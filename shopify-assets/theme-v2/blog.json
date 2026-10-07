@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "image_banner_MragWV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_RR4ipp": { "type": "heading", "settings": { "heading": "The BeeBlend Journal", "heading_size": "hxl" } },
+        "text_PVDr8Q": { "type": "text", "settings": { "text": "Honey guides, recipes and stories from the hive", "text_style": "body" } }
+      },
+      "block_order": ["heading_RR4ipp", "text_PVDr8Q"],
+      "custom_css": [".banner {min-height: 25rem;}"],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/honey.png",
+        "image_overlay_opacity": 70,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-92afd76a-68a9-449f-89d7-0c16f983dc5a",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false,
+        "custom_class": "blog_bannner"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": { "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837", "layout": "grid", "show_image": true, "image_height": "adapt", "show_date": true, "show_author": false, "padding_top": 60, "padding_bottom": 60 }
+    },
+    "rich_text_3r4J6t": {
+      "type": "rich-text",
+      "blocks": {
+        "button_itwQkR": { "type": "button", "settings": { "button_label": "Shop raw honey", "button_link": "shopify://collections/jar", "button_style_secondary": false, "button_label_2": "", "button_link_2": "", "button_style_secondary_2": false } }
+      },
+      "block_order": ["button_itwQkR"],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": { "custom_class": "rich_text_class", "desktop_content_position": "center", "content_alignment": "center", "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837", "full_width": true, "padding_top": 0, "padding_bottom": 52 }
+    }
+  },
+  "order": ["image_banner_MragWV", "main", "rich_text_3r4J6t"]
+}
