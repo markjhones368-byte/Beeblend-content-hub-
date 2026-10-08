@@ -1,0 +1,213 @@
+{
+ "sections": {
+  "bb_global": {
+   "type": "bb-global",
+   "settings": {
+    "logo": "shopify://shop_images/beeblend-logo.svg",
+    "instagram": "https://www.instagram.com/beeblendindia/",
+    "facebook": "https://www.facebook.com/share/1DsQkRpkBR/",
+    "youtube": "https://youtube.com/@beeblendindia",
+    "phone": "+91-7984373799",
+    "email": "info@beeblend.in"
+   }
+  },
+  "hero": {
+   "type": "bb-page-hero",
+   "settings": {
+    "use_collection_image": true,
+    "fit": "contain",
+    "crumbs": true,
+    "bg": "paper"
+   }
+  },
+  "trust": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Raw & unheated"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "pin",
+      "text": "Single-origin"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "No added sugar or syrups"
+     }
+    },
+    "t4": {
+     "type": "item",
+     "settings": {
+      "icon": "truck",
+      "text": "Dispatched in 1–2 days"
+     }
+    },
+    "t5": {
+     "type": "item",
+     "settings": {
+      "icon": "shield",
+      "text": "Secure checkout"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5"
+   ],
+   "settings": {}
+  },
+  "faq": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I buy single-flavour honey sachets?",
+      "a": "<p>Our sachets come in the Pure Honey Collection box: 24 sachets, four of each of six honeys. Found a favourite? Every honey is also available as a full jar in our <a href=\"/collections/jar\">raw honey range</a>.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "How much honey is in each sachet?",
+      "a": "<p>Each sachet holds 10g of honey, roughly a generous teaspoon or two: about right for a cup of tea or a bowl of yoghurt.</p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "Which flavours are in the box?",
+      "a": "<p>Himalayan Multi, Fennel, Kashmiri Acacia, Mustard, Lychee and Ayurveda Blend (pure honey infused with ginger, turmeric, black pepper, clove and cinnamon).</p>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "My sachet has thickened. Is it okay?",
+      "a": "<p>Yes. Raw honey crystallises naturally, especially in cool weather. Warm the sachet in your hand for a minute before opening. <a href=\"/blogs/news/why-does-honey-crystallise\">Here's why honey crystallises</a>.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "How fast is delivery?",
+      "a": "<p>Orders are dispatched within 1–2 business days (Monday–Saturday). Standard delivery across India takes 3–5 business days, and express delivery 1–2 business days.</p>"
+     }
+    },
+    "q6": {
+     "type": "qa",
+     "settings": {
+      "q": "Do you do bulk or corporate sachet orders?",
+      "a": "<p>Yes. The box makes a lovely corporate or festive gift. See <a href=\"/pages/gifting\">gifting</a> or get in touch through our <a href=\"/pages/contact\">contact page</a>.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6"
+   ],
+   "settings": {
+    "heading": "Honey sachets: your questions",
+    "open_first": true,
+    "bg": "white"
+   }
+  },
+  "hero_product": {
+   "type": "bb-feature-product",
+   "blocks": {
+    "f1": {
+     "type": "flavour",
+     "settings": {
+      "name": "Himalayan Multi",
+      "colour": "#6FB7DA"
+     }
+    },
+    "f2": {
+     "type": "flavour",
+     "settings": {
+      "name": "Fennel",
+      "colour": "#3E9E6A"
+     }
+    },
+    "f3": {
+     "type": "flavour",
+     "settings": {
+      "name": "Kashmiri Acacia",
+      "colour": "#EDE7D8"
+     }
+    },
+    "f4": {
+     "type": "flavour",
+     "settings": {
+      "name": "Mustard",
+      "colour": "#E8B53A"
+     }
+    },
+    "f5": {
+     "type": "flavour",
+     "settings": {
+      "name": "Lychee",
+      "colour": "#E8728A"
+     }
+    },
+    "f6": {
+     "type": "flavour",
+     "settings": {
+      "name": "Ayurveda Blend",
+      "colour": "#E5825A"
+     }
+    }
+   },
+   "block_order": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6"
+   ],
+   "settings": {
+    "product": "pure-honey-collection",
+    "badge": "New",
+    "eyebrow": "Our honey sachet box",
+    "heading": "24 honey sachets. Six flavours. One box.",
+    "text": "Tear-open 10g raw honey sachets, four each of six honeys. Keep them in your bag, at your desk or in your travel kit, or give the whole box as a gift.",
+    "stat1_num": "6",
+    "stat1_label": "Flavours",
+    "stat2_num": "24",
+    "stat2_label": "Pouches",
+    "stat3_num": "10g",
+    "stat3_label": "Each",
+    "btn_label": "Add to cart",
+    "link_label": "See what's inside",
+    "note": "100% natural & unprocessed · No added sugar · Ships in 1–2 days",
+    "bg": "paper",
+    "layout": "spotlight",
+    "spec_extra": "Gift-ready box"
+   }
+  }
+ },
+ "order": [
+  "bb_global",
+  "hero",
+  "hero_product",
+  "trust",
+  "faq"
+ ]
+}
