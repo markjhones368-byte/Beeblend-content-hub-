@@ -1,0 +1,120 @@
+{
+ "sections": {
+  "main": {
+   "type": "main-page",
+   "disabled": true,
+   "settings": {
+    "padding_top": 36,
+    "padding_bottom": 28
+   }
+  },
+  "image_banner_ATFrQC": {
+   "type": "image-banner",
+   "blocks": {
+    "heading_UipLVL": {
+     "type": "heading",
+     "settings": {
+      "heading": "Health Benefits",
+      "heading_size": "hxl"
+     }
+    }
+   },
+   "block_order": [
+    "heading_UipLVL"
+   ],
+   "custom_css": [
+    ".banner {min-height: 25rem;}"
+   ],
+   "name": "t:sections.image-banner.presets.name",
+   "settings": {
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "image_overlay_opacity": 70,
+    "image_height": "small",
+    "image_behavior": "none",
+    "desktop_content_position": "middle-center",
+    "desktop_content_alignment": "center",
+    "show_text_box": false,
+    "color_scheme": "scheme-92afd76a-68a9-449f-89d7-0c16f983dc5a",
+    "stack_images_on_mobile": false,
+    "mobile_content_alignment": "center",
+    "show_text_below": false,
+    "custom_class": "image_content"
+   }
+  },
+  "multicolumn_8GhCWm": {
+   "type": "multicolumn",
+   "blocks": {
+    "column_8VQqXi": {
+     "type": "column",
+     "settings": {
+      "image": "shopify://shop_images/honeycomb_1.png",
+      "title": "A Natural Sweetener",
+      "text": "<p>Made by bees from flower nectar, with nothing added. A simple swap for refined sugar.</p>",
+      "link_label": "",
+      "link": ""
+     }
+    },
+    "column_T3xWyC": {
+     "type": "column",
+     "settings": {
+      "image": "shopify://shop_images/immune-system.png",
+      "title": "Real, Single-Origin Flavour",
+      "text": "<p>Every honey tastes of its flower and region, from light acacia to fruity lychee.</p>",
+      "link_label": "",
+      "link": ""
+     }
+    },
+    "column_LA9qqN": {
+     "type": "column",
+     "settings": {
+      "image": "shopify://shop_images/moisturizer.png",
+      "title": "Raw & Unheated",
+      "text": "<p>Gently handled to keep honey's natural aroma, pollen and enzymes in the jar.</p>",
+      "link_label": "",
+      "link": ""
+     }
+    },
+    "column_GWm7NK": {
+     "type": "column",
+     "settings": {
+      "image": "shopify://shop_images/coffee-cup.png",
+      "title": "Everyday Rituals",
+      "text": "<p>In warm water, tea, breakfast bowls, cooking and golden milk.</p>",
+      "link_label": "",
+      "link": ""
+     }
+    }
+   },
+   "block_order": [
+    "column_8VQqXi",
+    "column_T3xWyC",
+    "column_LA9qqN",
+    "column_GWm7NK"
+   ],
+   "name": "t:sections.multicolumn.presets.name",
+   "settings": {
+    "title": "",
+    "bg_image": "shopify://shop_images/Screenshot_10.png",
+    "heading_size": "h1",
+    "image_width": "full",
+    "image_ratio": "adapt",
+    "button_label": "",
+    "button_link": "",
+    "columns_desktop": 2,
+    "column_alignment": "center",
+    "background_style": "primary",
+    "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+    "columns_mobile": "1",
+    "swipe_on_mobile": false,
+    "padding_top": 76,
+    "padding_bottom": 88,
+    "custom_class": "why_choose health__benefits"
+   }
+  }
+ },
+ "order": [
+  "main",
+  "image_banner_ATFrQC",
+  "multicolumn_8GhCWm"
+ ]
+}
