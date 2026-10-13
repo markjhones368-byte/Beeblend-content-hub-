@@ -52,7 +52,7 @@ TTCARD='''      {%- if section.settings.tiktok != blank -%}
       {%- if section.settings.youtube != blank -%}'''
 s=s.replace('      {%- if section.settings.youtube != blank -%}',TTCARD,1)
 s=s.replace('{ "type": "text", "id": "youtube", "label": "YouTube URL" },','{ "type": "text", "id": "tiktok", "label": "TikTok URL" },\n    { "type": "text", "id": "tiktok_handle", "label": "TikTok handle", "default": "@beeblend" },\n    { "type": "text", "id": "youtube", "label": "YouTube URL" },',1)
-s=s.replace('"default": "https://www.instagram.com/beeblendindia/"','"default": "'+IG+'"').replace('"label": "Instagram handle", "default": "@beeblendindia"','"label": "Instagram handle", "default": "@beeblenduk"').replace('"default": "BeeBlend India"','"default": "BeeBlend"').replace('"label": "YouTube handle", "default": "@beeblendindia"','"label": "YouTube handle", "default": ""')
+s=s.replace('"default": "https://www.instagram.com/beeblendindia/"','"default": "'+IG+'"').replace('"label": "Instagram handle", "default": "@beeblendindia"','"label": "Instagram handle", "default": "@beeblenduk"').replace('"default": "BeeBlend India"','"default": "BeeBlend"').replace('"label": "YouTube handle", "default": "@beeblendindia"','"label": "YouTube handle"')
 open(p,'w').write(s)
 
 # ---------- drop India-only templates; bring over UK-only page templates ----------
