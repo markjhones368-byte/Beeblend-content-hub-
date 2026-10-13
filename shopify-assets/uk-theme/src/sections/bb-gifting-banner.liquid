@@ -1,0 +1,35 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+<section class="bb bb-sec bb-sec--white">
+  <div class="bb-wrap">
+    <div class="bb-gift">
+      <div class="bb-gift__img">
+        {%- if section.settings.trio.count > 0 -%}
+          {% render 'bb-jar-trio', products: section.settings.trio, tint: section.settings.tint %}
+        {%- elsif section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '700, 1000, 1400', sizes: '(min-width: 990px) 55vw, 100vw', alt: section.settings.image.alt }}
+        {%- else -%}{{ 'lifestyle-2' | placeholder_svg_tag }}{%- endif -%}
+      </div>
+      <div class="bb-gift__copy">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.text }}</p>
+        {%- if section.settings.btn_label != blank -%}<a class="bb-btn bb-btn--gold" href="{{ section.settings.btn_link | default: '/pages/gifting' }}">{{ section.settings.btn_label }}</a>{%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BB Gifting banner",
+  "tag": "div",
+  "settings": [
+    { "type": "product_list", "id": "trio", "label": "Show 3 product jars (replaces image)", "limit": 3 },
+    { "type": "color", "id": "tint", "label": "Jar background", "default": "#EFE2C8" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "A gift that's actually used" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Curated honey sets for Diwali, weddings and corporate gifting, packed and ready to give." },
+    { "type": "text", "id": "btn_label", "label": "Button", "default": "Explore gifting" },
+    { "type": "url", "id": "btn_link", "label": "Button link" }
+  ],
+  "presets": [ { "name": "BB Gifting banner" } ]
+}
+{% endschema %}

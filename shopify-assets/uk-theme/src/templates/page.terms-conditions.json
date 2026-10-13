@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_TTFqUQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Pj7RJr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Terms & Conditions",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Pj7RJr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "bg_image": "shopify://shop_images/drops-4.jpg",
+        "custom_class": "hero__banner",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_cX3P4i": {
+      "type": "rich-text",
+      "blocks": {
+        "text_gMAb8w": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Introduction</h2><p>Welcome to beeblend.co.uk, owned and operated by BeeBlend Ltd, registered in England & Wales (Company No. 1G2U1GU2). By accessing or purchasing from our website, you agree to these Terms & Conditions.</p><p></p><h2>Use of Website</h2><p>You must be at least 18 years old to make a purchase. You agree not to use our site for unlawful or fraudulent purposes.</p><p></p><h2>Product Information</h2><p>We make every effort to display our products accurately. However, variations in colour or packaging may occur. BeeBlend reserves the right to update product information and pricing at any time without notice.</p><p></p><h2>Prices & Payments</h2><p>All prices are listed in GBP (£) and include VAT where applicable. Payment must be made at the time of order through our secure payment gateways.</p><p></p><h2>Shipping & Delivery</h2><p>Delivery times are estimates and not guaranteed. BeeBlend is not liable for delays caused by third-party couriers or customs.</p><p></p><h2>Returns & Refunds</h2><p>Please refer to our Returns & Refunds Policy for full details.</p><p></p><h2>Limitation of Liability</h2><p>BeeBlend Ltd shall not be held responsible for any indirect, incidental, or consequential damages arising from the use of our products or website.</p><p></p><h2>Governing Law</h2><p>These Terms are governed by and interpreted in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the UK courts.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_gMAb8w"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "custom_class": "rich_text_class",
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 68
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_TTFqUQ",
+    "rich_text_cX3P4i"
+  ]
+}

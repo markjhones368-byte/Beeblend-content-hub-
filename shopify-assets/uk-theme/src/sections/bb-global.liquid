@@ -1,0 +1,36 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap">
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+{{ 'bb-global.css' | asset_url | stylesheet_tag }}
+{{ 'bb-motion.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bb-motion.js' | asset_url }}" defer></script>
+{%- if template.name == 'index' and section.settings.include_schema -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":{{ shop.url | append: '/#org' | json }},"name":{{ shop.name | json }},"url":{{ shop.url | json }}
+{%- if section.settings.logo != blank -%},"logo":{{ section.settings.logo | image_url: width: 600 | prepend: 'https:' | json }}{%- endif -%}
+,"sameAs":[{% assign s = '' %}{% if section.settings.instagram != blank %}{{ section.settings.instagram | json }}{% assign s = ',' %}{% endif %}{% if section.settings.facebook != blank %}{{ s }}{{ section.settings.facebook | json }}{% assign s = ',' %}{% endif %}{% if section.settings.youtube != blank %}{{ s }}{{ section.settings.youtube | json }}{% endif %}]
+{%- if section.settings.phone != blank -%},"contactPoint":{"@type":"ContactPoint","telephone":{{ section.settings.phone | json }},"email":{{ section.settings.email | json }},"contactType":"customer service","areaServed":"GB","availableLanguage":["English"]}{%- endif -%}},
+{"@type":"WebSite","@id":{{ shop.url | append: '/#website' | json }},"url":{{ shop.url | json }},"name":{{ shop.name | json }},"publisher":{"@id":{{ shop.url | append: '/#org' | json }}},
+"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"{{ shop.url }}{{ routes.search_url }}?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}
+</script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "BB Global styles and SEO",
+  "tag": "div",
+  "class": "bb-global",
+  "settings": [
+    { "type": "paragraph", "content": "Loads the premium styling, motion and Google structured data." },
+    { "type": "checkbox", "id": "include_schema", "label": "Output Google structured data", "default": true },
+    { "type": "image_picker", "id": "logo", "label": "Logo for Google" },
+    { "type": "text", "id": "instagram", "label": "Instagram URL", "default": "https://www.instagram.com/beeblenduk/" },
+    { "type": "text", "id": "facebook", "label": "Facebook URL" },
+    { "type": "text", "id": "youtube", "label": "YouTube URL" },
+    { "type": "text", "id": "phone", "label": "Customer service phone", "default": "+44 7767967707" },
+    { "type": "text", "id": "email", "label": "Customer service email", "default": "support@beeblend.co.uk" }
+  ],
+  "presets": [ { "name": "BB Global styles and SEO" } ]
+}
+{% endschema %}

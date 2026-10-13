@@ -1,0 +1,108 @@
+{
+ "sections": {
+  "bb_global": {
+   "type": "bb-global",
+   "settings": {
+    "include_schema": false,
+    "logo": "shopify://shop_images/beeblend-logo.svg",
+    "instagram": "https://www.instagram.com/beeblenduk/",
+    "facebook": "",
+    "youtube": "",
+    "phone": "+44 7767967707",
+    "email": "support@beeblend.co.uk"
+   }
+  },
+  "hero": {
+   "type": "bb-page-hero",
+   "settings": {
+    "eyebrow": "Contact",
+    "heading": "We're here to help",
+    "text": "Order questions, gifting and bulk enquiries, or help choosing a honey. We're happy to help.",
+    "crumbs": true,
+    "bg": "paper",
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "fit": "cover"
+   }
+  },
+  "form": {
+   "type": "bb-contact",
+   "blocks": {
+    "o1": {
+     "type": "office",
+     "settings": {
+      "title": "BeeBlend UK",
+      "address": "<p>BeeBlend Ltd<br/>5 Kew Road, Richmond, London, TW9 2PR</p>",
+      "phone": "+44 7767967707",
+      "email": "support@beeblend.co.uk"
+     }
+    }
+   },
+   "block_order": [
+    "o1"
+   ],
+   "settings": {
+    "heading": "Send us a message",
+    "text": "We reply within one working day.",
+    "whatsapp": ""
+   }
+  },
+  "faq": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "How fast is UK delivery?",
+      "a": "<p>Orders are processed within 1–2 business days (Monday–Friday). UK Standard Delivery takes 3–5 business days and is free on orders over £40 (otherwise £3.99). UK Express Delivery takes 1–2 business days (£6.99). You'll get tracking details by email once your order ships. See <a href=\"/pages/shipping-delivery\">shipping &amp; delivery</a>.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "What if my jar arrives damaged?",
+      "a": "<p>Email support@beeblend.co.uk within 48 hours of delivery with your order number and a photo, and we'll put it right quickly.</p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "Do you ship outside the UK?",
+      "a": "<p>Yes. International delivery takes 7–14 business days, with shipping calculated at checkout. Customs duties and taxes are paid by the recipient.</p>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I return an order?",
+      "a": "<p>We accept unopened, unused items within 14 days of delivery. See our <a href=\"/pages/returns-refunds\">returns &amp; refunds policy</a>.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I order in bulk?",
+      "a": "<p>Yes. Use the form above with your quantity and we'll get back to you with pricing.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5"
+   ],
+   "settings": {
+    "heading": "Questions, answered",
+    "open_first": true,
+    "bg": "paper"
+   }
+  }
+ },
+ "order": [
+  "bb_global",
+  "hero",
+  "form",
+  "faq"
+ ]
+}

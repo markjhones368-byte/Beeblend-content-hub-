@@ -1,0 +1,76 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign h = section.settings.heading
+  if h == blank
+    if template.name == 'collection'
+      assign h = collection.title
+    elsif template.name == 'page'
+      assign h = page.title
+    endif
+  endif
+  assign t = section.settings.text
+  if t == blank and template.name == 'collection'
+    assign t = collection.description | strip_html | truncatewords: 40
+  endif
+  assign img = section.settings.image
+  if img == blank and template.name == 'collection' and section.settings.use_collection_image
+    assign img = collection.image
+  endif
+-%}
+<style>
+  #bb-ph-{{ section.id }} .bb-ph{display:grid;gap:3.2rem;align-items:center}
+  #bb-ph-{{ section.id }} .bb-ph__img{position:relative;border-radius:1.6rem;overflow:hidden;aspect-ratio:4/3;background:#fff}
+  #bb-ph-{{ section.id }} .bb-ph__img img{width:100%;height:100%;object-fit:{{ section.settings.fit }};{% if section.settings.fit == 'contain' %}padding:6%;{% endif %}}
+  @media(min-width:990px){#bb-ph-{{ section.id }} .bb-ph--img{grid-template-columns:1.05fr 1fr;gap:6.4rem}}
+</style>
+<section class="bb bb-sec bb-sec--{{ section.settings.bg }}" id="bb-ph-{{ section.id }}" style="padding:clamp(3.2rem,6vw,6.4rem) 0">
+  <div class="bb-wrap">
+    {%- if section.settings.crumbs -%}<div style="margin-bottom:2.4rem">{% render 'bb-breadcrumbs' %}</div>{%- endif -%}
+    {%- assign has_trio = false -%}{%- if section.settings.trio.count > 0 -%}{%- assign has_trio = true -%}{%- endif -%}
+    <div class="bb-ph{% if img != blank or has_trio %} bb-ph--img{% endif %}">
+      <div class="bb-head" style="margin-bottom:0;max-width:72rem">
+        {%- if section.settings.eyebrow != blank -%}<p style="font-weight:600;font-size:1.25rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bb-gold);margin:0 0 1.6rem">{{ section.settings.eyebrow }}</p>{%- endif -%}
+        <h1 style="font-size:clamp(3.4rem,5.2vw,5.8rem)">{{ h }}</h1>
+        {%- if t != blank -%}<p style="font-size:1.8rem">{{ t }}</p>{%- endif -%}
+        {%- if section.settings.points != blank -%}
+          <ul class="bb-ph__points" role="list">
+            {%- assign pts = section.settings.points | newline_to_br | split: '<br />' -%}
+            {%- for pt in pts -%}{%- assign ptx = pt | strip -%}{%- if ptx != blank -%}<li>{{ ptx }}</li>{%- endif -%}{%- endfor -%}
+          </ul>
+        {%- endif -%}
+        {%- if section.settings.btn_label != blank -%}<p style="margin-top:2.8rem"><a class="bb-btn bb-btn--solid" href="{{ section.settings.btn_link | default: '#MainContent' }}">{{ section.settings.btn_label }}</a></p>{%- endif -%}
+      </div>
+      {%- if has_trio -%}
+        <div class="bb-ph__img bb-story__img{% if section.settings.trio.count >= 4 %} bb-ph__img--flight{% endif %}" data-trio>{% render 'bb-jar-trio', products: section.settings.trio, tint: section.settings.tint, max: 5 %}</div>
+      {%- elsif img != blank -%}
+        <div class="bb-ph__img bb-story__img">
+          {{ img | image_url: width: 1400 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '600, 900, 1200, 1400', sizes: '(min-width: 990px) 48vw, 100vw', alt: img.alt | default: h }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BB Page header",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small label above heading" },
+    { "type": "text", "id": "heading", "label": "Heading (blank = page or collection title)" },
+    { "type": "textarea", "id": "text", "label": "Intro text (blank = collection description)" },
+    { "type": "textarea", "id": "points", "label": "Proof points (one per line)" },
+    { "type": "text", "id": "btn_label", "label": "Button" },
+    { "type": "url", "id": "btn_link", "label": "Button link" },
+    { "type": "product_list", "id": "trio", "label": "Show 3 to 5 product jars (replaces image)", "limit": 5 },
+    { "type": "color", "id": "tint", "label": "Jar background", "default": "#EFE2C8" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "checkbox", "id": "use_collection_image", "label": "On collections, use the collection image", "default": true },
+    { "type": "select", "id": "fit", "label": "Image fit", "default": "cover", "options": [
+      { "value": "cover", "label": "Fill (photos)" }, { "value": "contain", "label": "Fit (product shots)" } ] },
+    { "type": "checkbox", "id": "crumbs", "label": "Show breadcrumbs", "default": true },
+    { "type": "select", "id": "bg", "label": "Background", "default": "paper", "options": [
+      { "value": "paper", "label": "Warm paper" }, { "value": "sage", "label": "Sage" }, { "value": "white", "label": "White" } ] }
+  ],
+  "presets": [ { "name": "BB Page header" } ]
+}
+{% endschema %}

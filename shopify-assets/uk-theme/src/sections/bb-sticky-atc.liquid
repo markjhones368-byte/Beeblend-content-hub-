@@ -1,0 +1,45 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+{%- if product -%}
+{%- assign v0 = product.selected_or_first_available_variant -%}
+<div class="bb bb-sticky" id="bb-sticky-{{ section.id }}" aria-hidden="true">
+  <div class="bb-sticky__in">
+    {%- if product.featured_media -%}{{ product.featured_media.preview_image | image_url: width: 120 | image_tag: alt: '' }}{%- endif -%}
+    <div class="bb-sticky__t"><b>{{ product.title | split: '|' | first | strip }}</b><span class="bb-price" style="font-size:1.5rem">{{ v0.price | money }}{% if v0.compare_at_price > v0.price %}<s>{{ v0.compare_at_price | money }}</s>{% endif %}</span></div>
+    {%- if product.available -%}
+      {%- if product.has_only_default_variant -%}
+        {%- form 'product', product -%}
+          <input type="hidden" name="id" value="{{ v0.id }}">
+          <button class="bb-btn bb-btn--solid" type="submit" tabindex="-1">Add to cart</button>
+        {%- endform -%}
+      {%- else -%}
+        <button class="bb-btn bb-btn--solid" type="button" tabindex="-1" data-bb-scroll>Choose size</button>
+      {%- endif -%}
+    {%- else -%}
+      <button class="bb-btn bb-btn--solid" type="button" disabled>Sold out</button>
+    {%- endif -%}
+  </div>
+</div>
+<script>
+(function () {
+  var bar = document.getElementById('bb-sticky-{{ section.id }}'); if (!bar) return;
+  var target = document.querySelector('product-form, .product-form');
+  var btns = bar.querySelectorAll('button');
+  function show(on) { bar.classList.toggle('is-on', on); bar.setAttribute('aria-hidden', !on); btns.forEach(function (b) { b.tabIndex = on ? 0 : -1; }); }
+  if (target && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { show(!e[0].isIntersecting && e[0].boundingClientRect.top < 0); }).observe(target);
+  } else {
+    window.addEventListener('scroll', function () { show(window.scrollY > 700); }, { passive: true });
+  }
+  var s = bar.querySelector('[data-bb-scroll]');
+  if (s && target) s.addEventListener('click', function () { target.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+})();
+</script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "BB Sticky add to cart",
+  "tag": "div",
+  "enabled_on": { "templates": ["product"] },
+  "presets": [ { "name": "BB Sticky add to cart" } ]
+}
+{% endschema %}

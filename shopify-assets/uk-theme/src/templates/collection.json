@@ -1,0 +1,144 @@
+{
+ "sections": {
+  "bb_global": {
+   "type": "bb-global",
+   "settings": {
+    "include_schema": false,
+    "logo": "shopify://shop_images/beeblend-logo.svg",
+    "instagram": "https://www.instagram.com/beeblenduk/",
+    "facebook": "",
+    "youtube": "",
+    "phone": "+44 7767967707",
+    "email": "support@beeblend.co.uk"
+   }
+  },
+  "hero": {
+   "type": "bb-page-hero",
+   "settings": {
+    "use_collection_image": true,
+    "fit": "contain",
+    "crumbs": true,
+    "bg": "paper"
+   }
+  },
+  "trust": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Raw & unheated"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "pin",
+      "text": "Single-origin"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "No added sugar or syrups"
+     }
+    },
+    "t4": {
+     "type": "item",
+     "settings": {
+      "icon": "truck",
+      "text": "Free UK delivery over £40"
+     }
+    },
+    "t5": {
+     "type": "item",
+     "settings": {
+      "icon": "shield",
+      "text": "Secure checkout"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5"
+   ],
+   "settings": {}
+  },
+  "product-grid": {
+   "type": "main-collection-product-grid",
+   "settings": {
+    "products_per_page": 24,
+    "columns_desktop": 4,
+    "columns_mobile": "2",
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "image_ratio": "portrait",
+    "image_shape": "default",
+    "show_secondary_image": true,
+    "show_vendor": false,
+    "show_rating": true,
+    "quick_add": "standard",
+    "enable_filtering": true,
+    "filter_type": "horizontal",
+    "enable_sorting": true,
+    "padding_top": 40,
+    "padding_bottom": 60
+   }
+  },
+  "faq": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "What does single-origin honey mean?",
+      "a": "<p>Each jar comes from one region and one main flower source, so every honey has its own colour, aroma and taste.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "Which honey should I start with?",
+      "a": "<p>For everyday use, try Lychee Blossom or Kashmiri Acacia: both are light and smooth. For gifting, Golden Nut Infusion is our most indulgent jar. Or read <a href=\"/pages/which-honey-should-i-choose\">which honey should I choose?</a></p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "My honey has gone thick and grainy. Is it spoiled?",
+      "a": "<p>No. Raw honey naturally crystallises over time, especially in cooler weather. Stand the closed jar in warm (not boiling) water and stir to make it runny again.</p>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "How fast is UK delivery?",
+      "a": "<p>Orders are processed within 1–2 business days (Monday–Friday). UK Standard Delivery takes 3–5 business days and is free on orders over £40 (otherwise £3.99). UK Express Delivery takes 1–2 business days (£6.99). You'll get tracking details by email once your order ships. See <a href=\"/pages/shipping-delivery\">shipping &amp; delivery</a>.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4"
+   ],
+   "settings": {
+    "heading": "Questions, answered",
+    "open_first": true,
+    "bg": "white"
+   }
+  }
+ },
+ "order": [
+  "bb_global",
+  "hero",
+  "trust",
+  "product-grid",
+  "faq"
+ ]
+}

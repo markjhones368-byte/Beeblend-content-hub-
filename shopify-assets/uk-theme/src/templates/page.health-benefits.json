@@ -1,0 +1,148 @@
+{
+ "sections": {
+  "multicolumn_8GhCWm": {
+   "type": "multicolumn",
+   "blocks": {
+    "column_8VQqXi": {
+     "type": "column",
+     "settings": {
+      "image": "shopify://shop_images/honeycomb_1.png",
+      "title": "A Natural Sweetener",
+      "text": "<p>Made by bees from flower nectar, with nothing added. A simple swap for refined sugar.</p>",
+      "link_label": "",
+      "link": ""
+     }
+    },
+    "column_T3xWyC": {
+     "type": "column",
+     "settings": {
+      "image": "shopify://shop_images/immune-system.png",
+      "title": "Real, Single-Origin Flavour",
+      "text": "<p>Every honey tastes of its flower and region, from light acacia to fruity lychee.</p>",
+      "link_label": "",
+      "link": ""
+     }
+    },
+    "column_LA9qqN": {
+     "type": "column",
+     "settings": {
+      "image": "shopify://shop_images/moisturizer.png",
+      "title": "Raw & Unheated",
+      "text": "<p>Gently handled to keep honey's natural aroma, pollen and enzymes in the jar.</p>",
+      "link_label": "",
+      "link": ""
+     }
+    },
+    "column_GWm7NK": {
+     "type": "column",
+     "settings": {
+      "image": "shopify://shop_images/coffee-cup.png",
+      "title": "Everyday Rituals",
+      "text": "<p>In warm water, tea, breakfast bowls, cooking and golden milk.</p>",
+      "link_label": "",
+      "link": ""
+     }
+    }
+   },
+   "block_order": [
+    "column_8VQqXi",
+    "column_T3xWyC",
+    "column_LA9qqN",
+    "column_GWm7NK"
+   ],
+   "name": "t:sections.multicolumn.presets.name",
+   "settings": {
+    "title": "",
+    "bg_image": "shopify://shop_images/Screenshot_10.png",
+    "heading_size": "h1",
+    "image_width": "full",
+    "image_ratio": "adapt",
+    "button_label": "",
+    "button_link": "",
+    "columns_desktop": 2,
+    "column_alignment": "center",
+    "background_style": "primary",
+    "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+    "columns_mobile": "1",
+    "swipe_on_mobile": false,
+    "padding_top": 76,
+    "padding_bottom": 88,
+    "custom_class": "why_choose health__benefits"
+   }
+  },
+  "bb_global": {
+   "type": "bb-global",
+   "settings": {
+    "include_schema": false,
+    "logo": "shopify://shop_images/beeblend-logo.svg",
+    "instagram": "https://www.instagram.com/beeblenduk/",
+    "facebook": "",
+    "youtube": "",
+    "phone": "+44 7767967707",
+    "email": "support@beeblend.co.uk"
+   }
+  },
+  "hero": {
+   "type": "bb-page-hero",
+   "settings": {
+    "eyebrow": "Honey & everyday life",
+    "heading": "Why people choose raw honey",
+    "text": "Honey is a natural sweetener made by bees from flower nectar. Here's what makes raw, single-origin honey different, and how to enjoy it every day.",
+    "crumbs": true,
+    "bg": "paper",
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "fit": "cover"
+   }
+  },
+  "faq": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "Is honey healthier than sugar?",
+      "a": "<p>Honey is still a sugar and should be enjoyed in moderation. People choose it because it's a single, natural ingredient with its own flavour, and because it's sweeter than sugar, so a little goes a long way.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "What does raw mean?",
+      "a": "<p>Raw honey is extracted and gently filtered but not heated, so it keeps its natural aroma and pollen. It crystallises over time, which is normal.</p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "Is honey suitable for everyone?",
+      "a": "<p>Honey is not suitable for infants under 12 months. If you have diabetes or another medical condition, check with your doctor before adding honey to your diet. Golden Nut Infusion contains tree nuts.</p>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "How do I use honey every day?",
+      "a": "<p>Stir it into tea or warm water once it has cooled slightly, drizzle it over porridge and yoghurt, or use it in dressings and baking. See our <a href=\"/pages/honey-pairing-guide\">honey pairing guide</a>.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4"
+   ],
+   "settings": {
+    "heading": "Good to know",
+    "open_first": true,
+    "bg": "paper"
+   }
+  }
+ },
+ "order": [
+  "bb_global",
+  "hero",
+  "multicolumn_8GhCWm",
+  "faq"
+ ]
+}

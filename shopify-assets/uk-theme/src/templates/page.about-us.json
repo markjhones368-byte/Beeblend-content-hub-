@@ -1,0 +1,217 @@
+{
+ "sections": {
+  "bb_global": {
+   "type": "bb-global",
+   "settings": {
+    "include_schema": false,
+    "logo": "shopify://shop_images/beeblend-logo.svg",
+    "instagram": "https://www.instagram.com/beeblenduk/",
+    "facebook": "",
+    "youtube": "",
+    "phone": "+44 7767967707",
+    "email": "support@beeblend.co.uk"
+   }
+  },
+  "hero": {
+   "type": "bb-page-hero",
+   "settings": {
+    "eyebrow": "Why BeeBlend",
+    "heading": "One region. One flower. One honest jar.",
+    "text": "Most honey is blended from many sources and heated so it pours forever and tastes the same. Ours isn't. Every BeeBlend honey comes from a single region, stays separate from hive to jar, and is never heated. So a spoon of Kashmiri Acacia tastes nothing like Himalayan Multi-Flora. That's the whole point.",
+    "points": "Raw & never heated\nOne region per jar\nNothing added, ever",
+    "btn_label": "Find your honey",
+    "btn_link": "shopify://collections/all",
+    "trio": [
+     "kashmiri-acacia-honey",
+     "mustard-honey",
+     "lychee-honey",
+     "himalayan-multifloral-honey",
+     "fennel-honey"
+    ],
+    "tint": "#EADBBE",
+    "crumbs": true,
+    "bg": "paper"
+   }
+  },
+  "story": {
+   "type": "bb-text-image",
+   "settings": {
+    "trio": [
+     "golden-nut-honey",
+     "sesame-honey",
+     "kashmiri-acacia-honey"
+    ],
+    "tint": "#E7EADF",
+    "image_right": true,
+    "heading": "Honey you can trace back to its flower",
+    "text": "<p>We started BeeBlend because most honey on the shelf can't tell you where it came from. So we do it the slow way: we work with beekeepers in specific regions, from the Kashmir valley to the Himalayan foothills, and keep every harvest in its own jar.</p><p>No heating to make it pour. No syrups to stretch it. Just raw honey with the colour, aroma and taste of the place it was made. That's why it crystallises naturally, and why every jar tastes different.</p>",
+    "btn_label": "Shop our honeys",
+    "btn_link": "shopify://collections/all",
+    "bg": "white"
+   }
+  },
+  "trust": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Raw & unheated"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "pin",
+      "text": "Single-origin"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "No added sugar or syrups"
+     }
+    },
+    "t4": {
+     "type": "item",
+     "settings": {
+      "icon": "truck",
+      "text": "Free UK delivery over £40"
+     }
+    },
+    "t5": {
+     "type": "item",
+     "settings": {
+      "icon": "shield",
+      "text": "Secure checkout"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5"
+   ],
+   "settings": {}
+  },
+  "steps": {
+   "type": "bb-story-steps",
+   "blocks": {
+    "s1": {
+     "type": "step",
+     "settings": {
+      "title": "Bees gather nectar",
+      "text": "From a single dominant flower source in one region."
+     }
+    },
+    "s2": {
+     "type": "step",
+     "settings": {
+      "title": "The hive turns it into honey",
+      "text": "Bees evaporate the moisture and cap each cell with wax when it's ripe."
+     }
+    },
+    "s3": {
+     "type": "step",
+     "settings": {
+      "title": "We jar it raw",
+      "text": "Extracted and gently filtered, never heated, so the enzymes and flavour stay intact."
+     }
+    }
+   },
+   "block_order": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "settings": {
+    "illustration": "hive_to_jar",
+    "heading": "From hive to jar",
+    "text": "Three steps, and none of them involve heat or additives.",
+    "btn_label": "",
+    "btn_link": ""
+   }
+  },
+  "compare": {
+   "type": "bb-compare",
+   "blocks": {
+    "r1": {
+     "type": "row",
+     "settings": {
+      "feature": "Processing",
+      "us": "Raw, never heated",
+      "them": "Often heated for shelf life"
+     }
+    },
+    "r2": {
+     "type": "row",
+     "settings": {
+      "feature": "Source",
+      "us": "Single origin, one region per jar",
+      "them": "Blended from many sources"
+     }
+    },
+    "r3": {
+     "type": "row",
+     "settings": {
+      "feature": "Additives",
+      "us": "None",
+      "them": "May contain added syrups"
+     }
+    },
+    "r4": {
+     "type": "row",
+     "settings": {
+      "feature": "Taste",
+      "us": "Distinct to each flower",
+      "them": "Uniform sweetness"
+     }
+    },
+    "r5": {
+     "type": "row",
+     "settings": {
+      "feature": "Crystallises naturally",
+      "us": "Yes, a sign it's raw",
+      "them": "Rarely"
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5"
+   ],
+   "settings": {
+    "heading": "Not all honey is the same",
+    "text": "Most supermarket honey is heated and blended from many sources. Ours isn't.",
+    "us": "BeeBlend",
+    "them": "Typical supermarket honey"
+   }
+  },
+  "gift": {
+   "type": "bb-gifting-banner",
+   "settings": {
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "heading": "Taste the difference",
+    "text": "Start with our best-selling jars, or build a gift set for someone who'd appreciate real honey.",
+    "btn_label": "Shop now",
+    "btn_link": "shopify://collections/all"
+   }
+  }
+ },
+ "order": [
+  "bb_global",
+  "hero",
+  "story",
+  "trust",
+  "steps",
+  "compare",
+  "gift"
+ ]
+}

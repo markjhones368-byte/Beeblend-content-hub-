@@ -1,0 +1,73 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign coll = section.settings.collection
+  assign shown = 0
+-%}
+<section class="bb bb-sec bb-sec--{{ section.settings.bg }}" id="bb-grid-{{ section.id }}">
+  <div class="bb-wrap">
+    <div class="bb-head{% if section.settings.center %} bb-head--center{% endif %}">
+      <h2>{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}<p>{{ section.settings.text }}</p>{%- endif -%}
+    </div>
+    <div class="bb-grid" style="--bb-cols: {{ section.settings.columns }};">
+      {%- if coll != blank -%}
+        {%- for product in coll.products -%}
+          {%- if product.available and shown < section.settings.limit -%}
+            {% render 'bb-product-card', product: product, quick_add: section.settings.quick_add %}
+            {%- assign shown = shown | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if section.settings.show_sold_out -%}
+          {%- for product in coll.products -%}
+            {%- if product.available == false and shown < section.settings.limit -%}
+              {% render 'bb-product-card', product: product, quick_add: section.settings.quick_add %}
+              {%- assign shown = shown | plus: 1 -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- else -%}
+        {%- for i in (1..4) -%}
+          <div class="bb-card"><div class="bb-card__media">{{ 'product-apparel-1' | placeholder_svg_tag: 'bb-card__img' }}</div><div class="bb-card__body"><span class="bb-card__title">Choose a collection</span></div></div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+    {%- if section.settings.button_label != blank and coll != blank -%}
+      <div class="bb-more"><a class="bb-btn bb-btn--solid" href="{{ coll.url }}">{{ section.settings.button_label }}</a></div>
+    {%- endif -%}
+  </div>
+</section>
+<script>
+  document.querySelectorAll('#bb-grid-{{ section.id }} [data-bb-quick-add]').forEach(function (form) {
+    form.addEventListener('change', function (e) {
+      var r = e.target; if (!r.matches('input[type=radio]')) return;
+      var card = form.closest('.bb-card');
+      var now = card.querySelector('[data-bb-price-now]');
+      var was = card.querySelector('[data-bb-price-was]');
+      if (now) now.textContent = r.dataset.price;
+      if (r.dataset.was) {
+        if (!was) { was = document.createElement('s'); was.setAttribute('data-bb-price-was', ''); now.after(was); }
+        was.textContent = r.dataset.was; was.hidden = false;
+      } else if (was) { was.hidden = true; }
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "BB Product grid",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Best-selling raw honeys" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Pick a size and add to cart straight from here." },
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "range", "id": "limit", "label": "Products to show", "min": 2, "max": 16, "step": 1, "default": 8 },
+    { "type": "range", "id": "columns", "label": "Columns on desktop", "min": 2, "max": 5, "step": 1, "default": 4 },
+    { "type": "checkbox", "id": "quick_add", "label": "Show size picker + add to cart", "default": true },
+    { "type": "checkbox", "id": "show_sold_out", "label": "Show sold-out products (placed last)", "default": true },
+    { "type": "checkbox", "id": "center", "label": "Center heading", "default": false },
+    { "type": "text", "id": "button_label", "label": "View all button", "default": "Shop all honeys" },
+    { "type": "select", "id": "bg", "label": "Background", "default": "white", "options": [
+      { "value": "white", "label": "White" }, { "value": "paper", "label": "Warm paper" }, { "value": "sage", "label": "Sage" } ] }
+  ],
+  "presets": [ { "name": "BB Product grid" } ]
+}
+{% endschema %}

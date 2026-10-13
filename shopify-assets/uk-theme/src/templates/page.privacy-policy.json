@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_aYk8ni": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Xay9gX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Privacy Policy",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Xay9gX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "bg_image": "shopify://shop_images/drops-4.jpg",
+        "custom_class": "hero__banner",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_EEzYLx": {
+      "type": "rich-text",
+      "blocks": {
+        "text_VCJ397": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At BeeBlend UK, we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit <a href=\"https://beeblend.co.uk/\" title=\"https://beeblend.co.uk/\">beeblend.co.uk.</a></p><p></p><h2>Information We Collect</h2><ul><li><strong>Personal details:</strong> name, address, email, phone number</li><li><strong>Payment details:</strong> securely processed via trusted third-party gateways (we do not store card details)</li><li><strong>Usage data:</strong> pages visited, browsing behaviour, and preferences<br/></li></ul><h2>How We Use Your Data</h2><ul><li>To process and fulfil your orders<br/></li><li>To communicate with you about your purchase or support queries</li><li>To send promotional offers (only if you opt-in)</li><li>To improve our website and customer experience</li></ul><h2>Cookies</h2><p>Our website uses cookies to enhance your browsing experience and analyse site traffic. You can manage your cookie preferences through your browser settings.</p><h2>Data Protection</h2><p>Your personal data is stored securely in compliance with UK GDPR and Data Protection Act 2018. We never sell or share your data with third parties for marketing purposes.</p><p></p><h2>Your Rights</h2><p>You have the right to access, correct, or delete your personal data. To exercise these rights, contact us at <a href=\"mailto:support@beeblend.co.uk\">support@beeblend.co.uk.</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_VCJ397"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "custom_class": "rich_text_class",
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 68
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_aYk8ni",
+    "rich_text_EEzYLx"
+  ]
+}

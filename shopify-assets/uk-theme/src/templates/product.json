@@ -1,0 +1,309 @@
+{
+ "sections": {
+  "bb_global": {
+   "type": "bb-global",
+   "settings": {
+    "include_schema": false,
+    "logo": "shopify://shop_images/beeblend-logo.svg",
+    "instagram": "https://www.instagram.com/beeblenduk/",
+    "facebook": "",
+    "youtube": "",
+    "phone": "+44 7767967707",
+    "email": "support@beeblend.co.uk"
+   }
+  },
+  "crumbs": {
+   "type": "bb-breadcrumbs",
+   "settings": {}
+  },
+  "main": {
+   "type": "main-product",
+   "blocks": {
+    "title": {
+     "type": "title",
+     "settings": {}
+    },
+    "jm_badge": {
+     "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {}
+    },
+    "price": {
+     "type": "price",
+     "settings": {}
+    },
+    "variant_picker": {
+     "type": "variant_picker",
+     "settings": {
+      "picker_type": "button",
+      "swatch_shape": "circle"
+     }
+    },
+    "quantity_selector": {
+     "type": "quantity_selector",
+     "settings": {}
+    },
+    "buy_buttons": {
+     "type": "buy_buttons",
+     "settings": {
+      "show_dynamic_checkout": true,
+      "show_gift_card_recipient": false
+     }
+    },
+    "ship_note": {
+     "type": "text",
+     "settings": {
+      "text": "✓ Dispatched in 1–2 business days  ·  ✓ Free UK delivery over £40  ·  ✓ Secure checkout",
+      "text_style": "subtitle"
+     }
+    },
+    "description": {
+     "type": "description",
+     "settings": {}
+    },
+    "share": {
+     "type": "share",
+     "settings": {
+      "share_label": "Share"
+     }
+    }
+   },
+   "block_order": [
+    "title",
+    "jm_badge",
+    "price",
+    "variant_picker",
+    "quantity_selector",
+    "buy_buttons",
+    "ship_note",
+    "description",
+    "share"
+   ],
+   "settings": {
+    "enable_sticky_info": true,
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "media_size": "medium",
+    "constrain_to_viewport": true,
+    "media_fit": "contain",
+    "gallery_layout": "thumbnail_slider",
+    "mobile_thumbnails": "show",
+    "media_position": "left",
+    "image_zoom": "lightbox",
+    "hide_variants": true,
+    "enable_video_looping": false,
+    "padding_top": 24,
+    "padding_bottom": 48
+   }
+  },
+  "assure": {
+   "type": "bb-product-assurance",
+   "blocks": {
+    "b1": {
+     "type": "badge",
+     "settings": {
+      "icon": "drop",
+      "title": "Raw & unheated",
+      "text": "Enzymes and aroma intact"
+     }
+    },
+    "b2": {
+     "type": "badge",
+     "settings": {
+      "icon": "pin",
+      "title": "Single-origin",
+      "text": "One region per jar"
+     }
+    },
+    "b3": {
+     "type": "badge",
+     "settings": {
+      "icon": "leaf",
+      "title": "Nothing added",
+      "text": "No sugar, syrups or preservatives"
+     }
+    },
+    "b4": {
+     "type": "badge",
+     "settings": {
+      "icon": "truck",
+      "title": "Free UK delivery",
+      "text": "On orders over £40"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ],
+   "settings": {}
+  },
+  "compare": {
+   "type": "bb-compare",
+   "blocks": {
+    "r1": {
+     "type": "row",
+     "settings": {
+      "feature": "Processing",
+      "us": "Raw, never heated",
+      "them": "Often heated for shelf life"
+     }
+    },
+    "r2": {
+     "type": "row",
+     "settings": {
+      "feature": "Source",
+      "us": "Single origin, one region per jar",
+      "them": "Blended from many sources"
+     }
+    },
+    "r3": {
+     "type": "row",
+     "settings": {
+      "feature": "Additives",
+      "us": "None",
+      "them": "May contain added syrups"
+     }
+    },
+    "r4": {
+     "type": "row",
+     "settings": {
+      "feature": "Taste",
+      "us": "Distinct to each flower",
+      "them": "Uniform sweetness"
+     }
+    },
+    "r5": {
+     "type": "row",
+     "settings": {
+      "feature": "Crystallises naturally",
+      "us": "Yes, a sign it's raw",
+      "them": "Rarely"
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5"
+   ],
+   "settings": {
+    "heading": "Not all honey is the same",
+    "text": "Most supermarket honey is heated and blended from many sources. Ours isn't.",
+    "us": "BeeBlend",
+    "them": "Typical supermarket honey"
+   }
+  },
+  "reviews": {
+   "type": "apps",
+   "blocks": {
+    "jm_widget": {
+     "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {
+      "max_width": 1200,
+      "show_shop_reviews": false,
+      "empty_state": "empty_widget"
+     }
+    }
+   },
+   "block_order": [
+    "jm_widget"
+   ],
+   "settings": {
+    "include_margins": true
+   }
+  },
+  "faq": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "Is BeeBlend honey 100% pure?",
+      "a": "<p>Yes. Our raw honeys are 100% honey, with no added sugar, artificial preservatives, colours or flavours. Golden Nut Infusion also contains almonds, cashews and dates.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "Is it raw?",
+      "a": "<p>Yes. It's unheated and minimally handled to keep its natural taste and aroma.</p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "My honey has gone thick and grainy. Is it spoiled?",
+      "a": "<p>No. Raw honey naturally crystallises over time, especially in cooler weather. Stand the closed jar in warm (not boiling) water and stir to make it runny again.</p>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I use it instead of sugar?",
+      "a": "<p>Yes. Use it in tea, porridge, yoghurt, dressings, baking and cooking. Honey is sweeter than sugar, so you'll need a little less.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "How fast is UK delivery?",
+      "a": "<p>Orders are processed within 1–2 business days (Monday–Friday). UK Standard Delivery takes 3–5 business days and is free on orders over £40 (otherwise £3.99). UK Express Delivery takes 1–2 business days (£6.99). You'll get tracking details by email once your order ships. See <a href=\"/pages/shipping-delivery\">shipping &amp; delivery</a>.</p>"
+     }
+    },
+    "q6": {
+     "type": "qa",
+     "settings": {
+      "q": "What if my jar arrives damaged?",
+      "a": "<p>Email support@beeblend.co.uk within 48 hours of delivery with your order number and a photo, and we'll put it right quickly.</p>"
+     }
+    },
+    "q7": {
+     "type": "qa",
+     "settings": {
+      "q": "Is honey suitable for babies?",
+      "a": "<p>No. Honey is not suitable for infants under 12 months.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7"
+   ],
+   "settings": {
+    "heading": "Questions, answered",
+    "open_first": true,
+    "bg": "paper"
+   }
+  },
+  "related": {
+   "type": "bb-related",
+   "settings": {
+    "heading": "Pairs well with",
+    "limit": 4
+   }
+  },
+  "sticky": {
+   "type": "bb-sticky-atc",
+   "settings": {}
+  }
+ },
+ "order": [
+  "bb_global",
+  "crumbs",
+  "main",
+  "assure",
+  "compare",
+  "reviews",
+  "faq",
+  "related",
+  "sticky"
+ ]
+}

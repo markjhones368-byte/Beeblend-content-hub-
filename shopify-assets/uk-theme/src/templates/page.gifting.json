@@ -1,0 +1,185 @@
+{
+ "sections": {
+  "bb_global": {
+   "type": "bb-global",
+   "settings": {
+    "include_schema": false,
+    "logo": "shopify://shop_images/beeblend-logo.svg",
+    "instagram": "https://www.instagram.com/beeblenduk/",
+    "facebook": "",
+    "youtube": "",
+    "phone": "+44 7767967707",
+    "email": "support@beeblend.co.uk"
+   }
+  },
+  "hero": {
+   "type": "bb-page-hero",
+   "settings": {
+    "eyebrow": "Gifting",
+    "heading": "Honey gifts people actually use",
+    "text": "Christmas hampers, corporate gifts and personalised sets, packed beautifully and delivered across the UK.",
+    "crumbs": true,
+    "bg": "paper",
+    "trio": [
+     "kashmiri-acacia-honey",
+     "golden-nut-honey",
+     "lychee-honey"
+    ],
+    "tint": "#EADBBE",
+    "fit": "cover",
+    "btn_label": "Request a quote",
+    "btn_link": "shopify://pages/contact"
+   }
+  },
+  "cards": {
+   "type": "bb-collection-cards",
+   "blocks": {
+    "c1": {
+     "type": "card",
+     "settings": {
+      "collection": "corporate-gifting",
+      "sub": "For clients, teams and events"
+     }
+    },
+    "c2": {
+     "type": "card",
+     "settings": {
+      "collection": "festive-hampers",
+      "sub": "Christmas, birthdays, weddings and more"
+     }
+    },
+    "c3": {
+     "type": "card",
+     "settings": {
+      "collection": "personalized-gifts",
+      "sub": "Your name or message on the box"
+     }
+    }
+   },
+   "block_order": [
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "settings": {
+    "heading": "Choose your gift",
+    "bg": "white",
+    "fit": "contain"
+   }
+  },
+  "steps": {
+   "type": "bb-story-steps",
+   "blocks": {
+    "s1": {
+     "type": "step",
+     "settings": {
+      "title": "Tell us what you need",
+      "text": "Quantity, budget, occasion and delivery date."
+     }
+    },
+    "s2": {
+     "type": "step",
+     "settings": {
+      "title": "We suggest the perfect set",
+      "text": "Jar combinations, packaging and personalisation options."
+     }
+    },
+    "s3": {
+     "type": "step",
+     "settings": {
+      "title": "We pack and deliver",
+      "text": "To one address or many, across the UK."
+     }
+    }
+   },
+   "block_order": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "settings": {
+    "illustration": "image",
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "heading": "Corporate and bulk gifting",
+    "text": "Ordering for a team or event? We make it simple.",
+    "btn_label": "Request a quote",
+    "btn_link": "shopify://pages/contact"
+   }
+  },
+  "jars": {
+   "type": "bb-product-grid",
+   "settings": {
+    "heading": "Build your own gift",
+    "text": "Pick any jars and we'll pack them together.",
+    "collection": "jar",
+    "limit": 8,
+    "columns": 4,
+    "quick_add": true,
+    "show_sold_out": false,
+    "center": false,
+    "button_label": "",
+    "bg": "paper"
+   }
+  },
+  "faq": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "Do you offer bulk or corporate pricing?",
+      "a": "<p>Yes. Send us your quantity and budget through our <a href=\"/pages/contact\">contact page</a> and we'll share options and pricing.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "Can you personalise the packaging?",
+      "a": "<p>Yes, personalised gift sets are available. Tell us what you'd like printed when you get in touch.</p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "Can you deliver to multiple addresses?",
+      "a": "<p>Yes. Share the address list with us and we'll handle the rest.</p>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "When should I order for Christmas?",
+      "a": "<p>For corporate and bulk orders, get in touch three to four weeks ahead so there's time to pack and dispatch. Individual orders are processed within 1–2 business days.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "How fast is UK delivery?",
+      "a": "<p>Orders are processed within 1–2 business days (Monday–Friday). UK Standard Delivery takes 3–5 business days and is free on orders over £40 (otherwise £3.99). UK Express Delivery takes 1–2 business days (£6.99). You'll get tracking details by email once your order ships. See <a href=\"/pages/shipping-delivery\">shipping &amp; delivery</a>.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5"
+   ],
+   "settings": {
+    "heading": "Gifting questions",
+    "open_first": true,
+    "bg": "white"
+   }
+  }
+ },
+ "order": [
+  "bb_global",
+  "hero",
+  "cards",
+  "steps",
+  "jars",
+  "faq"
+ ]
+}
