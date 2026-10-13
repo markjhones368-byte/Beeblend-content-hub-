@@ -293,12 +293,19 @@
   "sticky": {
    "type": "bb-sticky-atc",
    "settings": {}
+  },
+  "taste": {
+   "type": "uk-taste-profile",
+   "settings": {
+    "heading": "How it tastes"
+   }
   }
  },
  "order": [
   "bb_global",
   "crumbs",
   "main",
+  "taste",
   "assure",
   "compare",
   "reviews",

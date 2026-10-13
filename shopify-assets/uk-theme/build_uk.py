@@ -161,6 +161,42 @@ d['order']=['bb_global','hero','multicolumn_8GhCWm','faq']
 S.pop('main',None)
 save('templates/page.health-benefits.json',d)
 
+
+# ---------- v2: premium UK layer (honey picker hero, marquee, flavour journey, taste profile) ----------
+for root_,_,files in os.walk(B+'/ukextra'):
+    for f in files:
+        src=os.path.join(root_,f); rel=os.path.relpath(src,B+'/ukextra')
+        os.makedirs(os.path.dirname(OUT+'/'+rel),exist_ok=True); shutil.copy(src,OUT+'/'+rel)
+p=OUT+'/sections/bb-global.liquid'; s=open(p).read()
+s=s.replace("family=Figtree:wght@400;500;600;700&family=Young+Serif","family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..800,0..100,0..1&family=Young+Serif",1)
+s=s.replace("{{ 'bb-motion.css' | asset_url | stylesheet_tag }}","{{ 'bb-motion.css' | asset_url | stylesheet_tag }}\n{{ 'uk-skin.css' | asset_url | stylesheet_tag }}",1)
+assert 'uk-skin.css' in s and 'Fraunces' in s
+open(p,'w').write(s)
+HONEYS=[
+ ("kashmiri-acacia-honey","Kashmiri Acacia","#F4DE9A","dark","Light and floral","Kashmir valley","Light, clean and delicately sweet, with a hint of vanilla. It sweetens tea without changing its taste.","Tea, Lemon water, Yoghurt, Soft cheese"),
+ ("mustard-honey","Yellow Mustard","#EFC650","dark","Mild, turns creamy","From mustard blossom","Mild and floral with a gentle warmth. It turns naturally thick and creamy, a sign it hasn't been heated.","Toast, Dressings, Mature cheddar, Glazes"),
+ ("lychee-honey","Lychee Blossom","#E3B04B","dark","Fragrant and fruity","From lychee blossom","Fragrant and fruity, with soft rose-like notes. One of the most aromatic honeys we make.","Strawberries, Pancakes, Iced tea, Goat cheese"),
+ ("himalayan-multifloral-honey","Himalayan Multi-Flora","#CF8E2A","dark","Wildflower, gently spiced","High-altitude Himalayan regions","Wildflower sweetness with herbal, gently spiced notes and a clean finish. Our everyday honey.","Porridge, Everyday tea, Baking, Granola"),
+ ("fennel-honey","Wild Fennel","#B06E1E","light","Soft aniseed warmth","Mediterranean region","A soft aniseed aroma and warm herbal sweetness. Distinctive without being overpowering.","Herbal tea, Ricotta, Roast roots, Vinaigrettes"),
+ ("golden-nut-honey","Golden Nut","#A8742F","light","With almonds, cashews and dates","Raw honey, almonds, cashews and dates","Raw honey slow-infused with almonds, cashews and dates. Creamy, nutty and rich. Contains tree nuts.","Toast, Ice cream, Porridge, Cheese boards"),
+ ("sesame-honey","Black Sesame","#7E4614","light","Toasted and nutty","From sesame blossom","Toasted, nutty and caramel-deep, with a savoury edge that holds up in cooking.","Salmon glaze, Noodles, Aged cheese, Stir-fries"),
+]
+d=T('templates/index.json'); S=d['sections']
+hb={f"h{i+1}":{"type":"honey","settings":{"product":h,"name":nm,"note":note,"colour":c,"ink":ink}} for i,(h,nm,c,ink,note,o,notes,pairs) in enumerate(HONEYS)}
+S['hero']={"type":"uk-hero","blocks":hb,"block_order":list(hb),"settings":{"heading":"Raw honey that tastes of where it's from","text":"Seven single-origin honeys, raw and never heated, delivered across the UK. Pick one to meet it.","btn1_label":"Shop raw honey","btn1_link":"shopify://collections/jar","btn2_label":"Help me choose","btn2_link":"shopify://pages/which-honey-should-i-choose"}}
+mk=["Free UK delivery over £40","Raw and never heated","One flower, one region","Dispatched in 1–2 working days","Nothing added, ever"]
+mb={f"m{i+1}":{"type":"item","settings":{"text":t}} for i,t in enumerate(mk)}
+S['marquee']={"type":"uk-marquee","blocks":mb,"block_order":list(mb),"settings":{"bg":"#1F3A2E","fg":"#FFF8E8","accent":"#F2C14E","speed":45}}
+jb={f"j{i+1}":{"type":"honey","settings":{"product":h,"name":nm,"colour":c,"ink":ink,"origin":o,"notes":notes,"pairs":pairs}} for i,(h,nm,c,ink,note,o,notes,pairs) in enumerate(HONEYS)}
+S['journey']={"type":"uk-flavour-journey","blocks":jb,"block_order":list(jb),"settings":{"heading":"Seven honeys, from light to dark","text":"Every honey takes its colour and taste from the flowers the bees visited. Start with pale Kashmiri Acacia and finish with deep Black Sesame."}}
+for k in ['trust','spectrum','hero_product','story']: S.pop(k,None)
+d['order']=['bb_global','hero','bestsellers','marquee','journey','compare','reels','reviews','gifting','social','guides','faq']
+save('templates/index.json',d)
+d=T('templates/product.json')
+d['sections']['taste']={"type":"uk-taste-profile","settings":{"heading":"How it tastes"}}
+o=d['order']; o.insert(o.index('main')+1,'taste')
+save('templates/product.json',d)
+
 # ---------- final scrub ----------
 bad=re.compile(r'(?i)india|indian|₹|\+91|beeblend\.in\b|beeblendindia|diwali|rakhi|pure-honey-collection|/blogs/news|info@beeblend\.in')
 for root,_,files in os.walk(OUT+'/templates'):

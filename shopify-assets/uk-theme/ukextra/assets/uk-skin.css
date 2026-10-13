@@ -1,0 +1,34 @@
+/* BeeBlend UK skin: colour-led "honey spectrum" identity.
+   Display type: Fraunces (soft, slightly wonky terminals, like poured honey). Body: Figtree. */
+.bb{--uk-forest:#1F3A2E;--uk-pollen:#F2C14E;--uk-ink:#22201B;--uk-white:#FFFFFF;--uk-comb:#FBF3DC;--uk-ease:cubic-bezier(.22,1,.36,1);--uk-goo:cubic-bezier(.34,1.56,.64,1)}
+.bb h1,.bb h2,.bb h3,.uk h1,.uk h2,.uk h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 96;letter-spacing:-.025em;line-height:1.02}
+.bb-sec--paper{background:var(--uk-comb)}
+.bb-btn--gold{background:var(--uk-pollen);color:var(--uk-ink)}
+.bb-btn--gold:hover{background:#E3AE2E}
+.bb-btn--solid{background:var(--uk-forest)}
+.bb-btn{transition:background .25s,color .25s,border-color .25s,transform .35s var(--uk-ease,ease)}
+.bb-btn:active{transform:scale(.97)}
+
+/* Shared */
+.uk{--bb-forest:#1F3A2E;--bb-forest-2:#2C5140;--bb-gold:#C9921B;--bb-ink:#22201B;--bb-muted:#6B655B;--bb-line:#E7E0D2;--bb-paper:#FBF3DC;font-family:'Figtree',system-ui,sans-serif;color:var(--uk-ink);font-size:1.6rem;line-height:1.6;--uk-forest:#1F3A2E;--uk-pollen:#F2C14E;--uk-ink:#22201B;--uk-ease:cubic-bezier(.22,1,.36,1);--uk-goo:cubic-bezier(.34,1.56,.64,1)}
+.uk *,.uk *::before,.uk *::after{box-sizing:border-box}
+.uk p{margin:0}
+.uk img{display:block;max-width:100%}
+.uk-wrap{max-width:136rem;margin:0 auto;padding:0 clamp(1.6rem,4vw,4.8rem)}
+.uk a:focus-visible,.uk button:focus-visible{outline:2px solid var(--uk-forest);outline-offset:3px}
+.uk-disc{display:block;position:relative;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle at 50% 38%,#fff 0%,#FFF8E6 62%,#F5E6BF 100%);box-shadow:0 40px 80px -40px rgba(60,35,5,.45),inset 0 -14px 30px rgba(196,140,30,.18)}
+.uk-disc img{position:absolute;inset:9%;width:82%;height:82%;object-fit:contain;filter:drop-shadow(0 22px 26px rgba(70,40,5,.28))}
+.uk-sticker{position:absolute;display:grid;place-items:center;text-align:center;width:9.6rem;height:9.6rem;border-radius:50%;background:var(--uk-pollen);color:var(--uk-ink);font:700 1.4rem/1.1 'Figtree',sans-serif;transform:rotate(-12deg);box-shadow:0 10px 22px -10px rgba(0,0,0,.35)}
+.uk-sticker b{display:block;font:600 2.4rem/1 'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1}
+.uk-sizes{display:flex;flex-wrap:wrap;gap:1rem}
+.uk-sizes form{margin:0}
+.uk-size{display:inline-flex;align-items:center;gap:.8rem;min-height:5rem;padding:0 2.2rem;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;font:600 1.5rem/1 'Figtree',sans-serif;cursor:pointer;transition:background .25s,color .25s,transform .35s var(--uk-ease)}
+.uk-size span{font-weight:400;opacity:.8}
+.uk-size:hover{background:var(--uk-ink);color:#fff;border-color:var(--uk-ink)}
+.uk-size.is-added{background:var(--uk-forest);border-color:var(--uk-forest);color:#fff}
+.uk-size[disabled]{opacity:.45;cursor:not-allowed}
+[data-ink="light"] .uk-size:hover{background:#FFF8E8;color:var(--uk-ink);border-color:#FFF8E8}
+
+@media (prefers-reduced-motion: reduce){
+  .uk *,.uk *::before,.uk *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

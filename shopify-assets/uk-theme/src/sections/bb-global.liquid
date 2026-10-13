@@ -1,9 +1,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..800,0..100,0..1&family=Young+Serif&display=swap">
 {{ 'bb-premium.css' | asset_url | stylesheet_tag }}
 {{ 'bb-global.css' | asset_url | stylesheet_tag }}
 {{ 'bb-motion.css' | asset_url | stylesheet_tag }}
+{{ 'uk-skin.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'bb-motion.js' | asset_url }}" defer></script>
 {%- if template.name == 'index' and section.settings.include_schema -%}
 <script type="application/ld+json">

@@ -13,90 +13,95 @@
    }
   },
   "hero": {
-   "type": "bb-hero",
-   "settings": {
-    "video": "shopify://files/videos/video-bg.mp4",
-    "image": "shopify://shop_images/honey_drizzle_1.jpg",
-    "heading": "Raw honey that tastes of where it's from",
-    "subheading": "Rare, single-origin raw honeys from Kashmir, the Himalayas and beyond. Unheated, nothing added, delivered across the UK.",
-    "btn1_label": "Shop raw honey",
-    "btn1_link": "shopify://collections/jar",
-    "btn2_label": "Find your honey",
-    "eyebrow": "Single-origin · Raw · Unheated",
-    "show_cue": true,
-    "btn2_link": "shopify://pages/which-honey-should-i-choose"
-   }
-  },
-  "trust": {
-   "type": "bb-trust-bar",
+   "type": "uk-hero",
    "blocks": {
-    "t1": {
-     "type": "item",
+    "h1": {
+     "type": "honey",
      "settings": {
-      "icon": "drop",
-      "text": "Raw & unheated"
+      "product": "kashmiri-acacia-honey",
+      "name": "Kashmiri Acacia",
+      "note": "Light and floral",
+      "colour": "#F4DE9A",
+      "ink": "dark"
      }
     },
-    "t2": {
-     "type": "item",
+    "h2": {
+     "type": "honey",
      "settings": {
-      "icon": "pin",
-      "text": "Single-origin"
+      "product": "mustard-honey",
+      "name": "Yellow Mustard",
+      "note": "Mild, turns creamy",
+      "colour": "#EFC650",
+      "ink": "dark"
      }
     },
-    "t3": {
-     "type": "item",
+    "h3": {
+     "type": "honey",
      "settings": {
-      "icon": "leaf",
-      "text": "No added sugar or syrups"
+      "product": "lychee-honey",
+      "name": "Lychee Blossom",
+      "note": "Fragrant and fruity",
+      "colour": "#E3B04B",
+      "ink": "dark"
      }
     },
-    "t4": {
-     "type": "item",
+    "h4": {
+     "type": "honey",
      "settings": {
-      "icon": "truck",
-      "text": "Free UK delivery over £40"
+      "product": "himalayan-multifloral-honey",
+      "name": "Himalayan Multi-Flora",
+      "note": "Wildflower, gently spiced",
+      "colour": "#CF8E2A",
+      "ink": "dark"
      }
     },
-    "t5": {
-     "type": "item",
+    "h5": {
+     "type": "honey",
      "settings": {
-      "icon": "shield",
-      "text": "Secure checkout"
+      "product": "fennel-honey",
+      "name": "Wild Fennel",
+      "note": "Soft aniseed warmth",
+      "colour": "#B06E1E",
+      "ink": "light"
+     }
+    },
+    "h6": {
+     "type": "honey",
+     "settings": {
+      "product": "golden-nut-honey",
+      "name": "Golden Nut",
+      "note": "With almonds, cashews and dates",
+      "colour": "#A8742F",
+      "ink": "light"
+     }
+    },
+    "h7": {
+     "type": "honey",
+     "settings": {
+      "product": "sesame-honey",
+      "name": "Black Sesame",
+      "note": "Toasted and nutty",
+      "colour": "#7E4614",
+      "ink": "light"
      }
     }
    },
    "block_order": [
-    "t1",
-    "t2",
-    "t3",
-    "t4",
-    "t5"
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "h7"
    ],
-   "settings": {}
-  },
-  "hero_product": {
-   "type": "bb-feature-product",
    "settings": {
-    "product": "golden-nut-honey",
-    "layout": "spotlight",
-    "image": "shopify://shop_images/Golden_Nut_Honey_with_premium_nuts_and_dried_fruit.png",
-    "asset": "",
-    "badge": "Gift favourite",
-    "eyebrow": "Golden Nut Infusion",
-    "heading": "Raw honey, slow-infused with almonds, cashews and dates.",
-    "text": "Our most indulgent jar: creamy, nutty and naturally sweet, with real nut pieces in every spoonful. Made for toast, porridge, cheese boards, and for giving.",
-    "stat1_num": "",
-    "stat1_label": "",
-    "stat2_num": "160g",
-    "stat2_label": "or 250g",
-    "stat3_num": "No",
-    "stat3_label": "added sugar",
-    "spec_extra": "Contains tree nuts",
-    "btn_label": "Add to cart",
-    "link_label": "See the jar",
-    "note": "Raw honey · No added sugar · Free UK delivery over £40",
-    "bg": "paper"
+    "heading": "Raw honey that tastes of where it's from",
+    "text": "Seven single-origin honeys, raw and never heated, delivered across the UK. Pick one to meet it.",
+    "btn1_label": "Shop raw honey",
+    "btn1_link": "shopify://collections/jar",
+    "btn2_label": "Help me choose",
+    "btn2_link": "shopify://pages/which-honey-should-i-choose"
    }
   },
   "bestsellers": {
@@ -112,89 +117,6 @@
     "center": false,
     "button_label": "Shop all raw honey",
     "bg": "white"
-   }
-  },
-  "spectrum": {
-   "type": "bb-honey-spectrum",
-   "blocks": {
-    "h1": {
-     "type": "honey",
-     "settings": {
-      "product": "kashmiri-acacia-honey",
-      "name": "Kashmiri Acacia",
-      "colour": "#F4DE9A",
-      "origin": "Kashmir valley",
-      "taste": "Light, floral, delicate",
-      "pairs": "Green tea, lemon water"
-     }
-    },
-    "h2": {
-     "type": "honey",
-     "settings": {
-      "product": "mustard-honey",
-      "name": "Yellow Mustard",
-      "colour": "#EFC650",
-      "origin": "",
-      "taste": "Bold, bright, slightly peppery",
-      "pairs": "Cheese boards, dressings"
-     }
-    },
-    "h3": {
-     "type": "honey",
-     "settings": {
-      "product": "lychee-honey",
-      "name": "Lychee Blossom",
-      "colour": "#E3B04B",
-      "origin": "",
-      "taste": "Fruity, fragrant, smooth",
-      "pairs": "Fruit bowls, desserts"
-     }
-    },
-    "h4": {
-     "type": "honey",
-     "settings": {
-      "product": "himalayan-multifloral-honey",
-      "name": "Himalayan Multiflora",
-      "colour": "#CF8E2A",
-      "origin": "Himalayan foothills",
-      "taste": "Rounded wildflower sweetness",
-      "pairs": "Everyday sweetener"
-     }
-    },
-    "h5": {
-     "type": "honey",
-     "settings": {
-      "product": "fennel-honey",
-      "name": "Fennel",
-      "colour": "#B06E1E",
-      "origin": "",
-      "taste": "Herbal, with a soft aniseed finish",
-      "pairs": "Herbal tea, after meals"
-     }
-    },
-    "h6": {
-     "type": "honey",
-     "settings": {
-      "product": "sesame-honey",
-      "name": "Sesame",
-      "colour": "#7E4614",
-      "origin": "",
-      "taste": "Nutty, deep, savoury",
-      "pairs": "Marinades, roasted vegetables"
-     }
-    }
-   },
-   "block_order": [
-    "h1",
-    "h2",
-    "h3",
-    "h4",
-    "h5",
-    "h6"
-   ],
-   "settings": {
-    "heading": "Every honey has its own colour, and its own taste",
-    "text": "Lighter honeys are delicate and floral. Darker ones are deep and earthy. Tap a colour to meet the honey."
    }
   },
   "compare": {
@@ -350,44 +272,6 @@
     "count_text": ""
    }
   },
-  "story": {
-   "type": "bb-story-steps",
-   "blocks": {
-    "s1": {
-     "type": "step",
-     "settings": {
-      "title": "Bees gather nectar",
-      "text": "From a single dominant flower source in one region."
-     }
-    },
-    "s2": {
-     "type": "step",
-     "settings": {
-      "title": "The hive turns it into honey",
-      "text": "Bees evaporate the moisture and cap each cell with wax."
-     }
-    },
-    "s3": {
-     "type": "step",
-     "settings": {
-      "title": "We jar it raw",
-      "text": "Extracted and gently filtered, never heated, so the enzymes and flavour stay intact."
-     }
-    }
-   },
-   "block_order": [
-    "s1",
-    "s2",
-    "s3"
-   ],
-   "settings": {
-    "illustration": "hive_to_jar",
-    "heading": "From hive to jar, nothing added",
-    "text": "We work with beekeepers in specific regions and keep each harvest separate.",
-    "btn_label": "Read our story",
-    "btn_link": "shopify://pages/about-us"
-   }
-  },
   "gifting": {
    "type": "bb-gifting-banner",
    "settings": {
@@ -512,19 +396,167 @@
     "padding_top": 48,
     "padding_bottom": 48
    }
+  },
+  "marquee": {
+   "type": "uk-marquee",
+   "blocks": {
+    "m1": {
+     "type": "item",
+     "settings": {
+      "text": "Free UK delivery over £40"
+     }
+    },
+    "m2": {
+     "type": "item",
+     "settings": {
+      "text": "Raw and never heated"
+     }
+    },
+    "m3": {
+     "type": "item",
+     "settings": {
+      "text": "One flower, one region"
+     }
+    },
+    "m4": {
+     "type": "item",
+     "settings": {
+      "text": "Dispatched in 1–2 working days"
+     }
+    },
+    "m5": {
+     "type": "item",
+     "settings": {
+      "text": "Nothing added, ever"
+     }
+    }
+   },
+   "block_order": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+   ],
+   "settings": {
+    "bg": "#1F3A2E",
+    "fg": "#FFF8E8",
+    "accent": "#F2C14E",
+    "speed": 45
+   }
+  },
+  "journey": {
+   "type": "uk-flavour-journey",
+   "blocks": {
+    "j1": {
+     "type": "honey",
+     "settings": {
+      "product": "kashmiri-acacia-honey",
+      "name": "Kashmiri Acacia",
+      "colour": "#F4DE9A",
+      "ink": "dark",
+      "origin": "Kashmir valley",
+      "notes": "Light, clean and delicately sweet, with a hint of vanilla. It sweetens tea without changing its taste.",
+      "pairs": "Tea, Lemon water, Yoghurt, Soft cheese"
+     }
+    },
+    "j2": {
+     "type": "honey",
+     "settings": {
+      "product": "mustard-honey",
+      "name": "Yellow Mustard",
+      "colour": "#EFC650",
+      "ink": "dark",
+      "origin": "From mustard blossom",
+      "notes": "Mild and floral with a gentle warmth. It turns naturally thick and creamy, a sign it hasn't been heated.",
+      "pairs": "Toast, Dressings, Mature cheddar, Glazes"
+     }
+    },
+    "j3": {
+     "type": "honey",
+     "settings": {
+      "product": "lychee-honey",
+      "name": "Lychee Blossom",
+      "colour": "#E3B04B",
+      "ink": "dark",
+      "origin": "From lychee blossom",
+      "notes": "Fragrant and fruity, with soft rose-like notes. One of the most aromatic honeys we make.",
+      "pairs": "Strawberries, Pancakes, Iced tea, Goat cheese"
+     }
+    },
+    "j4": {
+     "type": "honey",
+     "settings": {
+      "product": "himalayan-multifloral-honey",
+      "name": "Himalayan Multi-Flora",
+      "colour": "#CF8E2A",
+      "ink": "dark",
+      "origin": "High-altitude Himalayan regions",
+      "notes": "Wildflower sweetness with herbal, gently spiced notes and a clean finish. Our everyday honey.",
+      "pairs": "Porridge, Everyday tea, Baking, Granola"
+     }
+    },
+    "j5": {
+     "type": "honey",
+     "settings": {
+      "product": "fennel-honey",
+      "name": "Wild Fennel",
+      "colour": "#B06E1E",
+      "ink": "light",
+      "origin": "Mediterranean region",
+      "notes": "A soft aniseed aroma and warm herbal sweetness. Distinctive without being overpowering.",
+      "pairs": "Herbal tea, Ricotta, Roast roots, Vinaigrettes"
+     }
+    },
+    "j6": {
+     "type": "honey",
+     "settings": {
+      "product": "golden-nut-honey",
+      "name": "Golden Nut",
+      "colour": "#A8742F",
+      "ink": "light",
+      "origin": "Raw honey, almonds, cashews and dates",
+      "notes": "Raw honey slow-infused with almonds, cashews and dates. Creamy, nutty and rich. Contains tree nuts.",
+      "pairs": "Toast, Ice cream, Porridge, Cheese boards"
+     }
+    },
+    "j7": {
+     "type": "honey",
+     "settings": {
+      "product": "sesame-honey",
+      "name": "Black Sesame",
+      "colour": "#7E4614",
+      "ink": "light",
+      "origin": "From sesame blossom",
+      "notes": "Toasted, nutty and caramel-deep, with a savoury edge that holds up in cooking.",
+      "pairs": "Salmon glaze, Noodles, Aged cheese, Stir-fries"
+     }
+    }
+   },
+   "block_order": [
+    "j1",
+    "j2",
+    "j3",
+    "j4",
+    "j5",
+    "j6",
+    "j7"
+   ],
+   "settings": {
+    "heading": "Seven honeys, from light to dark",
+    "text": "Every honey takes its colour and taste from the flowers the bees visited. Start with pale Kashmiri Acacia and finish with deep Black Sesame."
+   }
   }
  },
  "order": [
   "bb_global",
   "hero",
-  "trust",
-  "hero_product",
   "bestsellers",
-  "spectrum",
+  "marquee",
+  "journey",
   "compare",
   "reels",
   "reviews",
-  "story",
   "gifting",
   "social",
   "guides",
