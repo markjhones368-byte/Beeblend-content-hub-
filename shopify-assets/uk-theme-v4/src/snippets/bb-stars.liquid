@@ -1,0 +1,6 @@
+{%- comment -%} Usage: render 'bb-stars', rating: 4.8 {%- endcomment -%}
+{%- liquid
+  assign r = rating | default: 5 | times: 1.0
+  assign pct = r | divided_by: 5.0 | times: 100 | round
+-%}
+<span class="bb-stars" style="--bb-pct: {{ pct }}%;" role="img" aria-label="{{ r | round: 1 }} out of 5 stars">★★★★★</span>

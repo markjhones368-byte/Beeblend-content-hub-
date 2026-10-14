@@ -1,0 +1,385 @@
+{
+ "sections": {
+  "crumbs": {
+   "type": "bb-breadcrumbs",
+   "settings": {}
+  },
+  "main": {
+   "type": "main-product",
+   "blocks": {
+    "vendor": {
+     "type": "text",
+     "settings": {
+      "text": "{{ product.vendor }}",
+      "text_style": "body"
+     }
+    },
+    "title": {
+     "type": "title",
+     "settings": {}
+    },
+    "rating": {
+     "type": "rating",
+     "settings": {}
+    },
+    "price": {
+     "type": "price",
+     "settings": {}
+    },
+    "variant_picker": {
+     "type": "variant_picker",
+     "settings": {
+      "picker_type": "button",
+      "swatch_shape": "circle"
+     }
+    },
+    "quantity_selector": {
+     "type": "quantity_selector",
+     "settings": {}
+    },
+    "seal_subscriptions_subscription_widget_QrdYC9": {
+     "type": "shopify://apps/seal-subscriptions/blocks/subscription-widget/13b25004-a140-4ab7-b5fe-29918f759699",
+     "settings": {
+      "product": "{{product}}"
+     }
+    },
+    "buy_buttons": {
+     "type": "buy_buttons",
+     "settings": {
+      "show_dynamic_checkout": true,
+      "show_gift_card_recipient": true
+     }
+    },
+    "judge_me_reviews_preview_badge_nkg7Wm": {
+     "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {}
+    },
+    "description": {
+     "type": "description",
+     "disabled": true,
+     "settings": {}
+    },
+    "share": {
+     "type": "share",
+     "settings": {
+      "share_label": "Share"
+     }
+    }
+   },
+   "block_order": [
+    "vendor",
+    "title",
+    "rating",
+    "price",
+    "variant_picker",
+    "quantity_selector",
+    "seal_subscriptions_subscription_widget_QrdYC9",
+    "buy_buttons",
+    "judge_me_reviews_preview_badge_nkg7Wm",
+    "description",
+    "share"
+   ],
+   "settings": {
+    "enable_sticky_info": true,
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "media_size": "small",
+    "constrain_to_viewport": true,
+    "media_fit": "cover",
+    "gallery_layout": "thumbnail_slider",
+    "mobile_thumbnails": "hide",
+    "media_position": "left",
+    "image_zoom": "lightbox",
+    "hide_variants": true,
+    "enable_video_looping": true,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "taste": {
+   "type": "uk-taste-profile",
+   "settings": {
+    "heading": "How it tastes"
+   }
+  },
+  "assure": {
+   "type": "bb-product-assurance",
+   "blocks": {
+    "b1": {
+     "type": "badge",
+     "settings": {
+      "icon": "drop",
+      "title": "Raw honey",
+      "text": "Cold-extracted, never blended"
+     }
+    },
+    "b2": {
+     "type": "badge",
+     "settings": {
+      "icon": "pin",
+      "title": "Single-origin",
+      "text": "Distinctive floral sources"
+     }
+    },
+    "b3": {
+     "type": "badge",
+     "settings": {
+      "icon": "leaf",
+      "title": "100% natural",
+      "text": "No preservatives"
+     }
+    },
+    "b4": {
+     "type": "badge",
+     "settings": {
+      "icon": "shield",
+      "title": "Secure checkout",
+      "text": "Cards, Apple Pay, Google Pay"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ],
+   "settings": {}
+  },
+  "rich_text_NJQTHR": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "BeeBlend - Golden Nut Honey",
+    "text": "Rich, Luxurious & Made to Be Savoured BeeBlend Golden Nut Honey brings together smooth golden honey, premium nuts and naturally sweet dried fruits for a richly textured treat unlike anything else in the collection. Every spoonful delivers layers of soft fruit, satisfying crunch and deep honeyed sweetness, making it perfect for breakfast bowls, cheeseboards, desserts or enjoying straight from the jar.",
+    "center": true,
+    "bg": "white"
+   }
+  },
+  "image_with_text_fmKV3D": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Rich, Fruity & Wonderfully Crunchy",
+    "text": "<p>BeeBlend Golden Nut Honey is a luxurious blend of smooth golden honey, premium nuts and naturally sweet dried fruits, creating a beautifully rich texture in every spoonful. Every bite delivers layers of delicate sweetness, satisfying crunch and fruity depth, making it as enjoyable on artisan toast as it is paired with cheeses, yoghurt or desserts.</p><p>Perfect for elevating breakfast, grazing boards and homemade bakes, this gourmet honey transforms everyday moments into something truly special with its naturally indulgent flavour and irresistible texture.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/golden_nut_honey_nut_image.png",
+    "btn_label": "Recipes",
+    "btn_link": "shopify://blogs/recipes/golden-nut-honey-baked-camembert"
+   }
+  },
+  "image_with_text_LAMz9X": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Golden Nut Honey Baked Camembert",
+    "text": "<p><strong>Culinary Application</strong></p><p>Warm, creamy Camembert topped with BeeBlend Golden Nut Honey, toasted walnuts and fresh rosemary. As the cheese melts, the honey, dried fruits and nuts create a rich sweet-and-savoury topping that is perfect for sharing with crusty bread or crackers.</p><p>This would be the strongest recipe because it showcases the nuts and dried fruit already within the honey, photographs beautifully and feels noticeably different from your other culinary applications.</p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/golden_nut_honey_camembert_snack_recipe.png",
+    "btn_label": "Recipe Here",
+    "btn_link": "shopify://blogs/recipes/golden-nut-honey-baked-camembert"
+   }
+  },
+  "image_with_text_M4YzTh": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Our story",
+    "text": "<p>BeeBlend was founded with a passion for bringing authentic, pure honey to every home. We partner with local beekeepers and carefully select distinctive honeys that celebrate their origins, flavours and natural character. Every jar reflects our commitment to quality, purity and exceptional taste.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Bee_Keeper_Honey_Beeblend.jpg",
+    "btn_label": "About Us",
+    "btn_link": "shopify://pages/about-us"
+   }
+  },
+  "image_with_text_QHpCmM": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Discover the Collection",
+    "text": "<p>Every BeeBlend honey is a unique expression of nature, shaped by the blossoms our bees forage and the landscapes they call home. From delicate floral notes to bold gourmet flavours, our collection celebrates the incredible diversity of pure, artisan honey. </p><p><strong>Not sure where to begin?</strong> Our <strong>Assorted Taster Sachet Pack</strong> lets you sample the full collection and discover your perfect blend.</p><p>Every BeeBlend honey tells a different story, shaped by the flowers our bees forage and the unique landscapes they call home. From the delicate floral sweetness of <strong>Lychee</strong> and <strong>Kashmiri Acacia</strong>, to the aromatic warmth of <strong>Fennel</strong>, the bold nuttiness of <strong>Sesame</strong>, and the rich indulgence of <strong>Golden Nut</strong>, each variety offers its own distinctive character. Explore the distinctive character of Ayurveda Honey, the vibrant complexity of <strong>Himalayan Multi-Floral Honey</strong>, or the smooth, mellow sweetness of <strong>Mustard Honey</strong>. Whether you enjoy light and delicate flavours or rich, adventurous profiles, there's a BeeBlend honey crafted to suit every palate. Start with our <strong>Assorted Taster Sachet Pack</strong> and discover the blend that's perfect for you.<br/><br/></p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Honey_jars_collection_beeblend.jpg",
+    "btn_label": "Taste The Range",
+    "btn_link": "shopify://collections/all"
+   }
+  },
+  "collapsible_content_iwCxKa": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "What is BeeBlend Golden Nut Honey?",
+      "a": "<p>BeeBlend Golden Nut Honey is a gourmet honey blend combining smooth golden honey with premium nuts and naturally sweet dried fruits. The combination creates a rich, textured honey with sweetness, fruitiness and satisfying crunch.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "What does BeeBlend Golden Nut Honey taste like?",
+      "a": "<p>BeeBlend Golden Nut Honey has a rich honeyed sweetness complemented by nutty flavours and naturally sweet dried fruit. Unlike smooth traditional honey, every spoonful also offers contrasting soft fruit and crunchy textures. </p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "How is Golden Nut Honey different from regular honey?",
+      "a": "<p>Golden Nut Honey combines honey with nuts and dried fruits rather than being a plain single-floral or multi-floral honey. This gives BeeBlend Golden Nut Honey a richer texture and more indulgent flavour profile than traditional smooth honey.</p><h3></h3>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "What is Golden Nut Honey best used for?",
+      "a": "<p>BeeBlend Golden Nut Honey is ideal for spooning over yoghurt, porridge, overnight oats and toast. Its combination of honey, nuts and fruit also makes it particularly suited to cheeseboards, baked cheese and desserts.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "What cheese pairs well with Golden Nut Honey?",
+      "a": "<p>Golden Nut Honey works particularly well with creamy and strongly flavoured cheeses because its honey sweetness, dried fruit and nuts provide contrast. BeeBlend pairs Golden Nut Honey with baked Camembert in one of its featured recipes.</p>"
+     }
+    },
+    "q6": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I use BeeBlend Golden Nut Honey for breakfast?",
+      "a": "<p>Yes. BeeBlend Golden Nut Honey can be added to yoghurt, porridge, overnight oats or artisan toast. The combination of honey, dried fruit and nuts makes it especially well suited to breakfast and brunch dishes.</p>"
+     }
+    },
+    "q7": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I cook with Golden Nut Honey?",
+      "a": "<p>Yes. Golden Nut Honey can be used in both sweet and savoury recipes. Try it with baked cheese, roasted fruit, desserts and homemade bakes, or use it as a finishing spoonful where its nuts and dried fruit can remain part of the dish.</p><p></p>"
+     }
+    },
+    "q8": {
+     "type": "qa",
+     "settings": {
+      "q": "How should I store BeeBlend Golden Nut Honey?",
+      "a": "<p>Keep BeeBlend Golden Nut Honey tightly sealed in a cool, dry place away from direct sunlight. Because this product contains ingredients in addition to honey, Keep BeeBlend Golden Nut Honey tightly sealed in a cool, dry place away from direct sunlight. As this product contains nuts and dried fruit in addition to honey, always follow any specific storage instructions provided on the packaging.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8"
+   ],
+   "settings": {
+    "heading": "Golden Nut Honey FAQs",
+    "open_first": true,
+    "bg": "paper"
+   }
+  },
+  "text_scrolling_6BVxr4": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "hex",
+      "text": "100% Natural"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "No Preservatives"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Ethically Harvested"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3"
+   ],
+   "settings": {}
+  },
+  "1758803877d65caa9c": {
+   "type": "apps",
+   "blocks": {
+    "judge_me_reviews_review_widget_VWYWci": {
+     "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {
+      "review_data": "sample_data",
+      "max_width": 1200,
+      "show_shop_reviews": false,
+      "empty_state": "empty_widget"
+     }
+    },
+    "klip_coupons_klip_app_section_product_GpzLmc": {
+     "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+     "disabled": true,
+     "settings": {
+      "margin_top": 10,
+      "margin_bottom": 10
+     }
+    }
+   },
+   "block_order": [
+    "judge_me_reviews_review_widget_VWYWci",
+    "klip_coupons_klip_app_section_product_GpzLmc"
+   ],
+   "settings": {
+    "include_margins": true
+   }
+  },
+  "featured_blog_VxCrVE": {
+   "type": "featured-blog",
+   "name": "t:sections.featured-blog.presets.name",
+   "settings": {
+    "blog": "recipes",
+    "post_limit": 3,
+    "heading": "Delicious Honey Based Recipes",
+    "heading_size": "h1",
+    "columns_desktop": 3,
+    "show_view_all": true,
+    "show_image": true,
+    "show_date": true,
+    "show_author": false,
+    "color_scheme": "scheme-c67ad067-fc7c-447d-ab8d-88637cf67a38",
+    "padding_top": 36,
+    "padding_bottom": 36
+   }
+  },
+  "sticky": {
+   "type": "bb-sticky-atc",
+   "settings": {}
+  }
+ },
+ "order": [
+  "crumbs",
+  "main",
+  "taste",
+  "assure",
+  "rich_text_NJQTHR",
+  "image_with_text_fmKV3D",
+  "image_with_text_LAMz9X",
+  "image_with_text_M4YzTh",
+  "image_with_text_QHpCmM",
+  "collapsible_content_iwCxKa",
+  "text_scrolling_6BVxr4",
+  "1758803877d65caa9c",
+  "featured_blog_VxCrVE",
+  "sticky"
+ ]
+}

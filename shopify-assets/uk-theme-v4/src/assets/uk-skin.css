@@ -1,0 +1,48 @@
+/* BeeBlend UK: animation layer on top of the beeblend.in design (Young Serif + Figtree, forest, gold, paper). */
+:root{--uk-forest:#1F3A2E;--uk-pollen:#C9921B;--uk-ink:#24211C;--uk-comb:#FFFCF5;--uk-ease:cubic-bezier(.22,1,.36,1);--uk-goo:cubic-bezier(.34,1.56,.64,1)}
+.uk{--bb-forest:#1F3A2E;--bb-gold:#C9921B;--bb-ink:#24211C;--bb-muted:#6B655B;--bb-line:#E7E0D2;--bb-paper:#FFFCF5;--uk-pollen:#C9921B;font-family:'Figtree',system-ui,sans-serif;color:var(--uk-ink);font-size:1.6rem;line-height:1.6}
+.uk *,.uk *::before,.uk *::after{box-sizing:border-box}
+.uk p{margin:0}
+.uk img{display:block;max-width:100%}
+.uk-wrap{max-width:132rem;margin:0 auto;padding:0 2rem}
+.uk a:focus-visible,.uk button:focus-visible{outline:2px solid var(--bb-gold);outline-offset:3px}
+.uk h2,.uk h3{font-family:'Young Serif',Georgia,serif!important;font-weight:400!important;letter-spacing:-.01em!important;text-transform:none!important}
+.uk-disc{display:block;position:relative;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle at 50% 38%,#fff 0%,#FFF8E6 62%,#F2E2BA 100%);box-shadow:0 40px 80px -40px rgba(60,35,5,.45),inset 0 -14px 30px rgba(196,140,30,.18)}
+.uk-disc img{position:absolute;inset:9%;width:82%;height:82%;object-fit:contain;filter:drop-shadow(0 22px 26px rgba(70,40,5,.28))}
+.uk-sticker{position:absolute;display:grid;place-items:center;text-align:center;width:9.6rem;height:9.6rem;border-radius:50%;background:#C9921B;color:#1d1606;font:700 1.3rem/1.1 'Figtree',sans-serif;transform:rotate(-12deg);box-shadow:0 10px 22px -10px rgba(0,0,0,.35)}
+.uk-sticker b{display:block;font:400 2.2rem/1 'Young Serif',Georgia,serif}
+.uk-sizes{display:flex;flex-wrap:wrap;gap:1rem}
+.uk-sizes form{margin:0}
+.uk-size{display:inline-flex;align-items:center;gap:.8rem;min-height:5rem;padding:0 2.2rem;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;font:600 1.5rem/1 'Figtree',sans-serif;cursor:pointer;transition:background .25s,color .25s}
+.uk-size span{font-weight:400;opacity:.8}
+.uk-size:hover{background:#1F3A2E;color:#fff;border-color:#1F3A2E}
+.uk-size.is-added{background:#1F3A2E;border-color:#1F3A2E;color:#fff}
+.uk-size[disabled]{opacity:.45;cursor:not-allowed}
+[data-ink="light"] .uk-size:hover{background:#FFF8E8;color:#24211C;border-color:#FFF8E8}
+.ukj__ghost,.ukt dt,.ukh__jar figcaption b{font-family:'Young Serif',Georgia,serif!important;font-variation-settings:normal!important;font-weight:400!important}
+.ukj__item h3{font-size:clamp(4rem,5.6vw,7.6rem)!important;line-height:1!important}
+
+/* Scroll progress: a thin honey line across the top of the page */
+.uk-progress{position:fixed;left:0;top:0;right:0;height:3px;z-index:1000;background:linear-gradient(90deg,#F4DE9A,#C9921B);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+/* Product cards: 3D tilt with a soft light sweep */
+.uk-tilt{transform-style:preserve-3d;transition:transform .5s var(--uk-ease);will-change:transform}
+.uk-tilt.is-tilting{transition:transform .08s linear}
+.uk-tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.38),rgba(255,255,255,0) 55%);opacity:0;transition:opacity .4s;z-index:3}
+.uk-tilt.is-tilting::after{opacity:1}
+
+/* Fly-to-cart */
+.uk-fly{position:fixed;z-index:1001;border-radius:50%;object-fit:cover;pointer-events:none;box-shadow:0 20px 40px -12px rgba(60,35,5,.5)}
+@keyframes ukBump{0%{transform:scale(1)}35%{transform:scale(1.35)}70%{transform:scale(.92)}100%{transform:scale(1)}}
+.uk-bump{animation:ukBump .6s var(--uk-goo)}
+
+/* Hero: content lifts away as you scroll */
+.bb-hero__inner,.bb-hero__media video,.bb-hero__media img{will-change:transform}
+
+/* Eyebrow lines on section titles grow in (already in the beeblend.in motion layer); stat-style underline for links */
+.bb-head h2 .bb-w>span{display:inline-block}
+
+@media (prefers-reduced-motion: reduce){
+  .uk *,.uk *::before,.uk *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .uk-progress,.uk-tilt::after{display:none}
+}

@@ -1,0 +1,955 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "video_section_QdfyKG": {
+      "type": "video-section",
+      "name": "Video Banner",
+      "settings": {
+        "video": "shopify://files/videos/video-bg.mp4",
+        "text_name": "Crafted by Bees, Perfected by Nature",
+        "font_size": "100",
+        "subtitle": "Discover rare, single-origin honeys infused with nature’s finest ingredients.",
+        "subtitle_font_size": "18",
+        "button_text": "Shop Now",
+        "button_url": "shopify://collections/all",
+        "button_text1": "Explore Our Blends",
+        "button_url1": "shopify://collections/all",
+        "color_scheme": "scheme-92afd76a-68a9-449f-89d7-0c16f983dc5a",
+        "custom_class": "video_banner"
+      }
+    },
+    "image_banner_a99M6A": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_DPdDK8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Natural Flavoured Honey",
+            "heading_size": "hxl"
+          }
+        },
+        "text_VxgMT9": {
+          "type": "text",
+          "settings": {
+            "text": "BeeBlend is the epitome of refined sweetness — where rare, single-origin honeys meet impeccable purity. ",
+            "text_style": "body"
+          }
+        },
+        "buttons_p8Xmb9": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DPdDK8",
+        "text_VxgMT9",
+        "buttons_p8Xmb9"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/honey_011.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-a69bb7a8-37f6-465c-904b-b6c8df1c2cc6",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "left",
+        "show_text_below": false,
+        "custom_class": "hero_banner"
+      }
+    },
+    "text_scrolling_YeatrM": {
+      "type": "text-scrolling",
+      "disabled": true,
+      "name": "Text Scrolling",
+      "settings": {
+        "text_name": "Natural Flavoured Honey",
+        "font_size": "30",
+        "bg_color": "#cde0e6",
+        "text_color": "#010412",
+        "custom_class": "text_scroll"
+      }
+    },
+    "image_with_text_tYq3R8": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JAtgFC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our <em>bee</em> Story",
+            "heading_size": "h0"
+          }
+        },
+        "text_9Lzq64": {
+          "type": "text",
+          "settings": {
+            "text": "<p>BeeBlend was founded with a passion to bring authentic, pure honey to every home. We partner with local beekeepers and carefully craft blends that combine tradition with wellness. Every jar of BeeBlend is a promise of quality, purity, and natural goodness.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Dzq7re": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read More",
+            "button_link": "shopify://pages/about-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JAtgFC",
+        "text_9Lzq64",
+        "button_Dzq7re"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/b1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+        "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "custom_class": "bg_pattern left how_works right"
+      }
+    },
+    "multicolumn_k4LWab": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xwKFbG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/honeycomb_1.png",
+            "title": "Pure & Natural",
+            "text": "<p>100% natural, free<br/>from additives.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UxHMfG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/macadamia.png",
+            "title": "Artisanal Infusions",
+            "text": "<p>Unique blends with<br/>dry fruits, seeds & spices.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eWzQxk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/jar.png",
+            "title": "Sustainably Sourced",
+            "text": "<p>Ethical beekeeping, eco-friendly packaging.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4WyngG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/immune-system.png",
+            "title": "Wellness in Every Jar",
+            "text": "<p>Rich in antioxidants & immunity-boosting goodness.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_xwKFbG",
+        "column_UxHMfG",
+        "column_eWzQxk",
+        "column_4WyngG"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Choose <em>bee </em>BeeBlend",
+        "bg_image": "shopify://shop_images/honey__bg9.jpg",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "custom_class": "why_choose"
+      }
+    },
+    "text_scrolling_WNLnfY": {
+      "type": "text-scrolling",
+      "name": "Text Scrolling",
+      "settings": {
+        "text_name": "Best Selling Products",
+        "font_size": "45",
+        "bg_color": "#cde0e6",
+        "text_color": "#010412",
+        "custom_class": "text_scroll"
+      }
+    },
+    "featured_collection_MQcrBh": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "title": "",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 60
+      }
+    },
+    "image_with_text_8hbt9B": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_EBEapm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Substitute sugar with Healthy sugar <em>bee</em>",
+            "heading_size": "h0"
+          }
+        },
+        "text_JFL9PX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Replace suger with natural suger honey for health benifit and dont compromise with taste Enhance the health benefits by replacing sugar with natural sugar honey without sacrificing taste.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_aLFyPw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/about-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_EBEapm",
+        "text_JFL9PX",
+        "button_aLFyPw"
+      ],
+      "custom_css": [
+        ".image-with-text__media img {object-fit: contain;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Group_63_1.png",
+        "bg_image": "shopify://shop_images/bg_pattern_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-38770d95-55a0-4811-bbf2-1535a47fc389",
+        "color_scheme": "scheme-38770d95-55a0-4811-bbf2-1535a47fc389",
+        "padding_top": 60,
+        "padding_bottom": 56,
+        "custom_class": "bg_pattern left right"
+      }
+    },
+    "image_banner_hAnDan": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_GVrAAr": {
+          "type": "heading",
+          "settings": {
+            "heading": "From hive to jar, we bring you honey the way nature intended",
+            "heading_size": "h0"
+          }
+        },
+        "buttons_nDtC9W": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Discover Our Story",
+            "button_link_1": "shopify://pages/about-us",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GVrAAr",
+        "buttons_nDtC9W"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/honey_drizzle_1.jpg",
+        "image_overlay_opacity": 80,
+        "image_height": "small",
+        "image_behavior": "ambient",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-92afd76a-68a9-449f-89d7-0c16f983dc5a",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false,
+        "custom_class": "image_content"
+      }
+    },
+    "multicolumn_d6XMFY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_qCqaPy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_Bee_1.png",
+            "title": "<strong>Immune support & respiratory relief</strong>",
+            "text": "<p>Honey exhibits broad-spectrum antibacterial activity and accelerates healing of partial-thickness burns and infected surgical wounds—some medical-grade honeys are FDA‑approved for this purpose</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_kDaWWg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_Bee_1.png",
+            "title": "<strong>Cardiometabolic benefits</strong>",
+            "text": "<p>Moderate consumption (~2 tbsp/day) of unprocessed honey improves inflammation, fasting blood glucose, LDL/HDL cholesterol, and triglycerides, particularly with single-floral (monofloral) honeys</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Xn7XVk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_Bee_1.png",
+            "title": "<strong>Immune support & respiratory relief</strong>",
+            "text": "<p>Randomized trials show daily honey intake reduces incidence of acute respiratory symptoms and improves cough frequency/severity; honey has been demonstrated to enhance immune function</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_qCqaPy",
+        "column_kDaWWg",
+        "column_Xn7XVk"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center; margin-bottom: 70px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Health <em>bee </em>Benefits",
+        "bg_image": "shopify://shop_images/honey_bg3.jpg",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "custom_class": "health_benefits"
+      }
+    },
+    "multicolumn_fNnYkT": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_rTF8DY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/honeycomb_1.png",
+            "title": "Boost Your Day Naturally",
+            "text": "<p>Natural Energy Booster – A healthy alternative to processed sugar.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gh836i": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/immune-system.png",
+            "title": "Immunity & Wellness",
+            "text": "<p>Rich in antioxidants to strengthen your immune system.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UPt4Ng": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/moisturizer.png",
+            "title": "Digestive & Skin Support",
+            "text": "<p>Helps soothe digestion and supports natural skincare remedies.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zUxjwJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/coffee-cup.png",
+            "title": "Everyday Wellness",
+            "text": "<p>Add to tea, warm water, or even as a natural sweetener for cooking.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_rTF8DY",
+        "column_gh836i",
+        "column_UPt4Ng",
+        "column_zUxjwJ"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center; margin-bottom: 70px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Health <em>bee </em>Benefits",
+        "bg_image": "shopify://shop_images/honey_bg3.jpg",
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 72,
+        "custom_class": "health__benefits_home"
+      }
+    },
+    "image_banner_BFT3pE": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_BUKmRY": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Happens to Your Body When You Start Eating Honey Every Day",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_ggKTn9": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Watch Video",
+            "button_link_1": "https://www.youtube.com/watch?v=SaPpTJ5kocM",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BUKmRY",
+        "buttons_ggKTn9"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 100,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-7e904c94-2601-4f68-8cf7-261088340d92",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "custom_class": "image_content"
+      }
+    },
+    "rich_text_94R8dA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BCCRnH": {
+          "type": "heading",
+          "settings": {
+            "heading": "What WE Do",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BCCRnH"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "custom_class": "rich_text_class",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_CxdmCA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_azXLYy": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Happens to Your Body When You Start Eating Honey Every Day",
+            "heading_size": "hxxl"
+          }
+        },
+        "button_kLAhqU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Watch Video",
+            "button_link": "https://www.youtube.com/watch?v=SaPpTJ5kocM",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_azXLYy",
+        "button_kLAhqU"
+      ],
+      "custom_css": [
+        ".rich-text__blocks {max-width: 100%;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "custom_class": "rich_text_class",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "multirow_V47bbV": {
+      "type": "multirow",
+      "blocks": {
+        "row_BqVUHL": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/stp_1_ea72da60-8269-47e5-bd13-ca89b7bf1ac6.jpg",
+            "caption": "",
+            "heading": "Gathering Nectar",
+            "text": "<p>Bees use their straw-like tongues to suck nectar from flowers, storing it in their specialized “honey stomach” for the journey back to the hive.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_wGdDFc": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/stp_3_014486ea-5d36-40a1-9e15-1c2aeafe0e9c.jpg",
+            "caption": "",
+            "heading": "Transforming & Dehydrating",
+            "text": "<p>Bees use their straw-like tongues to suck nectar from flowers, storing it in their specialized “honey stomach” for the journey back to the hive.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_7EqzB6": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/step3.jpg",
+            "caption": "",
+            "heading": "Harvesting & Jarring",
+            "text": "<p>When cells are capped with wax (indicating the honey is ripe), beekeepers harvest the frames, remove the wax caps, extract the honey (e.g., by spinning), filter it, and pour it into jars</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_BqVUHL",
+        "row_wGdDFc",
+        "row_7EqzB6"
+      ],
+      "disabled": true,
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "row_color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "padding_top": 60,
+        "padding_bottom": 84,
+        "custom_class": "process"
+      }
+    },
+    "collection_list_YR74Ua": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_bMPXhr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "candles"
+          }
+        },
+        "featured_collection_86KCBQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifts"
+          }
+        },
+        "featured_collection_6t4mVy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "candles"
+          }
+        },
+        "featured_collection_P47Khk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "honeycomb"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_bMPXhr",
+        "featured_collection_86KCBQ",
+        "featured_collection_6t4mVy",
+        "featured_collection_P47Khk"
+      ],
+      "custom_css": [],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Our Collections <em>bee</em>",
+        "bg_image": "shopify://shop_images/05.png",
+        "custom_class": "bg_pattern left",
+        "heading_size": "h0",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-38770d95-55a0-4811-bbf2-1535a47fc389",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 88
+      }
+    },
+    "image_with_text_63xW3b": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_iYVVL8": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Gathering Nectar</h2><p>Bees use their straw-like tongues to suck nectar from flowers, storing it in their specialized “honey stomach” for the journey back to the hive.</p><h2>Transforming & Dehydrating</h2><p>Bees use their straw-like tongues to suck nectar from flowers, storing it in their specialized “honey stomach” for the journey back to the hive.</p><h2>Harvesting & Jarring</h2><p>When cells are capped with wax (indicating the honey is ripe), beekeepers harvest the frames, remove the wax caps, extract the honey (e.g., by spinning), filter it, and pour it into jars</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_iYVVL8"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/generated-image_1.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+        "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "custom_class": "process_steps"
+      }
+    },
+    "testimonials_hYfjLM": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_6i3Gbf": {
+          "type": "testimonial",
+          "settings": {
+            "t_desc": "<p>“The best honey I’veever tasted – rich, smooth, and so pure!”</p>",
+            "t_title": "Emma R",
+            "t_position": ""
+          }
+        },
+        "testimonial_ttEt4V": {
+          "type": "testimonial",
+          "settings": {
+            "t_desc": "<p>“The best honey I’ve<br/>ever tasted – rich, smooth, and so pure!” </p>",
+            "t_title": "Emma R",
+            "t_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_6i3Gbf",
+        "testimonial_ttEt4V"
+      ],
+      "name": "Testimonials Section",
+      "settings": {
+        "bg_img": "shopify://shop_images/other-bg.jpg",
+        "test_heading": "Words from Our Customers bee",
+        "tdesc": "Honey has always beenmore than sweetness – it’s nature’s medicine. BeeBlend is our way of sharingthis gift with the world.",
+        "button_text": "Shop Now",
+        "button_url": "shopify://collections/all",
+        "title_font_size": "24",
+        "title_color": "#010412",
+        "content_font_size": "33",
+        "content_color": "#010412",
+        "image_size": "150",
+        "custom_class": "testimonials",
+        "container_width": "1200",
+        "padding_top": 88,
+        "padding_bottom": 80,
+        "padding_left": 20,
+        "padding_right": 20,
+        "space_between_slides": "10",
+        "dots_size": "13",
+        "dots_color": "#000000"
+      }
+    },
+    "logo_grid_kVhfhk": {
+      "type": "logo-grid",
+      "blocks": {
+        "logos_JLjQJC": {
+          "type": "logos",
+          "settings": {
+            "logo_img": "shopify://shop_images/logoipsum.png",
+            "logo_link": ""
+          }
+        },
+        "logos_TLXPEb": {
+          "type": "logos",
+          "settings": {
+            "logo_img": "shopify://shop_images/logoipsum.png",
+            "logo_link": ""
+          }
+        },
+        "logos_dq8mmK": {
+          "type": "logos",
+          "settings": {
+            "logo_img": "shopify://shop_images/logoipsum.png",
+            "logo_link": ""
+          }
+        },
+        "logos_Ycd3ca": {
+          "type": "logos",
+          "settings": {
+            "logo_img": "shopify://shop_images/logoipsum.png",
+            "logo_link": ""
+          }
+        },
+        "logos_4DjRd7": {
+          "type": "logos",
+          "settings": {
+            "logo_img": "shopify://shop_images/logoipsum.png",
+            "logo_link": ""
+          }
+        },
+        "logos_kMkPGR": {
+          "type": "logos",
+          "settings": {
+            "logo_img": "shopify://shop_images/logoipsum.png",
+            "logo_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logos_JLjQJC",
+        "logos_TLXPEb",
+        "logos_dq8mmK",
+        "logos_Ycd3ca",
+        "logos_4DjRd7",
+        "logos_kMkPGR"
+      ],
+      "name": "Logo Section",
+      "settings": {
+        "test_heading": "Where to <em>bee</em> find us",
+        "desktop_grid": 6,
+        "tablet_grid": 3,
+        "mobile_grid": 2,
+        "bg_color": "#f2f2f2",
+        "logo_color": "#ffffff",
+        "logo_size": "150",
+        "padding_top": 42,
+        "padding_bottom": 66,
+        "padding_left": 50,
+        "padding_right": 50,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "custom_class": "image_content"
+      }
+    },
+    "text_scrolling_khjh3U": {
+      "type": "text-scrolling",
+      "name": "Text Scrolling",
+      "settings": {
+        "text_name": "crafted by bees perfected by flvores",
+        "font_size": "35",
+        "bg_color": "#cde0e6",
+        "text_color": "#010412",
+        "custom_class": "text_scroll2"
+      }
+    },
+    "image_with_text_dDHrjn": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_CWxdrY": {
+          "type": "heading",
+          "settings": {
+            "heading": "How <em>bee </em>Beeblend works",
+            "heading_size": "h0"
+          }
+        },
+        "text_GgME6E": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We source pure nectar from specific blossoms—so each flavour (lychee, mustard, fennel, sesame, dry-fruit infusions, Himalayan multi-flora) gets its unique character.</p><p>Natural processing, from hive to jar: We never overheat or over-filter, preserving aroma, color, enzymes, and floral notes.</p><p>Harvest only when fully capped: That ensures moisture is low, flavour is full, and your honey stays fresh and stable.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_GGGgTw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CWxdrY",
+        "text_GgME6E",
+        "button_GGGgTw"
+      ],
+      "custom_css": [
+        ".how_works {background-position: right;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/WhatsAppImage2025-07-25at1.44.03AM.jpg",
+        "bg_image": "shopify://shop_images/honey__bg4.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "padding_top": 100,
+        "padding_bottom": 76,
+        "custom_class": "bg_pattern left how_works"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "video_section_QdfyKG",
+    "image_banner_a99M6A",
+    "text_scrolling_YeatrM",
+    "image_with_text_tYq3R8",
+    "multicolumn_k4LWab",
+    "text_scrolling_WNLnfY",
+    "featured_collection_MQcrBh",
+    "image_with_text_8hbt9B",
+    "image_banner_hAnDan",
+    "multicolumn_d6XMFY",
+    "multicolumn_fNnYkT",
+    "image_banner_BFT3pE",
+    "rich_text_94R8dA",
+    "rich_text_CxdmCA",
+    "multirow_V47bbV",
+    "collection_list_YR74Ua",
+    "image_with_text_63xW3b",
+    "testimonials_hYfjLM",
+    "logo_grid_kVhfhk",
+    "text_scrolling_khjh3U",
+    "image_with_text_dDHrjn"
+  ]
+}

@@ -1,0 +1,188 @@
+{%- liquid
+  assign sid = 'ukj-' | append: section.id
+  assign n = section.blocks.size
+  assign first = section.blocks.first
+-%}
+<style>
+  #{{ sid }}{--n:{{ n }};--c:{{ first.settings.colour | default: '#F4DE9A' }};--prog:0;--p:.5;background:#fff}
+  #{{ sid }} .ukj__head{padding-top:clamp(4.8rem,8vw,9.6rem);padding-bottom:clamp(3.2rem,4vw,4.8rem);display:grid;gap:1.6rem;max-width:132rem;margin:0 auto}
+  @media(min-width:990px){#{{ sid }} .ukj__head{grid-template-columns:1fr 1fr;align-items:end}}
+  #{{ sid }} .ukj__head h2{font-size:clamp(3rem,4.4vw,4.8rem);max-width:16ch}
+  #{{ sid }} .ukj__head p{max-width:52ch;font-size:1.7rem;color:#6B655B}
+  #{{ sid }} .ukj__item{--ic:#F4DE9A;color:var(--uk-ink)}
+  #{{ sid }} .ukj__item[data-ink="light"]{color:#FFF8E8}
+  #{{ sid }} .ukj__count{font:600 1.4rem/1 'Figtree',sans-serif;opacity:.7}
+  #{{ sid }} .ukj__item h3{font-size:clamp(4.4rem,6.4vw,9.2rem);line-height:.92;letter-spacing:-.035em;margin:1.2rem 0 0}
+  #{{ sid }} .ukj__origin{margin-top:1.4rem;font-size:1.6rem;opacity:.8}
+  #{{ sid }} .ukj__notes{margin-top:2rem;max-width:40ch;font-size:clamp(1.7rem,1.5vw,2rem);line-height:1.5}
+  #{{ sid }} .ukj__pairs{display:flex;flex-wrap:wrap;gap:.8rem;margin:2rem 0 0;padding:0;list-style:none}
+  #{{ sid }} .ukj__pairs li{padding:.8rem 1.4rem;border-radius:999px;background:rgba(255,255,255,.5);font-size:1.4rem;font-weight:500}
+  #{{ sid }} .ukj__item[data-ink="light"] .ukj__pairs li{background:rgba(255,255,255,.14)}
+  #{{ sid }} .ukj__buy{display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem 2rem;margin-top:3rem}
+  #{{ sid }} .ukj__more{color:inherit;font-weight:600;font-size:1.5rem;text-underline-offset:.4rem}
+  #{{ sid }} .ukj__media{position:relative}
+  #{{ sid }} .ukj__media .uk-disc{width:min(100%,52rem);margin:0 auto}
+  #{{ sid }} .ukj__media .uk-sticker{top:2%;right:4%}
+  #{{ sid }} .ukj__ghost{position:absolute;left:0;bottom:-.18em;white-space:nowrap;font:700 clamp(14rem,21vw,30rem)/1 'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1;letter-spacing:-.045em;color:currentColor;opacity:.07;transform:translateX(calc((0.5 - var(--p)) * 18%));pointer-events:none;z-index:0}
+  #{{ sid }} .ukj__rail{display:none}
+
+  /* Desktop: sticky scroll story */
+  @media(min-width:990px){
+    #{{ sid }} .ukj__scroller{position:relative;height:calc(var(--n) * 80vh + 20vh)}
+    #{{ sid }} .ukj__sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--c);transition:background-color .9s var(--uk-ease)}
+    #{{ sid }} .ukj__items{position:relative;height:100%;max-width:136rem;margin:0 auto}
+    #{{ sid }} .ukj__item{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;padding:0 clamp(6.4rem,7vw,11rem);visibility:hidden;transition:visibility 0s .8s}
+    #{{ sid }} .ukj__item.is-on{visibility:visible;transition:visibility 0s}
+    #{{ sid }} .ukj__item>*{min-width:0}
+    #{{ sid }} .ukj__copy{position:relative;z-index:2}
+    #{{ sid }} .ukj__copy>*{opacity:0;transform:translateY(3.2rem);transition:opacity .45s,transform .8s var(--uk-ease)}
+    #{{ sid }} .ukj__item.is-on .ukj__copy>*{opacity:1;transform:none;transition-delay:calc(var(--k,0) * 60ms + 120ms)}
+    #{{ sid }} .ukj__item.is-past .ukj__copy>*{transform:translateY(-3.2rem)}
+    #{{ sid }} .ukj__media{z-index:1;position:relative}
+    #{{ sid }} .ukj__media .uk-disc{opacity:0;transform:translateY(34%) rotate(16deg) scale(.86);transition:opacity .5s,transform 1s var(--uk-goo)}
+    #{{ sid }} .ukj__item.is-on .uk-disc{opacity:1;transform:rotate(calc((var(--p) - .5) * -10deg))}
+    #{{ sid }} .ukj__item.is-past .uk-disc{transform:translateY(-34%) rotate(-16deg) scale(.86)}
+    #{{ sid }} .ukj__ghost{opacity:0;transition:opacity .6s}
+    #{{ sid }} .ukj__item{overflow:hidden}
+    #{{ sid }} .ukj__item.is-on .ukj__ghost{opacity:.07}
+    #{{ sid }} .ukj__marks{position:absolute;inset:0;pointer-events:none}
+    #{{ sid }} .ukj__marks div{height:80vh}
+    #{{ sid }} .ukj__rail{display:flex;flex-direction:column;align-items:center;gap:1.2rem;position:absolute;left:clamp(2rem,2.4vw,3.6rem);top:50%;transform:translateY(-50%);z-index:3;margin:0;padding:0;list-style:none}
+    #{{ sid }} .ukj__rail button{width:1.6rem;height:1.6rem;border-radius:50%;border:2px solid rgba(34,32,27,.55);background:var(--dot);cursor:pointer;padding:0;transition:transform .4s var(--uk-goo)}
+    #{{ sid }} .ukj__rail button[aria-current="true"]{transform:scale(1.5);border-color:var(--uk-ink)}
+    #{{ sid }} .ukj__fill{position:absolute;left:0;right:0;bottom:0;height:.5rem;background:rgba(0,0,0,.08)}
+    #{{ sid }} .ukj__fill i{display:block;height:100%;width:calc(var(--prog) * 100%);background:var(--uk-ink);opacity:.7}
+  }
+  /* Mobile and tablet: swipeable cards */
+  @media(max-width:989px){
+    #{{ sid }} .ukj__marks,#{{ sid }} .ukj__fill{display:none}
+    #{{ sid }} .ukj__items{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 2rem 4rem;scrollbar-width:none}
+    #{{ sid }} .ukj__items::-webkit-scrollbar{display:none}
+    #{{ sid }} .ukj__item{flex:0 0 86%;scroll-snap-align:center;display:flex;flex-direction:column-reverse;gap:2.4rem;padding:3.2rem 2.4rem;border-radius:2.8rem;background:var(--ic);position:relative;overflow:hidden}
+    #{{ sid }} .ukj__media .uk-disc{width:76%}
+    #{{ sid }} .ukj__ghost{display:none}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #{{ sid }} .ukj__ghost{transform:translate(-50%,-50%)}
+    #{{ sid }} .ukj__item.is-on .uk-disc{transform:none}
+  }
+</style>
+<section class="uk ukj" id="{{ sid }}">
+  <div class="uk-wrap ukj__head">
+    <div class="bb-head" style="margin:0"><h2>{{ section.settings.heading }}</h2></div>
+    {%- if section.settings.text != blank -%}<p>{{ section.settings.text }}</p>{%- endif -%}
+  </div>
+  <div class="ukj__scroller">
+    <div class="ukj__marks" aria-hidden="true">{%- for block in section.blocks -%}<div data-ukj-mark="{{ forloop.index0 }}"></div>{%- endfor -%}</div>
+    <div class="ukj__sticky">
+      <ul class="ukj__rail" aria-label="Jump to a honey">
+        {%- for block in section.blocks -%}
+          {%- assign bp = block.settings.product -%}
+          <li><button type="button" data-ukj-go="{{ forloop.index0 }}" style="--dot: {{ block.settings.colour }};" aria-label="{{ block.settings.name | default: bp.title | escape }}" {% if forloop.first %}aria-current="true"{% endif %}></button></li>
+        {%- endfor -%}
+      </ul>
+      <div class="ukj__items">
+        {%- for block in section.blocks -%}
+          {%- assign bp = block.settings.product -%}
+          {%- if bp != blank -%}
+          {%- assign nm = block.settings.name | default: bp.title -%}
+          <article class="ukj__item{% if forloop.first %} is-on{% endif %}" data-ukj-item="{{ forloop.index0 }}" data-c="{{ block.settings.colour }}" data-ink="{{ block.settings.ink }}" style="--ic: {{ block.settings.colour }};" {{ block.shopify_attributes }}>
+            <span class="ukj__ghost" aria-hidden="true">{{ nm | split: ' ' | first }}</span>
+            <div class="ukj__copy">
+              <p class="ukj__count" style="--k:0">Honey {{ forloop.index }} of {{ n }}</p>
+              <h3 style="--k:1">{{ nm }}</h3>
+              {%- if block.settings.origin != blank -%}<p class="ukj__origin" style="--k:2">{{ block.settings.origin }}</p>{%- endif -%}
+              {%- if block.settings.notes != blank -%}<p class="ukj__notes" style="--k:3">{{ block.settings.notes }}</p>{%- endif -%}
+              {%- if block.settings.pairs != blank -%}
+                {%- assign pairs = block.settings.pairs | split: ',' -%}
+                <ul class="ukj__pairs" style="--k:4" aria-label="Best with">{%- for x in pairs -%}<li>{{ x | strip }}</li>{%- endfor -%}</ul>
+              {%- endif -%}
+              <div class="ukj__buy" style="--k:5">
+                <div class="uk-sizes">
+                  {%- for v in bp.variants limit: 3 -%}
+                    {%- form 'product', bp, data-bb-quick-add: '' -%}
+                      <input type="hidden" name="id" value="{{ v.id }}">
+                      <input type="hidden" name="quantity" value="1">
+                      <button type="submit" class="uk-size" {% unless v.available %}disabled{% endunless %} aria-label="Add {{ nm | escape }} {{ v.title | replace: 'gm', 'g' | escape }} to cart">{%- if bp.has_only_default_variant -%}Add to cart{%- else -%}{{ v.title | replace: 'gm', 'g' }}{%- endif -%} <span>{% if v.available %}{{ v.price | money_without_trailing_zeros }}{% else %}Sold out{% endif %}</span></button>
+                    {%- endform -%}
+                  {%- endfor -%}
+                </div>
+                <a class="ukj__more" href="{{ bp.url }}">More about {{ nm }}</a>
+              </div>
+            </div>
+            <div class="ukj__media">
+              <a class="uk-disc" href="{{ bp.url }}" tabindex="-1" aria-hidden="true">
+                {{ bp.featured_media | image_url: width: 900 | image_tag: loading: 'lazy', widths: '450, 700, 900', sizes: '(min-width: 990px) 40vw, 70vw', alt: '' }}
+                <span class="uk-sticker"><span>from<b>{{ bp.price_min | money_without_trailing_zeros }}</b></span></span>
+              </a>
+            </div>
+          </article>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="ukj__fill" aria-hidden="true"><i></i></div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var root=document.getElementById('{{ sid }}'); if(!root) return;
+  var items=root.querySelectorAll('[data-ukj-item]'), marks=root.querySelectorAll('[data-ukj-mark]'), dots=root.querySelectorAll('[data-ukj-go]');
+  var scroller=root.querySelector('.ukj__scroller'), cur=0, n=items.length;
+  var mq=window.matchMedia('(min-width: 990px)');
+  function setActive(i){
+    if(i===cur) return;
+    items.forEach(function(it,k){ it.classList.toggle('is-on',k===i); it.classList.toggle('is-past',k<i); });
+    dots.forEach(function(d,k){ if(k===i){d.setAttribute('aria-current','true');}else{d.removeAttribute('aria-current');} });
+    root.style.setProperty('--c', items[i].getAttribute('data-c'));
+    cur=i;
+  }
+  var io=new IntersectionObserver(function(es){
+    if(!mq.matches) return;
+    es.forEach(function(e){ if(e.isIntersecting) setActive(+e.target.getAttribute('data-ukj-mark')); });
+  },{rootMargin:'-50% 0px -50% 0px'});
+  marks.forEach(function(m){ io.observe(m); });
+  var ticking=false;
+  function onScroll(){
+    if(ticking||!mq.matches) return; ticking=true;
+    requestAnimationFrame(function(){
+      var r=scroller.getBoundingClientRect(), span=r.height-window.innerHeight;
+      var prog=Math.min(1,Math.max(0,-r.top/(span||1)));
+      root.style.setProperty('--prog',prog.toFixed(4));
+      var step=Math.min(1,Math.max(0,prog*n-cur));
+      root.style.setProperty('--p',step.toFixed(4));
+      ticking=false;
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  dots.forEach(function(d){
+    d.addEventListener('click',function(){
+      var i=+d.getAttribute('data-ukj-go'), m=marks[i]; if(!m) return;
+      var top=m.getBoundingClientRect().top+window.pageYOffset+m.offsetHeight*0.5-window.innerHeight*0.5+1;
+      window.scrollTo({top:top,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    });
+  });
+})();
+</script>
+{% schema %}
+{
+  "name": "UK Flavour journey",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Seven honeys, from light to dark" },
+    { "type": "textarea", "id": "text", "label": "Text" }
+  ],
+  "blocks": [
+    { "type": "honey", "name": "Honey", "limit": 8, "settings": [
+      { "type": "product", "id": "product", "label": "Product" },
+      { "type": "text", "id": "name", "label": "Short name" },
+      { "type": "color", "id": "colour", "label": "Honey colour", "default": "#F4DE9A" },
+      { "type": "select", "id": "ink", "label": "Text colour on this honey", "default": "dark", "options": [ { "value": "dark", "label": "Dark" }, { "value": "light", "label": "Light" } ] },
+      { "type": "text", "id": "origin", "label": "Origin line" },
+      { "type": "textarea", "id": "notes", "label": "Taste notes" },
+      { "type": "text", "id": "pairs", "label": "Best with (comma separated)" }
+    ] }
+  ],
+  "presets": [ { "name": "UK Flavour journey" } ]
+}
+{% endschema %}

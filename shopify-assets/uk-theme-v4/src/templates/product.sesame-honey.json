@@ -1,0 +1,376 @@
+{
+ "sections": {
+  "crumbs": {
+   "type": "bb-breadcrumbs",
+   "settings": {}
+  },
+  "main": {
+   "type": "main-product",
+   "blocks": {
+    "vendor": {
+     "type": "text",
+     "settings": {
+      "text": "{{ product.vendor }} Artisan Organic Honey",
+      "text_style": "body"
+     }
+    },
+    "title": {
+     "type": "title",
+     "settings": {}
+    },
+    "rating": {
+     "type": "rating",
+     "settings": {}
+    },
+    "price": {
+     "type": "price",
+     "settings": {}
+    },
+    "variant_picker": {
+     "type": "variant_picker",
+     "settings": {
+      "picker_type": "button",
+      "swatch_shape": "circle"
+     }
+    },
+    "quantity_selector": {
+     "type": "quantity_selector",
+     "settings": {}
+    },
+    "buy_buttons": {
+     "type": "buy_buttons",
+     "settings": {
+      "show_dynamic_checkout": true,
+      "show_gift_card_recipient": true
+     }
+    },
+    "judge_me_reviews_preview_badge_nkg7Wm": {
+     "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {}
+    },
+    "description": {
+     "type": "description",
+     "disabled": true,
+     "settings": {}
+    },
+    "share": {
+     "type": "share",
+     "settings": {
+      "share_label": "Share"
+     }
+    }
+   },
+   "block_order": [
+    "vendor",
+    "title",
+    "rating",
+    "price",
+    "variant_picker",
+    "quantity_selector",
+    "buy_buttons",
+    "judge_me_reviews_preview_badge_nkg7Wm",
+    "description",
+    "share"
+   ],
+   "settings": {
+    "enable_sticky_info": true,
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "media_size": "small",
+    "constrain_to_viewport": true,
+    "media_fit": "cover",
+    "gallery_layout": "thumbnail_slider",
+    "mobile_thumbnails": "hide",
+    "media_position": "left",
+    "image_zoom": "lightbox",
+    "hide_variants": true,
+    "enable_video_looping": true,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "taste": {
+   "type": "uk-taste-profile",
+   "settings": {
+    "heading": "How it tastes"
+   }
+  },
+  "assure": {
+   "type": "bb-product-assurance",
+   "blocks": {
+    "b1": {
+     "type": "badge",
+     "settings": {
+      "icon": "drop",
+      "title": "Raw honey",
+      "text": "Cold-extracted, never blended"
+     }
+    },
+    "b2": {
+     "type": "badge",
+     "settings": {
+      "icon": "pin",
+      "title": "Single-origin",
+      "text": "Distinctive floral sources"
+     }
+    },
+    "b3": {
+     "type": "badge",
+     "settings": {
+      "icon": "leaf",
+      "title": "100% natural",
+      "text": "No preservatives"
+     }
+    },
+    "b4": {
+     "type": "badge",
+     "settings": {
+      "icon": "shield",
+      "title": "Secure checkout",
+      "text": "Cards, Apple Pay, Google Pay"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ],
+   "settings": {}
+  },
+  "rich_text_fmD9xQ": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "BeeBlend | Sesame Honey",
+    "text": "Sesame Honey is BeeBlend's boldest expression a rare and distinctive honey crafted from bees that forage among flowering sesame fields. The result is an extraordinary honey with remarkable depth, balancing natural sweetness with rich, nutty complexity. This is honey, reimagined.",
+    "center": true,
+    "bg": "white"
+   }
+  },
+  "image_with_text_grAN3e": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "The Rich Nutty Flavour of Sesame",
+    "text": "<p><strong>Gourmet Artisan Honey</strong></p><p>Rich, bold, and wonderfully distinctive, Sesame Honey offers layers of toasted nuttiness balanced by smooth caramel sweetness. A subtle savoury finish adds remarkable depth, making it equally at home in both sweet and savoury dishes.</p><p><strong>Flavour Notes:</strong> Toasted Sesame • Nutty • Caramel • Warm • Subtly Smoky</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Honey_Glazed_Salmon_2.jpg"
+   }
+  },
+  "image_with_text_9tmHKb": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Sesame Honey Glazed Salmon",
+    "text": "<p><strong>Culinary Application</strong></p><p>Brush fresh salmon fillets with <strong>BeeBlend Sesame Honey</strong>, a splash of soy sauce, grated ginger, and a touch of garlic. Roast until the salmon is perfectly flaky and caramelised, allowing the honey to create a rich, glossy glaze with irresistible toasted notes. Finish with a sprinkle of sesame seeds and sliced spring onions, then serve with steamed rice and crisp greens for an effortlessly elegant meal.</p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Honey_Glazed_Salmon.jpg",
+    "btn_label": "Recipe",
+    "btn_link": "shopify://blogs/recipes/5-ways-to-sweeten-your-morning-with-beeblend-honey"
+   }
+  },
+  "image_with_text_YhFCtK": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Our story",
+    "text": "<p>BeeBlend was founded with a passion for bringing authentic, pure honey to every home. We partner with local beekeepers and carefully select distinctive honeys that celebrate their origins, flavours and natural character. Every jar reflects our commitment to quality, purity and exceptional taste.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Bee_Keeper_Honey_Beeblend.jpg",
+    "btn_label": "About Us",
+    "btn_link": "shopify://pages/about-us"
+   }
+  },
+  "image_with_text_GBJLBM": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Discover the Collection",
+    "text": "<p>Every BeeBlend honey is a unique expression of nature, shaped by the blossoms our bees forage and the landscapes they call home. From delicate floral notes to bold gourmet flavours, our collection celebrates the incredible diversity of pure, artisan honey. </p><p><strong>Not sure where to begin?</strong> Our <strong>Assorted Taster Sachet Pack</strong> lets you sample the full collection and discover your perfect blend.</p><p>Every BeeBlend honey tells a different story, shaped by the flowers our bees forage and the unique landscapes they call home. From the delicate floral sweetness of <strong>Lychee</strong> and <strong>Kashmiri Acacia</strong>, to the aromatic warmth of <strong>Fennel</strong>, the bold nuttiness of <strong>Sesame</strong>, and the rich indulgence of <strong>Golden Nut</strong>, each variety offers its own distinctive character. Explore the distinctive character of Ayurveda Honey, the vibrant complexity of <strong>Himalayan Multi-Floral Honey</strong>, or the smooth, mellow sweetness of <strong>Mustard Honey</strong>. Whether you enjoy light and delicate flavours or rich, adventurous profiles, there's a BeeBlend honey crafted to suit every palate. Start with our <strong>Assorted Taster Sachet Pack</strong> and discover the blend that's perfect for you.<br/><br/></p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Honey_jars_collection_beeblend.jpg",
+    "btn_label": "Taste The Range",
+    "btn_link": "shopify://collections/all"
+   }
+  },
+  "collapsible_content_wkwLWp": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "What is BeeBlend Sesame Honey?",
+      "a": "<p>BeeBlend Sesame Honey is a distinctive raw honey produced from nectar collected by bees foraging among flowering sesame fields. It combines natural honey sweetness with rich, toasted and nutty characteristics for a more savoury flavour profile than traditional floral honeys.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "What does BeeBlend Sesame Honey taste like?",
+      "a": "<p>BeeBlend Sesame Honey has a rich, nutty flavour with toasted sesame notes, smooth caramel sweetness and a subtly smoky finish. Its bold flavour makes it particularly suited to both sweet and savoury recipes. </p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "Is BeeBlend Sesame Honey raw honey?",
+      "a": "<p>Yes. BeeBlend Sesame Honey is sold as a raw honey, allowing its distinctive natural flavour and aroma to remain at the heart of the product.</p><h3></h3>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "What is Sesame Honey best used for?",
+      "a": "<p>BeeBlend Sesame Honey works particularly well in glazes, marinades, salad dressings, stir-fries and breakfast dishes. Its combination of sweetness and toasted nuttiness also makes it a natural pairing for tahini and sesame-based recipes.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "What foods pair well with Sesame Honey?",
+      "a": "<p>Sesame Honey pairs beautifully with salmon, chicken, tofu, roasted vegetables, tahini, soy sauce, ginger and garlic. It can also be drizzled over toast, yoghurt or other breakfast dishes when you want a richer, nuttier honey flavour.</p>"
+     }
+    },
+    "q6": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I use BeeBlend Sesame Honey in savoury cooking?",
+      "a": "<p>Yes. BeeBlend Sesame Honey is particularly well suited to savoury cooking because its toasted, nutty character complements ingredients such as soy, ginger, garlic and sesame oil. BeeBlend already uses it in recipes including Sesame Honey Glazed Salmon, Tofu Stir Fry and Asian Sesame Honey Salad Dressing. </p>"
+     }
+    },
+    "q7": {
+     "type": "qa",
+     "settings": {
+      "q": "How is Sesame Honey different from traditional floral honey?",
+      "a": "<p>BeeBlend Sesame Honey has a bolder, nuttier and more savoury flavour profile than many delicate floral honeys. Its toasted sesame, caramel and subtly smoky notes make it a good choice for people looking for a more distinctive honey. </p>"
+     }
+    },
+    "q8": {
+     "type": "qa",
+     "settings": {
+      "q": "How should I store BeeBlend Sesame Honey?",
+      "a": "<p>Store BeeBlend Sesame Honey tightly sealed in a cool, dry place away from direct sunlight. Honey does not generally need refrigeration, and natural changes in texture or crystallisation can occur over time.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8"
+   ],
+   "settings": {
+    "heading": "Sesame Honey FAQs",
+    "open_first": true,
+    "bg": "paper"
+   }
+  },
+  "text_scrolling_6BVxr4": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "hex",
+      "text": "100% Natural"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "No Preservatives"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Ethically Harvested"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3"
+   ],
+   "settings": {}
+  },
+  "1758803877d65caa9c": {
+   "type": "apps",
+   "blocks": {
+    "judge_me_reviews_review_widget_VWYWci": {
+     "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {
+      "review_data": "sample_data",
+      "max_width": 1200,
+      "show_shop_reviews": false,
+      "empty_state": "empty_widget"
+     }
+    },
+    "klip_coupons_klip_app_section_product_GpzLmc": {
+     "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+     "disabled": true,
+     "settings": {
+      "margin_top": 10,
+      "margin_bottom": 10
+     }
+    }
+   },
+   "block_order": [
+    "judge_me_reviews_review_widget_VWYWci",
+    "klip_coupons_klip_app_section_product_GpzLmc"
+   ],
+   "settings": {
+    "include_margins": true
+   }
+  },
+  "featured_blog_6Xp6di": {
+   "type": "featured-blog",
+   "name": "t:sections.featured-blog.presets.name",
+   "settings": {
+    "blog": "recipes",
+    "post_limit": 3,
+    "heading": "Delicious Honey Based Recipes",
+    "heading_size": "h1",
+    "columns_desktop": 3,
+    "show_view_all": true,
+    "show_image": true,
+    "show_date": true,
+    "show_author": false,
+    "color_scheme": "scheme-c67ad067-fc7c-447d-ab8d-88637cf67a38",
+    "padding_top": 36,
+    "padding_bottom": 36
+   }
+  },
+  "sticky": {
+   "type": "bb-sticky-atc",
+   "settings": {}
+  }
+ },
+ "order": [
+  "crumbs",
+  "main",
+  "taste",
+  "assure",
+  "rich_text_fmD9xQ",
+  "image_with_text_grAN3e",
+  "image_with_text_9tmHKb",
+  "image_with_text_YhFCtK",
+  "image_with_text_GBJLBM",
+  "collapsible_content_wkwLWp",
+  "text_scrolling_6BVxr4",
+  "1758803877d65caa9c",
+  "featured_blog_6Xp6di",
+  "sticky"
+ ]
+}
