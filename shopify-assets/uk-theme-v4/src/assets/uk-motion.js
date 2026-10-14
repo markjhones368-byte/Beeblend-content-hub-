@@ -25,6 +25,7 @@
         heroInner.style.opacity = (1 - p * 1.1).toFixed(3);
         if (heroMedia) heroMedia.style.transform = 'scale(' + (1 + p * 0.08).toFixed(4) + ')';
       }
+      if (drifters.length) driftTick();
       ticking = false;
     });
   }
@@ -82,8 +83,66 @@
     anim.onfinish = function () { fly.remove(); cart.classList.remove('uk-bump'); void cart.offsetWidth; cart.classList.add('uk-bump'); };
   }, true);
 
+
+  /* 6. Bees flying across the hero */
+  function bees() {
+    if (reduce) return;
+    var h = document.querySelector('.bb-hero'); if (!h || h.dataset.ukBees) return; h.dataset.ukBees = '1';
+    var svg = '<svg viewBox="0 0 40 40" aria-hidden="true"><ellipse class="w" cx="15" cy="12" rx="7" ry="9" fill="rgba(255,255,255,.75)"/><ellipse class="w" cx="25" cy="12" rx="7" ry="9" fill="rgba(255,255,255,.6)"/><ellipse cx="20" cy="24" rx="11" ry="8" fill="#F2B61F"/><path d="M15 17v14M20 16v16M25 17v14" stroke="#24211C" stroke-width="2.6"/><circle cx="31" cy="23" r="4" fill="#24211C"/></svg>';
+    [{ y: '24%', d: 17, delay: 0 }, { y: '58%', d: 22, delay: -7 }, { y: '40%', d: 26, delay: -15 }].forEach(function (b) {
+      var el = document.createElement('span'); el.className = 'uk-bee'; el.setAttribute('aria-hidden', 'true');
+      el.style.setProperty('--y', b.y); el.style.setProperty('--d', b.d + 's'); el.style.setProperty('--delay', b.delay + 's');
+      el.innerHTML = svg; h.appendChild(el);
+    });
+  }
+
+  /* 7. Tap ripple on buttons */
+  document.addEventListener('pointerdown', function (e) {
+    if (reduce) return;
+    var b = e.target.closest && e.target.closest('.bb-btn, .uk-size, .button, .product-form__submit');
+    if (!b) return;
+    if (getComputedStyle(b).position === 'static') b.style.position = 'relative';
+    b.style.overflow = 'hidden';
+    var r = b.getBoundingClientRect(), s = Math.max(r.width, r.height);
+    var dot = document.createElement('span'); dot.className = 'uk-ripple';
+    dot.style.width = dot.style.height = s + 'px'; dot.style.left = (e.clientX - r.left - s / 2) + 'px'; dot.style.top = (e.clientY - r.top - s / 2) + 'px';
+    b.appendChild(dot); setTimeout(function () { dot.remove(); }, 650);
+  }, { passive: true });
+
+  /* 8. Phones: focus the honey card that is centred in the swipe row */
+  function journeyFocus() {
+    document.querySelectorAll('.ukj__items').forEach(function (row) {
+      if (row.dataset.ukFocus) return; row.dataset.ukFocus = '1';
+      var items = row.querySelectorAll('.ukj__item');
+      var pick = function () {
+        if (window.matchMedia('(min-width: 990px)').matches) return;
+        var mid = row.getBoundingClientRect().left + row.clientWidth / 2, best = null, bd = 1e9;
+        items.forEach(function (it) { var r = it.getBoundingClientRect(), d = Math.abs(r.left + r.width / 2 - mid); if (d < bd) { bd = d; best = it; } });
+        items.forEach(function (it) { it.classList.toggle('is-focus', it === best); });
+      };
+      row.addEventListener('scroll', function () { raf(pick); }, { passive: true }); pick();
+    });
+  }
+
+  /* 9. Images drift while scrolling, and product cards pop in one by one */
+  var drifters = [];
+  function drift() {
+    if (reduce) return;
+    document.querySelectorAll('.bb-story__img img, .bb-gift__img img, .bb-reel img').forEach(function (img) {
+      if (img.dataset.ukDrift) return; img.dataset.ukDrift = '1'; img.classList.add('uk-drift'); drifters.push(img);
+    });
+  }
+  function driftTick() {
+    var vh = window.innerHeight;
+    drifters.forEach(function (img) {
+      var box = img.parentElement.getBoundingClientRect(); if (box.bottom < 0 || box.top > vh) return;
+      var t = (box.top + box.height / 2 - vh / 2) / vh;
+      img.style.setProperty('--drift', (t * -28).toFixed(1) + 'px');
+    });
+  }
+
   function init() {
-    reveals(); tilt(); magnetic();
+    reveals(); tilt(); magnetic(); bees(); journeyFocus(); drift();
     if (!reduce && !bar) { bar = document.createElement('div'); bar.className = 'uk-progress'; bar.setAttribute('aria-hidden', 'true'); document.body.appendChild(bar); }
     hero = document.querySelector('.bb-hero'); heroInner = hero && hero.querySelector('.bb-hero__inner'); heroMedia = hero && hero.querySelector('.bb-hero__media video, .bb-hero__media img');
     if (reduce) { hero = null; }

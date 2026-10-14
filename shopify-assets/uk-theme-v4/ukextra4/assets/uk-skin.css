@@ -46,3 +46,98 @@
   .uk *,.uk *::before,.uk *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .uk-progress,.uk-tilt::after{display:none}
 }
+
+/* ================= Mobile fit ================= */
+html,body{max-width:100%;overflow-x:clip}
+#MainContent{overflow-x:clip}
+img,video,iframe,svg{max-width:100%}
+h1,h2,h3{overflow-wrap:break-word;hyphens:manual}
+.page-width{padding-left:max(1.6rem,env(safe-area-inset-left));padding-right:max(1.6rem,env(safe-area-inset-right))}
+@media(max-width:749px){
+  /* announcement bar: the uppercase, wide-spaced message wrapped off-screen */
+  .utility-bar .announcement-bar__message,.utility-bar .announcement-bar__message span{letter-spacing:.06em!important;font-size:11.5px!important;white-space:normal!important;line-height:1.35!important}
+  .utility-bar .announcement-bar{padding:.8rem 0}
+  /* header */
+  .header{padding-left:1.2rem!important;padding-right:1.2rem!important}
+  .header__heading-logo-wrapper,.header__heading-logo{max-width:13rem!important;height:auto}
+  .header__icon{width:4.2rem;height:4.4rem}
+  /* section rhythm */
+  .bb-sec{padding:5.2rem 0!important}
+  .bb-wrap,.uk-wrap{padding-left:1.6rem!important;padding-right:1.6rem!important}
+  .bb-head{margin-bottom:2.4rem!important}
+  .bb-head h2{font-size:clamp(2.8rem,8vw,3.4rem)!important;line-height:1.12!important}
+  .bb-head p{font-size:1.55rem!important}
+  /* hero */
+  .bb-hero{min-height:82svh!important}
+  .bb-hero h1{font-size:clamp(3.6rem,11vw,4.6rem)!important;line-height:1.05!important}
+  .bb-hero__sub{font-size:1.55rem!important}
+  .bb-hero__ctas{display:grid!important;grid-template-columns:1fr;gap:1rem!important;width:100%}
+  .bb-hero__ctas .bb-btn{width:100%}
+  /* image + text sections stack image first */
+  .bb-story{display:flex!important;flex-direction:column;gap:2.8rem!important}
+  .bb-story>div:first-child{order:0!important;width:100%}
+  .bb-story__img img{width:100%;height:auto;max-height:60vh;object-fit:cover;border-radius:1.6rem}
+  /* banners and cards */
+  .bb-gift{grid-template-columns:1fr!important}
+  .bb-btn{min-height:4.8rem;padding:0 2.2rem}
+  .bb-rs__card{padding:2.4rem 2rem!important}
+  .bb-faq summary{font-size:1.65rem!important;padding-right:4rem!important}
+  /* product page */
+  .product__info-wrapper{padding-left:0!important;padding-right:0!important}
+  .product .product__title h1{font-size:clamp(2.8rem,8vw,3.6rem)!important}
+  .product__media-list{margin-bottom:1.2rem}
+  .bb-sticky{padding-bottom:max(.8rem,env(safe-area-inset-bottom))}
+  body.template-product,body:has(.bb-sticky){padding-bottom:7.6rem}
+  .ukt__cells svg{width:2.8rem!important}
+  .ukt__row{grid-template-columns:1fr!important;gap:.6rem!important}
+  /* Shopify rich text with background images */
+  .rich-text__wrapper,.rich-text__blocks{width:100%!important;max-width:100%!important}
+  .rich_text_class .rich-text__blocks *{max-width:100%}
+  .image-with-text__grid{flex-direction:column}
+  /* reviews widget */
+  .jdgm-widget,.jdgm-carousel-wrapper{max-width:100%!important;overflow:hidden}
+  .footer__content-top{padding-left:1.6rem;padding-right:1.6rem}
+}
+
+/* ================= More motion ================= */
+/* Bees flying across the hero */
+.uk-bee{position:absolute;z-index:2;width:3.4rem;height:3.4rem;pointer-events:none;top:var(--y,30%);left:-6rem;animation:ukBeeFly var(--d,16s) linear var(--delay,0s) infinite;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.uk-bee svg{width:100%;height:100%;animation:ukBob 1.2s ease-in-out infinite}
+.uk-bee .w{transform-origin:50% 90%;animation:ukWing .09s linear infinite alternate}
+@keyframes ukBeeFly{0%{transform:translate(0,0) rotate(6deg)}20%{transform:translate(28vw,-6vh) rotate(-4deg)}40%{transform:translate(52vw,4vh) rotate(8deg)}60%{transform:translate(74vw,-8vh) rotate(-6deg)}80%{transform:translate(96vw,2vh) rotate(4deg)}100%{transform:translate(118vw,-4vh) rotate(0)}}
+@keyframes ukBob{50%{transform:translateY(-6px)}}
+@keyframes ukWing{to{transform:scaleY(.35)}}
+@media(max-width:749px){.uk-bee{width:2.6rem;height:2.6rem}}
+
+/* Gold buttons: a soft shine passes over them now and then */
+.bb-btn--gold,.bb-hero .bb-btn:first-child{position:relative;overflow:hidden;isolation:isolate}
+.bb-btn--gold::after,.bb-hero .bb-btn:first-child::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:ukShine 5.5s ease-in-out 2s infinite;z-index:-1;pointer-events:none}
+@keyframes ukShine{0%,70%{left:-60%}100%{left:130%}}
+
+/* Tap feedback on phones */
+.uk-ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.45);transform:scale(0);animation:ukRipple .6s ease-out forwards;pointer-events:none}
+@keyframes ukRipple{to{transform:scale(2.6);opacity:0}}
+
+/* Phones: the honey cards in the scroll story grow as they snap to centre */
+@media(max-width:989px){
+  .ukj__item{transition:transform .5s var(--uk-ease),opacity .5s;transform:scale(.92);opacity:.6}
+  .ukj__item.is-focus{transform:none;opacity:1}
+  .ukj__item .uk-disc{transition:transform .9s var(--uk-goo)}
+  .ukj__item.is-focus .uk-disc{transform:rotate(-6deg) scale(1.04)}
+}
+
+/* Images drift gently while scrolling (all screen sizes) */
+.uk-drift{transform:translate3d(0,var(--drift,0px),0) scale(1.08);transition:transform .1s linear;will-change:transform}
+
+/* Product cards pop up one after another */
+@keyframes ukPop{from{opacity:0;transform:translateY(28px) scale(.96)}to{opacity:1;transform:none}}
+.uk-pop{opacity:0}
+.uk-pop.is-in{animation:ukPop .8s var(--uk-ease) forwards;animation-delay:calc(var(--i,0) * 90ms)}
+
+@media (prefers-reduced-motion: reduce){
+  .uk-bee{display:none}
+  .bb-btn--gold::after,.bb-hero .bb-btn:first-child::after{animation:none;display:none}
+  .uk-drift{transform:none}
+  .uk-pop{opacity:1}
+  .uk-pop.is-in{animation:none}
+}
