@@ -1,0 +1,8 @@
+{%- liquid
+  assign k = key | downcase
+  if k contains 'fennel' or k contains 'golden-nut' or k contains 'golden nut' or k contains 'sesame'
+    echo 'light'
+  else
+    echo 'dark'
+  endif
+-%}

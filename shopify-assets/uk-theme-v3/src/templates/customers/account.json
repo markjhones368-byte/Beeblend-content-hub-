@@ -1,0 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_3FPTJU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kYyEdK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Profile",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kYyEdK"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "bg_image": "shopify://shop_images/drops-4.jpg",
+        "custom_class": "hero__banner",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 28
+      }
+    },
+    "main": {
+      "type": "main-account",
+      "settings": {
+        "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+        "padding_top": 52,
+        "padding_bottom": 76
+      }
+    }
+  },
+  "order": [
+    "rich_text_3FPTJU",
+    "main"
+  ]
+}

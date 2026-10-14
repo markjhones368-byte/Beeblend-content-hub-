@@ -1,0 +1,50 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+<style>.bb-cc__media img[data-fit=cover]{object-fit:cover}.bb-cc__media img[data-fit=contain]{object-fit:contain;padding:10%!important}</style>
+<section class="bb bb-sec bb-sec--{{ section.settings.bg }}">
+  <div class="bb-wrap">
+    <div class="bb-head{% if section.settings.center %} bb-head--center{% endif %}">
+      <h2>{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}<p>{{ section.settings.text }}</p>{%- endif -%}
+    </div>
+    <div class="bb-grid" style="--bb-cols: {{ section.blocks.size | at_most: 4 | at_least: 2 }};">
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.collection -%}
+        {%- assign img = block.settings.image | default: c.featured_image -%}
+        {%- if img == blank -%}
+          {%- for cp in c.products limit: 1 -%}{%- assign img = cp.featured_media.preview_image -%}{%- endfor -%}
+        {%- endif -%}
+        {%- assign fit = section.settings.fit -%}{%- if block.settings.image == blank and c.featured_image == blank -%}{%- assign fit = 'contain' -%}{%- endif -%}
+        <a class="bb-card" href="{{ c.url | default: '#' }}" style="text-decoration:none;color:inherit" {{ block.shopify_attributes }}>
+          <span class="bb-card__media bb-cc__media" style="aspect-ratio:1">
+            {%- if img != blank -%}{{ img | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400, 600, 800', sizes: '(min-width: 990px) 33vw, 50vw', class: 'bb-card__img', style: 'padding:0', data-fit: fit, alt: c.title }}{%- else -%}{{ 'collection-1' | placeholder_svg_tag: 'bb-card__img' }}{%- endif -%}
+          </span>
+          <span class="bb-card__body">
+            <span class="bb-card__title">{{ block.settings.label | default: c.title }}</span>
+            {%- if block.settings.sub != blank -%}<span class="bb-card__tag">{{ block.settings.sub }}</span>{%- endif -%}
+            <span style="font-weight:600;color:var(--bb-forest);font-size:1.4rem;margin-top:.4rem">Explore →</span>
+          </span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BB Collection cards",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Shop by occasion" },
+    { "type": "textarea", "id": "text", "label": "Text" },
+    { "type": "checkbox", "id": "center", "label": "Center heading", "default": false },
+    { "type": "select", "id": "fit", "label": "Image fit", "default": "contain", "options": [ { "value": "cover", "label": "Fill (photos)" }, { "value": "contain", "label": "Fit (product shots)" } ] },
+    { "type": "select", "id": "bg", "label": "Background", "default": "white", "options": [
+      { "value": "white", "label": "White" }, { "value": "paper", "label": "Warm paper" }, { "value": "sage", "label": "Sage" } ] }
+  ],
+  "blocks": [ { "type": "card", "name": "Collection", "limit": 8, "settings": [
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "image_picker", "id": "image", "label": "Custom image" },
+    { "type": "text", "id": "label", "label": "Custom title" },
+    { "type": "text", "id": "sub", "label": "Short description" } ] } ],
+  "presets": [ { "name": "BB Collection cards", "blocks": [ { "type": "card" }, { "type": "card" }, { "type": "card" } ] } ]
+}
+{% endschema %}

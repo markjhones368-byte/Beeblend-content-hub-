@@ -1,0 +1,575 @@
+.button.button--primary{
+  background: linear-gradient(45deg, #ffbf00, #ffd700);
+  color:#000;
+}
+.button.button--primary:before,.button.button--primary:after{
+  box-shadow:none !important;
+}
+
+.hero_banner .banner__content{
+    justify-content:flex-start !important;
+}
+.hero_banner .banner__box{
+    max-width:600px !important;
+}
+.hero_banner h2{
+    line-height:1.1em;
+    margin-bottom:25px;
+}
+.bg_pattern{
+    position:relative;
+}
+.bg_pattern.left:before{
+    content:"";
+    background-image: url('/cdn/shop/files/bg__1.png?v=1758607262');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: scroll;
+    position: absolute;
+    left: -49px;
+    bottom: -44px;
+    width: 200px;
+    height: 200px;
+}
+.bg_pattern.right{
+    background-image: url('https://cdn.shopify.com/s/files/1/0930/9827/9299/files/bg__2.png?v=1758607276');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-attachment: scroll;
+}
+.health_benefits .media{
+    position: absolute;
+    right:0px;
+    top:-90px;
+    width: 100% !important;
+    height: 100px !important;
+    padding-bottom: 0px !important;
+    overflow:visible !important;
+}
+.health_benefits .multicolumn-card{
+    background:#ededed !important;
+}
+.health_benefits .media img{
+    animation: moveBee 2s linear infinite;
+    width: 100px !important;
+    height: 100px !important;
+    right: 0;
+}
+.health_benefits h3{
+    font-family:'DM Sans';
+}
+.health_benefits .multicolumn-list{
+    row-gap:50px;
+}
+
+
+/*Why Choose Us*/
+.why_choose .title-wrapper-with-link{
+    justify-content:center;
+}
+.why_choose h3{
+    font-size:30px;
+}
+.why_choose .media{
+  padding-bottom:0px !important;
+  background:url('https://cdn.shopify.com/s/files/1/0930/9827/9299/files/bg__shape.png?v=1759470333');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.why_choose .media img{
+  position:relative !important;
+  height:80px !important;
+  width:80px !important;
+  object-fit:contain;
+  left:auto !important;
+  transform: translate(0%) !important;
+}
+
+/*End Why Choose Us*/
+
+
+@keyframes moveBee {
+  0% {
+    top: 45%; /* Starting position */
+  }
+  50% {
+    top: 40%; /* Move slightly up */
+  }
+  100% {
+    top: 45%; /* Move back to the original position */
+  }
+}
+
+
+
+
+/*Text Scrolling*/
+.text-scrolling{
+    padding: 10px 10px 5px 10px;
+    text-align: center;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family:'valley';
+}
+.text-wrap{
+    display: flex;
+    margin: .15em 0;
+    visibility: visible;
+    column-gap:40px;
+    white-space: nowrap;
+    animation: scroll-text 15s linear infinite;
+}
+@keyframes scroll-text {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+}
+/*Text Scrolling End*/
+
+
+/*Process Steps*/
+.process_steps img{
+    object-fit:contain;
+}
+.process_steps .image-with-text__content{
+  padding:0px !important
+}
+/*Process Step End*/
+
+
+/*Fly Animation*/
+.process.multirow{
+    background-image: url('https://cdn.shopify.com/s/files/1/0930/9827/9299/files/bg__2.png?v=1758607276');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-attachment: scroll;
+}
+.process .image-with-text__media,
+.process .image-with-text__media img{
+  border-radius:0px !important;
+}
+.process .multirow__inner{
+  row-gap:0px;
+}
+.process .image-with-text__text-item{
+  border:1px solid;
+  background:#fff;
+}
+.process .image-with-text__content{
+  padding:6rem !important;
+}
+.process h2.h0:before{
+  content:"" !important;
+  border-top:1px solid !important; 
+  display:block !important;
+}
+
+footer .footer-block a{
+  color:#010412 !important;
+  font-size:16px;
+}
+
+
+/*Products Card*/
+.collection .card__heading{
+    /*font-family: 'DM Sans' !important;*/
+    font-size: 24px;
+    font-weight: 500 !important;
+    text-transform:capitalize !important;
+}
+.collection .badge{
+  background:#fff !important;
+  color:#010412 !important;
+}
+/*Products Cards End*/
+
+.how_works .image-with-text__media{
+  border-radius:0px !important;
+}
+.how_works img{
+  border-radius:10px !important;
+}
+
+/*Animation*/
+#shopify-section-template--26287090073987__rich_text_94R8dA{
+  position:relative;
+}
+#shopify-section-template--26287090073987__rich_text_94R8dA h2.h0:after{
+  content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0930/9827/9299/files/Bee_flying.gif?v=1758631197');
+    position: absolute;
+    top: 0;
+    right: -103px;
+    width: 150px;
+    height: 50px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#shopify-section-template--26287090073987__rich_text_94R8dA .rich-text__blocks{
+    display: flex;
+    justify-content: center;
+}
+/*Animation*/
+
+
+/*Collection List*/
+.collection-list-wrapper .title-wrapper-with-link{
+  justify-content:center;
+}
+.collection-list li:first-child .card{
+  background:#D3C7B7;
+}
+.collection-list li:nth-child(2) .card{
+  background:#cde0e6;
+}
+.collection-list li:nth-child(3) .card{
+  background:rgb(211,191,166);
+}
+.collection-list li:nth-child(4) .card{
+  background:rgb(211,191,166);
+}
+.collection-list .card__heading{
+  font-size:30px;
+}
+.collection-list .media{
+  border-radius:10px !important;
+}
+/*Collecton List End*/
+
+/*Collection Banner*/
+.collection-hero{
+  background:url('https://cdn.shopify.com/s/files/1/0930/9827/9299/files/drops-4.jpg?v=1758785115');
+}
+/*Collection Banner End*/
+
+
+/*Login*/
+#shopify-section-template--25751532110211__main{
+  background:#fff;
+}
+.customer{
+  padding-bottom:50px !important;
+  background:#f2f2f2;
+  margin:30px auto 30px auto !important;
+  padding:25px 50px 50px 50px!important;
+  border-radius:10px;
+}
+.customer h1{
+  display:none;
+}
+.customer .field input{
+  background:transparent;
+}
+.login .retur_link a{
+  display:inline !important;
+}
+
+/*Login End*/
+
+/*promises*/
+.promises ul{
+  list-style:none;
+  padding-left:0px;
+}
+.promises ul li{
+  margin:7px 0px; 
+  font-size:20px;
+  display:flex;
+  column-gap:15px;
+}
+.promises ul li:before{
+  content:"";
+  background:url('https://cdn.shopify.com/s/files/1/0930/9827/9299/files/checked.png?v=1759487343');
+  background-size: contain;
+  width: 25px;
+  background-repeat: no-repeat;
+  margin-top:4px;
+  padding-right:25px;
+}
+
+/*Promies End*/
+
+
+/*Contact*/
+.contact_grid{
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  column-gap: 55px;
+  row-gap:25px;
+  padding:80px 20px; 
+}
+.contact{
+  max-width: 100%;
+  margin: 0;
+  width: 60%;
+  padding:0px !important;
+}
+.contact_details{
+  width: 40%;
+  background: #f2f2f2;
+  padding: 30px;
+  border-radius: 10px;
+}
+.contact_details .social_icons{
+    display: flex;
+    column-gap: 15px;
+    margin-top: 20px;
+}
+.contact_grid h2{
+  margin-top:0px;
+}
+.contact_box{
+  padding-bottom:35px;
+}
+.contact_box a{
+  color:#010412;
+}
+.contact_box h2{
+  margin-bottom:10px;
+  font-size:25px;
+}
+.social_icon img{
+  width:20px;
+} 
+.contact_details_heading{
+  font-size:35px;
+}
+/*Contact*/
+
+/*Blog*/
+.main-blog h1{
+  display:none;
+}
+.article-template__back{
+  margin-bottom:0px !important;
+  padding-bottom:30px !important;
+}
+/*Blog End*/
+
+/*Heading Style*/
+.image-with-text__heading em,
+.multicolumn h2.title em,
+.testimonials h2 em,
+.logo-section h2 em,
+.collection-list-wrapper .collection-list-title em,
+.rich-text__heading em{
+  color:transparent;
+  position:relative;
+}
+.image-with-text__heading em:before,
+.multicolumn h2.title em:before,
+.testimonials h2 em:before,
+.logo-section h2 em:before,
+.collection-list-wrapper .collection-list-title em:before,
+.rich-text__heading em:before{
+  content:"";
+  background:url('https://cdn.shopify.com/s/files/1/0930/9827/9299/files/04.png?v=1759572166');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150%;
+  position: absolute;
+  height: 148%;
+  left: -31%;
+  top: -20%;
+}
+/*Heading Style End*/
+
+/*Health Benefits*/
+.health__benefits .multicolumn-card{
+    background: transparent !important;
+    border: 1px solid #484848;
+    padding: 35px 20px;
+}
+.health__benefits h3{
+  font-size:35px;
+}
+.health__benefits .page-width{
+  max-width:1200px;
+}
+.health__benefits .multicolumn-card .media{
+    width: 150px !important;
+    height: 150px !important;
+    margin: 0 auto;
+    background: #f1c646;
+    border-radius: 100%;
+}
+/*Health Benefits*/
+
+/*Health Benefits Home*/
+.health__benefits_home .multicolumn-card{
+  background:#ffffffd6 !important;
+    padding: 35px 20px;
+}
+.health__benefits_home h3{
+  font-size:35px;
+}
+.health__benefits_home .page-width{
+  max-width:1200px;
+}
+.health__benefits_home .multicolumn-card .media{
+    width: 150px !important;
+    height: 150px !important;
+    margin: 0 auto;
+    background: #f1c646;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:0px !important;
+}
+.health__benefits_home .multicolumn-card .media img{
+    position: relative !important;
+    height: 80px !important;
+    width: 80px !important;
+    object-fit: contain;
+    left: auto !important;
+    transform: translate(0) !important;
+}
+/*Health Benefits Home*/
+
+/*About Founder Note*/
+.founder_note{
+  background-size:400px !important;
+  position:relative;
+}
+.founder_note:before{
+  content: "";
+    background: #ffffff69;
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+/*End About Founder note*/
+
+.product .badge{
+    color: #fff;
+    border-radius: 5px;
+}
+.collection .card__inner{
+  height:270px;
+}
+.collection .media img{
+  object-fit:contain !important;
+}
+
+/*Notify Button*/
+.product-form .nm-portal{
+  width:calc(50% - 10px);
+  display:inline-block;
+}
+.product-form .nm-portal:nth-child(2){
+  margin-right:10px;
+  position:relative;
+  bottom:3px;
+}
+.product-form .nm-portal:nth-child(3){
+  margin-left:10px;
+}
+
+.footer-block__newsletter{
+  flex-grow:unset !important;
+  width:100%;
+}
+.footer-block--newsletter{
+  flex-direction:column !important;
+  align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+#judgeme_product_reviews,.jdgm-rev-widg__title{
+  color:#010412;
+}
+.product-form__buttons .nm-wishlist-button svg path{
+  stroke:#010412 !important;
+}
+@media only screen and (max-width: 500px) {
+  .product-form .nm-portal{
+    width:100%;
+    display:block;
+    margin-left:0px !important;
+    margin-right:0px !important;
+    bottom:0px !important;
+  }
+}
+/*Notify Button End*/
+
+@media only screen and (max-width: 750px) {
+ .hero_banner .banner__media img{
+    object-position: 22% center !important;
+ }
+ .hero_banner .banner__text{
+    max-width:400px;
+ }
+  h2.h0,h2.hxxl{
+    font-size:30px !important;
+  }
+  h2.h1{
+    font-size:27px !important;
+  }
+  .process .image-with-text__content{
+    padding:4rem !important;
+  }
+  .contact_grid{
+    flex-direction:column;
+  }
+  .contact_details,.contact{
+    width:100%;
+  }
+  .our_story{
+    background-image:none !important;
+  }
+  .how_works{
+    background-position:bottom !important;
+  }
+}
+@media only screen and (min-width: 750px){
+  footer .footer__blocks-wrapper .footer-block:nth-child(2),
+  footer .footer__blocks-wrapper .footer-block:nth-child(3){
+    width:9% !important;
+  }
+  .process_steps h2{
+    font-size:40px;
+  }
+  #shopify-section-template--26287090073987__featured_collection_MQcrBh .slider-component-full-width{
+    padding:10px 60px !important;
+  }
+  .collection-hero__text-wrapper{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .collection-hero__title{
+    font-size:60px;
+  }
+  
+}
+@media only screen and (min-width: 979px) {
+  .footer__content-top {
+    display: flex !important;
+  }
+   .footer-block--newsletter {
+      flex-wrap: wrap !important;
+      
+      margin-top: 0 !important;
+      width:60%;
+  }
+  .blog-articles{
+    grid-template-columns:1fr 1fr 1fr !important;
+  }
+}

@@ -1,0 +1,81 @@
+{%- liquid
+  assign sid = 'uka-' | append: section.id
+  assign st = section.settings
+-%}
+<style>
+  #{{ sid }}{background:{{ st.bg }};color:var(--uk-ink);padding:clamp(5.6rem,8vw,10.4rem) 0}
+  #{{ sid }} .uka__in{display:grid;gap:clamp(3.2rem,5vw,8rem)}
+  #{{ sid }} .uka__in>*{min-width:0}
+  @media(min-width:990px){#{{ sid }} .uka__in{grid-template-columns:.8fr 1.2fr;align-items:start}#{{ sid }} .uka__head{position:sticky;top:12rem}}
+  #{{ sid }} h2{font-size:clamp(3.4rem,4.6vw,6rem);line-height:1;letter-spacing:-.03em;margin:0;max-width:14ch}
+  #{{ sid }} .uka__intro{margin-top:2rem;max-width:42ch;font-size:1.7rem;line-height:1.6;opacity:.85}
+  #{{ sid }} .uka__list{border-top:1.5px solid rgba(34,32,27,.14)}
+  #{{ sid }} details{border-bottom:1.5px solid rgba(34,32,27,.14)}
+  #{{ sid }} summary{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:2.4rem 0;cursor:pointer;list-style:none;font:600 clamp(1.8rem,1.6vw,2.2rem)/1.3 'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1;letter-spacing:-.01em}
+  #{{ sid }} summary::-webkit-details-marker{display:none}
+  #{{ sid }} summary:hover .uka__q{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.4rem}
+  #{{ sid }} .uka__pm{position:relative;flex:none;width:4rem;height:4rem;border-radius:50%;background:var(--uk-pollen);transition:background .3s}
+  #{{ sid }} .uka__pm::before,#{{ sid }} .uka__pm::after{content:"";position:absolute;left:50%;top:50%;width:1.4rem;height:2px;margin:-1px 0 0 -.7rem;background:var(--uk-ink);border-radius:2px;transition:transform .45s var(--uk-ease)}
+  #{{ sid }} .uka__pm::after{transform:rotate(90deg)}
+  #{{ sid }} details[open] .uka__pm::after{transform:rotate(0)}
+  #{{ sid }} details[open] .uka__pm{background:var(--uk-ink)}
+  #{{ sid }} details[open] .uka__pm::before,#{{ sid }} details[open] .uka__pm::after{background:#fff}
+  #{{ sid }} .uka__a{overflow:hidden}
+  #{{ sid }} .uka__a>div{padding:0 6rem 2.8rem 0;font-size:1.65rem;line-height:1.7;opacity:.88}
+  #{{ sid }} .uka__a p+p,#{{ sid }} .uka__a ul{margin-top:1rem}
+  #{{ sid }} .uka__a a{color:inherit}
+  @media(max-width:749px){#{{ sid }} .uka__a>div{padding-right:0}}
+</style>
+<section class="uk uka" id="{{ sid }}">
+  <div class="uk-wrap uka__in">
+    <div class="uka__head">
+      {%- if st.heading != blank -%}<h2>{{ st.heading }}</h2>{%- endif -%}
+      {%- if st.text != blank -%}<div class="uka__intro">{{ st.text }}</div>{%- endif -%}
+    </div>
+    <div class="uka__list">
+      {%- for block in section.blocks -%}
+        <details {{ block.shopify_attributes }}{% if forloop.first and st.open_first %} open{% endif %}>
+          <summary><span class="uka__q">{{ block.settings.question }}</span><span class="uka__pm" aria-hidden="true"></span></summary>
+          <div class="uka__a"><div>{{ block.settings.answer }}</div></div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var root=document.getElementById('{{ sid }}'); if(!root) return;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.querySelectorAll('details').forEach(function(d){
+    var s=d.querySelector('summary'), a=d.querySelector('.uka__a');
+    s.addEventListener('click',function(e){
+      if(reduce||!a.animate) return;
+      e.preventDefault();
+      if(d.open){
+        var h=a.offsetHeight; var an=a.animate([{height:h+'px'},{height:'0px'}],{duration:380,easing:'cubic-bezier(.22,1,.36,1)'});
+        an.onfinish=function(){ d.open=false; };
+      } else {
+        d.open=true; var h2=a.offsetHeight;
+        a.animate([{height:'0px',opacity:0},{height:h2+'px',opacity:1}],{duration:480,easing:'cubic-bezier(.22,1,.36,1)'});
+      }
+    });
+  });
+})();
+</script>
+{% schema %}
+{
+  "name": "UK Questions",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Questions" },
+    { "type": "richtext", "id": "text", "label": "Intro" },
+    { "type": "checkbox", "id": "open_first", "label": "Open the first question", "default": false },
+    { "type": "color", "id": "bg", "label": "Background", "default": "#FFFFFF" }
+  ],
+  "blocks": [ { "type": "row", "name": "Question", "settings": [
+    { "type": "text", "id": "question", "label": "Question", "default": "Question" },
+    { "type": "richtext", "id": "answer", "label": "Answer" }
+  ] } ],
+  "presets": [ { "name": "UK Questions", "blocks": [ { "type": "row" } ] } ]
+}
+{% endschema %}

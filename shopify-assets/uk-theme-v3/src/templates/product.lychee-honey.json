@@ -1,0 +1,331 @@
+{
+ "sections": {
+  "main": {
+   "type": "main-product",
+   "blocks": {
+    "vendor": {
+     "type": "text",
+     "settings": {
+      "text": "{{ product.vendor }}",
+      "text_style": "body"
+     }
+    },
+    "title": {
+     "type": "title",
+     "settings": {}
+    },
+    "rating": {
+     "type": "rating",
+     "settings": {}
+    },
+    "price": {
+     "type": "price",
+     "settings": {}
+    },
+    "variant_picker": {
+     "type": "variant_picker",
+     "settings": {
+      "picker_type": "button",
+      "swatch_shape": "circle"
+     }
+    },
+    "quantity_selector": {
+     "type": "quantity_selector",
+     "settings": {}
+    },
+    "buy_buttons": {
+     "type": "buy_buttons",
+     "settings": {
+      "show_dynamic_checkout": true,
+      "show_gift_card_recipient": true
+     }
+    },
+    "judge_me_reviews_preview_badge_nkg7Wm": {
+     "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {}
+    },
+    "description": {
+     "type": "description",
+     "disabled": true,
+     "settings": {}
+    },
+    "share": {
+     "type": "share",
+     "settings": {
+      "share_label": "Share"
+     }
+    }
+   },
+   "block_order": [
+    "vendor",
+    "title",
+    "rating",
+    "price",
+    "variant_picker",
+    "quantity_selector",
+    "buy_buttons",
+    "judge_me_reviews_preview_badge_nkg7Wm",
+    "description",
+    "share"
+   ],
+   "settings": {
+    "enable_sticky_info": true,
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "media_size": "small",
+    "constrain_to_viewport": true,
+    "media_fit": "cover",
+    "gallery_layout": "thumbnail_slider",
+    "mobile_thumbnails": "hide",
+    "media_position": "left",
+    "image_zoom": "lightbox",
+    "hide_variants": true,
+    "enable_video_looping": true,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "taste": {
+   "type": "uk-taste-profile",
+   "settings": {
+    "heading": "How it tastes"
+   }
+  },
+  "rich_text_NJQTHR": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "statement",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "heading": "BeeBlend - Lychee Honey",
+    "text": "<p>Not all honey is bold—some is beautifully subtle. BeeBlend Lychee Honey is prized for its delicate floral aroma, silky texture and gentle tropical sweetness. Created from the nectar of fragrant lychee blossoms, it offers a light, elegant flavour that's perfect for those who appreciate a refined honey with a naturally refreshing finish.</p>"
+   }
+  },
+  "image_with_text_fmKV3D": {
+   "type": "uk-split",
+   "settings": {
+    "shape": "disc",
+    "image_side": "left",
+    "bg": "#FBF3DC",
+    "ink": "dark",
+    "image": "shopify://shop_images/Lychee_Honey_f6d7cd9d-7b2d-4657-9307-0eb8edbd0995.png",
+    "heading": "A delicate honey with exotic sweetness",
+    "text": "<p>Harvested from fragrant lychee blossoms, BeeBlend Lychee Honey is wonderfully light, smooth and naturally floral. Its delicate tropical sweetness makes it a versatile everyday honey, perfect for drizzling over breakfast, stirring into drinks or elevating your favourite recipes. Every spoonful captures the fresh, vibrant character of blooming lychee orchards.</p>",
+    "btn_label": "Recipes",
+    "btn_link": "https://beeblend.co.uk/blogs/recipes/lychee-honey-healthy-elixir"
+   }
+  },
+  "image_with_text_LAMz9X": {
+   "type": "uk-split",
+   "settings": {
+    "shape": "disc",
+    "image_side": "right",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "image": "shopify://shop_images/Lychee_Honey_Drink.png",
+    "caption": "Culinary Application",
+    "heading": "Lychee Honey healthy elixir",
+    "text": "<p>BeeBlend was founded with a passion for bringing authentic, pure honey to every home. We partner with local beekeepers and carefully select distinctive honeys that celebrate their origins, flavours and natural character. Every jar reflects our commitment to quality, purity and exceptional taste.</p>",
+    "btn_label": "Recipe Here",
+    "btn_link": "https://beeblend.co.uk/blogs/recipes/lychee-honey-healthy-elixir"
+   }
+  },
+  "image_with_text_HHggjA": {
+   "type": "uk-split",
+   "settings": {
+    "shape": "arch",
+    "image_side": "left",
+    "bg": "#FBF3DC",
+    "ink": "dark",
+    "image": "shopify://shop_images/Bee_Keeper_Honey_Beeblend.jpg",
+    "heading": "Our story",
+    "text": "<p>BeeBlend was founded with a passion for bringing authentic, pure honey to every home. We partner with local beekeepers and carefully select distinctive honeys that celebrate their origins, flavours and natural character. Every jar reflects our commitment to quality, purity and exceptional taste.</p>",
+    "btn_label": "About Us",
+    "btn_link": "shopify://pages/about-us"
+   }
+  },
+  "image_with_text_qAkk9J": {
+   "type": "uk-split",
+   "settings": {
+    "shape": "arch",
+    "image_side": "right",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "image": "shopify://shop_images/Honey_jars_collection_beeblend.jpg",
+    "heading": "Discover the Collection",
+    "text": "<p>Every BeeBlend honey is a unique expression of nature, shaped by the blossoms our bees forage and the landscapes they call home. From delicate floral notes to bold gourmet flavours, our collection celebrates the incredible diversity of pure, artisan honey. </p><p><strong>Not sure where to begin?</strong> Our <strong>Assorted Taster Sachet Pack</strong> lets you sample the full collection and discover your perfect blend.</p><p>Every BeeBlend honey tells a different story, shaped by the flowers our bees forage and the unique landscapes they call home. From the delicate floral sweetness of <strong>Lychee</strong> and <strong>Kashmiri Acacia</strong>, to the aromatic warmth of <strong>Fennel</strong>, the bold nuttiness of <strong>Sesame</strong>, and the rich indulgence of <strong>Golden Nut</strong>, each variety offers its own distinctive character. Explore the distinctive character of Ayurveda Honey, the vibrant complexity of <strong>Himalayan Multi-Floral Honey</strong>, or the smooth, mellow sweetness of <strong>Mustard Honey</strong>. Whether you enjoy light and delicate flavours or rich, adventurous profiles, there's a BeeBlend honey crafted to suit every palate. Start with our <strong>Assorted Taster Sachet Pack</strong> and discover the blend that's perfect for you.<br/><br/></p>",
+    "btn_label": "Taste The Range",
+    "btn_link": "shopify://collections/all"
+   }
+  },
+  "collapsible_content_hT6QDF": {
+   "type": "uk-accordion",
+   "blocks": {
+    "r1": {
+     "type": "row",
+     "settings": {
+      "question": "What is BeeBlend Lychee Honey?",
+      "answer": "<p>BeeBlend Lychee Honey is a single-origin raw honey produced from nectar collected from lychee blossoms. It has a pale golden colour, smooth texture and delicate flavour with floral, tropical-fruit and subtle rose notes.</p>"
+     }
+    },
+    "r2": {
+     "type": "row",
+     "settings": {
+      "question": "What does BeeBlend Lychee Honey taste like?",
+      "answer": "<p>BeeBlend Lychee Honey has a light, floral sweetness with delicate tropical-fruit notes and subtle rose undertones. Its gentle flavour makes it a good choice for dishes where you want sweetness without overpowering the other ingredients.</p>"
+     }
+    },
+    "r3": {
+     "type": "row",
+     "settings": {
+      "question": "Is BeeBlend Lychee Honey raw honey?",
+      "answer": "<p>Yes. BeeBlend Lychee Honey is a raw, single-origin honey that is cold-extracted and never blended, helping preserve the distinctive aroma and flavour associated with its floral source. </p><h3></h3>"
+     }
+    },
+    "r4": {
+     "type": "row",
+     "settings": {
+      "question": "What is Lychee Honey best used for?",
+      "answer": "<p>BeeBlend Lychee Honey is particularly suited to breakfast dishes, yoghurt, fresh fruit, desserts and drinks. Its delicate sweetness also works beautifully in savoury recipes such as glazes, dressings and seafood dishes.</p>"
+     }
+    },
+    "r5": {
+     "type": "row",
+     "settings": {
+      "question": "What foods pair well with Lychee Honey?",
+      "answer": "<p>Lychee Honey pairs well with strawberries, tropical fruit, yoghurt, soft goat's cheese and seafood such as prawns. Its floral character also complements lighter teas and desserts.</p>"
+     }
+    },
+    "r6": {
+     "type": "row",
+     "settings": {
+      "question": "Can I use BeeBlend Lychee Honey in tea?",
+      "answer": "<p>Yes. BeeBlend Lychee Honey can be stirred into tea as a natural sweetener. Its light floral and fruity character works particularly well with delicate teas where a stronger-tasting honey could dominate the flavour.</p>"
+     }
+    },
+    "r7": {
+     "type": "row",
+     "settings": {
+      "question": "Why does Lychee Honey crystallise?",
+      "answer": "<p>Crystallisation is a natural process that can occur in honey and does not mean it has spoiled. BeeBlend describes its Lychee Honey as slow-crystallising; if crystallisation occurs, the closed jar can be gently warmed in warm water to soften the honey.</p>"
+     }
+    },
+    "r8": {
+     "type": "row",
+     "settings": {
+      "question": "How should I store BeeBlend Lychee Honey?",
+      "answer": "<p>Keep BeeBlend Lychee Honey tightly sealed in a cool, dry place away from direct sunlight. There is generally no need to refrigerate honey.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6",
+    "r7",
+    "r8"
+   ],
+   "settings": {
+    "heading": "Lychee Honey FAQs",
+    "open_first": true,
+    "bg": "#FBF3DC"
+   }
+  },
+  "text_scrolling_6BVxr4": {
+   "type": "uk-marquee",
+   "blocks": {
+    "m1": {
+     "type": "item",
+     "settings": {
+      "text": "100% Natural"
+     }
+    },
+    "m2": {
+     "type": "item",
+     "settings": {
+      "text": "No Preservatives"
+     }
+    },
+    "m3": {
+     "type": "item",
+     "settings": {
+      "text": "Ethically Harvested"
+     }
+    }
+   },
+   "block_order": [
+    "m1",
+    "m2",
+    "m3"
+   ],
+   "settings": {
+    "bg": "#1F3A2E",
+    "fg": "#FFF8E8",
+    "accent": "#F2C14E",
+    "speed": 40
+   }
+  },
+  "1758803877d65caa9c": {
+   "type": "apps",
+   "blocks": {
+    "judge_me_reviews_review_widget_VWYWci": {
+     "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {
+      "review_data": "sample_data",
+      "max_width": 1200,
+      "show_shop_reviews": false,
+      "empty_state": "empty_widget"
+     }
+    },
+    "klip_coupons_klip_app_section_product_GpzLmc": {
+     "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+     "disabled": true,
+     "settings": {
+      "margin_top": 10,
+      "margin_bottom": 10
+     }
+    }
+   },
+   "block_order": [
+    "judge_me_reviews_review_widget_VWYWci",
+    "klip_coupons_klip_app_section_product_GpzLmc"
+   ],
+   "settings": {
+    "include_margins": true
+   }
+  },
+  "featured_blog_VxCrVE": {
+   "type": "featured-blog",
+   "name": "t:sections.featured-blog.presets.name",
+   "settings": {
+    "blog": "recipes",
+    "post_limit": 3,
+    "heading": "Delicious Honey Based Recipes",
+    "heading_size": "h1",
+    "columns_desktop": 3,
+    "show_view_all": true,
+    "show_image": true,
+    "show_date": true,
+    "show_author": false,
+    "color_scheme": "scheme-c67ad067-fc7c-447d-ab8d-88637cf67a38",
+    "padding_top": 36,
+    "padding_bottom": 36
+   }
+  }
+ },
+ "order": [
+  "main",
+  "taste",
+  "rich_text_NJQTHR",
+  "image_with_text_fmKV3D",
+  "image_with_text_LAMz9X",
+  "image_with_text_HHggjA",
+  "image_with_text_qAkk9J",
+  "collapsible_content_hT6QDF",
+  "text_scrolling_6BVxr4",
+  "1758803877d65caa9c",
+  "featured_blog_VxCrVE"
+ ]
+}

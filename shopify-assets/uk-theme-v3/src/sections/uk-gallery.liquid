@@ -1,0 +1,51 @@
+{%- liquid
+  assign sid = 'ukg-' | append: section.id
+  assign st = section.settings
+-%}
+<style>
+  #{{ sid }}{background:{{ st.bg }};color:var(--uk-ink);padding:clamp(5.6rem,8vw,10.4rem) 0;overflow:hidden}
+  #{{ sid }} .ukg__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:clamp(3.2rem,4vw,5.6rem)}
+  #{{ sid }} h2{font-size:clamp(3.4rem,4.8vw,6.4rem);line-height:1;letter-spacing:-.03em;margin:0}
+  #{{ sid }} .ukg__follow{display:inline-flex;align-items:center;gap:1rem;font-weight:600;font-size:1.6rem;color:inherit;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:.3rem}
+  #{{ sid }} .ukg__row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(24rem,1fr);gap:1.6rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.4rem}
+  #{{ sid }} .ukg__row::-webkit-scrollbar{display:none}
+  #{{ sid }} .ukg__item{position:relative;display:block;aspect-ratio:4/5;border-radius:2.4rem;overflow:hidden;scroll-snap-align:start;background:#EADBBE}
+  #{{ sid }} .ukg__item:nth-child(even){margin-top:4.8rem}
+  #{{ sid }} .ukg__item img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--uk-ease)}
+  #{{ sid }} a.ukg__item:hover img{transform:scale(1.05)}
+  @media(max-width:749px){#{{ sid }} .ukg__row{grid-auto-columns:72%}#{{ sid }} .ukg__item:nth-child(even){margin-top:0}}
+</style>
+<section class="uk ukg" id="{{ sid }}">
+  <div class="uk-wrap">
+    <div class="ukg__head">
+      {%- if st.heading != blank -%}<h2>{{ st.heading }}</h2>{%- endif -%}
+      {%- if st.link_label != blank -%}<a class="ukg__follow" href="{{ st.link }}" target="_blank" rel="noopener">{{ st.link_label }}</a>{%- endif -%}
+    </div>
+    <div class="ukg__row">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+          {%- if block.settings.link != blank -%}<a class="ukg__item" href="{{ block.settings.link }}" target="_blank" rel="noopener" {{ block.shopify_attributes }}>{%- else -%}<div class="ukg__item" {{ block.shopify_attributes }}>{%- endif -%}
+          {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400, 600, 800', sizes: '(min-width: 990px) 25vw, 72vw', alt: block.settings.image.alt }}
+          {%- if block.settings.link != blank -%}</a>{%- else -%}</div>{%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "UK Photo gallery",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Where to find us" },
+    { "type": "text", "id": "link_label", "label": "Link label" },
+    { "type": "url", "id": "link", "label": "Link" },
+    { "type": "color", "id": "bg", "label": "Background", "default": "#FFFFFF" }
+  ],
+  "blocks": [ { "type": "photo", "name": "Photo", "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "url", "id": "link", "label": "Link" }
+  ] } ],
+  "presets": [ { "name": "UK Photo gallery", "blocks": [ { "type": "photo" } ] } ]
+}
+{% endschema %}

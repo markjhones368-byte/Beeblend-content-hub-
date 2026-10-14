@@ -1,0 +1,23 @@
+{%- comment -%} Returns the honey colour for a product handle or any text containing one. Usage: {% render 'uk-honey-colour', key: product.handle %} {%- endcomment -%}
+{%- liquid
+  assign k = key | downcase
+  if k contains 'acacia'
+    echo '#F4DE9A'
+  elsif k contains 'lychee'
+    echo '#E3B04B'
+  elsif k contains 'mustard'
+    echo '#EFC650'
+  elsif k contains 'himalayan'
+    echo '#CF8E2A'
+  elsif k contains 'fennel'
+    echo '#B06E1E'
+  elsif k contains 'golden-nut' or k contains 'golden nut'
+    echo '#A8742F'
+  elsif k contains 'sesame'
+    echo '#7E4614'
+  elsif k contains 'ayurveda'
+    echo '#C77A3A'
+  else
+    echo fallback
+  endif
+-%}

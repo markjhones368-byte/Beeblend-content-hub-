@@ -1,0 +1,63 @@
+{
+ "sections": {
+  "rich_text_zqHJhx": {
+   "type": "uk-page-hero",
+   "settings": {
+    "style": "colour",
+    "heading": "The Gift of Nature’s Sweetness",
+    "colour": "#E3B04B",
+    "ink": "dark",
+    "drip": true
+   }
+  },
+  "collection_list_D86icm": {
+   "type": "uk-collection-tiles",
+   "blocks": {
+    "t1": {
+     "type": "tile",
+     "settings": {
+      "collection": "corporate-gifting"
+     }
+    },
+    "t2": {
+     "type": "tile",
+     "settings": {
+      "collection": "festive-hampers"
+     }
+    },
+    "t3": {
+     "type": "tile",
+     "settings": {
+      "collection": "personalized-gifts"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3"
+   ],
+   "settings": {
+    "heading": "Collections",
+    "bg": "#FBF3DC"
+   }
+  },
+  "image_banner_HztA99": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "statement",
+    "heading": "Build Your Hamper",
+    "bg": "#1F3A2E",
+    "ink": "light",
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "btn1_label": "Start Now",
+    "btn1_link": "shopify://pages/contact"
+   }
+  }
+ },
+ "order": [
+  "rich_text_zqHJhx",
+  "collection_list_D86icm",
+  "image_banner_HztA99"
+ ]
+}

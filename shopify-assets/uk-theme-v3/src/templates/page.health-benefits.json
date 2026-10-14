@@ -1,0 +1,340 @@
+{
+ "sections": {
+  "image_banner_ATFrQC": {
+   "type": "uk-page-hero",
+   "settings": {
+    "style": "photo",
+    "heading": "Health Benefits",
+    "colour": "#F4DE9A",
+    "ink": "dark",
+    "drip": true,
+    "image": "shopify://shop_images/honey_drizzle_1.jpg"
+   }
+  },
+  "image_banner_WaixA6": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "statement",
+    "heading": "The Health Benefits of Honey",
+    "bg": "#1F3A2E",
+    "ink": "light",
+    "text": "<p>Discover why honey has been treasured for thousands of years. From its naturally occurring antioxidants to its versatility in everyday recipes, learn how premium honey can be enjoyed as part of a healthy, balanced lifestyle.</p>",
+    "image": "shopify://shop_images/beeblend_honey_call_to_action.jpg",
+    "btn1_label": "Shop Our Honey Collection",
+    "btn1_link": "shopify://collections/all"
+   }
+  },
+  "rich_text_6TYpA7": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "prose",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "heading": "Why Honey is Different",
+    "text": "<h3>Nature's Original Sweetener</h3><p>Honey has been enjoyed around the world for thousands of years. Unlike refined sugar, honey is produced naturally by honeybees using nectar collected from flowering plants. Every jar reflects the flowers visited by the bees, giving each variety its own unique flavour, colour and aroma.</p><p>Premium honey also contains naturally occurring plant compounds, trace minerals, enzymes and antioxidants that contribute to its distinctive character. The exact composition varies depending on the flowers the bees visit, making every honey variety wonderfully unique.</p><p>Whether stirred into tea, drizzled over yoghurt or used in savoury cooking, honey offers a naturally sweet alternative that brings far more than sweetness alone.</p>"
+   }
+  },
+  "rich_text_XA8nC4": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "statement",
+    "bg": "#FBF3DC",
+    "ink": "dark",
+    "heading": "Naturally Occurring Antioxidants",
+    "text": "<h3>A Natural Source of Plant Compounds</h3><p>Honey naturally contains antioxidants, including plant compounds known as polyphenols and flavonoids. These compounds occur naturally in many fruits, vegetables, herbs and flowers and contribute to the unique colour and flavour of different honey varieties.</p><p>Generally speaking, darker honeys tend to contain higher levels of antioxidants, although every floral source is different.</p><p>The nectar collected by bees directly influences the character of the finished honey, meaning every BeeBlend variety offers its own distinctive taste profile.</p>"
+   }
+  },
+  "rich_text_pNXXLf": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "prose",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "heading": "Honey in Everyday Life",
+    "text": "<p>Honey has long been enjoyed as part of a balanced lifestyle.</p><p>Many people choose honey because it is:</p><ul><li>Naturally sweet<br/></li><li>Versatile in cooking<br/></li><li>Delicious in hot drinks<br/></li><li>Perfect for breakfasts<br/></li><li>Great in smoothies<br/></li><li>Ideal for marinades and dressings<br/></li></ul><p>Whether you're preparing breakfast, baking or cooking dinner, honey is an easy way to add natural sweetness and flavour to everyday meals.</p>"
+   }
+  },
+  "rich_text_miGkBU": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "prose",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "heading": "Honey for Active Days",
+    "text": "<p>Honey's natural sweetness and easy-to-use texture make it a popular addition to breakfasts, snacks and homemade recipes.</p><p>Its smooth texture and rich flavour also make it an excellent ingredient in homemade energy bites and granola.</p><p><strong>Internal links:</strong></p><ul><li><a href=\"/blogs/recipes/himalayan-honey-energy-bites\" target=\"_blank\" title=\"Himalayan Honey Energy Bites\">Himalayan Energy Bites</a><br/></li><li><a href=\"/blogs/recipes/homemade-himalayan-honey-granola\" target=\"_blank\" title=\"Homemade Himalayan Honey Granola\">Homemade Granola</a><br/></li><li><a href=\"/blogs/recipes/golden-nut-honey-overnight-oats\" target=\"_blank\" title=\"Golden Nut Honey Overnight Oats\">Overnight Oats</a><br/></li></ul>"
+   }
+  },
+  "rich_text_yiEtRY": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "prose",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "heading": "Honey in Hot Drinks",
+    "text": "<p>For generations, honey has been stirred into warm drinks.</p><p>Popular combinations include:</p><ul><li>Honey & lemon<br/></li><li>Chamomile tea<br/></li><li>Ginger tea<br/></li><li>Herbal infusions<br/></li><li>Warm water with honey<br/></li></ul><p>BeeBlend's Wild Fennel Honey and Himalayan Multi-Flora Honey pair beautifully with herbal teas thanks to their aromatic floral notes.</p><p><strong>Internal links:</strong></p><ul><li><a href=\"/blogs/recipes/mediterranean-fennel-honey-wellness-tea\" target=\"_blank\" title=\"Mediterranean Fennel Honey Wellness Tea\">Wellness Tea</a><br/></li><li><a href=\"/blogs/recipes/himalayan-honey-chamomile-tea\" target=\"_blank\" title=\"Himalayan Honey Chamomile Tea\">Chamomile Tea</a><br/></li><li><a href=\"/blogs/recipes/himalayan-honey-lemon-ginger-wellness-drink\" target=\"_blank\" title=\"Himalayan Honey Lemon & Ginger Wellness Drink\">Lemon & Ginger Drink</a></li></ul>"
+   }
+  },
+  "rich_text_cTF9EH": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "prose",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "heading": "Honey in Cooking",
+    "text": "<p>Honey isn't just for toast.</p><p>It's fantastic in:</p><ul><li>Salad dressings<br/></li><li>Marinades<br/></li><li>BBQ sauces<br/></li><li>Roasted vegetables<br/></li><li>Glazed salmon<br/></li><li>Roast chicken<br/></li><li>Cheese boards<br/></li><li>Desserts<br/></li></ul><p>Every BeeBlend honey variety has been selected to complement different styles of cooking.</p>"
+   }
+  },
+  "multicolumn_XT7p4V": {
+   "type": "uk-cards",
+   "blocks": {
+    "c1": {
+     "type": "card",
+     "settings": {
+      "title": "Lychee Honey",
+      "text": "<p>Light, delicate and wonderfully floral, Lychee Honey is perfect for yoghurt, fresh fruit, smoothies and refreshing drinks. Its naturally fruity sweetness makes it a favourite for lighter recipes and everyday breakfasts.</p>",
+      "link_label": "Shop Lychee Honey",
+      "link": "https://beeblend.co.uk/products/lychee-honey"
+     }
+    },
+    "c2": {
+     "type": "card",
+     "settings": {
+      "title": "Wild Fennel Honey",
+      "text": "<p>With subtle herbal notes and a distinctive Mediterranean character, Wild Fennel Honey pairs beautifully with herbal teas, roasted vegetables, savoury dishes and artisan cheeses.</p>",
+      "link_label": "Shop Wild Fennel Honey",
+      "link": "https://beeblend.co.uk/products/fennel-honey"
+     }
+    },
+    "c3": {
+     "type": "card",
+     "settings": {
+      "title": "Kashmiri Acacia Honey",
+      "text": "<p>Exceptionally smooth with a delicate floral sweetness, Kashmiri Acacia Honey is ideal for pancakes, porridge, coffee, fruit and family breakfasts.</p>",
+      "link_label": "Shop Kashmiri Acacia Honey",
+      "link": "https://beeblend.co.uk/products/kashmiri-acacia-honey"
+     }
+    },
+    "c4": {
+     "type": "card",
+     "settings": {
+      "title": "Himalayan Multi-Flora Honey",
+      "text": "<p>Collected from diverse mountain blossoms, Himalayan Multi-Flora Honey offers a rich floral flavour that's perfect for teas, granola, energy bites and everyday recipes.</p>",
+      "link_label": "Shop Himalayan Multi-Flora Honey",
+      "link": "https://beeblend.co.uk/products/himalayan-multifloral-honey"
+     }
+    },
+    "c5": {
+     "type": "card",
+     "settings": {
+      "title": "Yellow Mustard Honey",
+      "text": "<p>A delicious balance of sweetness and gentle savoury notes, Yellow Mustard Honey shines in marinades, glazes, BBQ dishes and homemade salad dressings.</p>",
+      "link_label": "Shop Yellow Mustard Honey",
+      "link": "https://beeblend.co.uk/products/mustard-honey"
+     }
+    },
+    "c6": {
+     "type": "card",
+     "settings": {
+      "title": "Golden Nut Honey",
+      "text": "<p>A luxurious blend of premium honey, crunchy nuts and naturally sweet dried fruits. Perfect for breakfast bowls, toast, desserts, roasted fruit and elegant cheese boards.</p>",
+      "link_label": "Shop Golden Nut Honey",
+      "link": "https://beeblend.co.uk/products/golden-nut-honey"
+     }
+    }
+   },
+   "block_order": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6"
+   ],
+   "settings": {
+    "heading": "Discover the BeeBlend Collection",
+    "columns": "3",
+    "bg": "#FFFFFF"
+   }
+  },
+  "featured_blog_R4jfqC": {
+   "type": "featured-blog",
+   "name": "t:sections.featured-blog.presets.name",
+   "settings": {
+    "blog": "recipes",
+    "post_limit": 3,
+    "heading": "RECIPES",
+    "heading_size": "h1",
+    "columns_desktop": 3,
+    "show_view_all": true,
+    "show_image": true,
+    "show_date": true,
+    "show_author": false,
+    "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+    "padding_top": 36,
+    "padding_bottom": 36
+   }
+  },
+  "collapsible_content_p3KLnA": {
+   "type": "uk-accordion",
+   "blocks": {
+    "r1": {
+     "type": "row",
+     "settings": {
+      "question": "What makes honey different from refined sugar?",
+      "answer": "<p>Honey is produced by honeybees from flower nectar, and its flavour, colour and aroma vary according to its floral source. This gives different honey varieties their own distinctive character. Like all sweeteners, honey is best enjoyed in moderation as part of a balanced diet.</p>"
+     }
+    },
+    "r2": {
+     "type": "row",
+     "settings": {
+      "question": "Can I enjoy honey every day?",
+      "answer": "<p>Yes, many people enjoy honey every day in breakfasts, hot drinks, smoothies and cooking. Like all sweeteners, it's best enjoyed as part of a varied and balanced diet.</p>"
+     }
+    },
+    "r3": {
+     "type": "row",
+     "settings": {
+      "question": "Does honey naturally contain antioxidants?",
+      "answer": "<p>Yes. Honey naturally contains antioxidants, including plant compounds such as polyphenols and flavonoids. The exact levels vary depending on the flowers visited by the bees.</p>"
+     }
+    },
+    "r4": {
+     "type": "row",
+     "settings": {
+      "question": "Why does honey crystallise?",
+      "answer": "<p>Crystallisation is a completely natural process that can occur in honey. Simply stand the jar in warm water and stir gently if you prefer a smoother consistency.</p>"
+     }
+    },
+    "r5": {
+     "type": "row",
+     "settings": {
+      "question": "Does crystallised honey mean it has gone bad?",
+      "answer": "<p>Not at all. Crystallisation is a natural characteristic of real honey and does not affect its quality or safety.</p>"
+     }
+    },
+    "r6": {
+     "type": "row",
+     "settings": {
+      "question": "How should I store honey?",
+      "answer": "<p>Store your honey in a cool, dry place with the lid tightly sealed. There's no need to refrigerate it, as this can encourage crystallisation.</p>"
+     }
+    },
+    "r7": {
+     "type": "row",
+     "settings": {
+      "question": "Does honey expire?",
+      "answer": "<p>Honey has an exceptionally long shelf life when stored correctly. While its flavour, colour and texture may naturally change over time, it remains enjoyable for a long time when kept sealed in suitable conditions.</p>"
+     }
+    },
+    "r8": {
+     "type": "row",
+     "settings": {
+      "question": "Can I cook and bake with honey?",
+      "answer": "<p>Absolutely. Honey is a versatile ingredient that's perfect for marinades, glazes, dressings, baking, desserts and hot drinks.</p>"
+     }
+    },
+    "r9": {
+     "type": "row",
+     "settings": {
+      "question": "Which BeeBlend honey is best for tea?",
+      "answer": "<p>Wild Fennel Honey and Himalayan Multi-Flora Honey are excellent choices for herbal teas thanks to their rich floral and aromatic flavours.</p>"
+     }
+    },
+    "r10": {
+     "type": "row",
+     "settings": {
+      "question": "Which BeeBlend honey is best for breakfast?",
+      "answer": "<p>Kashmiri Acacia Honey and Golden Nut Honey are favourites for porridge, pancakes, yoghurt, toast and overnight oats.</p>"
+     }
+    },
+    "r11": {
+     "type": "row",
+     "settings": {
+      "question": "Which BeeBlend honey is best for cooking?",
+      "answer": "<p>Yellow Mustard Honey works beautifully in marinades, glazes and savoury recipes, while Wild Fennel Honey is ideal for roasted vegetables and Mediterranean-inspired dishes.</p>"
+     }
+    },
+    "r12": {
+     "type": "row",
+     "settings": {
+      "question": "Which BeeBlend honey pairs well with cheese?",
+      "answer": "<p>Golden Nut Honey and Wild Fennel Honey both pair wonderfully with artisan cheeses, baked Camembert and grazing boards.</p>"
+     }
+    },
+    "r13": {
+     "type": "row",
+     "settings": {
+      "question": "Which BeeBlend honey should I choose?",
+      "answer": "<p>If you enjoy lighter flavours, try Lychee Honey or Kashmiri Acacia Honey. For cooking, Yellow Mustard Honey and Wild Fennel Honey are excellent choices. If you're looking for something indulgent, Golden Nut Honey is perfect for breakfasts, desserts and cheese boards.</p>"
+     }
+    },
+    "r14": {
+     "type": "row",
+     "settings": {
+      "question": "Why do different honeys taste different?",
+      "answer": "<p>The flavour, colour and aroma of honey depend on the flowers visited by the bees. Different floral sources create unique honey varieties, each with its own distinctive characteristics.</p>"
+     }
+    },
+    "r15": {
+     "type": "row",
+     "settings": {
+      "question": "Is honey suitable for children?",
+      "answer": "<p>Honey should <strong>not</strong> be given to babies under 12 months of age. Older children and adults can enjoy honey as part of a balanced diet.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6",
+    "r7",
+    "r8",
+    "r9",
+    "r10",
+    "r11",
+    "r12",
+    "r13",
+    "r14",
+    "r15"
+   ],
+   "settings": {
+    "heading": "Frequently Asked Questions",
+    "open_first": true,
+    "bg": "#FFFFFF",
+    "text": "<p>Everything you need to know about BeeBlend honey, from storage and crystallisation to cooking, breakfasts and choosing the right variety.</p>"
+   }
+  },
+  "image_banner_nr3ntG": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "statement",
+    "heading": "Explore the BeeBlend Collection",
+    "bg": "#1F3A2E",
+    "ink": "light",
+    "text": "<p>Whether you're looking for a light and delicate honey for breakfast, a rich floral variety for your favourite tea, or the perfect ingredient for cooking and baking, BeeBlend has a honey to suit every occasion. From the fruity sweetness of <strong>Lychee Honey</strong> to the aromatic notes of <strong>Wild Fennel Honey</strong>, every jar is carefully selected for its unique flavour, quality and versatility. Explore our collection and find the perfect honey to enjoy every day.</p>",
+    "image": "shopify://shop_images/beeblend_honey_call_to_action.jpg",
+    "btn1_label": "Shop All Honey",
+    "btn1_link": "shopify://collections/all",
+    "btn2_label": "Browse Our Recipes",
+    "btn2_link": "shopify://blogs/recipes"
+   }
+  }
+ },
+ "order": [
+  "image_banner_ATFrQC",
+  "image_banner_WaixA6",
+  "rich_text_6TYpA7",
+  "rich_text_XA8nC4",
+  "rich_text_pNXXLf",
+  "rich_text_miGkBU",
+  "rich_text_yiEtRY",
+  "rich_text_cTF9EH",
+  "multicolumn_XT7p4V",
+  "featured_blog_R4jfqC",
+  "collapsible_content_p3KLnA",
+  "image_banner_nr3ntG"
+ ]
+}

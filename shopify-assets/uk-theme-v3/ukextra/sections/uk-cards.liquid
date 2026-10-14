@@ -1,0 +1,85 @@
+{%- liquid
+  assign sid = 'ukc-' | append: section.id
+  assign st = section.settings
+-%}
+<style>
+  #{{ sid }}{background:{{ st.bg }};color:var(--uk-ink);padding:clamp(5.6rem,8vw,10.4rem) 0}
+  #{{ sid }} .ukc__head{display:grid;gap:1.6rem;margin-bottom:clamp(3.2rem,4vw,5.6rem)}
+  @media(min-width:990px){#{{ sid }} .ukc__head{grid-template-columns:1fr 1fr;align-items:end}}
+  #{{ sid }} .ukc__head h2{font-size:clamp(3.4rem,4.8vw,6.4rem);line-height:1;letter-spacing:-.03em;margin:0;max-width:16ch}
+  #{{ sid }} .ukc__head .ukc__intro{max-width:50ch;font-size:1.75rem;line-height:1.6;opacity:.85}
+  #{{ sid }} .ukc__grid{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,{% if st.columns == '2' %}44rem{% elsif st.columns == '4' %}24rem{% else %}30rem{% endif %}),1fr))}
+  #{{ sid }} .ukc__card{--hc:#FFFFFF;position:relative;display:flex;flex-direction:column;gap:1.4rem;padding:clamp(2.4rem,2.4vw,3.2rem);border-radius:2.4rem;background:var(--hc);color:var(--uk-ink);text-decoration:none;border:1px solid rgba(34,32,27,.08);transition:transform .5s var(--uk-ease),box-shadow .5s var(--uk-ease)}
+  #{{ sid }} .ukc__card[data-ink="light"]{color:#FFF8E8;border-color:transparent}
+  #{{ sid }} .ukc__card.has-honey{border-color:transparent}
+  #{{ sid }} a.ukc__card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(60,35,5,.55)}
+  #{{ sid }} .ukc__img{border-radius:1.6rem;overflow:hidden;aspect-ratio:4/3;margin:-.4rem -.4rem .4rem}
+  #{{ sid }} .ukc__img img{width:100%;height:100%;object-fit:cover}
+  #{{ sid }} .ukc__card h3{font-size:clamp(2.4rem,2.2vw,3rem);line-height:1.08;letter-spacing:-.02em;margin:0}
+  #{{ sid }} .ukc__text{font-size:1.6rem;line-height:1.6;opacity:.9}
+  #{{ sid }} .ukc__text p+p{margin-top:.8rem}
+  #{{ sid }} .ukc__more{margin-top:auto;padding-top:1rem;font-weight:600;font-size:1.5rem;display:inline-flex;align-items:center;gap:.8rem}
+  #{{ sid }} .ukc__more svg{width:1.6rem;height:1.6rem;transition:transform .5s var(--uk-ease)}
+  #{{ sid }} a.ukc__card:hover .ukc__more svg{transform:translateX(4px)}
+</style>
+<section class="uk ukc" id="{{ sid }}">
+  <div class="uk-wrap">
+    {%- if st.heading != blank or st.text != blank -%}
+      <div class="ukc__head">
+        {%- if st.heading != blank -%}<h2>{{ st.heading }}</h2>{%- endif -%}
+        {%- if st.text != blank -%}<div class="ukc__intro">{{ st.text }}</div>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="ukc__grid">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign b = block.settings
+          assign key = b.title | append: ' ' | append: b.link
+          capture hc
+            render 'uk-honey-colour', key: key
+          endcapture
+          assign hc = hc | strip
+          assign ink = 'dark'
+          if hc == 'fallback'
+            assign hc = ''
+          else
+            capture ink
+              render 'uk-honey-ink', key: key
+            endcapture
+            assign ink = ink | strip
+          endif
+          assign tag = 'div'
+          if b.link != blank
+            assign tag = 'a'
+          endif
+        -%}
+        <{{ tag }} class="ukc__card{% if hc != blank %} has-honey{% endif %}" {% if b.link != blank %}href="{{ b.link }}"{% endif %} {% if hc != blank %}style="--hc: {{ hc }};" data-ink="{{ ink }}"{% endif %} {{ block.shopify_attributes }}>
+          {%- if b.image != blank -%}<div class="ukc__img">{{ b.image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400, 600, 900', sizes: '(min-width: 990px) 30vw, 90vw', alt: b.image.alt }}</div>{%- endif -%}
+          {%- if b.title != blank -%}<h3>{{ b.title }}</h3>{%- endif -%}
+          {%- if b.text != blank -%}<div class="ukc__text">{{ b.text }}</div>{%- endif -%}
+          {%- if b.link_label != blank -%}<span class="ukc__more">{{ b.link_label }}<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>{%- endif -%}
+        </{{ tag }}>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "UK Cards",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "text", "label": "Intro" },
+    { "type": "select", "id": "columns", "label": "Card width", "default": "3", "options": [ { "value": "2", "label": "Wide" }, { "value": "3", "label": "Medium" }, { "value": "4", "label": "Narrow" } ] },
+    { "type": "color", "id": "bg", "label": "Background", "default": "#FBF3DC" }
+  ],
+  "blocks": [ { "type": "card", "name": "Card", "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "title", "label": "Title" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "text", "id": "link_label", "label": "Link label" },
+    { "type": "url", "id": "link", "label": "Link" }
+  ] } ],
+  "presets": [ { "name": "UK Cards", "blocks": [ { "type": "card" } ] } ]
+}
+{% endschema %}

@@ -1,0 +1,116 @@
+{%- liquid
+  assign sid = 'ukt-' | append: section.id
+  assign h = product.handle
+  case h
+    when 'kashmiri-acacia-honey'
+      assign vals = '3,4,1,1' | split: ','
+      assign col = '#F4DE9A'
+      assign line = 'Delicate, smooth and elegantly sweet. A mild floral aroma with soft vanilla-like notes and a clean, subtle finish.'
+      assign pairs = 'Tea and coffee,Fruit and yoghurt,Pancakes,Soft cheeses'
+    when 'lychee-honey'
+      assign vals = '4,5,2,2' | split: ','
+      assign col = '#E3B04B'
+      assign line = 'Delicate floral notes come first, followed by hints of tropical fruit and a light, lingering sweetness.'
+      assign pairs = "Strawberries and cream,Tea and cold drinks,Soft goat's cheese,Prawns"
+    when 'mustard-honey'
+      assign vals = '3,3,2,5' | split: ','
+      assign col = '#EFC650'
+      assign line = 'Surprisingly mild and floral, with a gentle warmth and subtle spice that develops on the palate.'
+      assign pairs = 'Honey mustard glazes,Mature cheddar,Salad dressings,BBQ sauces'
+    when 'himalayan-multifloral-honey'
+      assign vals = '3,3,4,3' | split: ','
+      assign col = '#CF8E2A'
+      assign line = 'Layers of wildflower sweetness, herbal notes and subtle spice, followed by a clean, balanced finish.'
+      assign pairs = 'Porridge and granola,Tea and warm drinks,Artisan cheeses,Baking'
+    when 'fennel-honey'
+      assign vals = '3,2,3,3' | split: ','
+      assign col = '#B06E1E'
+      assign line = 'Delicate anise-like aromatics, followed by warm herbal sweetness and a complex botanical finish.'
+      assign pairs = 'Herbal infusions,Ricotta with black pepper,Roasted root vegetables,Vinaigrettes'
+    when 'golden-nut-honey'
+      assign vals = '4,1,4,5' | split: ','
+      assign col = '#A8742F'
+      assign line = 'Creamy, nutty sweetness meets the caramel-like character of dates, with a rich, velvety mouthfeel.'
+      assign pairs = 'Toast and croissants,Porridge and yoghurt,Cheese and crackers,Ice cream'
+    when 'sesame-honey'
+      assign vals = '2,1,5,4' | split: ','
+      assign col = '#7E4614'
+      assign line = 'Rich and complex, with toasted, nutty notes balanced by caramel-like sweetness and a subtle smoky finish.'
+      assign pairs = 'Roasted salmon,Noodles and rice,Aged cheeses,Marinades'
+    else
+      assign vals = ''
+  endcase
+  assign labels = 'Sweetness,Floral,Depth,Texture' | split: ','
+  assign lows = 'Gentle,Subtle,Light,Runny' | split: ','
+  assign highs = 'Rich,Fragrant,Deep,Creamy' | split: ','
+-%}
+{%- if vals != blank -%}
+<style>:root{--honey:{{ col }}}</style>
+<style>
+  #{{ sid }}{--hc:{{ col }};padding:clamp(5.6rem,8vw,9.6rem) 0;background:#fff}
+  #{{ sid }} .ukt__grid{display:grid;gap:4rem;align-items:center}
+  @media(min-width:990px){#{{ sid }} .ukt__grid{grid-template-columns:1fr 1.1fr;gap:8rem}}
+  #{{ sid }} .ukt__grid>*{min-width:0}
+  #{{ sid }} h2{font-size:clamp(3.6rem,5vw,6.4rem)}
+  #{{ sid }} .ukt__line{margin-top:1.8rem;max-width:42ch;font-size:clamp(1.7rem,1.5vw,2rem);line-height:1.5}
+  #{{ sid }} .ukt__pairs{display:flex;flex-wrap:wrap;gap:.8rem;margin:2.4rem 0 0;padding:0;list-style:none}
+  #{{ sid }} .ukt__pairs li{padding:.9rem 1.5rem;border-radius:999px;background:color-mix(in srgb,var(--hc) 22%,#fff);font-size:1.45rem;font-weight:500}
+  #{{ sid }} .ukt__pairs-label{margin-top:2.8rem;font-weight:600;font-size:1.5rem}
+  #{{ sid }} .ukt__rows{display:grid;gap:2.4rem;margin:0;padding:clamp(2.8rem,3vw,4rem);border-radius:2.8rem;background:color-mix(in srgb,var(--hc) 14%,#fff)}
+  #{{ sid }} .ukt__row{display:grid;grid-template-columns:11rem 1fr;align-items:center;gap:1.2rem 2rem}
+  #{{ sid }} dt{font:600 2rem/1.1 'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1}
+  #{{ sid }} dd{margin:0}
+  #{{ sid }} .ukt__cells{display:flex;gap:.6rem}
+  #{{ sid }} .ukt__cells svg{width:clamp(3rem,3.4vw,4.2rem);height:auto;color:rgba(34,32,27,.12);transition:color .5s,transform .7s var(--uk-goo)}
+  #{{ sid }} .ukt__cells svg.on{color:rgba(34,32,27,.12)}
+  #{{ sid }}.is-in .ukt__cells svg.on{color:var(--hc);transform:scale(1.06);transition-delay:calc(var(--r) * 140ms + var(--k) * 90ms)}
+  #{{ sid }} .ukt__ends{display:flex;justify-content:space-between;max-width:26rem;margin-top:.6rem;font-size:1.3rem;color:#6B655B}
+  @media(max-width:500px){#{{ sid }} .ukt__row{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion: reduce){#{{ sid }} .ukt__cells svg.on{color:var(--hc)}}
+</style>
+<section class="uk ukt" id="{{ sid }}">
+  <div class="uk-wrap ukt__grid">
+    <div>
+      <h2>{{ section.settings.heading }}</h2>
+      <p class="ukt__line">{{ line }}</p>
+      <p class="ukt__pairs-label">Best with</p>
+      <ul class="ukt__pairs">{%- assign ps = pairs | split: ',' -%}{%- for x in ps -%}<li>{{ x }}</li>{%- endfor -%}</ul>
+    </div>
+    <dl class="ukt__rows">
+      {%- for lab in labels -%}
+        {%- assign r = forloop.index0 -%}
+        {%- assign v = vals[r] | plus: 0 -%}
+        <div class="ukt__row">
+          <dt>{{ lab }}</dt>
+          <dd>
+            <span class="bb-visually-hidden">{{ v }} out of 5</span>
+            <div class="ukt__cells" aria-hidden="true">
+              {%- for k in (1..5) -%}<svg class="{% if k <= v %}on{% endif %}" style="--r: {{ r }}; --k: {{ k }};" viewBox="0 0 16 18" focusable="false"><path fill="currentColor" d="M8 0l8 4.5v9L8 18l-8-4.5v-9z"/></svg>{%- endfor -%}
+            </div>
+            <div class="ukt__ends" aria-hidden="true"><span>{{ lows[r] }}</span><span>{{ highs[r] }}</span></div>
+          </dd>
+        </div>
+      {%- endfor -%}
+    </dl>
+  </div>
+</section>
+<script>
+(function(){
+  var el=document.getElementById('{{ sid }}'); if(!el) return;
+  if(!('IntersectionObserver' in window)){ el.classList.add('is-in'); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ el.classList.add('is-in'); io.disconnect(); } }); },{threshold:.35});
+  io.observe(el);
+})();
+</script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "UK Taste profile",
+  "tag": "div",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "How it tastes" }
+  ],
+  "presets": [ { "name": "UK Taste profile" } ]
+}
+{% endschema %}

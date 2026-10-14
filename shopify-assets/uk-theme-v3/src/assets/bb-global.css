@@ -1,0 +1,78 @@
+:root{--font-heading-family:'Young Serif',Georgia,serif;--font-body-family:'Figtree',system-ui,sans-serif}
+body{font-family:'Figtree',system-ui,sans-serif!important;color:#24211C;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.h0,.hxl,.h1,.h2,.h3,.title,.card__heading,.product__title h1,.product__title h2,.collection-hero__title,.main-page-title{font-family:'Young Serif',Georgia,serif!important;text-transform:none!important;letter-spacing:-.01em!important;font-weight:400!important}
+.bb .bb-head h2{font-size:clamp(2.8rem,4.4vw,4.8rem)!important}
+.button,.product-form__submit,.shopify-payment-button__button--unbranded,.cart__checkout-button{border-radius:999px!important;font-family:'Figtree',sans-serif!important;font-weight:600!important;letter-spacing:.02em!important;text-transform:none!important}
+.button::before,.button::after,.product-form__submit::after{border-radius:999px!important;box-shadow:none!important}
+.button:not(.button--secondary):not(.button--tertiary):not(.link),.product-form__submit,.cart__checkout-button{background:#1F3A2E!important;color:#fff!important}
+.button:not(.button--secondary):not(.button--tertiary):hover,.product-form__submit:hover{background:#2C5140!important}
+.shopify-payment-button__button--unbranded{background:#C9921B!important;color:#1d1606!important}
+.badge{border-radius:999px!important;background:#1F3A2E!important;color:#fff!important;border:0!important;font-weight:600}
+.card-wrapper .card__inner,.card-wrapper .card__media{border-radius:16px!important;overflow:hidden}
+.card-wrapper .card--standard .card__inner{background:#FFFCF5}
+.card__heading a{font-size:1.8rem}
+.price .price-item--regular,.price .price-item--sale{font-weight:700}
+.product__media-wrapper .product__media,.product__media-item .media{background:#FFFCF5;border-radius:16px}
+.product__title h1{font-size:clamp(3rem,4vw,4.4rem)!important;line-height:1.1}
+.product-form__input--pill input[type=radio]+label,.product-form__input input[type=radio]+label{border-radius:999px!important}
+.product-form__input input[type=radio]:checked+label{background:#1F3A2E!important;color:#fff!important;border-color:#1F3A2E!important}
+.product__description{line-height:1.7}
+.bb-crumbs{font-size:1.3rem;color:#6B655B}
+.bb-crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.bb-crumbs li+li::before{content:"/";margin-right:.6rem;color:#C9C1B0}
+.bb-crumbs a{color:inherit;text-decoration:none}.bb-crumbs a:hover{color:#1F3A2E;text-decoration:underline}
+@media(max-width:749px){
+ .bb-hero{min-height:80vh}.bb-hero h1{font-size:3.4rem}.bb-hero__sub{font-size:1.6rem}.bb-hero__ctas .bb-btn{flex:1 1 100%}
+ .bb-sec{padding:4.8rem 0}.bb-wrap{padding:0 1.6rem}.bb .bb-head h2{font-size:2.8rem!important}.bb-head{margin-bottom:2.4rem}
+ .bb-grid{gap:2.4rem 1.2rem}.bb-card__title{font-size:1.6rem}.bb-card__tag{font-size:1.25rem}.bb-price{font-size:1.5rem}
+ .bb-pill span{padding:.4rem .9rem;font-size:1.2rem}.bb-card__add{min-height:4.2rem;font-size:1.35rem;padding:0 1rem}
+ .bb-badge{top:.8rem;left:.8rem;font-size:1.1rem;padding:.4rem .9rem}
+ .bb-cmp th,.bb-cmp td{padding:1.2rem 1rem;font-size:1.35rem}.bb-cmp thead th{font-size:1.6rem}
+ .bb-trust__list{justify-content:flex-start;gap:2.4rem}
+ .bb-reels{grid-auto-columns:minmax(17rem,19rem);padding:0 1.6rem 1rem}
+ .bb-gift__img{min-height:22rem}.product__title h1{font-size:2.8rem!important}
+}
+/* ---------- Jar trio composition ---------- */
+.bb-trio{position:absolute;inset:0;overflow:hidden;background:radial-gradient(120% 90% at 50% 78%,#FFFDF7 0%,var(--tint,#EFE2C8) 62%)}
+.bb-trio__floor{position:absolute;left:8%;right:8%;bottom:11%;height:7%;border-radius:50%;background:radial-gradient(closest-side,rgba(90,60,16,.22),rgba(90,60,16,0))}
+.bb-trio img.bb-trio__jar{position:absolute!important;top:auto!important;bottom:13%!important;width:29%!important;height:auto!important;max-height:72%;object-fit:contain!important;padding:0!important;mix-blend-mode:multiply;transform:none!important;transition:none!important}
+.bb-trio img.bb-trio__jar:nth-of-type(1){left:5%!important;right:auto!important}
+.bb-trio img.bb-trio__jar:nth-of-type(2){left:35.5%!important;right:auto!important;bottom:16%!important;z-index:1}
+.bb-trio img.bb-trio__jar:nth-of-type(3){right:5%!important;left:auto!important}
+/* ---------- Illustration + image sizing on phones ---------- */
+.bb-story__img img.bb-illus{object-fit:contain!important;background:#F6EEDC}
+@media(max-width:989px){
+ .bb-story__img{aspect-ratio:4/5;max-width:52rem;width:100%;margin:0 auto}
+ .bb-gift__img{min-height:0;aspect-ratio:4/3}
+ .bb-gift__copy{padding:3.2rem 2.4rem}
+}
+@media(max-width:749px){
+ .bb-gift{border-radius:1.6rem}
+ .bb-story{gap:3.2rem}
+}
+.bb-story__img[data-trio]{aspect-ratio:1/1}
+.bb-story__img{position:relative}
+.bb-story__img img.bb-illus,.bb-story__img img.bb-illus__jar{transform:none!important;transition:none!important}
+.bb-story__img img.bb-illus__jar{position:absolute!important;left:0!important;right:0!important;margin:0 auto!important;top:auto!important;bottom:4.2%!important;height:24%!important;width:auto!important;max-width:40%!important;object-fit:contain!important;object-position:center bottom!important;padding:0!important;mix-blend-mode:multiply}
+/* ---------- Shelf: one jar per arch (Why BeeBlend) ---------- */
+.bb-story__img.bb-ph__img--flight{aspect-ratio:16/9!important;background:linear-gradient(180deg,#FBF5E8 0%,#F2E6CC 100%)!important}
+.bb-shelf{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));gap:2.2%;align-content:center;align-items:end;padding:4% 4%}
+.bb-shelf__item{position:relative;display:flex;flex-direction:column;align-items:center;gap:1.2rem;text-decoration:none;color:var(--bb-forest,#1F3A2E)}
+.bb-shelf__arch{position:relative;display:block;width:100%;aspect-ratio:1/2;border-radius:999px 999px 1rem 1rem;background:radial-gradient(120% 70% at 50% 85%,rgba(255,255,255,.7),rgba(255,255,255,0) 60%),var(--t);box-shadow:inset 0 0 0 1px rgba(107,79,30,.08),0 18px 30px -22px rgba(90,60,16,.35);overflow:hidden}
+.bb-story__img .bb-shelf img.bb-shelf__jar{position:absolute!important;left:8%!important;right:auto!important;top:auto!important;bottom:7%!important;width:84%!important;height:auto!important;max-height:62%!important;object-fit:contain!important;object-position:center bottom!important;padding:0!important;transform:none!important;transition:transform .9s cubic-bezier(.16,1,.3,1)!important;filter:drop-shadow(0 10px 10px rgba(60,40,10,.18))}
+.bb-shelf__name{font-family:'Young Serif',Georgia,serif;font-size:clamp(1.15rem,1.05vw,1.45rem);line-height:1.2;text-align:center;min-height:2.4em}
+@media(hover:hover){.bb-shelf__item:hover img.bb-shelf__jar{transform:translateY(-4px)!important}}
+html.bb-js .bb-curtain .bb-shelf__item{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1.2s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i) * 110ms + 350ms)}
+html.bb-js .bb-curtain.is-in .bb-shelf__item{opacity:1;transform:none}
+@media(max-width:749px){
+ .bb-story__img.bb-ph__img--flight{aspect-ratio:4/3!important}
+ .bb-shelf__arch{aspect-ratio:1/2.1}
+ .bb-shelf{gap:1.6%;padding:7% 3% 5%}
+ .bb-shelf__item{gap:.8rem}
+ .bb-shelf__name{font-size:1rem;min-height:2.6em}
+}
+@media(prefers-reduced-motion:reduce){html.bb-js .bb-curtain .bb-shelf__item{opacity:1!important;transform:none!important}}
+/* ---------- Page header proof points ---------- */
+.bb-ph__points{list-style:none;margin:2.4rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:1rem 2.4rem}
+.bb-ph__points li{display:flex;align-items:center;gap:.8rem;font-weight:600;font-size:1.5rem;color:var(--bb-forest,#1F3A2E)}
+.bb-ph__points li::before{content:"";flex:none;width:2rem;height:2rem;border-radius:50%;background:var(--bb-gold,#C9921B) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/1.2rem no-repeat}

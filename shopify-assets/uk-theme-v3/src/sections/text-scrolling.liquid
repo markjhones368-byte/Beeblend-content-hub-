@@ -1,0 +1,70 @@
+{%- style -%}
+
+.text-scrolling.{{ section.settings.custom_class }}{
+    Background:{{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.font_size }}px;
+}
+
+{%- endstyle -%}
+<div class="text-scrolling {{ section.settings.custom_class }}">
+  <div class="text-wrap">
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+       <span>{{ section.settings.text_name }}</span>
+  </div>
+</div>
+
+
+{% schema %}
+    {
+        "name" : "Text Scrolling",
+        "settings" : [
+          {
+            "type": "text",
+            "id": "text_name",
+            "label": "Enter Text",
+             "default": "Natural Flavoured Honey"
+          },
+          {
+            "type": "text",
+            "id": "font_size",
+            "label": "Font Size",
+             "default": "25"
+          },
+          {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color",
+          "default": "#cde0e6"
+          },
+          {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#010412"
+          },
+          {
+            "type": "text",
+            "id": "custom_class",
+            "label": "Custom Class",
+             "default": "text_scroll"
+          },
+        ],
+        "presets": [
+            {
+                "name": "Text Scrolling"
+            }
+        ]
+    }
+{% endschema %}

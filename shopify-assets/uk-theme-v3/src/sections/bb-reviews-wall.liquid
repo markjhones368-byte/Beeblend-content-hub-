@@ -1,0 +1,64 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign review_blocks = section.blocks | where: 'type', 'review'
+  assign app_blocks = section.blocks | where: 'type', '@app'
+-%}
+<section class="bb bb-sec bb-sec--sage" id="bb-rev-{{ section.id }}">
+  <div class="bb-wrap">
+    <div class="bb-head">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    {%- if section.settings.score != blank -%}
+      <div class="bb-rev__summary">
+        <span class="bb-rev__score">{{ section.settings.score }}</span>
+        <span>{% render 'bb-stars', rating: section.settings.score %}<br>{{ section.settings.count_text }}</span>
+      </div>
+    {%- endif -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == '@app' -%}<div {{ block.shopify_attributes }}>{% render block %}</div>{%- endif -%}
+    {%- endfor -%}
+    {%- if review_blocks.size > 0 -%}
+      <div class="bb-rev__wall">
+        {%- for block in review_blocks -%}
+          {%- assign p = block.settings.product -%}
+          <figure class="bb-rev" {{ block.shopify_attributes }}>
+            {%- if block.settings.photo != blank -%}{{ block.settings.photo | image_url: width: 600 | image_tag: loading: 'lazy', class: 'bb-rev__photo', alt: block.settings.photo.alt }}{%- endif -%}
+            {% render 'bb-stars', rating: block.settings.rating %}
+            <blockquote>{{ block.settings.quote }}</blockquote>
+            <footer>
+              <span><b>{{ block.settings.name }}</b>{% if block.settings.city != blank %}, {{ block.settings.city }}{% endif %}{% if block.settings.verified %} <span class="bb-verified">✓ Verified buyer</span>{% endif %}</span>
+              {%- if p != blank -%}<a href="{{ p.url }}">{{ p.title | split: '|' | first | strip }}</a>{%- endif -%}
+            </footer>
+          </figure>
+        {%- endfor -%}
+      </div>
+    {%- elsif section.blocks.size == 0 -%}
+      <p class="bb-rev__empty">Add genuine customer reviews as blocks, or add your reviews app block (e.g. Judge.me) here.</p>
+    {%- endif -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BB Reviews wall",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "What customers are saying" },
+    { "type": "text", "id": "score", "label": "Average rating (e.g. 4.9). Leave blank to hide." },
+    { "type": "text", "id": "count_text", "label": "Review count text", "default": "Based on verified reviews" }
+  ],
+  "blocks": [
+    { "type": "@app" },
+    { "type": "review", "name": "Customer review", "settings": [
+      { "type": "paragraph", "content": "Only use real reviews from real customers, with their permission." },
+      { "type": "range", "id": "rating", "label": "Stars", "min": 1, "max": 5, "step": 1, "default": 5 },
+      { "type": "textarea", "id": "quote", "label": "Review text" },
+      { "type": "text", "id": "name", "label": "Customer first name + initial" },
+      { "type": "text", "id": "city", "label": "City" },
+      { "type": "checkbox", "id": "verified", "label": "Verified buyer", "default": true },
+      { "type": "image_picker", "id": "photo", "label": "Customer photo (optional)" },
+      { "type": "product", "id": "product", "label": "Product reviewed" }
+    ] }
+  ],
+  "presets": [ { "name": "BB Reviews wall" } ]
+}
+{% endschema %}

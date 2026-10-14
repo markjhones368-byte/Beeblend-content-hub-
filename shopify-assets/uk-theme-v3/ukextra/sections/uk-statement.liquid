@@ -1,0 +1,61 @@
+{%- liquid
+  assign sid = 'ukx-' | append: section.id
+  assign st = section.settings
+-%}
+<style>
+  #{{ sid }}{position:relative;background:{{ st.bg }};color:var(--uk-ink);padding:clamp(5.6rem,8vw,10.4rem) 0;overflow:hidden}
+  #{{ sid }}[data-ink="light"]{color:#FFF8E8}
+  #{{ sid }} .ukx__bg{position:absolute;inset:0}
+  #{{ sid }} .ukx__bg img{width:100%;height:100%;object-fit:cover}
+  #{{ sid }} .ukx__bg::after{content:"";position:absolute;inset:0;background:rgba(20,28,22,.62)}
+  #{{ sid }} .ukx__in{position:relative}
+  #{{ sid }}.is-statement .ukx__in{text-align:center;max-width:96rem;margin:0 auto}
+  #{{ sid }}.is-statement h2{font-size:clamp(3.6rem,5.6vw,7.2rem);line-height:1;letter-spacing:-.03em;margin:0 auto;max-width:18ch}
+  #{{ sid }}.is-statement .ukx__text{margin:2.4rem auto 0;max-width:60ch;font-size:clamp(1.65rem,1.4vw,1.9rem);line-height:1.6;opacity:.9}
+  #{{ sid }}.is-statement .ukx__cta{justify-content:center}
+  #{{ sid }}.is-prose .ukx__in{max-width:76rem;margin:0 auto}
+  #{{ sid }}.is-prose h2{font-size:clamp(3.2rem,4vw,5.2rem);line-height:1.04;letter-spacing:-.025em;margin:0 0 2.4rem}
+  #{{ sid }}.is-prose .ukx__text{font-size:1.7rem;line-height:1.75}
+  #{{ sid }}.is-prose .ukx__text h2,#{{ sid }}.is-prose .ukx__text h3{font-size:clamp(2.4rem,2.4vw,3rem);line-height:1.15;letter-spacing:-.015em;margin:4rem 0 1.2rem}
+  #{{ sid }}.is-prose .ukx__text h2:first-child,#{{ sid }}.is-prose .ukx__text h3:first-child{margin-top:0}
+  #{{ sid }}.is-prose .ukx__text p+p{margin-top:1.4rem}
+  #{{ sid }} .ukx__text ul,#{{ sid }} .ukx__text ol{margin:1.4rem 0 0;padding-left:2.2rem}
+  #{{ sid }} .ukx__text li+li{margin-top:.6rem}
+  #{{ sid }} .ukx__text li::marker{color:#C98F17}
+  #{{ sid }} .ukx__text a{color:inherit;text-underline-offset:.3rem}
+  #{{ sid }} .ukx__cta{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:3.2rem}
+  #{{ sid }} .ukx__ghost{border-color:currentColor;color:inherit;background:transparent}
+  #{{ sid }}[data-ink="light"] .bb-btn--solid{background:var(--uk-pollen);color:var(--uk-ink)}
+</style>
+<section class="uk ukx is-{{ st.style }}" id="{{ sid }}" data-ink="{{ st.ink }}">
+  {%- if st.image != blank -%}<div class="ukx__bg">{{ st.image | image_url: width: 2000 | image_tag: loading: 'lazy', widths: '750, 1200, 1600, 2000', sizes: '100vw', alt: '' }}</div>{%- endif -%}
+  <div class="uk-wrap"><div class="ukx__in">
+    {%- if st.heading != blank -%}<h2>{{ st.heading }}</h2>{%- endif -%}
+    {%- if st.text != blank -%}<div class="ukx__text">{{ st.text }}</div>{%- endif -%}
+    {%- if st.btn1_label != blank or st.btn2_label != blank -%}
+      <div class="ukx__cta">
+        {%- if st.btn1_label != blank -%}<a class="bb-btn bb-btn--solid" href="{{ st.btn1_link }}">{{ st.btn1_label }}</a>{%- endif -%}
+        {%- if st.btn2_label != blank -%}<a class="bb-btn ukx__ghost" href="{{ st.btn2_link }}">{{ st.btn2_label }}</a>{%- endif -%}
+      </div>
+    {%- endif -%}
+  </div></div>
+</section>
+{% schema %}
+{
+  "name": "UK Statement or text",
+  "tag": "div",
+  "settings": [
+    { "type": "select", "id": "style", "label": "Style", "default": "statement", "options": [ { "value": "statement", "label": "Big statement (centred)" }, { "value": "prose", "label": "Long text (policies, articles)" } ] },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "image_picker", "id": "image", "label": "Background photo" },
+    { "type": "color", "id": "bg", "label": "Background", "default": "#FFFFFF" },
+    { "type": "select", "id": "ink", "label": "Text colour", "default": "dark", "options": [ { "value": "dark", "label": "Dark" }, { "value": "light", "label": "Light" } ] },
+    { "type": "text", "id": "btn1_label", "label": "Button" },
+    { "type": "url", "id": "btn1_link", "label": "Button link" },
+    { "type": "text", "id": "btn2_label", "label": "Second button" },
+    { "type": "url", "id": "btn2_link", "label": "Second button link" }
+  ],
+  "presets": [ { "name": "UK Statement or text" } ]
+}
+{% endschema %}

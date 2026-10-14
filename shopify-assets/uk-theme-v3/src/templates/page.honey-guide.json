@@ -1,0 +1,224 @@
+{
+ "sections": {
+  "rich_text_3kyYBM": {
+   "type": "uk-page-hero",
+   "settings": {
+    "style": "colour",
+    "heading": "Which honey should I choose?",
+    "colour": "#EFC650",
+    "ink": "dark",
+    "drip": true,
+    "text": "<p>From delicate and floral to rich, nutty and aromatic, every BeeBlend honey has its own distinctive character. Explore our honey guide to compare flavours, discover the best ways to enjoy each variety and find the perfect honey for your taste.</p>",
+    "btn1_label": "Shop all honey",
+    "btn1_link": "https://beeblend.co.uk/collections/jar"
+   }
+  },
+  "multicolumn_AVEhk7": {
+   "type": "uk-cards",
+   "blocks": {
+    "c1": {
+     "type": "card",
+     "settings": {
+      "title": "Best honey for tea & hot drinks",
+      "text": "<p>Acacia for something mild, Fennel for aromatic flavour, Lychee for floral sweetness.</p>"
+     }
+    },
+    "c2": {
+     "type": "card",
+     "settings": {
+      "title": "Best honey for breakfast",
+      "text": "<p>Lychee, Acacia and Golden Nut.</p>"
+     }
+    },
+    "c3": {
+     "type": "card",
+     "settings": {
+      "title": "Best honey for dressings & marinades",
+      "text": "<p>Sesame and Yellow Mustard.</p>"
+     }
+    },
+    "c4": {
+     "type": "card",
+     "settings": {
+      "title": "Best honey for cooking",
+      "text": "<p>Sesame, Mustard and Himalayan Multi-Flora.</p>"
+     }
+    },
+    "c5": {
+     "type": "card",
+     "settings": {
+      "title": "Best honey for cheese",
+      "text": "<p>Fennel and Golden Nut.</p>"
+     }
+    },
+    "c6": {
+     "type": "card",
+     "settings": {
+      "title": "Best honey for baking & desserts",
+      "text": "<p>Acacia, Lychee and Golden Nut.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6"
+   ],
+   "settings": {
+    "heading": "Find your flavour",
+    "columns": "3",
+    "bg": "#FBF3DC"
+   }
+  },
+  "collapsible_content_pdqmPB": {
+   "type": "uk-accordion",
+   "blocks": {
+    "r1": {
+     "type": "row",
+     "settings": {
+      "question": "Mild & Delicate",
+      "answer": "<p><a href=\"https://beeblend.co.uk/products/kashmiri-acacia-honey\" title=\"https://beeblend.co.uk/products/kashmiri-acacia-honey\">Kashmiri Acacia Honey </a>— smooth, softly floral and a great choice if you prefer a subtle honey.</p>"
+     }
+    },
+    "r2": {
+     "type": "row",
+     "settings": {
+      "question": "Floral & Fruity",
+      "answer": "<p><a href=\"https://beeblend.co.uk/products/lychee-honey\" title=\"https://beeblend.co.uk/products/lychee-honey\">Lychee Honey </a>— delicate floral sweetness with subtle tropical notes.</p>"
+     }
+    },
+    "r3": {
+     "type": "row",
+     "settings": {
+      "question": "Botanical & Aromatic",
+      "answer": "<p><a href=\"https://beeblend.co.uk/products/fennel-honey\" title=\"https://beeblend.co.uk/products/fennel-honey\">Wild Fennel Honey</a> — distinctive herbal character with delicate anise-like notes.</p>"
+     }
+    },
+    "r4": {
+     "type": "row",
+     "settings": {
+      "question": "Rich & Nutty",
+      "answer": "<p><a href=\"https://beeblend.co.uk/products/sesame-honey\" title=\"https://beeblend.co.uk/products/sesame-honey\">Sesame Honey</a> — toasted, nutty notes with a rich, smooth sweetness.</p>"
+     }
+    },
+    "r5": {
+     "type": "row",
+     "settings": {
+      "question": "Complex & Floral",
+      "answer": "<p><a href=\"https://beeblend.co.uk/products/himalayan-multifloral-honey\" title=\"https://beeblend.co.uk/products/himalayan-multifloral-honey\">Himalayan Multi-Flora Honey </a>— layered floral character with herbal and subtly spiced notes.</p>"
+     }
+    },
+    "r6": {
+     "type": "row",
+     "settings": {
+      "question": "Floral & Gently Warming",
+      "answer": "<p><a href=\"https://beeblend.co.uk/products/mustard-honey\" title=\"https://beeblend.co.uk/products/mustard-honey\">Yellow Mustard Honey </a>— smooth floral sweetness with a gently warming character.</p>"
+     }
+    },
+    "r7": {
+     "type": "row",
+     "settings": {
+      "question": "Rich & Indulgent",
+      "answer": "<p><a href=\"https://beeblend.co.uk/products/golden-nut-honey\" title=\"https://beeblend.co.uk/products/golden-nut-honey\">Golden Nut Honey</a> — honey combined with nuts and dried fruit for a richer, textured experience.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6",
+    "r7"
+   ],
+   "settings": {
+    "heading": "Choose your honey by flavour",
+    "open_first": true,
+    "bg": "#FFFFFF"
+   }
+  },
+  "collapsible_content_cTnVrU": {
+   "type": "uk-accordion",
+   "blocks": {
+    "r1": {
+     "type": "row",
+     "settings": {
+      "question": "Tea & Hot Drinks",
+      "answer": "<p>Choose <strong>Kashmiri Acacia Honey</strong> for mild sweetness, <strong>Wild Fennel Honey</strong> for a more aromatic flavour, or <strong>Lychee Honey</strong> for delicate floral notes.</p>"
+     }
+    },
+    "r2": {
+     "type": "row",
+     "settings": {
+      "question": "Breakfast",
+      "answer": "<p>Try <strong>Lychee Honey</strong> or <strong>Kashmiri Acacia Honey</strong> over porridge, yoghurt, toast or fruit. <strong>Golden Nut Honey</strong> is a richer choice for an indulgent breakfast.</p>"
+     }
+    },
+    "r3": {
+     "type": "row",
+     "settings": {
+      "question": "Cooking",
+      "answer": "<p><strong>Himalayan Multi-Flora Honey</strong> is a versatile option, while <strong>Sesame Honey</strong> and <strong>Yellow Mustard Honey</strong> work particularly well with savoury flavours.</p>"
+     }
+    },
+    "r4": {
+     "type": "row",
+     "settings": {
+      "question": "Dressings & Marinades",
+      "answer": "<p>Try <strong>Sesame Honey</strong> for rich, nutty dressings or <strong>Yellow Mustard Honey</strong> for glazes, vinaigrettes and marinades.</p>"
+     }
+    },
+    "r5": {
+     "type": "row",
+     "settings": {
+      "question": "Cheese",
+      "answer": "<p>Pair <strong>Wild Fennel Honey</strong> with cheese for an aromatic contrast, or choose <strong>Golden Nut Honey</strong> for something richer and more indulgent.</p>"
+     }
+    },
+    "r6": {
+     "type": "row",
+     "settings": {
+      "question": "Baking & Desserts",
+      "answer": "<p>Try <strong>Kashmiri Acacia Honey</strong> for delicate sweetness, <strong>Lychee Honey</strong> for floral character or <strong>Golden Nut Honey</strong> for richer desserts.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6"
+   ],
+   "settings": {
+    "heading": "Which honey is best for...?",
+    "open_first": true,
+    "bg": "#FBF3DC"
+   }
+  },
+  "rich_text_VwU9Qa": {
+   "type": "uk-statement",
+   "settings": {
+    "style": "statement",
+    "bg": "#FFFFFF",
+    "ink": "dark",
+    "heading": "Ready to find your favourite?",
+    "text": "<p>Explore the full BeeBlend honey collection and discover distinctive flavours for breakfast, cooking, drinks and everyday enjoyment.</p>",
+    "btn1_label": "Shop all honey",
+    "btn1_link": "https://beeblend.co.uk/collections/jar"
+   }
+  }
+ },
+ "order": [
+  "rich_text_3kyYBM",
+  "multicolumn_AVEhk7",
+  "collapsible_content_pdqmPB",
+  "collapsible_content_cTnVrU",
+  "rich_text_VwU9Qa"
+ ]
+}
