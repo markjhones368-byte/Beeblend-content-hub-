@@ -84,16 +84,33 @@
   }, true);
 
 
-  /* 6. Bees flying across the hero */
-  function bees() {
+  /* 6. Pollen light: a few soft golden motes drift up through the hero */
+  function pollen() {
     if (reduce) return;
-    var h = document.querySelector('.bb-hero'); if (!h || h.dataset.ukBees) return; h.dataset.ukBees = '1';
-    var svg = '<svg viewBox="0 0 40 40" aria-hidden="true"><ellipse class="w" cx="15" cy="12" rx="7" ry="9" fill="rgba(255,255,255,.75)"/><ellipse class="w" cx="25" cy="12" rx="7" ry="9" fill="rgba(255,255,255,.6)"/><ellipse cx="20" cy="24" rx="11" ry="8" fill="#F2B61F"/><path d="M15 17v14M20 16v16M25 17v14" stroke="#24211C" stroke-width="2.6"/><circle cx="31" cy="23" r="4" fill="#24211C"/></svg>';
-    [{ y: '24%', d: 17, delay: 0 }, { y: '58%', d: 22, delay: -7 }, { y: '40%', d: 26, delay: -15 }].forEach(function (b) {
-      var el = document.createElement('span'); el.className = 'uk-bee'; el.setAttribute('aria-hidden', 'true');
-      el.style.setProperty('--y', b.y); el.style.setProperty('--d', b.d + 's'); el.style.setProperty('--delay', b.delay + 's');
-      el.innerHTML = svg; h.appendChild(el);
-    });
+    var h = document.querySelector('.bb-hero'); if (!h || h.dataset.ukPollen) return; h.dataset.ukPollen = '1';
+    var c = document.createElement('canvas'); c.className = 'uk-pollen'; c.setAttribute('aria-hidden', 'true'); h.appendChild(c);
+    var ctx = c.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2), W, H, motes = [], mx = 0, my = 0, run = true;
+    var N = window.matchMedia('(max-width: 749px)').matches ? 22 : 46;
+    function size() { W = h.clientWidth; H = h.clientHeight; c.width = W * dpr; c.height = H * dpr; c.style.width = W + 'px'; c.style.height = H + 'px'; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    function mote(init) { return { x: Math.random() * W, y: init ? Math.random() * H : H + 10, r: 0.6 + Math.random() * 2.2, z: 0.3 + Math.random() * 0.7, vy: 0.12 + Math.random() * 0.32, ph: Math.random() * 6.28, a: 0.12 + Math.random() * 0.34 }; }
+    size(); for (var i = 0; i < N; i++) motes.push(mote(true));
+    window.addEventListener('resize', size);
+    if (fine) h.addEventListener('pointermove', function (e) { var r = h.getBoundingClientRect(); mx = (e.clientX - r.left) / r.width - 0.5; my = (e.clientY - r.top) / r.height - 0.5; });
+    new IntersectionObserver(function (es) { run = es[0].isIntersecting; if (run) raf(draw); }).observe(h);
+    var t = 0;
+    function draw() {
+      if (!run) return; t += 0.01; ctx.clearRect(0, 0, W, H);
+      motes.forEach(function (m, i) {
+        m.y -= m.vy * m.z; m.x += Math.sin(t * 1.3 + m.ph) * 0.18 * m.z;
+        if (m.y < -10) motes[i] = m = mote(false);
+        var x = m.x + mx * 24 * m.z, y = m.y + my * 16 * m.z, tw = 0.65 + 0.35 * Math.sin(t * 2 + m.ph);
+        var g = ctx.createRadialGradient(x, y, 0, x, y, m.r * 4);
+        g.addColorStop(0, 'rgba(255,226,150,' + (m.a * tw).toFixed(3) + ')'); g.addColorStop(1, 'rgba(255,200,90,0)');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, m.r * 4, 0, 6.283); ctx.fill();
+      });
+      raf(draw);
+    }
+    raf(function () { c.classList.add('is-on'); draw(); });
   }
 
   /* 7. Tap ripple on buttons */
@@ -142,7 +159,7 @@
   }
 
   function init() {
-    reveals(); tilt(); magnetic(); bees(); journeyFocus(); drift();
+    reveals(); tilt(); magnetic(); pollen(); journeyFocus(); drift();
     if (!reduce && !bar) { bar = document.createElement('div'); bar.className = 'uk-progress'; bar.setAttribute('aria-hidden', 'true'); document.body.appendChild(bar); }
     hero = document.querySelector('.bb-hero'); heroInner = hero && hero.querySelector('.bb-hero__inner'); heroMedia = hero && hero.querySelector('.bb-hero__media video, .bb-hero__media img');
     if (reduce) { hero = null; }
