@@ -1,0 +1,39 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+<section class="bb bb-sec bb-sec--{{ section.settings.bg }}">
+  <div class="bb-wrap bb-story">
+    <div class="bb-story__img"{% if section.settings.image_right %} style="order:2"{% endif %}{% if section.settings.trio.count > 0 %} data-trio{% endif %}>
+      {%- if section.settings.trio.count > 0 -%}
+        {% render 'bb-jar-trio', products: section.settings.trio, tint: section.settings.tint %}
+      {%- elsif section.settings.image != blank -%}
+        {%- assign alt_txt = section.settings.image.alt | default: section.settings.heading -%}
+        {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600, 900, 1200', sizes: '(min-width: 990px) 50vw, 100vw', alt: alt_txt }}
+      {%- else -%}{{ 'lifestyle-1' | placeholder_svg_tag }}{%- endif -%}
+    </div>
+    <div>
+      <div class="bb-head" style="margin-bottom:0">
+        <h2>{{ section.settings.heading }}</h2>
+        <div style="margin-top:1.6rem;color:var(--bb-muted);font-size:1.7rem;line-height:1.7">{{ section.settings.text }}</div>
+      </div>
+      {%- if section.settings.btn_label != blank -%}<p style="margin-top:3.2rem"><a class="bb-btn bb-btn--solid" href="{{ section.settings.btn_link | default: routes.all_products_collection_url }}">{{ section.settings.btn_label }}</a></p>{%- endif -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BB Image with text",
+  "tag": "div",
+  "settings": [
+    { "type": "product_list", "id": "trio", "label": "Show 3 product jars (replaces image)", "limit": 3 },
+    { "type": "color", "id": "tint", "label": "Jar background", "default": "#EFE2C8" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "checkbox", "id": "image_right", "label": "Image on the right (desktop)", "default": false },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Our story" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Tell your story here.</p>" },
+    { "type": "text", "id": "btn_label", "label": "Button" },
+    { "type": "url", "id": "btn_link", "label": "Button link" },
+    { "type": "select", "id": "bg", "label": "Background", "default": "white", "options": [
+      { "value": "white", "label": "White" }, { "value": "paper", "label": "Warm paper" }, { "value": "sage", "label": "Sage" } ] }
+  ],
+  "presets": [ { "name": "BB Image with text" } ]
+}
+{% endschema %}

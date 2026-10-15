@@ -1,0 +1,396 @@
+{
+ "sections": {
+  "video_section_QdfyKG": {
+   "type": "bb-hero",
+   "settings": {
+    "video": "shopify://files/videos/video-bg.mp4",
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "heading": "Crafted by Bees, Perfected by Nature",
+    "subheading": "Discover rare, single-origin raw honeys, each with its own distinctive flavour and natural character.",
+    "btn1_label": "Shop Honey",
+    "btn1_link": "shopify://collections/all",
+    "btn2_label": "Find your honey",
+    "btn2_link": "shopify://pages/which-honey-should-i-choose",
+    "eyebrow": "Rare honeys · Distinctive flavours",
+    "show_cue": true
+   }
+  },
+  "featured_collection_MQcrBh": {
+   "type": "bb-product-grid",
+   "settings": {
+    "heading": "Rare Honeys, Raw Truth.",
+    "collection": "frontpage",
+    "limit": 4,
+    "columns": 4,
+    "quick_add": true,
+    "show_sold_out": true,
+    "center": false,
+    "button_label": "View all",
+    "bg": "paper"
+   }
+  },
+  "image_with_text_tYq3R8": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Our story",
+    "text": "<p>At BeeBlend, we believe honey is more than just a sweetener—it’s nature’s golden gift, crafted by the tireless work of bees and the bounty of wildflowers. Our journey began with a simple vision: to bring you the purest, most exquisite honey, exactly as nature intended.</p>",
+    "image_right": false,
+    "bg": "sage",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/PDFGallery_20260413_171623_pages-to-jpg-0001_jpg.png",
+    "btn_label": "Read More",
+    "btn_link": "shopify://pages/about-us"
+   }
+  },
+  "journey": {
+   "type": "uk-flavour-journey",
+   "blocks": {
+    "j1": {
+     "type": "honey",
+     "settings": {
+      "product": "kashmiri-acacia-honey",
+      "name": "Kashmiri Acacia",
+      "colour": "#F4DE9A",
+      "ink": "dark",
+      "origin": "Kashmir",
+      "notes": "Delicate, smooth and elegantly sweet, with a mild floral aroma, soft vanilla-like notes and a clean, subtle finish.",
+      "pairs": "Tea and coffee, Fruit and yoghurt, Soft cheeses"
+     }
+    },
+    "j2": {
+     "type": "honey",
+     "settings": {
+      "product": "mustard-honey",
+      "name": "Yellow Mustard Flower",
+      "colour": "#EFC650",
+      "ink": "dark",
+      "origin": "Mustard-growing regions",
+      "notes": "Surprisingly mild and floral, with a gentle warmth and subtle spice that develops on the palate.",
+      "pairs": "Honey mustard glazes, Mature cheddar, Salad dressings"
+     }
+    },
+    "j3": {
+     "type": "honey",
+     "settings": {
+      "product": "lychee-honey",
+      "name": "Lychee Blossom",
+      "colour": "#E3B04B",
+      "ink": "dark",
+      "notes": "Delicate floral notes come first, followed by hints of tropical fruit and a light, lingering sweetness.",
+      "pairs": "Strawberries and cream, Tea and cold drinks, Soft goat's cheese"
+     }
+    },
+    "j4": {
+     "type": "honey",
+     "settings": {
+      "product": "himalayan-multifloral-honey",
+      "name": "Himalayan Multi-Flora",
+      "colour": "#CF8E2A",
+      "ink": "dark",
+      "origin": "High-altitude Himalayan regions",
+      "notes": "Layers of wildflower sweetness, herbal notes and subtle spice, followed by a clean, balanced finish.",
+      "pairs": "Porridge and granola, Tea and warm drinks, Baking"
+     }
+    },
+    "j5": {
+     "type": "honey",
+     "settings": {
+      "product": "fennel-honey",
+      "name": "Wild Fennel",
+      "colour": "#B06E1E",
+      "ink": "light",
+      "origin": "Mediterranean region",
+      "notes": "Delicate anise-like aromatics, followed by warm herbal sweetness and a complex botanical finish.",
+      "pairs": "Herbal infusions, Ricotta with black pepper, Artisan cheeses"
+     }
+    },
+    "j6": {
+     "type": "honey",
+     "settings": {
+      "product": "golden-nut-honey",
+      "name": "Golden Nut Infusion",
+      "colour": "#A8742F",
+      "ink": "light",
+      "origin": "Raw honey, almonds, cashews and dates",
+      "notes": "Creamy, nutty sweetness meets the caramel-like character of dates, with a rich, velvety mouthfeel.",
+      "pairs": "Toast and croissants, Porridge, Cheese and crackers"
+     }
+    },
+    "j7": {
+     "type": "honey",
+     "settings": {
+      "product": "sesame-honey",
+      "name": "Black Sesame",
+      "colour": "#7E4614",
+      "ink": "light",
+      "origin": "Sesame-growing regions",
+      "notes": "Rich and complex, with toasted, nutty notes balanced by caramel-like sweetness and a subtle smoky finish.",
+      "pairs": "Roasted salmon, Noodles and rice, Aged cheeses"
+     }
+    }
+   },
+   "block_order": [
+    "j1",
+    "j2",
+    "j3",
+    "j4",
+    "j5",
+    "j6",
+    "j7"
+   ],
+   "settings": {
+    "heading": "Honey with a story",
+    "text": "From delicate and floral to rich and nutty, every BeeBlend honey has its own distinctive character. Explore honeys sourced from unique blossoms and landscapes, chosen for their flavour, versatility and individuality."
+   }
+  },
+  "image_with_text_8hbt9B": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Naturally sweeten your everyday",
+    "text": "<p>From morning porridge and yoghurt to tea, dressings and home cooking, discover delicious ways to use BeeBlend honey in place of refined sugar.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Group_63_1.png",
+    "btn_label": "Discover Our Honey",
+    "btn_link": "shopify://collections/all"
+   }
+  },
+  "image_banner_hAnDan": {
+   "type": "bb-gifting-banner",
+   "settings": {
+    "heading": "From hive to jar, we bring you honey the way nature intended",
+    "text": "",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "btn_label": "Discover Our Story",
+    "btn_link": "shopify://pages/about-us"
+   }
+  },
+  "collection_list_YR74Ua": {
+   "type": "bb-collection-cards",
+   "blocks": {
+    "c1": {
+     "type": "card",
+     "settings": {
+      "collection": "jar"
+     }
+    },
+    "c2": {
+     "type": "card",
+     "settings": {
+      "collection": "sachet"
+     }
+    }
+   },
+   "block_order": [
+    "c1",
+    "c2"
+   ],
+   "settings": {
+    "heading": "Our Collections",
+    "center": false,
+    "fit": "contain",
+    "bg": "sage"
+   }
+  },
+  "image_with_text_63xW3b": {
+   "type": "bb-story-steps",
+   "blocks": {
+    "s1": {
+     "type": "step",
+     "settings": {
+      "title": "Gathering Nectar",
+      "text": "Bees use their straw-like tongues to extract nectar from flowers, storing it in a specialized “honey stomach” for transport back to the hive."
+     }
+    },
+    "s2": {
+     "type": "step",
+     "settings": {
+      "title": "Transforming & Dehydrating",
+      "text": "Inside the hive, bees add enzymes to break down the nectar’s sugars, then deposit it into honeycomb cells. They fan their wings to evaporate moisture, transforming the nectar into thick, concentrated honey before sealing the cells with wax."
+     }
+    },
+    "s3": {
+     "type": "step",
+     "settings": {
+      "title": "Harvesting & Jarring",
+      "text": "Beekeepers remove the wax caps and spin the frames in an extractor. The honey is then filtered and bottled, preserving nature’s golden sweetness in every jar."
+     }
+    }
+   },
+   "block_order": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "settings": {
+    "illustration": "image",
+    "heading": "From hive to jar",
+    "text": "",
+    "image": "shopify://shop_images/generated-image_1.jpg"
+   }
+  },
+  "logo_grid_kVhfhk": {
+   "type": "bb-social",
+   "blocks": {
+    "p2": {
+     "type": "photo",
+     "settings": {
+      "image": "shopify://shop_images/IMG_0335.jpg",
+      "link": "https://www.instagram.com/beeblenduk/"
+     }
+    },
+    "p3": {
+     "type": "photo",
+     "settings": {
+      "image": "shopify://shop_images/2227.jpg",
+      "link": "https://www.instagram.com/beeblenduk/"
+     }
+    },
+    "p4": {
+     "type": "photo",
+     "settings": {
+      "image": "shopify://shop_images/IMG_0334.jpg",
+      "link": "https://beeblend.co.uk/"
+     }
+    }
+   },
+   "block_order": [
+    "p2",
+    "p3",
+    "p4"
+   ],
+   "settings": {
+    "heading": "Where to find us",
+    "text": "",
+    "instagram": "https://www.instagram.com/beeblenduk/",
+    "instagram_handle": "@beeblenduk",
+    "tiktok": "https://www.tiktok.com/@beeblend?_t=ZN-90ZZW4Fjk7a&_r=1",
+    "tiktok_handle": "@beeblend",
+    "feed_heading": "From our feed",
+    "bg": "white"
+   }
+  },
+  "177495970502d286d5": {
+   "type": "apps",
+   "blocks": {
+    "judge_me_reviews_testimonials_carousel_TEhYTX": {
+     "type": "shopify://apps/judge-me-reviews/blocks/testimonials_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {
+      "show_sample_reviews": false,
+      "reviews_selection": "product_reviews",
+      "products": [],
+      "filter_pinned": false,
+      "filter_featured": false,
+      "filter_custom_tags": "",
+      "star_rating": "all",
+      "max_reviews": 20,
+      "quote_marks_size": "small",
+      "product_name_text_size": "small",
+      "verified_badge_style": "icon",
+      "card_height": "medium",
+      "text_size": "small",
+      "stars_size": "medium",
+      "arrows_position": "bottom",
+      "max_width": 1100,
+      "corner_styling": "soft",
+      "quote_marks_style": "serif",
+      "card_color": "#f9f9f9",
+      "stars_and_quote_marks_color": "#108474",
+      "text_color": "#000000",
+      "arrows_color": "#010412",
+      "show_border": false,
+      "border_color": "#108474",
+      "show_drop_shadow": false,
+      "transition_speed": 5,
+      "header_text": "Customers are saying",
+      "show_average_rating": true,
+      "rating_display": "default"
+     }
+    }
+   },
+   "block_order": [
+    "judge_me_reviews_testimonials_carousel_TEhYTX"
+   ],
+   "settings": {
+    "include_margins": true
+   }
+  },
+  "text_scrolling_khjh3U": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "hex",
+      "text": "Rare honeys"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "Distinctive flavours"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Crafted by bees"
+     }
+    },
+    "t4": {
+     "type": "item",
+     "settings": {
+      "icon": "pin",
+      "text": "Perfected by nature"
+     }
+    },
+    "t5": {
+     "type": "item",
+     "settings": {
+      "icon": "shield",
+      "text": "100% pure honey"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5"
+   ],
+   "settings": {}
+  },
+  "image_with_text_dDHrjn": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "How BeeBlend works",
+    "text": "<p>At Bee Blend, we don’t just bottle honey—we preserve nature’s masterpiece. Each jar represents an extraordinary collaboration between our carefully tended bees and pristine wildflowers, resulting in honey of unparalleled purity and depth. Our philosophy is uncompromising: honor the ancient wisdom of the hive, intervene only with reverence, and deliver nothing less than perfection. Below, discover the three sacred stages where 60,000 bee visits to two million blossoms create a single pound of liquid gold. This isn’t just honey. This is Bee Blend—where nature’s artistry meets human devotion, and every golden drop tells a story of patience, purity, and exceptional quality.</p>",
+    "image_right": true,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/05.png",
+    "btn_label": "Shop Now",
+    "btn_link": "shopify://collections/all"
+   }
+  }
+ },
+ "order": [
+  "video_section_QdfyKG",
+  "text_scrolling_khjh3U",
+  "featured_collection_MQcrBh",
+  "image_with_text_tYq3R8",
+  "journey",
+  "image_with_text_8hbt9B",
+  "image_banner_hAnDan",
+  "collection_list_YR74Ua",
+  "image_with_text_63xW3b",
+  "logo_grid_kVhfhk",
+  "177495970502d286d5",
+  "image_with_text_dDHrjn"
+ ]
+}

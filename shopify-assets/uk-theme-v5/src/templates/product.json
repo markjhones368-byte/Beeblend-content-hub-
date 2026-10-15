@@ -1,0 +1,211 @@
+{
+ "sections": {
+  "crumbs": {
+   "type": "bb-breadcrumbs",
+   "settings": {}
+  },
+  "main": {
+   "type": "main-product",
+   "blocks": {
+    "vendor": {
+     "type": "text",
+     "settings": {
+      "text": "{{ product.vendor }}",
+      "text_style": "body"
+     }
+    },
+    "title": {
+     "type": "title",
+     "settings": {}
+    },
+    "rating": {
+     "type": "rating",
+     "settings": {}
+    },
+    "price": {
+     "type": "price",
+     "settings": {}
+    },
+    "variant_picker": {
+     "type": "variant_picker",
+     "settings": {
+      "picker_type": "button",
+      "swatch_shape": "circle"
+     }
+    },
+    "quantity_selector": {
+     "type": "quantity_selector",
+     "settings": {}
+    },
+    "buy_buttons": {
+     "type": "buy_buttons",
+     "settings": {
+      "show_dynamic_checkout": true,
+      "show_gift_card_recipient": true
+     }
+    },
+    "judge_me_reviews_preview_badge_nkg7Wm": {
+     "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {}
+    },
+    "description": {
+     "type": "description",
+     "settings": {}
+    },
+    "share": {
+     "type": "share",
+     "settings": {
+      "share_label": "Share"
+     }
+    }
+   },
+   "block_order": [
+    "vendor",
+    "title",
+    "rating",
+    "price",
+    "variant_picker",
+    "quantity_selector",
+    "buy_buttons",
+    "judge_me_reviews_preview_badge_nkg7Wm",
+    "description",
+    "share"
+   ],
+   "settings": {
+    "enable_sticky_info": true,
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "media_size": "small",
+    "constrain_to_viewport": true,
+    "media_fit": "cover",
+    "gallery_layout": "thumbnail_slider",
+    "mobile_thumbnails": "hide",
+    "media_position": "left",
+    "image_zoom": "lightbox",
+    "hide_variants": true,
+    "enable_video_looping": true,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "assure": {
+   "type": "bb-product-assurance",
+   "blocks": {
+    "b1": {
+     "type": "badge",
+     "settings": {
+      "icon": "leaf",
+      "title": "100% natural"
+     }
+    },
+    "b2": {
+     "type": "badge",
+     "settings": {
+      "icon": "drop",
+      "title": "No preservatives"
+     }
+    },
+    "b3": {
+     "type": "badge",
+     "settings": {
+      "icon": "hex",
+      "title": "Ethically harvested"
+     }
+    },
+    "b4": {
+     "type": "badge",
+     "settings": {
+      "icon": "shield",
+      "title": "Secure checkout"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ],
+   "settings": {}
+  },
+  "text_scrolling_6BVxr4": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "hex",
+      "text": "Pure honey"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "Distinctive flavours"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Perfectly portioned"
+     }
+    },
+    "t4": {
+     "type": "item",
+     "settings": {
+      "icon": "pin",
+      "text": "Honey on the go"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+   ],
+   "settings": {}
+  },
+  "1758803877d65caa9c": {
+   "type": "apps",
+   "blocks": {
+    "judge_me_reviews_review_widget_VWYWci": {
+     "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {
+      "max_width": 1200,
+      "show_shop_reviews": false,
+      "empty_state": "empty_widget"
+     }
+    },
+    "klip_coupons_klip_app_section_product_GpzLmc": {
+     "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+     "disabled": true,
+     "settings": {
+      "margin_top": 10,
+      "margin_bottom": 10
+     }
+    }
+   },
+   "block_order": [
+    "judge_me_reviews_review_widget_VWYWci",
+    "klip_coupons_klip_app_section_product_GpzLmc"
+   ],
+   "settings": {
+    "include_margins": true
+   }
+  },
+  "sticky": {
+   "type": "bb-sticky-atc",
+   "settings": {}
+  }
+ },
+ "order": [
+  "crumbs",
+  "main",
+  "assure",
+  "text_scrolling_6BVxr4",
+  "1758803877d65caa9c",
+  "sticky"
+ ]
+}

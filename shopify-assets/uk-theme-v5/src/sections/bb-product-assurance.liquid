@@ -1,0 +1,28 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+<section class="bb" style="padding:2.4rem 0">
+  <div class="bb-wrap">
+    <div class="bb-assure__badges">
+      {%- for block in section.blocks -%}
+        <div class="bb-assure__badge" {{ block.shopify_attributes }}>{% render 'bb-icon', name: block.settings.icon %}{{ block.settings.title }}{% if block.settings.text != blank %}<span>{{ block.settings.text }}</span>{% endif %}</div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BB Product assurance",
+  "tag": "div",
+  "enabled_on": { "templates": ["product"] },
+  "blocks": [ { "type": "badge", "name": "Badge", "limit": 4, "settings": [
+    { "type": "select", "id": "icon", "label": "Icon", "default": "shield", "options": [
+      { "value": "leaf", "label": "Leaf" }, { "value": "drop", "label": "Drop" }, { "value": "pin", "label": "Pin" }, { "value": "truck", "label": "Truck" },
+      { "value": "shield", "label": "Shield" }, { "value": "gift", "label": "Gift" }, { "value": "hex", "label": "Honeycomb" }, { "value": "cash", "label": "Cash" } ] },
+    { "type": "text", "id": "title", "label": "Title" }, { "type": "text", "id": "text", "label": "Small text" } ] } ],
+  "presets": [ { "name": "BB Product assurance", "blocks": [
+    { "type": "badge", "settings": { "icon": "drop", "title": "Raw & unheated", "text": "Enzymes intact" } },
+    { "type": "badge", "settings": { "icon": "pin", "title": "Single-origin", "text": "One region per jar" } },
+    { "type": "badge", "settings": { "icon": "truck", "title": "Fast UK delivery", "text": "Edit delivery time" } },
+    { "type": "badge", "settings": { "icon": "shield", "title": "Secure checkout", "text": "Cards, Apple Pay, Google Pay" } }
+  ] } ]
+}
+{% endschema %}

@@ -1,0 +1,180 @@
+{
+ "sections": {
+  "image_banner_Bc9HGV": {
+   "type": "bb-page-hero",
+   "settings": {
+    "heading": "The BeeBlend Honey Pairing Guide",
+    "crumbs": true,
+    "bg": "paper",
+    "fit": "cover",
+    "text": "From artisan cheese and morning toast to tea, desserts and savoury dishes, discover which BeeBlend honeys pair beautifully with your favourite foods.",
+    "image": "shopify://shop_images/beeblend-honey-pairing-guide.jpg",
+    "btn_label": "Explore the pairings",
+    "btn_link": "https://beeblend.co.uk/pages/honey-pairing-guide"
+   }
+  },
+  "rich_text_cjWxCL": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "What goes well with honey?",
+    "text": "Honey pairs beautifully with cheese, fruit, nuts, yoghurt, porridge, tea, roasted vegetables, marinades and desserts. The best pairing depends on the honey's flavour, from delicate floral varieties to richer, nutty and aromatic honeys. Use our BeeBlend Honey Pairing Guide to discover what goes well with honey and find the perfect honey for cheese, breakfast, tea, salads, savoury dishes and desserts.",
+    "center": true,
+    "bg": "white"
+   }
+  },
+  "image_with_text_A43J7F": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Honey & cheese",
+    "text": "<p><strong>Honey and cheese are a classic pairing because sweetness provides a delicious contrast to salty, creamy and mature flavours.</strong></p><p><strong>Try Wild Fennel Honey</strong> with creamy or mature cheeses for its distinctive aromatic character, or choose <strong>Golden Nut Honey</strong> when you want something richer and more indulgent for a cheeseboard.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/beeblend-honey-cheese-pairing.jpg",
+    "btn_label": "Shop Fennel Honey",
+    "btn_link": "https://beeblend.co.uk/products/fennel-honey"
+   }
+  },
+  "image_with_text_iry3AM": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Honey & tea",
+    "text": "<p>Honey is a natural partner for tea, adding sweetness while allowing different flavours to complement your favourite brew. Choose <strong>Kashmiri Acacia Honey</strong> for a mild, delicate sweetness, <strong>Wild Fennel Honey</strong> for a more aromatic botanical character, or <strong>Lychee Honey</strong> for soft floral and fruity notes.</p><p></p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/beeblend-honey-tea-pairing.jpg",
+    "btn_label": "Shop Acacia Honey",
+    "btn_link": "https://beeblend.co.uk/products/kashmiri-acacia-honey"
+   }
+  },
+  "image_with_text_F4dNfm": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Honey & breakfast",
+    "text": "<p>Start the day with a drizzle of honey over yoghurt, porridge, toast, pancakes or fresh fruit. <strong>Lychee Honey</strong> brings delicate floral and fruity notes, <strong>Kashmiri Acacia Honey</strong> offers a mild everyday sweetness, while <strong>Golden Nut Honey</strong> is perfect when you want something richer and more indulgent.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/beeblend-honey-breakfast-pairing.jpg",
+    "btn_label": "Shop Lychee Honey",
+    "btn_link": "https://beeblend.co.uk/products/lychee-honey"
+   }
+  },
+  "image_with_text_6jbYQU": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Honey & salads",
+    "text": "<p>Honey adds sweetness and balance to homemade dressings and vinaigrettes. <strong>Sesame Honey</strong> pairs beautifully with soy, ginger and toasted sesame flavours, while <strong>Yellow Mustard Honey</strong> works perfectly with tangy vinaigrettes, herbs and savoury salads.</p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/beeblend-honey-salad-pairing.jpg",
+    "btn_label": "Shop Sesame Honey",
+    "btn_link": "https://beeblend.co.uk/products/sesame-honey"
+   }
+  },
+  "image_with_text_mEmh4k": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Honey & savoury cooking",
+    "text": "<p>Honey brings sweetness, depth and a beautiful glossy finish to savoury dishes. <strong>Himalayan Multi-Flora Honey</strong> is a versatile choice for marinades and glazes, while <strong>Sesame Honey</strong> works beautifully with soy, garlic and ginger for Asian-inspired dishes.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/beeblend-honey-savoury-cooking-pairing.jpg",
+    "btn_label": "Shop Himalayan Honey",
+    "btn_link": "https://beeblend.co.uk/products/himalayan-multifloral-honey"
+   }
+  },
+  "image_with_text_66tN4M": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Honey & desserts",
+    "text": "<p>Honey brings natural sweetness and distinctive flavour to desserts and baking. <strong>Kashmiri Acacia Honey</strong> is ideal when you want a light, delicate sweetness, <strong>Lychee Honey</strong> adds floral and fruity character, while <strong>Golden Nut Honey</strong> is perfect for richer, more indulgent desserts.</p>",
+    "image_right": false,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/beeblend-honey-dessert-pairing.jpg",
+    "btn_label": "Shop Acacia Honey",
+    "btn_link": "https://beeblend.co.uk/products/kashmiri-acacia-honey"
+   }
+  },
+  "collapsible_content_8ypAeG": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "What foods pair well with honey?",
+      "a": "<p>Honey pairs well with a wide variety of foods including cheese, fruit, nuts, yoghurt, porridge, toast, roasted vegetables and desserts. Different honey varieties have their own flavour profiles, so the best pairing can depend on the honey you choose.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "What cheese goes well with honey?",
+      "a": "<p>Honey pairs particularly well with cheeses such as Brie, Camembert, goat's cheese, blue cheese and mature Cheddar. Lighter floral honeys work beautifully with soft cheeses, while richer honeys can complement stronger, more mature varieties.</p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "What fruit goes well with honey?",
+      "a": "<p>Apples, pears, berries, figs, peaches and citrus fruits all pair beautifully with honey. Try drizzling honey over fresh fruit, adding it to yoghurt bowls or using it with baked fruit for a simple dessert.</p>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "What nuts go well with honey?",
+      "a": "<p>Walnuts, almonds, pistachios, pecans and cashews all work well with honey. They can be combined on cheese boards, added to breakfast bowls or used together in baking and desserts.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "What savoury foods go well with honey?",
+      "a": "<p>Honey works well in glazes, marinades and dressings for foods such as salmon, chicken, halloumi and roasted vegetables. Combining honey with ingredients such as mustard, soy sauce, chilli or citrus can create a balance of sweet and savoury flavours.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5"
+   ],
+   "settings": {
+    "heading": "Honey Pairing FAQs",
+    "open_first": true,
+    "bg": "paper",
+    "schema": true
+   }
+  },
+  "rich_text_pjty3X": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "Ready to put your perfect pairing to the test?",
+    "text": "Discover more delicious ways to enjoy BeeBlend honey with our collection of breakfast, drinks, dinners, dressings, bakes and desserts.",
+    "center": true,
+    "bg": "white",
+    "btn_label": "Explore our recipes",
+    "btn_link": "https://beeblend.co.uk/blogs/recipes"
+   }
+  }
+ },
+ "order": [
+  "image_banner_Bc9HGV",
+  "rich_text_cjWxCL",
+  "image_with_text_A43J7F",
+  "image_with_text_iry3AM",
+  "image_with_text_F4dNfm",
+  "image_with_text_6jbYQU",
+  "image_with_text_mEmh4k",
+  "image_with_text_66tN4M",
+  "collapsible_content_8ypAeG",
+  "rich_text_pjty3X"
+ ]
+}

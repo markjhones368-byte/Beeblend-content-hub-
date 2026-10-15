@@ -1,0 +1,33 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+<div class="bb bb-trust">
+  <div class="bb-trust__track">
+    {%- for pass in (1..2) -%}
+      <ul class="bb-trust__list" role="list"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+        {%- for block in section.blocks -%}
+          <li class="bb-trust__item" {% if pass == 1 %}{{ block.shopify_attributes }}{% endif %}>{% render 'bb-icon', name: block.settings.icon %}{{ block.settings.text }}</li>
+        {%- endfor -%}
+      </ul>
+    {%- endfor -%}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "BB Trust bar",
+  "tag": "section",
+  "blocks": [
+    { "type": "item", "name": "Trust point", "settings": [
+      { "type": "select", "id": "icon", "label": "Icon", "default": "leaf", "options": [
+        { "value": "leaf", "label": "Leaf" }, { "value": "drop", "label": "Drop" }, { "value": "pin", "label": "Location pin" },
+        { "value": "truck", "label": "Truck" }, { "value": "shield", "label": "Shield" }, { "value": "gift", "label": "Gift" },
+        { "value": "hex", "label": "Honeycomb" }, { "value": "cash", "label": "Cash" } ] },
+      { "type": "text", "id": "text", "label": "Text", "default": "Raw & unheated" }
+    ] }
+  ],
+  "presets": [ { "name": "BB Trust bar", "blocks": [
+    { "type": "item", "settings": { "icon": "drop", "text": "Raw & unheated" } },
+    { "type": "item", "settings": { "icon": "pin", "text": "Single-origin" } },
+    { "type": "item", "settings": { "icon": "leaf", "text": "No added sugar or syrups" } },
+    { "type": "item", "settings": { "icon": "truck", "text": "Fast UK delivery" } }
+  ] } ]
+}
+{% endschema %}
