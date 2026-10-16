@@ -24,7 +24,11 @@
   #{{ sid }} .bbk__pts li{display:flex;gap:1.4rem;align-items:flex-start;font:500 1.6rem/1.5 'Figtree',system-ui,sans-serif;color:var(--k-ink)}
   #{{ sid }} .bbk__pts li::before{content:"";flex:none;margin-top:.15rem;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--k-gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d1606' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/1.3rem no-repeat}
   #{{ sid }} .bbk__ctas{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:4rem}
-  #{{ sid }} .bbk__ctas .bb-btn--ghost{color:#FFF8E8}
+  #{{ sid }} .bbk__ctas .bb-btn{display:inline-flex;align-items:center;justify-content:center;gap:.8rem;min-height:5.2rem;padding:0 3rem;border-radius:999px;font:600 1.55rem/1 'Figtree',system-ui,sans-serif;text-decoration:none;border:1.5px solid transparent;transition:background .25s,color .25s,border-color .25s,transform .3s}
+  #{{ sid }} .bbk__ctas .bb-btn--gold{background:#C9921B;color:#1d1606;box-shadow:0 14px 28px -18px rgba(0,0,0,.6)}
+  #{{ sid }} .bbk__ctas .bb-btn--gold:hover{background:#E2B341;transform:translateY(-1px)}
+  #{{ sid }} .bbk__ctas .bb-btn--ghost{background:transparent;color:#FFF8E8;border-color:rgba(255,248,232,.55)}
+  #{{ sid }} .bbk__ctas .bb-btn--ghost:hover{border-color:#FFF8E8;background:rgba(255,255,255,.06)}
 
   /* Portrait film with an overlapping photo */
   #{{ sid }} .bbk__stage{position:relative;max-width:60rem;width:100%;margin-left:auto;padding:0 0 12% 18%}
@@ -73,7 +77,7 @@
     #{{ sid }} .bbk__photo{width:50%;border-width:.6rem;border-radius:1.8rem}
     #{{ sid }} .bbk__strip-h{display:block}
     #{{ sid }} .bbk__strip-h p{margin-top:1rem}
-    #{{ sid }} .bbk__tiles{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -1.6rem;padding:0 1.6rem 1rem;scrollbar-width:none;align-items:flex-start}
+    #{{ sid }} .bbk__tiles{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:1.6rem;margin:0 -1.6rem;padding:0 1.6rem 1rem;scrollbar-width:none;align-items:flex-start}
     #{{ sid }} .bbk__tiles::-webkit-scrollbar{display:none}
     #{{ sid }} .bbk__tile{flex:0 0 74%;scroll-snap-align:start}
     #{{ sid }} .bbk__tile.is-tall .bbk__tile-m{aspect-ratio:4/5}
