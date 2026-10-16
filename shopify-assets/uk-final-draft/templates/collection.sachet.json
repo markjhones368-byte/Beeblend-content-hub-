@@ -1,0 +1,37 @@
+{
+ "sections": {
+  "coming": {
+   "type": "uk-coming-soon",
+   "settings": {
+    "image": "shopify://shop_images/pure-honey-collection-gift-box.jpg",
+    "badge": "Coming soon",
+    "eyebrow": "Launching soon",
+    "heading": "The Pure Honey Collection",
+    "heading_tag": "h1",
+    "text": "<p>Our honey sachet tasting box: 24 tear-open 10g sachets, four each of six raw honeys, so you can taste them side by side. Perfect for gifting, travel and the office.</p>",
+    "points": "Himalayan Multi, Fennel, Kashmiri Acacia, Mustard, Lychee and Ayurveda Blend\n24 sachets × 10g (240g in total)\nGift-ready box",
+    "show_form": true,
+    "bg": "ivory"
+   }
+  },
+  "jars": {
+   "type": "bb-product-grid",
+   "settings": {
+    "heading": "Our raw honey jars",
+    "text": "Available now, in 160g and 250g.",
+    "collection": "jar",
+    "limit": 8,
+    "columns": 4,
+    "quick_add": true,
+    "show_sold_out": true,
+    "center": false,
+    "button_label": "Shop all raw honey",
+    "bg": "white"
+   }
+  }
+ },
+ "order": [
+  "coming",
+  "jars"
+ ]
+}

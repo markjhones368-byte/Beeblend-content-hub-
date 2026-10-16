@@ -1,0 +1,78 @@
+{
+ "sections": {
+  "rich_text_zqHJhx": {
+   "type": "bb-page-hero",
+   "settings": {
+    "heading": "The Gift of Nature’s Sweetness",
+    "crumbs": true,
+    "bg": "paper",
+    "fit": "cover"
+   }
+  },
+  "collection_list_D86icm": {
+   "type": "bb-collection-cards",
+   "blocks": {
+    "c1": {
+     "type": "card",
+     "settings": {
+      "collection": "corporate-gifting"
+     }
+    },
+    "c2": {
+     "type": "card",
+     "settings": {
+      "collection": "festive-hampers"
+     }
+    },
+    "c3": {
+     "type": "card",
+     "settings": {
+      "collection": "personalized-gifts"
+     }
+    }
+   },
+   "block_order": [
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "settings": {
+    "heading": "Collections",
+    "center": false,
+    "fit": "contain",
+    "bg": "white"
+   }
+  },
+  "image_banner_HztA99": {
+   "type": "bb-gifting-banner",
+   "settings": {
+    "heading": "Build Your Hamper",
+    "text": "",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "btn_label": "Start Now",
+    "btn_link": "shopify://pages/contact"
+   }
+  },
+  "phc_coming": {
+   "type": "uk-coming-soon",
+   "settings": {
+    "image": "shopify://shop_images/pure-honey-collection-gift-box.jpg",
+    "badge": "Coming soon",
+    "eyebrow": "Launching soon · Perfect for gifting",
+    "heading": "The Pure Honey Collection",
+    "heading_tag": "h2",
+    "text": "<p>Our honey sachet tasting box: 24 tear-open 10g sachets, four each of six raw honeys, so you can taste them side by side. Perfect for gifting, travel and the office.</p>",
+    "points": "Himalayan Multi, Fennel, Kashmiri Acacia, Mustard, Lychee and Ayurveda Blend\n24 sachets × 10g (240g in total)\nGift-ready box",
+    "show_form": true,
+    "bg": "charcoal"
+   }
+  }
+ },
+ "order": [
+  "rich_text_zqHJhx",
+  "phc_coming",
+  "collection_list_D86icm",
+  "image_banner_HztA99"
+ ]
+}
