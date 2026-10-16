@@ -1,0 +1,224 @@
+{%- comment -%}
+  BeeBlend: "Meet the beekeepers" — real footage and photos from our own hives.
+  Part 1: story + portrait film with an overlapping photo. Part 2: a film strip of moments from the apiary.
+  Content stays visible without JavaScript; motion respects prefers-reduced-motion; videos play muted, only when on screen, with a pause button.
+{%- endcomment -%}
+{%- liquid
+  assign sid = 'bbk-' | append: section.id
+  assign st = section.settings
+-%}
+<style>
+  #{{ sid }}{--k-ink:#F4F1E8;--k-mut:#C9D3CB;--k-gold:#C9921B;--k-gold-2:#E2B341;background:#1F3A2E;color:var(--k-ink);padding:clamp(6.4rem,9vw,12rem) 0 clamp(5.6rem,8vw,10.4rem);overflow:hidden;position:relative;isolation:isolate}
+  #{{ sid }}::before{content:"";position:absolute;inset:-20% -10% auto auto;width:70rem;height:70rem;border-radius:50%;background:radial-gradient(closest-side,rgba(201,146,27,.16),rgba(201,146,27,0));z-index:-1;pointer-events:none}
+  #{{ sid }} *,#{{ sid }} *::before,#{{ sid }} *::after{box-sizing:border-box}
+  #{{ sid }} .bbk{max-width:132rem;margin:0 auto;padding:0 2rem}
+  #{{ sid }} .bbk__top{display:grid;gap:clamp(4rem,6vw,8rem);align-items:center}
+  @media(min-width:990px){#{{ sid }} .bbk__top{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}}
+  #{{ sid }} .bbk__eyebrow{display:inline-flex;align-items:center;gap:1.2rem;margin:0 0 2rem;font:600 1.3rem/1 'Figtree',system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--k-gold-2)}
+  #{{ sid }} .bbk__eyebrow::before{content:"";width:4rem;height:1px;background:currentColor}
+  #{{ sid }} .bbk__h{margin:0;color:#FFF8E8;font-size:clamp(3.6rem,4.8vw,6.2rem);line-height:1.06;max-width:15ch}
+  #{{ sid }} .bbk__h em{font-style:normal;color:var(--k-gold-2)}
+  #{{ sid }} .bbk__text{margin-top:2.4rem;font:400 1.75rem/1.7 'Figtree',system-ui,sans-serif;color:var(--k-mut);max-width:50ch}
+  #{{ sid }} .bbk__text p{margin:0}#{{ sid }} .bbk__text p+p{margin-top:1.2rem}
+  #{{ sid }} .bbk__pts{list-style:none;margin:3.2rem 0 0;padding:0;display:grid;gap:1.4rem}
+  #{{ sid }} .bbk__pts li{display:flex;gap:1.4rem;align-items:flex-start;font:500 1.6rem/1.5 'Figtree',system-ui,sans-serif;color:var(--k-ink)}
+  #{{ sid }} .bbk__pts li::before{content:"";flex:none;margin-top:.15rem;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--k-gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d1606' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/1.3rem no-repeat}
+  #{{ sid }} .bbk__ctas{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:4rem}
+  #{{ sid }} .bbk__ctas .bb-btn--ghost{color:#FFF8E8}
+
+  /* Portrait film with an overlapping photo */
+  #{{ sid }} .bbk__stage{position:relative;max-width:60rem;width:100%;margin-left:auto;padding:0 0 12% 18%}
+  #{{ sid }} .bbk__film{position:relative;aspect-ratio:9/14;border-radius:2.8rem;overflow:hidden;background:#2C5140;box-shadow:0 50px 90px -40px rgba(0,0,0,.65)}
+  #{{ sid }} .bbk__film video,#{{ sid }} .bbk__film img,#{{ sid }} .bbk__tile video,#{{ sid }} .bbk__tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  #{{ sid }} .bbk__photo{position:absolute;left:0;bottom:0;width:52%;aspect-ratio:4/5;border-radius:2.2rem;overflow:hidden;border:.8rem solid #1F3A2E;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);background:#2C5140}
+  #{{ sid }} .bbk__photo img{width:100%;height:100%;object-fit:cover;display:block}
+  #{{ sid }} .bbk__chip{position:absolute;top:1.8rem;left:1.8rem;z-index:2;display:inline-flex;align-items:center;gap:.8rem;padding:.9rem 1.4rem;border-radius:999px;background:rgba(20,32,26,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font:600 1.2rem/1 'Figtree',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FFF8E8}
+  #{{ sid }} .bbk__chip i{width:.8rem;height:.8rem;border-radius:50%;background:#E2B341;box-shadow:0 0 0 0 rgba(226,179,65,.7);animation:bbkPulse 2.4s ease-out infinite}
+  @keyframes bbkPulse{0%{box-shadow:0 0 0 0 rgba(226,179,65,.6)}70%{box-shadow:0 0 0 1rem rgba(226,179,65,0)}100%{box-shadow:0 0 0 0 rgba(226,179,65,0)}}
+  #{{ sid }} .bbk__pp{position:absolute;right:1.6rem;bottom:1.6rem;z-index:2;display:grid;place-items:center;width:4.4rem;height:4.4rem;border:0;border-radius:50%;background:rgba(20,32,26,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#FFF8E8;cursor:pointer}
+  #{{ sid }} .bbk__pp svg{width:1.6rem;height:1.6rem}
+  #{{ sid }} .bbk__pp .i-play{display:none}#{{ sid }} .bbk__pp[aria-pressed="true"] .i-play{display:block}#{{ sid }} .bbk__pp[aria-pressed="true"] .i-pause{display:none}
+  #{{ sid }} .bbk__pp:focus-visible{outline:2px solid #E2B341;outline-offset:3px}
+
+  /* Film strip */
+  #{{ sid }} .bbk__strip{margin-top:clamp(6.4rem,8vw,10.4rem)}
+  #{{ sid }} .bbk__strip-h{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin:0 0 2.8rem}
+  #{{ sid }} .bbk__strip-h h3{margin:0;color:#FFF8E8;font-size:clamp(2.6rem,3vw,3.6rem);line-height:1.1}
+  #{{ sid }} .bbk__strip-h p{margin:0;font:400 1.5rem/1.5 'Figtree',sans-serif;color:var(--k-mut);max-width:40ch}
+  #{{ sid }} .bbk__tiles{display:grid;grid-template-columns:repeat({{ section.blocks.size | at_least: 1 }},minmax(0,1fr));gap:1.6rem;align-items:end}
+  #{{ sid }} .bbk__tile{margin:0;position:relative}
+  #{{ sid }} .bbk__tile-m{position:relative;aspect-ratio:4/5;border-radius:2.2rem;overflow:hidden;background:#2C5140}
+  #{{ sid }} .bbk__tile.is-tall .bbk__tile-m{aspect-ratio:9/13}
+  #{{ sid }} .bbk__tile figcaption{margin-top:1.4rem;font:500 1.5rem/1.4 'Figtree',sans-serif;color:var(--k-ink)}
+  #{{ sid }} .bbk__tile figcaption span{display:block;margin-top:.3rem;font-weight:400;font-size:1.35rem;color:var(--k-mut)}
+  @media(hover:hover){#{{ sid }} .bbk__tile-m img{transition:transform 1.4s cubic-bezier(.22,1,.36,1)}#{{ sid }} .bbk__tile:hover .bbk__tile-m img{transform:scale(1.04)}}
+
+  /* Gentle entrance (only when JavaScript is running; otherwise everything is simply visible) */
+  .bbk-js #{{ sid }} [data-bbk-rv]{opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1.2s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--d,0) * 120ms)}
+  .bbk-js #{{ sid }} [data-bbk-rv].is-in{opacity:1;transform:none}
+  .bbk-js #{{ sid }} .bbk__film[data-bbk-rv]{transform:translateY(40px) scale(.97)}
+  .bbk-js #{{ sid }} .bbk__film[data-bbk-rv].is-in{transform:none}
+
+  @media(max-width:989px){
+    #{{ sid }} .bbk__stage{margin:0 auto;max-width:52rem;padding:0 0 14% 16%}
+  }
+  @media(max-width:749px){
+    #{{ sid }} .bbk{padding:0 1.6rem}
+    #{{ sid }} .bbk__h{font-size:clamp(3.2rem,9.6vw,4rem)}
+    #{{ sid }} .bbk__text{font-size:1.6rem}
+    #{{ sid }} .bbk__ctas{display:grid;grid-template-columns:1fr}
+    #{{ sid }} .bbk__ctas .bb-btn{width:100%}
+    #{{ sid }} .bbk__film{aspect-ratio:4/5;border-radius:2.2rem}
+    #{{ sid }} .bbk__stage{padding:0 0 18% 12%}
+    #{{ sid }} .bbk__photo{width:50%;border-width:.6rem;border-radius:1.8rem}
+    #{{ sid }} .bbk__strip-h{display:block}
+    #{{ sid }} .bbk__strip-h p{margin-top:1rem}
+    #{{ sid }} .bbk__tiles{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -1.6rem;padding:0 1.6rem 1rem;scrollbar-width:none;align-items:flex-start}
+    #{{ sid }} .bbk__tiles::-webkit-scrollbar{display:none}
+    #{{ sid }} .bbk__tile{flex:0 0 74%;scroll-snap-align:start}
+    #{{ sid }} .bbk__tile.is-tall .bbk__tile-m{aspect-ratio:4/5}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #{{ sid }} .bbk__chip i{animation:none}
+    .bbk-js #{{ sid }} [data-bbk-rv]{opacity:1!important;transform:none!important;transition:none!important}
+  }
+</style>
+
+<section class="bbk-sec" id="{{ sid }}" aria-labelledby="{{ sid }}-h">
+  <div class="bbk">
+    <div class="bbk__top">
+      <div>
+        {%- if st.eyebrow != blank -%}<p class="bbk__eyebrow" data-bbk-rv>{{ st.eyebrow }}</p>{%- endif -%}
+        <h2 class="bbk__h" id="{{ sid }}-h" data-bbk-rv style="--d:1">{{ st.heading }}</h2>
+        {%- if st.text != blank -%}<div class="bbk__text" data-bbk-rv style="--d:2">{{ st.text }}</div>{%- endif -%}
+        {%- assign pts = st.points | newline_to_br | split: '<br />' -%}
+        {%- if st.points != blank -%}
+          <ul class="bbk__pts" role="list" data-bbk-rv style="--d:3">
+            {%- for p in pts -%}{%- assign t = p | strip -%}{%- if t != '' -%}<li>{{ t }}</li>{%- endif -%}{%- endfor -%}
+          </ul>
+        {%- endif -%}
+        <div class="bbk__ctas" data-bbk-rv style="--d:4">
+          {%- if st.btn1_label != blank -%}<a class="bb-btn bb-btn--gold" href="{{ st.btn1_link | default: routes.all_products_collection_url }}">{{ st.btn1_label }}</a>{%- endif -%}
+          {%- if st.btn2_label != blank -%}<a class="bb-btn bb-btn--ghost" href="{{ st.btn2_link | default: '/pages/about-us' }}">{{ st.btn2_label }}</a>{%- endif -%}
+        </div>
+      </div>
+
+      <div class="bbk__stage">
+        <div class="bbk__film" data-bbk-rv style="--d:1">
+          {%- if st.chip != blank -%}<span class="bbk__chip"><i aria-hidden="true"></i>{{ st.chip }}</span>{%- endif -%}
+          {%- if st.video != blank -%}
+            {{ st.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, preload: 'metadata', image_size: '1000x', class: 'bbk__v' }}
+            <button type="button" class="bbk__pp" aria-pressed="false" aria-label="Pause video">
+              <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
+              <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
+            </button>
+          {%- elsif st.photo != blank -%}
+            {{ st.photo | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600, 900, 1200', sizes: '(min-width: 990px) 34vw, 88vw', alt: st.photo.alt }}
+          {%- endif -%}
+        </div>
+        {%- if st.photo != blank and st.video != blank -%}
+          <div class="bbk__photo" data-bbk-rv style="--d:3">
+            {{ st.photo | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400, 600, 900', sizes: '(min-width: 990px) 18vw, 44vw', alt: st.photo.alt }}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="bbk__strip">
+        <div class="bbk__strip-h" data-bbk-rv>
+          {%- if st.strip_heading != blank -%}<h3>{{ st.strip_heading }}</h3>{%- endif -%}
+          {%- if st.strip_text != blank -%}<p>{{ st.strip_text }}</p>{%- endif -%}
+        </div>
+        <div class="bbk__tiles">
+          {%- for block in section.blocks -%}
+            {%- assign b = block.settings -%}
+            <figure class="bbk__tile{% if b.video != blank %} is-tall{% endif %}" data-bbk-rv style="--d:{{ forloop.index }}" {{ block.shopify_attributes }}>
+              <div class="bbk__tile-m">
+                {%- if b.video != blank -%}
+                  {{ b.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, preload: 'metadata', image_size: '800x', class: 'bbk__v' }}
+                  <button type="button" class="bbk__pp" aria-pressed="false" aria-label="Pause video">
+                    <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
+                    <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
+                  </button>
+                {%- elsif b.image != blank -%}
+                  {{ b.image | image_url: width: 1100 | image_tag: loading: 'lazy', widths: '500, 800, 1100', sizes: '(min-width: 990px) 30vw, 74vw', alt: b.image.alt | default: b.caption }}
+                {%- endif -%}
+              </div>
+              {%- if b.caption != blank -%}<figcaption>{{ b.caption }}{%- if b.sub != blank -%}<span>{{ b.sub }}</span>{%- endif -%}</figcaption>{%- endif -%}
+            </figure>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.getElementById('{{ sid }}'); if (!root || root.dataset.ready) return; root.dataset.ready = '1';
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var vids = root.querySelectorAll('video');
+    vids.forEach(function (v) {
+      v.muted = true; v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+      var btn = v.parentNode.querySelector('.bbk__pp');
+      if (reduce) { v.removeAttribute('autoplay'); v.pause(); if (btn) { btn.setAttribute('aria-pressed', 'true'); btn.setAttribute('aria-label', 'Play video'); } }
+      if (btn) btn.addEventListener('click', function () {
+        var paused = btn.getAttribute('aria-pressed') === 'true';
+        if (paused) { v.play(); btn.setAttribute('aria-pressed', 'false'); btn.setAttribute('aria-label', 'Pause video'); v.dataset.user = ''; }
+        else { v.pause(); btn.setAttribute('aria-pressed', 'true'); btn.setAttribute('aria-label', 'Play video'); v.dataset.user = 'paused'; }
+      });
+    });
+    if (!('IntersectionObserver' in window)) return;
+    /* Play only while on screen, to save data and battery */
+    var vo = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var v = e.target; if (reduce || v.dataset.user === 'paused') return;
+        if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause();
+      });
+    }, { threshold: 0.2 });
+    vids.forEach(function (v) { vo.observe(v); });
+    if (reduce) return;
+    document.documentElement.classList.add('bbk-js');
+    var els = root.querySelectorAll('[data-bbk-rv]');
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    els.forEach(function (el) { io.observe(el); });
+    /* safety: never leave anything hidden */
+    setTimeout(function () { els.forEach(function (el) { el.classList.add('is-in'); }); }, 4000);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "BB Meet the beekeepers",
+  "tag": "div",
+  "class": "bb-beekeepers",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small heading", "default": "Meet the beekeepers" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "We don't just sell honey. We keep the bees." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Every jar of BeeBlend starts at our own hives. We look after the bees ourselves, check the frames by hand and bring the honey to you raw and unheated.</p>" },
+    { "type": "textarea", "id": "points", "label": "Proof points (one per line)", "default": "Our own hives, tended by hand\nRaw and unheated, nothing added\nFrom our hives to your jar" },
+    { "type": "text", "id": "btn1_label", "label": "Button 1", "default": "Shop our honey" },
+    { "type": "url", "id": "btn1_link", "label": "Button 1 link" },
+    { "type": "text", "id": "btn2_label", "label": "Button 2", "default": "Our story" },
+    { "type": "url", "id": "btn2_link", "label": "Button 2 link" },
+    { "type": "header", "content": "Film" },
+    { "type": "video", "id": "video", "label": "Main video (portrait works best)" },
+    { "type": "text", "id": "chip", "label": "Label on the video", "default": "Filmed at our hives" },
+    { "type": "image_picker", "id": "photo", "label": "Overlapping photo" },
+    { "type": "header", "content": "Film strip" },
+    { "type": "text", "id": "strip_heading", "label": "Strip heading", "default": "A day at our apiary" },
+    { "type": "text", "id": "strip_text", "label": "Strip text", "default": "Real moments from our hives. No stock photos." }
+  ],
+  "blocks": [
+    { "type": "tile", "name": "Moment", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Photo" },
+      { "type": "video", "id": "video", "label": "Video (replaces the photo)" },
+      { "type": "text", "id": "caption", "label": "Caption" },
+      { "type": "text", "id": "sub", "label": "Small text" }
+    ] }
+  ],
+  "max_blocks": 4,
+  "presets": [ { "name": "BB Meet the beekeepers" } ]
+}
+{% endschema %}
