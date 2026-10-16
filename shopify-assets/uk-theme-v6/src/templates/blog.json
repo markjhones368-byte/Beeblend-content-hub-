@@ -1,0 +1,56 @@
+{
+ "sections": {
+  "image_banner_MragWV": {
+   "type": "bb-page-hero",
+   "settings": {
+    "heading": "Recipes",
+    "crumbs": true,
+    "bg": "paper",
+    "fit": "cover",
+    "text": "Honey isn’t just for tea – discover new ways to enjoy BeeBlend in your daily life",
+    "image": "shopify://shop_images/honey.png"
+   }
+  },
+  "rich_text_m4D3m9": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "Discover more with BeeBlend",
+    "text": "Not sure which honey is right for you? Explore our Honey Guide to find your perfect flavour, or discover delicious food combinations in our Honey Pairing Guide .",
+    "center": true,
+    "bg": "white",
+    "btn_label": "Explore the Honey Guide",
+    "btn_link": "https://beeblend.co.uk/pages/which-honey-should-i-choose"
+   }
+  },
+  "main": {
+   "type": "main-blog",
+   "settings": {
+    "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+    "layout": "grid",
+    "show_image": true,
+    "image_height": "adapt",
+    "show_date": true,
+    "show_author": false,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "rich_text_3r4J6t": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "Explore Honey",
+    "text": "",
+    "center": true,
+    "bg": "paper",
+    "btn_label": "Explore Honey",
+    "btn_link": "shopify://collections/all"
+   }
+  }
+ },
+ "order": [
+  "image_banner_MragWV",
+  "rich_text_m4D3m9",
+  "main",
+  "rich_text_3r4J6t"
+ ]
+}

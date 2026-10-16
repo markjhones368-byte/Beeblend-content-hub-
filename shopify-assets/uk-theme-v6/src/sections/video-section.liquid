@@ -1,0 +1,175 @@
+{%- style -%}
+
+.video-container.{{ section.settings.custom_class }}{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+.video-container.{{ section.settings.custom_class }} .video-wrap{
+    max-width:900px;
+    margin:0 auto;
+    position:relative;
+    text-align:center;
+    padding:10px;
+}
+.video-container.{{ section.settings.custom_class }} .video_bg{
+    position:absolute;
+    left:0px;
+    top:0px;
+    height:100%;
+    width:100%;
+}
+.video-container.{{ section.settings.custom_class }} .video_bg:before{
+  content:"";
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+}
+.video-container.{{ section.settings.custom_class }} .video_content{
+    z-index:2;
+}
+.video-container.{{ section.settings.custom_class }} video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.video-container.{{ section.settings.custom_class }} .video_content h1{
+    font-size:{{ section.settings.font_size }}px;
+    margin:0px;
+}
+.video-container.{{ section.settings.custom_class }} .video_content p{
+    font-size:{{ section.settings.subtitle_font_size }}px;
+}
+.bg_transparent{
+    background:transparent;
+}
+.buttons_inline{
+    display:flex;
+    justify-content:center;
+    column-gap:10px;
+    row-gap:10px;
+    flex-wrap:wrap;
+}
+@media only screen and (max-width: 979px) {
+    .video-container.{{ section.settings.custom_class }} .video_content h1{
+        font-size:70px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .video-container.{{ section.settings.custom_class }}{
+        height:550px !important;
+    }
+    .video-container.{{ section.settings.custom_class }} .video_content h1{
+        font-size:50px;
+    }
+}
+
+{%- endstyle -%}
+<div class="video-container {{ section.settings.custom_class }} color-{{ section.settings.color_scheme }}">
+    {%- if section.settings.video != null -%}
+        <div class="video_bg">
+            {{
+            section.settings.video
+            | video_tag:
+              height:'500px',
+              width:'1200px',
+              autoplay: true,
+              loop: true,
+              controls: false,
+              muted: true
+          }}
+        </div>
+       {%- endif -%}
+  <div class="video-wrap ">
+       <div class="video_content">
+            <h1>{{ section.settings.text_name }}</h1>
+            <p>{{ section.settings.subtitle }}</p>
+            <div class="buttons_inline">
+                <a class="button button--primary" href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</a>
+                <a class="button button--secondary bg_transparent" href="{{ section.settings.button_url1 }}">{{ section.settings.button_text1 }}</a>
+            </div>
+        </div>
+  </div>
+</div>
+
+
+{% schema %}
+    {
+        "name" : "Video Banner",
+        "settings" : [
+            {
+            "type": "video",
+            "id": "video",
+            "label": "Select Video"
+          },
+          {
+            "type": "text",
+            "id": "text_name",
+            "label": "Heading",
+             "default": "Heading Text"
+          },
+          {
+            "type": "text",
+            "id": "font_size",
+            "label": "Font Size",
+             "default": "65"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Content",
+             "default": "Content Text"
+          },
+          {
+            "type": "text",
+            "id": "subtitle_font_size",
+            "label": "Font Size",
+             "default": "16"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Label",
+             "default": "Shop Now"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Link"          
+          },
+          {
+            "type": "text",
+            "id": "button_text1",
+            "label": "Button Label",
+             "default": "Explore Our Blends"
+          },
+          {
+            "type": "url",
+            "id": "button_url1",
+            "label": "Link"          
+          },
+          {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "Color Scheme",
+            "default": "scheme-1"
+          },
+          {
+            "type": "text",
+            "id": "custom_class",
+            "label": "Custom Class",
+             "default": "text_scroll"
+          },
+        ],
+        "presets": [
+            {
+                "name": "Video Banner"
+            }
+        ]
+    }
+{% endschema %}

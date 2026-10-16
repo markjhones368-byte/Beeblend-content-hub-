@@ -1,0 +1,151 @@
+{
+ "sections": {
+  "image_banner_a99M6A": {
+   "type": "bb-page-hero",
+   "settings": {
+    "heading": "About Us",
+    "crumbs": true,
+    "bg": "paper",
+    "fit": "cover",
+    "text": "BeeBlend was founded with a passion for bringing authentic, pure honey to every home. We partner with local beekeepers and carefully select distinctive honeys that celebrate their origins, flavours and natural character. Every jar reflects our commitment to quality, purity and exceptional taste."
+   }
+  },
+  "text_scrolling_YeatrM": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "hex",
+      "text": "Pure honey"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "Distinctive flavours"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Carefully sourced"
+     }
+    },
+    "t4": {
+     "type": "item",
+     "settings": {
+      "icon": "pin",
+      "text": "Crafted by bees"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+   ],
+   "settings": {}
+  },
+  "image_with_text_8hbt9B": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Our Story",
+    "text": "<p>BeeBlend was founded with a passion for bringing authentic, pure honey to every home. We partner with local beekeepers and carefully select distinctive honeys that celebrate their origins, flavours and natural character. Every jar reflects our commitment to quality, purity and exceptional taste.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Group_63_1.png"
+   }
+  },
+  "image_with_text_63xW3b": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "At BeeBlend",
+    "text": "<p>We are guardians of an ancient craft and pioneers of purity. At BeeBlend, we cultivate partnerships with nature's most remarkable artisans—honeybees—nurturing them in pristine environments where they thrive among diverse, diverse wildflowers.</p><p>Our role is both humble and essential: we provide sanctuary for our colonies, protect their natural rhythms, and harvest their precious work with the utmost respect and precision. Every decision we make—from hive placement to harvest timing—is guided by our commitment to quality and sustainability.</p><p>We carefully extract, gently filter and thoughtfully bottle each batch to preserve the distinctive aromas, textures and complex flavours that make raw honey extraordinary.</p><p>Beyond producing exceptional honey, we're committed to bee conservation, environmental stewardship and helping our community understand the vital role honeybees play in our ecosystem. At BeeBlend, we don't compromise, we don't rush, and we never forget that our honey is only as pure as the care we put into every step.</p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/BEE_BLEND_LOGO.svg"
+   }
+  },
+  "text_scrolling_khjh3U": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "hex",
+      "text": "Pure honey"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "Distinctive flavours"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Crafted by bees"
+     }
+    },
+    "t4": {
+     "type": "item",
+     "settings": {
+      "icon": "pin",
+      "text": "Perfected by nature"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+   ],
+   "settings": {}
+  },
+  "image_with_text_VtjU6p": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Our Promise",
+    "text": "<ul><li>Ethically harvested honey.</li><li>Infused only with natural ingredients.</li><li>Sustainable practices in sourcing & packaging.<br/></li></ul>",
+    "image_right": false,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/0.jpg",
+    "btn_label": "Shop Now",
+    "btn_link": "shopify://collections/all"
+   }
+  },
+  "image_with_text_7ceAaJ": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Founder’s Note",
+    "text": "<p><em>“Honey has always been more than sweetness — it’s a reflection of nature, place and the remarkable work of bees. BeeBlend is our way of sharing that story with the world.”</em></p>",
+    "image_right": true,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/34.png",
+    "btn_label": "Shop Now",
+    "btn_link": "shopify://collections/all"
+   }
+  }
+ },
+ "order": [
+  "image_banner_a99M6A",
+  "text_scrolling_YeatrM",
+  "image_with_text_8hbt9B",
+  "image_with_text_63xW3b",
+  "text_scrolling_khjh3U",
+  "image_with_text_VtjU6p",
+  "image_with_text_7ceAaJ"
+ ]
+}

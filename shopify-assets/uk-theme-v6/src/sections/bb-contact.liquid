@@ -1,0 +1,61 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+<style>
+  .bb-ct{display:grid;gap:4rem}@media(min-width:990px){.bb-ct{grid-template-columns:1.2fr 1fr;gap:6.4rem}}
+  .bb-ct label{display:block;font-weight:600;font-size:1.4rem;margin:0 0 .6rem}
+  .bb-ct input,.bb-ct textarea{width:100%;font:inherit;font-size:1.6rem;padding:1.3rem 1.5rem;border:1px solid var(--bb-line);border-radius:1.2rem;background:#fff;color:var(--bb-ink)}
+  .bb-ct input:focus,.bb-ct textarea:focus{outline:2px solid var(--bb-gold);outline-offset:1px;border-color:transparent}
+  .bb-ct__row{display:grid;gap:1.6rem;margin-bottom:1.6rem}@media(min-width:750px){.bb-ct__row--2{grid-template-columns:1fr 1fr}}
+  .bb-ct__card{background:var(--bb-paper);border:1px solid var(--bb-line);border-radius:1.6rem;padding:2.4rem;margin-bottom:1.6rem}
+  .bb-ct__card h3{font-size:2rem;margin-bottom:.8rem}.bb-ct__card p{color:var(--bb-muted);font-size:1.5rem;margin:0 0 .4rem}
+  .bb-ct__card a{color:var(--bb-forest);font-weight:600}
+  .bb-ct__msg{padding:1.4rem 1.6rem;border-radius:1.2rem;margin-bottom:2rem;font-weight:500}
+</style>
+<section class="bb bb-sec bb-sec--white">
+  <div class="bb-wrap bb-ct">
+    <div>
+      <div class="bb-head"><h2>{{ section.settings.heading }}</h2><p>{{ section.settings.text }}</p></div>
+      {%- form 'contact', id: 'BBContact' -%}
+        {%- if form.posted_successfully? -%}<p class="bb-ct__msg" style="background:var(--bb-sage);color:var(--bb-forest)" role="status">Thanks, we've got your message and will reply within one working day.</p>{%- endif -%}
+        {%- if form.errors -%}<p class="bb-ct__msg" style="background:#FBEAEA;color:#7A1F1F" role="alert">Please check the highlighted fields and try again.</p>{%- endif -%}
+        <div class="bb-ct__row bb-ct__row--2">
+          <div><label for="bbc-name">Name</label><input id="bbc-name" name="contact[name]" autocomplete="name" value="{{ form.name }}" required></div>
+          <div><label for="bbc-phone">Phone (optional)</label><input id="bbc-phone" type="tel" name="contact[phone]" autocomplete="tel" value="{{ form.phone }}"></div>
+        </div>
+        <div class="bb-ct__row"><div><label for="bbc-email">Email</label><input id="bbc-email" type="email" name="contact[email]" autocomplete="email" value="{{ form.email }}" required></div></div>
+        <div class="bb-ct__row"><div><label for="bbc-msg">How can we help?</label><textarea id="bbc-msg" name="contact[body]" rows="6" required>{{ form.body }}</textarea></div></div>
+        <button type="submit" class="bb-btn bb-btn--solid">Send message</button>
+      {%- endform -%}
+    </div>
+    <aside>
+      {%- if section.settings.whatsapp != blank -%}
+        {%- assign wa = section.settings.whatsapp | remove: '+' | remove: ' ' | remove: '-' -%}
+        <a class="bb-btn bb-btn--gold" style="width:100%;margin-bottom:1.6rem" href="https://wa.me/{{ wa }}" target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+      {%- endif -%}
+      {%- for block in section.blocks -%}
+        <div class="bb-ct__card" {{ block.shopify_attributes }}>
+          <h3>{{ block.settings.title }}</h3>
+          <div style="color:var(--bb-muted);font-size:1.5rem;line-height:1.6">{{ block.settings.address }}</div>
+          {%- if block.settings.phone != blank -%}<p style="margin-top:.8rem"><a href="tel:{{ block.settings.phone | remove: ' ' }}">{{ block.settings.phone }}</a></p>{%- endif -%}
+          {%- if block.settings.email != blank -%}<p><a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a></p>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </aside>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BB Contact",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Send us a message" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Questions about an order, bulk pricing or gifting? We reply within one working day." },
+    { "type": "text", "id": "whatsapp", "label": "WhatsApp number with country code" }
+  ],
+  "blocks": [ { "type": "office", "name": "Office", "limit": 4, "settings": [
+    { "type": "text", "id": "title", "label": "Title" },
+    { "type": "richtext", "id": "address", "label": "Address" },
+    { "type": "text", "id": "phone", "label": "Phone" },
+    { "type": "text", "id": "email", "label": "Email" } ] } ],
+  "presets": [ { "name": "BB Contact", "blocks": [ { "type": "office" } ] } ]
+}
+{% endschema %}

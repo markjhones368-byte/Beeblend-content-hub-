@@ -1,0 +1,44 @@
+{
+ "sections": {
+  "rich_text_e3jALm": {
+   "type": "bb-page-hero",
+   "settings": {
+    "heading": "Contact Us",
+    "crumbs": true,
+    "bg": "paper",
+    "fit": "cover"
+   }
+  },
+  "form": {
+   "type": "contact-form",
+   "settings": {
+    "heading": "Get In Touch",
+    "heading_size": "h1",
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "padding_top": 72,
+    "padding_bottom": 72,
+    "fb_url": "",
+    "insta_icon": "shopify://shop_images/instagram.png",
+    "insta_url": "https://www.instagram.com/beeblenduk/",
+    "tiktok_icon": "shopify://shop_images/tik-tok.png",
+    "tiktok_url": "https://www.tiktok.com/@beeblend?_t=ZN-90ZZW4Fjk7a&_r=1"
+   }
+  },
+  "image_banner_EYN3fK": {
+   "type": "bb-gifting-banner",
+   "settings": {
+    "heading": "From hive to jar, we bring you honey the way nature intended",
+    "text": "",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/honey_drizzle_1.jpg",
+    "btn_label": "Discover Our Story",
+    "btn_link": "shopify://pages/about-us"
+   }
+  }
+ },
+ "order": [
+  "rich_text_e3jALm",
+  "form",
+  "image_banner_EYN3fK"
+ ]
+}

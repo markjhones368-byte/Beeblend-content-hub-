@@ -1,0 +1,451 @@
+{
+ "sections": {
+  "crumbs": {
+   "type": "bb-breadcrumbs",
+   "settings": {}
+  },
+  "main": {
+   "type": "main-product",
+   "blocks": {
+    "vendor": {
+     "type": "text",
+     "settings": {
+      "text": "{{ product.vendor }}",
+      "text_style": "body"
+     }
+    },
+    "title": {
+     "type": "title",
+     "settings": {}
+    },
+    "rating": {
+     "type": "rating",
+     "settings": {}
+    },
+    "judge_me_reviews_preview_badge_nkg7Wm": {
+     "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {}
+    },
+    "price": {
+     "type": "price",
+     "settings": {}
+    },
+    "variant_picker": {
+     "type": "variant_picker",
+     "settings": {
+      "picker_type": "button",
+      "swatch_shape": "circle"
+     }
+    },
+    "quantity_selector": {
+     "type": "quantity_selector",
+     "settings": {}
+    },
+    "seal_subscriptions_subscription_widget_Mmgwbr": {
+     "type": "shopify://apps/seal-subscriptions/blocks/subscription-widget/13b25004-a140-4ab7-b5fe-29918f759699",
+     "settings": {
+      "product": "{{product}}"
+     }
+    },
+    "buy_buttons": {
+     "type": "buy_buttons",
+     "settings": {
+      "show_dynamic_checkout": true,
+      "show_gift_card_recipient": true
+     }
+    },
+    "description": {
+     "type": "description",
+     "disabled": true,
+     "settings": {}
+    },
+    "share": {
+     "type": "share",
+     "settings": {
+      "share_label": "Share"
+     }
+    }
+   },
+   "block_order": [
+    "vendor",
+    "title",
+    "rating",
+    "judge_me_reviews_preview_badge_nkg7Wm",
+    "price",
+    "variant_picker",
+    "quantity_selector",
+    "seal_subscriptions_subscription_widget_Mmgwbr",
+    "buy_buttons",
+    "description",
+    "share"
+   ],
+   "settings": {
+    "enable_sticky_info": true,
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "media_size": "small",
+    "constrain_to_viewport": true,
+    "media_fit": "cover",
+    "gallery_layout": "thumbnail_slider",
+    "mobile_thumbnails": "hide",
+    "media_position": "left",
+    "image_zoom": "lightbox",
+    "hide_variants": true,
+    "enable_video_looping": true,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "assure": {
+   "type": "bb-product-assurance",
+   "blocks": {
+    "b1": {
+     "type": "badge",
+     "settings": {
+      "icon": "leaf",
+      "title": "100% natural"
+     }
+    },
+    "b2": {
+     "type": "badge",
+     "settings": {
+      "icon": "drop",
+      "title": "No preservatives"
+     }
+    },
+    "b3": {
+     "type": "badge",
+     "settings": {
+      "icon": "hex",
+      "title": "Ethically harvested"
+     }
+    },
+    "b4": {
+     "type": "badge",
+     "settings": {
+      "icon": "shield",
+      "title": "Secure checkout"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ],
+   "settings": {}
+  },
+  "image_with_text_yr39PG": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Bold, botanical & beautifully balanced",
+    "text": "<p><strong>BeeBlend Wild Fennel Honey</strong> combines smooth natural sweetness with delicate herbal notes and a subtle hint of anise. Distinctive yet beautifully balanced, this aromatic honey brings a unique botanical character to breakfasts, drinks, dressings and everyday recipes.</p>",
+    "image_right": false,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/bee-and-nectar.jpg"
+   }
+  },
+  "image_with_text_Mq6AWT": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "A naturally aromatic honey",
+    "text": "<p><strong>BeeBlend Wild Fennel Honey</strong> is produced from nectar collected by bees foraging among fragrant fennel blossoms. Smooth and naturally sweet, it has delicate herbal notes and a subtle anise-like finish.</p><p>Its distinctive botanical flavour makes it delicious drizzled over breakfast, stirred into tea or used to add depth to dressings, glazes and recipes.</p>",
+    "image_right": true,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Citrus_Vinaigrette_with_Fennel_Honey_recipe_454cd222-4f08-413d-a6cf-9642c1ef61c5.jpg"
+   }
+  },
+  "multicolumn_Edyh97": {
+   "type": "bb-reasons",
+   "blocks": {
+    "r1": {
+     "type": "reason",
+     "settings": {
+      "icon": "leaf",
+      "title": "100% Pure Honey",
+      "text": "Pure honey with nothing unnecessary added."
+     }
+    },
+    "r2": {
+     "type": "reason",
+     "settings": {
+      "icon": "drop",
+      "title": "Raw & Cold Extracted",
+      "text": "Carefully handled to preserve its distinctive natural flavour and aroma."
+     }
+    },
+    "r3": {
+     "type": "reason",
+     "settings": {
+      "icon": "pin",
+      "title": "Distinctive Botanical Flavour",
+      "text": "Smooth natural sweetness with delicate herbal notes and a subtle anise-like finish."
+     }
+    },
+    "r4": {
+     "type": "reason",
+     "settings": {
+      "icon": "hex",
+      "title": "Naturally Versatile",
+      "text": "Perfect for breakfast, tea, dressings, marinades and recipes."
+     }
+    },
+    "r5": {
+     "type": "reason",
+     "settings": {
+      "icon": "gift",
+      "title": "Naturally Aromatic",
+      "text": "A distinctive fennel aroma with delicate botanical notes that set it apart from traditional floral honeys."
+     }
+    },
+    "r6": {
+     "type": "reason",
+     "settings": {
+      "icon": "shield",
+      "title": "Perfect for Sweet & Savoury",
+      "text": "From yoghurt and toast to marinades, glazes and cheese, its balanced flavour works beautifully across sweet and savoury dishes."
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6"
+   ],
+   "settings": {
+    "heading": "Why choose Wild Fennel Honey?",
+    "center": false,
+    "bg": "white"
+   }
+  },
+  "image_with_text_LAMz9X": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Mediterranean Fennel Honey Wellness Tea",
+    "text": "<p><strong>Culinary Application</strong></p><p>Discover the comforting flavours of the Mediterranean with this naturally soothing herbal tea. Made with BeeBlend Fennel Honey, fresh lemon, ginger and fragrant herbs, it's a warming drink with delicate botanical notes and a smooth, naturally sweet finish. Perfect for relaxing after a meal or enjoying a peaceful moment at any time of day.</p>",
+    "image_right": true,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Fennel_Honey.png",
+    "btn_label": "Recipe Here",
+    "btn_link": "shopify://blogs/recipes/mediterranean-fennel-honey-wellness-tea"
+   }
+  },
+  "image_with_text_zVjBbA": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Our story",
+    "text": "<p>BeeBlend was founded with a passion for bringing authentic, pure honey to every home. We partner with local beekeepers and carefully select distinctive honeys that celebrate their origins, flavours and natural character. Every jar reflects our commitment to quality, purity and exceptional taste.</p>",
+    "image_right": false,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Bee_Keeper_Honey_Beeblend.jpg",
+    "btn_label": "About Us",
+    "btn_link": "shopify://pages/about-us"
+   }
+  },
+  "image_with_text_68X6NX": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Discover the Collection",
+    "text": "<p>Every BeeBlend honey is a unique expression of nature, shaped by the blossoms our bees forage and the landscapes they call home. From delicate floral notes to bold gourmet flavours, our collection celebrates the incredible diversity of pure, artisan honey. </p><p><strong>Not sure where to begin?</strong> Our <strong>Assorted Taster Sachet Pack</strong> lets you sample the full collection and discover your perfect blend.</p><p>Every BeeBlend honey tells a different story, shaped by the flowers our bees forage and the unique landscapes they call home. From the delicate floral sweetness of <strong>Lychee</strong> and <strong>Kashmiri Acacia</strong>, to the aromatic warmth of <strong>Fennel</strong>, the bold nuttiness of <strong>Sesame</strong>, and the rich indulgence of <strong>Golden Nut</strong>, each variety offers its own distinctive character. Explore the distinctive character of Ayurveda Honey, the vibrant complexity of <strong>Himalayan Multi-Floral Honey</strong>, or the smooth, mellow sweetness of <strong>Mustard Honey</strong>. Whether you enjoy light and delicate flavours or rich, adventurous profiles, there's a BeeBlend honey crafted to suit every palate. Start with our <strong>Assorted Taster Sachet Pack</strong> and discover the blend that's perfect for you.<br/><br/></p>",
+    "image_right": true,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Honey_jars_collection_beeblend.jpg",
+    "btn_label": "Taste The Range",
+    "btn_link": "shopify://collections/all"
+   }
+  },
+  "collapsible_content_UUTGXc": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "What is fennel honey?",
+      "a": "<p>Fennel honey is produced by bees that forage on the nectar of flowering fennel plants. BeeBlend Wild Fennel Honey has a distinctive botanical character, combining natural honey sweetness with delicate herbal notes and a subtle hint of anise.</p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "What does fennel honey taste like?",
+      "a": "<p>Fennel honey has a smooth, aromatic flavour with gentle herbal notes and a naturally sweet finish. BeeBlend Fennel Honey also has a subtle anise-like character that makes it distinctive without being overpowering.</p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "Is BeeBlend Fennel Honey raw honey?",
+      "a": "<p>BeeBlend Fennel Honey is a raw honey, allowing you to enjoy its natural flavour, aroma and distinctive characteristics.</p><h3></h3>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "How can I use fennel honey?",
+      "a": "<p>Fennel honey is incredibly versatile. Drizzle it over yoghurt, porridge or toast, stir it into tea, use it in salad dressings and marinades, or add it to sweet and savoury recipes for an aromatic twist.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I use fennel honey in tea?",
+      "a": "<p>Yes. BeeBlend Fennel Honey works particularly well in herbal teas, where its botanical flavour and gentle sweetness complement ingredients such as lemon, ginger and fragrant herbs.</p>"
+     }
+    },
+    "q6": {
+     "type": "qa",
+     "settings": {
+      "q": "Why does raw fennel honey crystallise?",
+      "a": "<p>Crystallisation is a natural process that can occur in raw honey and does not mean the honey has spoiled. If your fennel honey crystallises, place the closed jar in warm water and allow it to soften gradually.</p>"
+     }
+    },
+    "q7": {
+     "type": "qa",
+     "settings": {
+      "q": "What makes BeeBlend Fennel Honey different?",
+      "a": "<p>BeeBlend Wild Fennel Honey stands out for its distinctive botanical flavour. Its combination of smooth natural sweetness, delicate herbal notes and subtle anise character makes it an interesting alternative to more traditional floral honeys.</p>"
+     }
+    },
+    "q8": {
+     "type": "qa",
+     "settings": {
+      "q": "How should I store fennel honey?",
+      "a": "<p>Keep your fennel honey tightly sealed in a cool, dry place away from direct sunlight. There is usually no need to refrigerate honey.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8"
+   ],
+   "settings": {
+    "heading": "Fennel Honey FAQs",
+    "open_first": true,
+    "bg": "white",
+    "schema": true
+   }
+  },
+  "text_scrolling_6BVxr4": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "hex",
+      "text": "100% Natural"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "No Preservatives"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Ethically Harvested"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3"
+   ],
+   "settings": {}
+  },
+  "1758803877d65caa9c": {
+   "type": "apps",
+   "blocks": {
+    "judge_me_reviews_review_widget_VWYWci": {
+     "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {
+      "max_width": 1200,
+      "show_shop_reviews": false,
+      "empty_state": "empty_widget"
+     }
+    },
+    "klip_coupons_klip_app_section_product_GpzLmc": {
+     "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+     "disabled": true,
+     "settings": {
+      "margin_top": 10,
+      "margin_bottom": 10
+     }
+    }
+   },
+   "block_order": [
+    "judge_me_reviews_review_widget_VWYWci",
+    "klip_coupons_klip_app_section_product_GpzLmc"
+   ],
+   "settings": {
+    "include_margins": true
+   }
+  },
+  "rich_text_qN74UN": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "Try Wild Fennel Honey in our recipes",
+    "text": "Discover delicious ways to enjoy BeeBlend Wild Fennel Honey. Its distinctive aromatic flavour works beautifully in everything from warming drinks to savoury dishes. Try our Mediterranean Fennel Honey Wellness Tea for an easy way to enjoy it at home.",
+    "center": true,
+    "bg": "white"
+   }
+  },
+  "featured_blog_VxCrVE": {
+   "type": "featured-blog",
+   "name": "t:sections.featured-blog.presets.name",
+   "settings": {
+    "blog": "recipes",
+    "post_limit": 3,
+    "heading": "Delicious Honey Based Recipes",
+    "heading_size": "h1",
+    "columns_desktop": 3,
+    "show_view_all": true,
+    "show_image": true,
+    "show_date": true,
+    "show_author": false,
+    "color_scheme": "scheme-e7d033a6-032f-4c6f-85fe-a72fe5872837",
+    "padding_top": 36,
+    "padding_bottom": 36
+   }
+  },
+  "sticky": {
+   "type": "bb-sticky-atc",
+   "settings": {}
+  }
+ },
+ "order": [
+  "crumbs",
+  "main",
+  "assure",
+  "image_with_text_yr39PG",
+  "image_with_text_Mq6AWT",
+  "multicolumn_Edyh97",
+  "image_with_text_LAMz9X",
+  "image_with_text_zVjBbA",
+  "image_with_text_68X6NX",
+  "collapsible_content_UUTGXc",
+  "text_scrolling_6BVxr4",
+  "1758803877d65caa9c",
+  "rich_text_qN74UN",
+  "featured_blog_VxCrVE",
+  "sticky"
+ ]
+}

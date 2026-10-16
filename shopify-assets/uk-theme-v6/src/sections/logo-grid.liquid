@@ -1,0 +1,133 @@
+{%- style -%}
+
+.logo-section.{{ section.settings.custom_class }}{
+  background-image:url({{ section.settings.bg_image | image_url }});
+  background-size:600px;
+  background-repeat:no-repeat;
+  background-position:right top -20px;
+}
+
+.logo-section{
+  background:{{ section.settings.bg_color }};
+  padding:{{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
+}
+
+.logo_slider{
+  display:grid;
+  grid-template-columns: repeat({{ section.settings.desktop_grid }}, 1fr);
+  gap:15px;
+}
+
+.logo_img{
+  text-align:center;
+  padding:20px;
+  background:{{ section.settings.logo_color }};
+}
+
+.logo_img img{
+  width:100%;
+  height:{{ section.settings.logo_size }}px;
+  max-width:{{ section.settings.logo_size }}px;
+  object-fit:contain;
+}
+
+.logo-section .banner__heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 65px;
+    color: #010412;
+}
+
+/* Tablet */
+@media(max-width: 979px){
+  .logo_slider{
+    grid-template-columns: repeat({{ section.settings.tablet_grid }}, 1fr);
+  }
+}
+
+/* Mobile */
+@media(max-width: 750px){
+  .logo_slider{
+    grid-template-columns: repeat({{ section.settings.mobile_grid }}, 1fr);
+  }
+
+  .logo-section{
+    padding:{{ section.settings.padding_top_mobile }}px {{ section.settings.padding_right_mobile }}px {{ section.settings.padding_bottom_mobile }}px {{ section.settings.padding_left_mobile }}px;
+  }
+}
+
+{%- endstyle -%}
+
+<section class="logo-section {{ section.settings.custom_class }}">
+  <div class="logo-wrapper">
+
+    <h2 class="banner__heading h1">{{ section.settings.test_heading }}</h2>
+
+    <div class="logo_slider">
+      {% for block in section.blocks %}
+        
+        <div class="logo_img">
+          
+          {% if block.settings.logo_link != blank %}
+            <a href="{{ block.settings.logo_link }}">
+          {% endif %}
+
+          <img src="{{ block.settings.logo_img | image_url }}" />
+
+          {% if block.settings.logo_link != blank %}
+            </a>
+          {% endif %}
+
+        </div>
+
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Logo Section",
+  "settings": [
+
+    { "type": "text", "id": "test_heading", "label": "Heading" },
+
+    { "type": "range", "id": "desktop_grid", "min": 2, "max": 6, "step": 1, "label": "Desktop Columns", "default": 6 },
+    { "type": "range", "id": "tablet_grid", "min": 2, "max": 4, "step": 1, "label": "Tablet Columns", "default": 3 },
+    { "type": "range", "id": "mobile_grid", "min": 1, "max": 3, "step": 1, "label": "Mobile Columns", "default": 2 },
+
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#f5f5f5" },
+    { "type": "color", "id": "logo_color", "label": "Logo Background", "default": "#ffffff" },
+
+    { "type": "text", "id": "logo_size", "label": "Logo Size(px)", "default": "100" },
+
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 2, "default": 40, "label": "Top Padding" },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 2, "default": 40, "label": "Bottom Padding" },
+    { "type": "range", "id": "padding_left", "min": 0, "max": 100, "step": 2, "default": 20, "label": "Left Padding" },
+    { "type": "range", "id": "padding_right", "min": 0, "max": 100, "step": 2, "default": 20, "label": "Right Padding" },
+
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 200, "step": 2, "default": 40, "label": "Top Padding Mobile" },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 200, "step": 2, "default": 40, "label": "Bottom Padding Mobile" },
+    { "type": "range", "id": "padding_left_mobile", "min": 0, "max": 100, "step": 2, "default": 20, "label": "Left Padding Mobile" },
+    { "type": "range", "id": "padding_right_mobile", "min": 0, "max": 100, "step": 2, "default": 20, "label": "Right Padding Mobile" },
+
+    { "type": "text", "id": "custom_class", "label": "Custom Class" }
+  ],
+
+  "blocks": [
+    {
+      "type": "logos",
+      "name": "Logo",
+      "settings": [
+        { "type": "image_picker", "id": "logo_img", "label": "Logo Image" },
+        { "type": "url", "id": "logo_link", "label": "Logo Link" }
+      ]
+    }
+  ],
+
+  "presets": [
+    { "name": "Logo Section" }
+  ]
+}
+{% endschema %}
