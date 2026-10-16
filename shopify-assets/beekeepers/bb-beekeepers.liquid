@@ -112,15 +112,21 @@
               <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
               <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
             </button>
+          {%- elsif st.video_asset != blank -%}
+            <video class="bbk__v" autoplay muted loop playsinline preload="metadata"{% if st.poster_asset != blank %} poster="{{ st.poster_asset | asset_url }}"{% endif %}><source src="{{ st.video_asset | asset_url }}" type="video/mp4"></video>
+            <button type="button" class="bbk__pp" aria-pressed="false" aria-label="Pause video">
+              <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
+              <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
+            </button>
           {%- elsif st.photo != blank -%}
             {{ st.photo | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600, 900, 1200', sizes: '(min-width: 990px) 34vw, 88vw', alt: st.photo.alt }}
           {%- endif -%}
         </div>
-        {%- if st.photo != blank and st.video != blank -%}
+        {%- if st.photo != blank -%}{%- if st.video != blank or st.video_asset != blank -%}
           <div class="bbk__photo" data-bbk-rv style="--d:3">
             {{ st.photo | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400, 600, 900', sizes: '(min-width: 990px) 18vw, 44vw', alt: st.photo.alt }}
           </div>
-        {%- endif -%}
+        {%- endif -%}{%- endif -%}
       </div>
     </div>
 
@@ -133,10 +139,16 @@
         <div class="bbk__tiles">
           {%- for block in section.blocks -%}
             {%- assign b = block.settings -%}
-            <figure class="bbk__tile{% if b.video != blank %} is-tall{% endif %}" data-bbk-rv style="--d:{{ forloop.index }}" {{ block.shopify_attributes }}>
+            <figure class="bbk__tile{% if b.video != blank or b.video_asset != blank %} is-tall{% endif %}" data-bbk-rv style="--d:{{ forloop.index }}" {{ block.shopify_attributes }}>
               <div class="bbk__tile-m">
                 {%- if b.video != blank -%}
                   {{ b.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, preload: 'metadata', image_size: '800x', class: 'bbk__v' }}
+                  <button type="button" class="bbk__pp" aria-pressed="false" aria-label="Pause video">
+                    <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
+                    <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
+                  </button>
+                {%- elsif b.video_asset != blank -%}
+                  <video class="bbk__v" autoplay muted loop playsinline preload="metadata"{% if b.poster_asset != blank %} poster="{{ b.poster_asset | asset_url }}"{% endif %}><source src="{{ b.video_asset | asset_url }}" type="video/mp4"></video>
                   <button type="button" class="bbk__pp" aria-pressed="false" aria-label="Pause video">
                     <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
                     <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
@@ -204,6 +216,8 @@
     { "type": "url", "id": "btn2_link", "label": "Button 2 link" },
     { "type": "header", "content": "Film" },
     { "type": "video", "id": "video", "label": "Main video (portrait works best)" },
+    { "type": "text", "id": "video_asset", "label": "Or: video file in theme assets", "info": "Used when no video is picked above, e.g. beeblend-hive-entrance.mp4" },
+    { "type": "text", "id": "poster_asset", "label": "Poster image in theme assets" },
     { "type": "text", "id": "chip", "label": "Label on the video", "default": "Filmed at our hives" },
     { "type": "image_picker", "id": "photo", "label": "Overlapping photo" },
     { "type": "header", "content": "Film strip" },
@@ -214,6 +228,8 @@
     { "type": "tile", "name": "Moment", "settings": [
       { "type": "image_picker", "id": "image", "label": "Photo" },
       { "type": "video", "id": "video", "label": "Video (replaces the photo)" },
+      { "type": "text", "id": "video_asset", "label": "Or: video file in theme assets" },
+      { "type": "text", "id": "poster_asset", "label": "Poster image in theme assets" },
       { "type": "text", "id": "caption", "label": "Caption" },
       { "type": "text", "id": "sub", "label": "Small text" }
     ] }
