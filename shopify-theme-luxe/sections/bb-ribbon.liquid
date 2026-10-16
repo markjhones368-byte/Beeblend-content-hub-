@@ -1,0 +1,27 @@
+{%- comment -%} BeeBlend Luxe — slow italic ribbon. Text is duplicated for a seamless loop; the copy is aria-hidden. {%- endcomment -%}
+{%- assign items = section.settings.items | split: ',' -%}
+<div class="bb-ribbon" role="region" aria-label="{{ section.settings.items | escape }}">
+  <div class="bb-ribbon__track">
+    {%- for n in (1..2) -%}
+      {%- for it in items -%}
+        {%- assign t = it | strip -%}
+        {%- if t != blank -%}<span class="bb-ribbon__item"{% if n == 2 %} aria-hidden="true"{% endif %}>{{ t | escape }}</span>{%- endif -%}
+      {%- endfor -%}
+      {%- for it in items -%}
+        {%- assign t = it | strip -%}
+        {%- if t != blank -%}<span class="bb-ribbon__item" aria-hidden="true">{{ t | escape }}</span>{%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "BeeBlend ribbon",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "items", "label": "Phrases (comma separated)", "default": "Rare honeys, Distinctive flavours, Crafted by bees, Perfected by nature, 100% pure honey" }
+  ],
+  "presets": [{ "name": "BeeBlend ribbon" }]
+}
+{% endschema %}

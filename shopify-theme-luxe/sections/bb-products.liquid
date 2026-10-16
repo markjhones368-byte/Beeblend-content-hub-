@@ -1,0 +1,95 @@
+{%- comment -%}
+  BeeBlend Luxe — product grid. Reads live products from the chosen collection:
+  real titles, prices, compare-at prices, variants and availability. Nothing is hardcoded.
+{%- endcomment -%}
+{%- assign coll = section.settings.collection -%}
+<section class="bb-section{% if section.settings.surface == 'ivory' %} bb-section--ivory{% elsif section.settings.surface == 'ink2' %} bb-section--ink2{% endif %}" aria-labelledby="bb-prod-{{ section.id }}">
+  <div class="bb-wrap">
+    <div class="bb-head bb-reveal">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<p class="bb-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+        <h2 class="bb-h2" id="bb-prod-{{ section.id }}">{{ section.settings.heading }}</h2>
+        {%- if section.settings.text != blank -%}<div class="bb-lede">{{ section.settings.text }}</div>{%- endif -%}
+      </div>
+      {%- if coll != blank and section.settings.show_view_all -%}
+        <a class="bb-link" href="{{ coll.url }}">{{ section.settings.view_all_label | escape }}</a>
+      {%- endif -%}
+    </div>
+
+    <ul class="bb-grid bb-grid--{{ section.settings.columns }}" role="list">
+      {%- if coll != blank -%}
+        {%- assign shown = 0 -%}
+        {%- for product in coll.products -%}
+          {%- if section.settings.hide_sold_out and product.available == false -%}{%- continue -%}{%- endif -%}
+          {%- if shown >= section.settings.limit -%}{%- break -%}{%- endif -%}
+          {%- assign shown = shown | plus: 1 -%}
+          {%- assign parts = product.title | split: '|' -%}
+          {%- assign name = parts.first | strip -%}
+          {%- assign note = '' -%}
+          {%- if parts.size > 1 -%}{%- assign note = parts.last | strip -%}{%- endif -%}
+          <li class="bb-card bb-reveal" style="--bb-i: {{ forloop.index0 | modulo: 4 }}">
+            <a class="bb-card__media" href="{{ product.url }}" tabindex="-1" aria-hidden="true">
+              {%- unless product.available -%}<span class="bb-card__badge">Sold out</span>{%- endunless -%}
+              {%- if product.featured_media -%}
+                {{ product.featured_media | image_url: width: 900 | image_tag:
+                  widths: '360, 540, 720, 900', sizes: '(min-width: 990px) 25vw, 50vw', loading: 'lazy',
+                  alt: product.featured_media.alt | default: product.title | escape
+                }}
+              {%- endif -%}
+              {%- if section.settings.hover_image and product.media.size > 1 -%}
+                {{ product.media[1] | image_url: width: 900 | image_tag:
+                  widths: '360, 540, 720, 900', sizes: '(min-width: 990px) 25vw, 50vw', loading: 'lazy', class: 'bb-card__alt', alt: ''
+                }}
+              {%- endif -%}
+            </a>
+            <div class="bb-card__body">
+              {%- if note != blank -%}<span class="bb-card__note">{{ note | escape }}</span>{%- endif -%}
+              <h3 class="bb-card__title"><a href="{{ product.url }}">{{ name | escape }}</a></h3>
+              <span class="bb-card__price">
+                {%- if product.price_varies -%}From {% endif -%}{{ product.price_min | money }}
+                {%- if product.compare_at_price_min > product.price_min -%}<s><span class="visually-hidden">Regular price </span>{{ product.compare_at_price_min | money }}</s>{%- endif -%}
+              </span>
+            </div>
+            {%- if section.settings.quick_add -%}
+              {%- form 'product', product, class: 'bb-card__add bb-quick-add', novalidate: 'novalidate' -%}
+                {%- for variant in product.variants limit: 3 -%}
+                  <button type="submit" name="id" value="{{ variant.id }}"{% unless variant.available %} disabled{% endunless %}
+                    aria-label="Add {{ name | escape }}{% unless product.has_only_default_variant %}, {{ variant.title | escape }}{% endunless %} to bag">
+                    {%- if product.has_only_default_variant -%}{% if variant.available %}Add to bag{% else %}Sold out{% endif %}{%- else -%}{{ variant.title | escape }}{%- endif -%}
+                  </button>
+                {%- endfor -%}
+                <p class="bb-quick-add__msg" role="status" hidden></p>
+              {%- endform -%}
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      {%- else -%}
+        {%- for i in (1..4) -%}
+          <li class="bb-card"><div class="bb-card__media">{{ 'product-1' | placeholder_svg_tag }}</div><div class="bb-card__body"><h3 class="bb-card__title">Choose a collection</h3></div></li>
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BeeBlend products",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The collection" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Rare honeys, <em>raw truth.</em>" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "range", "id": "limit", "label": "Products to show", "min": 2, "max": 12, "step": 1, "default": 8 },
+    { "type": "select", "id": "columns", "label": "Desktop columns", "default": "4", "options": [{ "value": "3", "label": "3" }, { "value": "4", "label": "4" }] },
+    { "type": "checkbox", "id": "hide_sold_out", "label": "Hide sold-out products", "default": true },
+    { "type": "checkbox", "id": "hover_image", "label": "Show second image on hover", "default": true },
+    { "type": "checkbox", "id": "quick_add", "label": "Show size quick-add buttons", "default": true },
+    { "type": "checkbox", "id": "show_view_all", "label": "Show 'view all' link", "default": true },
+    { "type": "text", "id": "view_all_label", "label": "'View all' label", "default": "View all honeys" },
+    { "type": "select", "id": "surface", "label": "Background", "default": "ink", "options": [{ "value": "ink", "label": "Charcoal" }, { "value": "ink2", "label": "Raised charcoal" }, { "value": "ivory", "label": "Ivory" }] }
+  ],
+  "presets": [{ "name": "BeeBlend products" }]
+}
+{% endschema %}

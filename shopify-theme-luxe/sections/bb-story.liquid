@@ -1,0 +1,40 @@
+{%- comment -%} BeeBlend Luxe — editorial image + text. Links to the existing About page rather than duplicating it. {%- endcomment -%}
+<section class="bb-section{% if section.settings.surface == 'ivory' %} bb-section--ivory{% elsif section.settings.surface == 'ink2' %} bb-section--ink2{% endif %}" aria-labelledby="bb-story-{{ section.id }}">
+  <div class="bb-wrap bb-story{% if section.settings.flip %} bb-story--flip{% endif %}">
+    <div class="bb-story__media bb-reveal">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1600 | image_tag: widths: '600, 900, 1200, 1600', sizes: '(min-width: 990px) 50vw, 100vw', loading: 'lazy', alt: section.settings.image.alt | escape }}
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag }}
+      {%- endif -%}
+      <span class="bb-story__frame" aria-hidden="true"></span>
+    </div>
+    <div class="bb-story__body bb-reveal" style="--bb-i: 1">
+      {%- if section.settings.eyebrow != blank -%}<p class="bb-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h2 class="bb-h2" id="bb-story-{{ section.id }}">{{ section.settings.heading }}</h2>
+      <div class="bb-story__text">{{ section.settings.text }}</div>
+      {%- if section.settings.button_label != blank -%}
+        <a class="{% if section.settings.button_style == 'button' %}bb-btn{% else %}bb-link{% endif %}" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BeeBlend story",
+  "tag": "div",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "checkbox", "id": "flip", "label": "Image on right (desktop)", "default": false },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Our story" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Nature's golden gift, <em>as nature intended</em>" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>At BeeBlend, we believe honey is more than just a sweetener—it’s nature’s golden gift, crafted by the tireless work of bees and the bounty of wildflowers. Our journey began with a simple vision: to bring you the purest, most exquisite honey, exactly as nature intended.</p>" },
+    { "type": "text", "id": "button_label", "label": "Link label", "default": "Read our story" },
+    { "type": "url", "id": "button_link", "label": "Link" },
+    { "type": "select", "id": "button_style", "label": "Link style", "default": "link", "options": [{ "value": "link", "label": "Underlined link" }, { "value": "button", "label": "Button" }] },
+    { "type": "select", "id": "surface", "label": "Background", "default": "ivory", "options": [{ "value": "ink", "label": "Charcoal" }, { "value": "ink2", "label": "Raised charcoal" }, { "value": "ivory", "label": "Ivory" }] }
+  ],
+  "presets": [{ "name": "BeeBlend story" }]
+}
+{% endschema %}

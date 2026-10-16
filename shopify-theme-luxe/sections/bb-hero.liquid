@@ -1,0 +1,61 @@
+{%- comment -%} BeeBlend Luxe — cinematic hero. Uses the store's existing hero video / image. {%- endcomment -%}
+<section class="bb-hero" id="bb-hero-{{ section.id }}" aria-labelledby="bb-hero-title-{{ section.id }}">
+  <div class="bb-hero__media">
+    {%- if section.settings.video != blank -%}
+      {{ section.settings.video | video_tag:
+        autoplay: true, loop: true, muted: true, playsinline: true, controls: false,
+        preload: 'metadata', image_size: '1920x'
+      }}
+    {%- elsif section.settings.image != blank -%}
+      {{ section.settings.image | image_url: width: 2400 | image_tag:
+        widths: '750, 1100, 1500, 2000, 2400', sizes: '100vw', fetchpriority: 'high', loading: 'eager', alt: section.settings.image.alt | escape
+      }}
+    {%- endif -%}
+  </div>
+
+  <div class="bb-wrap bb-hero__inner">
+    <h1 class="bb-hero__title" id="bb-hero-title-{{ section.id }}">
+      <span class="bb-line">{{ section.settings.line_1 | escape }}</span>
+      {%- if section.settings.line_2 != blank -%}<span class="bb-line"><em>{{ section.settings.line_2 | escape }}</em></span>{%- endif -%}
+    </h1>
+    <div class="bb-hero__copy">
+      {%- if section.settings.eyebrow != blank -%}<p class="bb-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      {%- if section.settings.subheading != blank -%}<p class="bb-hero__sub">{{ section.settings.subheading | escape }}</p>{%- endif -%}
+      <div class="bb-hero__ctas">
+        {%- if section.settings.button_1_label != blank -%}<a class="bb-btn" href="{{ section.settings.button_1_link | default: routes.all_products_collection_url }}">{{ section.settings.button_1_label | escape }}</a>{%- endif -%}
+        {%- if section.settings.button_2_label != blank -%}<a class="bb-btn bb-btn--ghost" href="{{ section.settings.button_2_link }}">{{ section.settings.button_2_label | escape }}</a>{%- endif -%}
+      </div>
+      {%- if section.settings.meta_1 != blank or section.settings.meta_2 != blank or section.settings.meta_3 != blank -%}
+        <div class="bb-hero__meta">
+          {%- if section.settings.meta_1 != blank -%}<span>{{ section.settings.meta_1 | escape }}</span>{%- endif -%}
+          {%- if section.settings.meta_2 != blank -%}<span>{{ section.settings.meta_2 | escape }}</span>{%- endif -%}
+          {%- if section.settings.meta_3 != blank -%}<span>{{ section.settings.meta_3 | escape }}</span>{%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BeeBlend hero",
+  "tag": "div",
+  "settings": [
+    { "type": "video", "id": "video", "label": "Background video", "info": "Plays muted and looped. Hidden for visitors who prefer reduced motion." },
+    { "type": "image_picker", "id": "image", "label": "Image / video poster" },
+    { "type": "text", "id": "line_1", "label": "Headline line 1", "default": "Crafted by Bees," },
+    { "type": "text", "id": "line_2", "label": "Headline line 2 (italic gold)", "default": "Perfected by Nature" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Rare single-origin raw honey" },
+    { "type": "textarea", "id": "subheading", "label": "Supporting sentence", "default": "Discover rare, single-origin raw honeys, each with its own distinctive flavour and natural character." },
+    { "type": "text", "id": "button_1_label", "label": "Primary button label", "default": "Shop Honey" },
+    { "type": "url", "id": "button_1_link", "label": "Primary button link" },
+    { "type": "text", "id": "button_2_label", "label": "Secondary button label", "default": "Find your honey" },
+    { "type": "url", "id": "button_2_link", "label": "Secondary button link" },
+    { "type": "header", "content": "Detail row", "info": "Only use claims you can verify." },
+    { "type": "text", "id": "meta_1", "label": "Detail 1", "default": "Raw honey" },
+    { "type": "text", "id": "meta_2", "label": "Detail 2", "default": "Single origin" },
+    { "type": "text", "id": "meta_3", "label": "Detail 3", "default": "100% pure honey" }
+  ],
+  "presets": [{ "name": "BeeBlend hero" }]
+}
+{% endschema %}

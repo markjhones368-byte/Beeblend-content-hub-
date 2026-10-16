@@ -1,0 +1,51 @@
+{%- comment -%} BeeBlend Luxe — the three real stages from hive to jar, plus optional verified attribute pills. {%- endcomment -%}
+<section class="bb-section bb-section--ink2" aria-labelledby="bb-steps-{{ section.id }}">
+  <div class="bb-wrap">
+    <div class="bb-head bb-reveal">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<p class="bb-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+        <h2 class="bb-h2" id="bb-steps-{{ section.id }}">{{ section.settings.heading }}</h2>
+      </div>
+      {%- if section.settings.button_label != blank -%}<a class="bb-link" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>{%- endif -%}
+    </div>
+    <ol class="bb-steps" role="list" style="list-style:none;margin:0;padding:0">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'step' -%}
+          <li class="bb-step bb-reveal" style="--bb-i: {{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            <span class="bb-step__n" aria-hidden="true">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            <h3 class="bb-step__title">{{ block.settings.title | escape }}</h3>
+            <p class="bb-step__text">{{ block.settings.text | escape }}</p>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ol>
+    {%- assign pills = section.settings.pills | split: ',' -%}
+    {%- if section.settings.pills != blank -%}
+      <ul class="bb-pillrow bb-reveal" role="list" style="list-style:none;padding:0">
+        {%- for p in pills -%}{%- assign t = p | strip -%}{%- if t != blank -%}<li class="bb-pill">{{ t | escape }}</li>{%- endif -%}{%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BeeBlend hive to jar",
+  "tag": "div",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "From hive to jar" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Honey the way <em>nature intended</em>" },
+    { "type": "text", "id": "button_label", "label": "Link label", "default": "Discover our story" },
+    { "type": "url", "id": "button_link", "label": "Link" },
+    { "type": "text", "id": "pills", "label": "Attribute pills (comma separated)", "info": "Only list attributes you can verify.", "default": "Raw honey, Single origin, 100% pure honey" }
+  ],
+  "blocks": [
+    { "type": "step", "name": "Step", "settings": [
+      { "type": "text", "id": "title", "label": "Title", "default": "Step" },
+      { "type": "textarea", "id": "text", "label": "Text" }
+    ] }
+  ],
+  "presets": [{ "name": "BeeBlend hive to jar", "blocks": [{ "type": "step" }, { "type": "step" }, { "type": "step" }] }]
+}
+{% endschema %}

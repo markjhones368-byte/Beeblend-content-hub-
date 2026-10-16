@@ -1,0 +1,57 @@
+{%- comment -%} BeeBlend Luxe — shop by collection. Each block picks an existing collection; empty or missing collections are skipped. {%- endcomment -%}
+<section class="bb-section{% if section.settings.surface == 'ink2' %} bb-section--ink2{% endif %}" aria-labelledby="bb-coll-{{ section.id }}">
+  <div class="bb-wrap">
+    <div class="bb-head bb-reveal">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<p class="bb-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+        <h2 class="bb-h2" id="bb-coll-{{ section.id }}">{{ section.settings.heading }}</h2>
+      </div>
+      <a class="bb-link" href="{{ routes.collections_url }}">{{ section.settings.all_label | escape }}</a>
+    </div>
+    <div class="bb-colls">
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.collection -%}
+        {%- if c == blank -%}{%- continue -%}{%- endif -%}
+        {%- assign img = block.settings.image | default: c.featured_image -%}
+        <a class="bb-coll bb-reveal" href="{{ c.url }}" style="--bb-i: {{ forloop.index0 }}" {{ block.shopify_attributes }}>
+          {%- if img -%}
+            {{ img | image_url: width: 1400 | image_tag: widths: '500, 800, 1100, 1400', sizes: '(min-width: 990px) 40vw, 100vw', loading: 'lazy', alt: '' }}
+          {%- endif -%}
+          <div class="bb-coll__body">
+            <div>
+              <h3 class="bb-coll__title">{{ block.settings.title | default: c.title | escape }}</h3>
+              <span class="bb-coll__count">{{ c.all_products_count }} {% if c.all_products_count == 1 %}product{% else %}products{% endif %}</span>
+            </div>
+            <span class="bb-coll__arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BeeBlend collections",
+  "tag": "div",
+  "max_blocks": 5,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Shop by collection" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Find your <em>honey</em>" },
+    { "type": "text", "id": "all_label", "label": "All collections label", "default": "All collections" },
+    { "type": "select", "id": "surface", "label": "Background", "default": "ink", "options": [{ "value": "ink", "label": "Charcoal" }, { "value": "ink2", "label": "Raised charcoal" }] }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "text", "id": "title", "label": "Display title", "info": "Leave blank to use the collection title." },
+        { "type": "image_picker", "id": "image", "label": "Image override", "info": "Leave blank to use the collection image." }
+      ]
+    }
+  ],
+  "presets": [{ "name": "BeeBlend collections", "blocks": [{ "type": "collection" }, { "type": "collection" }, { "type": "collection" }] }]
+}
+{% endschema %}
