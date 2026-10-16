@@ -1,0 +1,373 @@
+{
+ "sections": {
+  "crumbs": {
+   "type": "bb-breadcrumbs",
+   "settings": {}
+  },
+  "main": {
+   "type": "main-product",
+   "blocks": {
+    "vendor": {
+     "type": "text",
+     "settings": {
+      "text": "{{ product.vendor }}",
+      "text_style": "body"
+     }
+    },
+    "title": {
+     "type": "title",
+     "settings": {}
+    },
+    "rating": {
+     "type": "rating",
+     "settings": {}
+    },
+    "price": {
+     "type": "price",
+     "settings": {}
+    },
+    "variant_picker": {
+     "type": "variant_picker",
+     "settings": {
+      "picker_type": "button",
+      "swatch_shape": "circle"
+     }
+    },
+    "quantity_selector": {
+     "type": "quantity_selector",
+     "settings": {}
+    },
+    "buy_buttons": {
+     "type": "buy_buttons",
+     "settings": {
+      "show_dynamic_checkout": true,
+      "show_gift_card_recipient": true
+     }
+    },
+    "judge_me_reviews_preview_badge_nkg7Wm": {
+     "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {}
+    },
+    "description": {
+     "type": "description",
+     "settings": {}
+    },
+    "share": {
+     "type": "share",
+     "settings": {
+      "share_label": "Share"
+     }
+    },
+    "uk_confidence": {
+     "type": "custom_liquid",
+     "settings": {
+      "custom_liquid": "{% render 'uk-buy-confidence' %}"
+     }
+    }
+   },
+   "block_order": [
+    "vendor",
+    "title",
+    "rating",
+    "price",
+    "variant_picker",
+    "quantity_selector",
+    "buy_buttons",
+    "uk_confidence",
+    "judge_me_reviews_preview_badge_nkg7Wm",
+    "description",
+    "share"
+   ],
+   "settings": {
+    "enable_sticky_info": true,
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "media_size": "small",
+    "constrain_to_viewport": true,
+    "media_fit": "cover",
+    "gallery_layout": "thumbnail_slider",
+    "mobile_thumbnails": "hide",
+    "media_position": "left",
+    "image_zoom": "lightbox",
+    "hide_variants": true,
+    "enable_video_looping": true,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "assure": {
+   "type": "bb-product-assurance",
+   "blocks": {
+    "b1": {
+     "type": "badge",
+     "settings": {
+      "icon": "leaf",
+      "title": "100% natural"
+     }
+    },
+    "b2": {
+     "type": "badge",
+     "settings": {
+      "icon": "drop",
+      "title": "No preservatives"
+     }
+    },
+    "b3": {
+     "type": "badge",
+     "settings": {
+      "icon": "hex",
+      "title": "Ethically harvested"
+     }
+    },
+    "b4": {
+     "type": "badge",
+     "settings": {
+      "icon": "shield",
+      "title": "Secure checkout"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ],
+   "settings": {}
+  },
+  "rich_text_NJQTHR": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "BeeBlend - Yellow Mustard flower honey",
+    "text": "Bright, Bold & Unexpectedly Smooth Forget everything you thought you knew about honey. BeeBlend Mustard Flower Honey surprises with its vibrant golden colour, delicate floral sweetness and a gentle hint of warming spice. Naturally versatile and full of character, it's equally at home drizzled over breakfast or paired with savoury dishes for an unforgettable flavour experience.",
+    "center": true,
+    "bg": "white"
+   }
+  },
+  "image_with_text_fmKV3D": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Bright, Smooth & Naturally Distinctive",
+    "text": "<p>BeeBlend Yellow Mustard Honey is a celebration of flavour that's both vibrant and refined. Crafted from the nectar of blooming mustard flowers, it offers a beautifully smooth texture with delicate floral sweetness and a subtle warming finish that complements both sweet and savoury dishes.</p><p>A favourite among professional chefs, its naturally balanced character enhances recipes without overpowering them, making it the perfect ingredient for honey mustard glazes, roasted meats, salad dressings, artisan cheeseboards and homemade barbecue sauces. It's the bridge between sweet and savoury that every kitchen should have.</p><p>With its bright floral character, gentle warmth and subtle spice, Yellow Mustard Honey brings a distinctive twist to everyday dishes. Whether drizzled over breakfast or used to elevate savoury cooking, every spoonful delivers exceptional flavour with remarkable versatility.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/mustard_honey.png",
+    "btn_label": "Recipes",
+    "btn_link": "shopify://blogs/recipes/honey-mustard-glazed-pork-tenderloin"
+   }
+  },
+  "image_with_text_LAMz9X": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Mustard Honey Glazed Pork Tenderloin",
+    "text": "<p><strong>Culinary Application</strong></p><p>Succulent pork tenderloin brushed with BeeBlend Yellow Mustard Honey, Dijon mustard and fresh herbs, then roasted until golden and caramelised. The honey’s gentle sweetness balances the savoury mustard beautifully, creating an elegant main course with rich, rounded flavour.</p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/mustard_honey_pork_dinner_recipe.png",
+    "btn_label": "Recipe Here",
+    "btn_link": "shopify://blogs/recipes/honey-mustard-glazed-pork-tenderloin"
+   }
+  },
+  "image_with_text_mMddzg": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Our story",
+    "text": "<p>BeeBlend was founded with a passion for bringing authentic, pure honey to every home. We partner with local beekeepers and carefully select distinctive honeys that celebrate their origins, flavours and natural character. Every jar reflects our commitment to quality, purity and exceptional taste.</p>",
+    "image_right": false,
+    "bg": "paper",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Bee_Keeper_Honey_Beeblend.jpg",
+    "btn_label": "About Us",
+    "btn_link": "shopify://pages/about-us"
+   }
+  },
+  "image_with_text_GGXKN3": {
+   "type": "bb-text-image",
+   "settings": {
+    "heading": "Discover the Collection",
+    "text": "<p>Every BeeBlend honey is a unique expression of nature, shaped by the blossoms our bees forage and the landscapes they call home. From delicate floral notes to bold gourmet flavours, our collection celebrates the incredible diversity of pure, artisan honey. </p><p><strong>Not sure where to begin?</strong> Our <strong>Assorted Taster Sachet Pack</strong> lets you sample the full collection and discover your perfect blend.</p><p>Every BeeBlend honey tells a different story, shaped by the flowers our bees forage and the unique landscapes they call home. From the delicate floral sweetness of <strong>Lychee</strong> and <strong>Kashmiri Acacia</strong>, to the aromatic warmth of <strong>Fennel</strong>, the bold nuttiness of <strong>Sesame</strong>, and the rich indulgence of <strong>Golden Nut</strong>, each variety offers its own distinctive character. Explore the distinctive character of Ayurveda Honey, the vibrant complexity of <strong>Himalayan Multi-Floral Honey</strong>, or the smooth, mellow sweetness of <strong>Mustard Honey</strong>. Whether you enjoy light and delicate flavours or rich, adventurous profiles, there's a BeeBlend honey crafted to suit every palate. Start with our <strong>Assorted Taster Sachet Pack</strong> and discover the blend that's perfect for you.<br/><br/></p>",
+    "image_right": true,
+    "bg": "white",
+    "tint": "#EADBBE",
+    "image": "shopify://shop_images/Honey_jars_collection_beeblend.jpg",
+    "btn_label": "Taste The Range",
+    "btn_link": "shopify://collections/all"
+   }
+  },
+  "collapsible_content_Fj9XJT": {
+   "type": "bb-faq",
+   "blocks": {
+    "q1": {
+     "type": "qa",
+     "settings": {
+      "q": "What is BeeBlend Yellow Mustard Honey?",
+      "a": "<p>BeeBlend Yellow Mustard Honey is produced from nectar collected by bees foraging among flowering yellow mustard fields. It has a vibrant golden colour, smooth texture and distinctive flavour that combines floral sweetness with gentle warmth and subtle spice.</p><p></p>"
+     }
+    },
+    "q2": {
+     "type": "qa",
+     "settings": {
+      "q": "What does BeeBlend Mustard Honey taste like?",
+      "a": "<p>BeeBlend Yellow Mustard Honey has a surprisingly mild and floral flavour with gentle warmth, subtle spice and a clean finish. Despite its bold origin, it has a balanced sweetness that works well in both sweet and savoury dishes. </p>"
+     }
+    },
+    "q3": {
+     "type": "qa",
+     "settings": {
+      "q": "Is Mustard Honey made with mustard?",
+      "a": "<p>Mustard flower honey comes from nectar collected by bees from flowering mustard plants. It is different from prepared mustard or honey-mustard sauce; its distinctive character comes from the floral source the bees forage from.</p><h3></h3>"
+     }
+    },
+    "q4": {
+     "type": "qa",
+     "settings": {
+      "q": "What is Yellow Mustard Honey best used for?",
+      "a": "<p>BeeBlend Yellow Mustard Honey is particularly versatile in cooking. Use it for honey mustard glazes, roasted chicken or pork, salad dressings, marinades, barbecue sauces and cheeseboards, or simply drizzle it over breakfast dishes.</p>"
+     }
+    },
+    "q5": {
+     "type": "qa",
+     "settings": {
+      "q": "What foods pair well with Mustard Honey?",
+      "a": "<p>Mustard Honey pairs particularly well with chicken, pork, salmon, sharp cheeses and roasted vegetables. Its balance of floral sweetness and gentle warmth also works beautifully with Dijon mustard, apple cider vinegar and fresh herbs.</p>"
+     }
+    },
+    "q6": {
+     "type": "qa",
+     "settings": {
+      "q": "Can I use BeeBlend Mustard Honey to make honey mustard?",
+      "a": "<p>Yes. BeeBlend Yellow Mustard Honey is ideal for homemade honey mustard dressings, sauces and glazes. Combine it with your preferred mustard to create a balance of sweetness, acidity and savoury flavour.</p>"
+     }
+    },
+    "q7": {
+     "type": "qa",
+     "settings": {
+      "q": "Why does Mustard Honey crystallise?",
+      "a": "<p>Crystallisation is a natural process in honey and does not mean it has spoiled. BeeBlend describes its Yellow Mustard Honey as quick-crystallising, so changes in texture can naturally occur over time.</p>"
+     }
+    },
+    "q8": {
+     "type": "qa",
+     "settings": {
+      "q": "How should I store BeeBlend Yellow Mustard Honey?",
+      "a": "<p>Store BeeBlend Yellow Mustard Honey tightly sealed in a cool, dry place away from direct sunlight. Honey generally does not need to be refrigerated, and natural crystallisation can occur during storage.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8"
+   ],
+   "settings": {
+    "heading": "Yellow Mustard Honey FAQs",
+    "open_first": true,
+    "bg": "paper",
+    "schema": true
+   }
+  },
+  "text_scrolling_6BVxr4": {
+   "type": "bb-trust-bar",
+   "blocks": {
+    "t1": {
+     "type": "item",
+     "settings": {
+      "icon": "hex",
+      "text": "100% Natural"
+     }
+    },
+    "t2": {
+     "type": "item",
+     "settings": {
+      "icon": "leaf",
+      "text": "No Preservatives"
+     }
+    },
+    "t3": {
+     "type": "item",
+     "settings": {
+      "icon": "drop",
+      "text": "Ethically Harvested"
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3"
+   ],
+   "settings": {}
+  },
+  "1758803877d65caa9c": {
+   "type": "apps",
+   "blocks": {
+    "judge_me_reviews_review_widget_VWYWci": {
+     "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+     "settings": {
+      "max_width": 1200,
+      "show_shop_reviews": false,
+      "empty_state": "empty_widget"
+     }
+    },
+    "klip_coupons_klip_app_section_product_GpzLmc": {
+     "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+     "disabled": true,
+     "settings": {
+      "margin_top": 10,
+      "margin_bottom": 10
+     }
+    }
+   },
+   "block_order": [
+    "judge_me_reviews_review_widget_VWYWci",
+    "klip_coupons_klip_app_section_product_GpzLmc"
+   ],
+   "settings": {
+    "include_margins": true
+   }
+  },
+  "featured_blog_VxCrVE": {
+   "type": "featured-blog",
+   "name": "t:sections.featured-blog.presets.name",
+   "settings": {
+    "blog": "recipes",
+    "post_limit": 3,
+    "heading": "Delicious Honey Based Recipes",
+    "heading_size": "h1",
+    "columns_desktop": 3,
+    "show_view_all": true,
+    "show_image": true,
+    "show_date": true,
+    "show_author": false,
+    "color_scheme": "scheme-c67ad067-fc7c-447d-ab8d-88637cf67a38",
+    "padding_top": 36,
+    "padding_bottom": 36
+   }
+  },
+  "sticky": {
+   "type": "bb-sticky-atc",
+   "settings": {}
+  }
+ },
+ "order": [
+  "crumbs",
+  "main",
+  "assure",
+  "rich_text_NJQTHR",
+  "image_with_text_fmKV3D",
+  "image_with_text_LAMz9X",
+  "image_with_text_mMddzg",
+  "image_with_text_GGXKN3",
+  "collapsible_content_Fj9XJT",
+  "text_scrolling_6BVxr4",
+  "1758803877d65caa9c",
+  "featured_blog_VxCrVE",
+  "sticky"
+ ]
+}

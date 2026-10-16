@@ -1,0 +1,198 @@
+{
+ "sections": {
+  "banner": {
+   "type": "bb-page-hero",
+   "settings": {
+    "use_collection_image": true,
+    "fit": "contain",
+    "crumbs": true,
+    "bg": "paper"
+   }
+  },
+  "product-grid": {
+   "type": "main-collection-product-grid",
+   "settings": {
+    "products_per_page": 24,
+    "columns_desktop": 3,
+    "columns_mobile": "2",
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "image_ratio": "adapt",
+    "image_shape": "default",
+    "show_secondary_image": true,
+    "show_vendor": false,
+    "show_rating": true,
+    "quick_add": "standard",
+    "enable_filtering": true,
+    "filter_type": "horizontal",
+    "enable_sorting": true,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "multicolumn_HTGEdL": {
+   "type": "bb-reasons",
+   "blocks": {
+    "r1": {
+     "type": "reason",
+     "settings": {
+      "icon": "leaf",
+      "title": "Lychee Honey",
+      "text": "Floral & Fruity Delicate floral sweetness with subtle tropical notes. Perfect for breakfast, fruit, yoghurt and drinks.",
+      "link_label": "Discover Lychee",
+      "link": "shopify://collections/all"
+     }
+    },
+    "r2": {
+     "type": "reason",
+     "settings": {
+      "icon": "drop",
+      "title": "Wild Fennel Honey",
+      "text": "Botanical & Aromatic Smooth and aromatic with delicate herbal and anise-like notes. Ideal for tea, cheese, dressings and cooking.",
+      "link_label": "Discover Fennel",
+      "link": "https://beeblend.co.uk/products/fennel-honey"
+     }
+    },
+    "r3": {
+     "type": "reason",
+     "settings": {
+      "icon": "pin",
+      "title": "Sesame Honey",
+      "text": "Rich & Nutty Rich and distinctive with toasted, nutty notes and a smooth sweetness. Perfect for marinades, dressings, Asian-inspired dishes and baking.",
+      "link_label": "Discover Sesame",
+      "link": "https://beeblend.co.uk/products/sesame-honey"
+     }
+    },
+    "r4": {
+     "type": "reason",
+     "settings": {
+      "icon": "hex",
+      "title": "Yellow Mustard Honey",
+      "text": "Floral & Gently Warming Smooth floral sweetness with a distinctive, gently warming character. Perfect for glazes, dressings, roast dishes and savoury recipes.",
+      "link_label": "Discover Mustard",
+      "link": "https://beeblend.co.uk/products/mustard-honey"
+     }
+    },
+    "r5": {
+     "type": "reason",
+     "settings": {
+      "icon": "gift",
+      "title": "Golden Nut Honey",
+      "text": "Rich & Indulgent A luxurious combination of golden honey, nuts and dried fruit with wonderful texture and richness. Delicious with breakfast, cheese or desserts.",
+      "link_label": "Discover Golden Nut",
+      "link": "https://beeblend.co.uk/products/golden-nut-honey"
+     }
+    },
+    "r6": {
+     "type": "reason",
+     "settings": {
+      "icon": "shield",
+      "title": "Himalayan Multi-Flora Honey",
+      "text": "Complex & Floral A beautifully complex honey with rich floral, herbal and subtly spiced notes. Ideal for breakfast, drinks, cooking and everyday enjoyment.",
+      "link_label": "Discover Himalayan",
+      "link": "https://beeblend.co.uk/products/himalayan-multifloral-honey"
+     }
+    },
+    "r7": {
+     "type": "reason",
+     "settings": {
+      "icon": "truck",
+      "title": "Kashmiri Acacia Honey",
+      "text": "Light & Delicate Mild, smooth and softly floral. A versatile honey for breakfast, baking, drinks and everyday sweetness.",
+      "link_label": "Discover Acacia",
+      "link": "https://beeblend.co.uk/products/kashmiri-acacia-honey"
+     }
+    }
+   },
+   "block_order": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6",
+    "r7"
+   ],
+   "settings": {
+    "heading": "Find your perfect honey",
+    "center": false,
+    "bg": "white"
+   }
+  },
+  "rich_text_mPQdh3": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "Need a little inspiration?",
+    "text": "Not sure which honey is right for you? Discover flavours and uses in our Honey Guide , then explore delicious food combinations in our Honey Pairing Guide .",
+    "center": true,
+    "bg": "paper",
+    "btn_label": "Explore honey pairings",
+    "btn_link": "https://beeblend.co.uk/pages/honey-pairing-guide"
+   }
+  },
+  "rich_text_Eg4xG6": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "About our brand",
+    "text": "BeeBlend is the epitome of refined sweetness — where rare, single-origin honeys meet impeccable purity. Each jar is curated for connoisseurs who value elegance, craft, and the finest natural indulgence",
+    "center": true,
+    "bg": "white"
+   }
+  },
+  "uk_promise": {
+   "type": "uk-service-strip",
+   "blocks": {
+    "p1": {
+     "type": "item",
+     "settings": {
+      "icon": "truck",
+      "title": "Free UK delivery",
+      "text": "On orders over £50",
+      "link": "/policies/shipping-policy"
+     }
+    },
+    "p2": {
+     "type": "item",
+     "settings": {
+      "icon": "clock",
+      "title": "Dispatched in 1–3 days",
+      "text": "Tracked, with UK delivery in 3–5 working days"
+     }
+    },
+    "p3": {
+     "type": "item",
+     "settings": {
+      "icon": "box",
+      "title": "Packed with care",
+      "text": "Glass jars wrapped for safe delivery"
+     }
+    },
+    "p4": {
+     "type": "item",
+     "settings": {
+      "icon": "lock",
+      "title": "Secure checkout",
+      "text": "Pay safely with the methods you trust"
+     }
+    }
+   },
+   "block_order": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+   ],
+   "settings": {
+    "bg": "#FFFCF5",
+    "compact": true
+   }
+  }
+ },
+ "order": [
+  "banner",
+  "product-grid",
+  "uk_promise",
+  "multicolumn_HTGEdL",
+  "rich_text_mPQdh3",
+  "rich_text_Eg4xG6"
+ ]
+}

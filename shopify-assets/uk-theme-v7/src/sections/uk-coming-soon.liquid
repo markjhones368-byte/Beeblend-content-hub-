@@ -1,0 +1,96 @@
+{%- liquid
+  assign sid = 'ukcs-' | append: section.id
+  assign st = section.settings
+  assign tag = st.heading_tag | default: 'h2'
+  assign dark = false
+  assign form_id = 'ukcs-form-' | append: section.id
+  if st.bg == 'charcoal'
+    assign dark = true
+  endif
+-%}
+<style>
+  #{{ sid }}{background:{% if dark %}#1F3A2E{% else %}#FBF4E4{% endif %};color:{% if dark %}#FFF8E8{% else %}#24211C{% endif %};padding:clamp(5.6rem,8vw,10.4rem) 0}
+  #{{ sid }} .ukcs{display:grid;gap:clamp(3.2rem,5vw,7.2rem);align-items:center;max-width:132rem;margin:0 auto;padding:0 2rem}
+  #{{ sid }} .ukcs>*{min-width:0}
+  @media(min-width:990px){#{{ sid }} .ukcs{grid-template-columns:1.1fr 1fr}}
+  #{{ sid }} .ukcs__media{position:relative;border-radius:2rem;overflow:hidden;aspect-ratio:4/3;background:#F2E8D2}
+  #{{ sid }} .ukcs__media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.22,1,.36,1)}
+  @media(hover:hover){#{{ sid }} .ukcs__media:hover img{transform:scale(1.03)}}
+  #{{ sid }} .ukcs__badge{position:absolute;top:1.8rem;left:1.8rem;padding:.9rem 1.6rem;border-radius:999px;background:#1F3A2E;color:#F4DE9A;font:500 1.25rem/1 'Figtree',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+  #{{ sid }} .ukcs__eyebrow{font:500 1.3rem/1 'Figtree',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:{% if dark %}#E2B341{% else %}#A87A12{% endif %};margin:0 0 1.6rem}
+  #{{ sid }} .ukcs__h{font-size:clamp(3.6rem,4.6vw,5.6rem);line-height:1.05;margin:0}
+  #{{ sid }} .ukcs__text{margin-top:2rem;font-size:1.8rem;line-height:1.65;max-width:48ch;opacity:.9}
+  #{{ sid }} .ukcs__text p+p{margin-top:1rem}
+  #{{ sid }} .ukcs__points{list-style:none;margin:2.4rem 0 0;padding:0;display:grid;gap:1rem}
+  #{{ sid }} .ukcs__points li{display:flex;gap:1.2rem;align-items:baseline;font-size:1.65rem}
+  #{{ sid }} .ukcs__points li::before{content:"";flex:none;width:.8rem;height:.8rem;border-radius:50%;background:#C9921B;transform:translateY(-.1rem)}
+  #{{ sid }} .ukcs__form,#{{ sid }} .ukcs__points+form{margin-top:3.2rem;max-width:48rem;display:block}
+  #{{ sid }} form label{display:block;font:500 1.5rem/1.3 'Figtree',sans-serif;margin-bottom:1rem}
+  #{{ sid }} .ukcs__row{display:flex;gap:.8rem;flex-wrap:wrap}
+  #{{ sid }} .ukcs__row input{flex:1 1 24rem;min-height:5.4rem;padding:0 2rem;border-radius:999px;border:1px solid {% if dark %}rgba(239,230,211,.35){% else %}rgba(28,24,20,.28){% endif %};background:{% if dark %}rgba(255,255,255,.06){% else %}#fff{% endif %};color:inherit;font:400 1.6rem/1 'Figtree',sans-serif}
+  #{{ sid }} .ukcs__row input:focus-visible{outline:2px solid #C9921B;outline-offset:2px}
+  #{{ sid }} .ukcs__row button{min-height:5.4rem;padding:0 3rem;border:0;border-radius:999px;background:#C9921B;color:#1d1606;font:600 1.6rem/1 'Figtree',sans-serif;letter-spacing:.04em;cursor:pointer;transition:background .3s}
+  #{{ sid }} .ukcs__row button:hover{background:#E2B341}
+  #{{ sid }} .ukcs__note{margin-top:1.2rem;font-size:1.35rem;opacity:.7}
+  #{{ sid }} .ukcs__ok{margin-top:1.6rem;padding:1.4rem 1.8rem;border-radius:1.2rem;background:{% if dark %}rgba(201,146,27,.16){% else %}#F6E7C1{% endif %};font-size:1.6rem}
+  #{{ sid }} .ukcs__err{margin-top:1.2rem;color:#B3261E;font-size:1.5rem}
+</style>
+<section class="ukcs-sec" id="{{ sid }}">
+  <div class="ukcs">
+    <div class="ukcs__media">
+      {%- if st.image != blank -%}
+        {{ st.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '600, 900, 1200, 1600', sizes: '(min-width: 990px) 55vw, 100vw', alt: st.image.alt }}
+      {%- else -%}
+        <img src="{{ 'phc-spotlight.webp' | asset_url }}" width="1400" height="1249" loading="lazy" alt="BeeBlend Pure Honey Collection gift box">
+      {%- endif -%}
+      {%- if st.badge != blank -%}<span class="ukcs__badge">{{ st.badge }}</span>{%- endif -%}
+    </div>
+    <div>
+      {%- if st.eyebrow != blank -%}<p class="ukcs__eyebrow">{{ st.eyebrow }}</p>{%- endif -%}
+      <{{ tag }} class="ukcs__h">{{ st.heading }}</{{ tag }}>
+      {%- if st.text != blank -%}<div class="ukcs__text">{{ st.text }}</div>{%- endif -%}
+      {%- if st.points != blank -%}
+        <ul class="ukcs__points">{%- assign pts = st.points | newline_to_br | split: '<br />' -%}{%- for p in pts -%}{%- assign pp = p | strip -%}{%- if pp != blank -%}<li>{{ pp }}</li>{%- endif -%}{%- endfor -%}</ul>
+      {%- endif -%}
+      {%- if st.show_form -%}
+        {%- form 'customer', class: 'ukcs__form', id: form_id -%}
+          <input type="hidden" name="contact[tags]" value="newsletter,{{ st.tag | default: 'pure-honey-collection-waitlist' }}">
+          {%- if form.posted_successfully? -%}
+            <p class="ukcs__ok" role="status">{{ st.success }}</p>
+          {%- else -%}
+            <label for="ukcs-email-{{ section.id }}">{{ st.form_label }}</label>
+            <div class="ukcs__row">
+              <input id="ukcs-email-{{ section.id }}" type="email" name="contact[email]" required autocomplete="email" placeholder="Your email address" aria-describedby="ukcs-note-{{ section.id }}">
+              <button type="submit">{{ st.button }}</button>
+            </div>
+            {%- if form.errors -%}<p class="ukcs__err" role="alert">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>{%- endif -%}
+            <p class="ukcs__note" id="ukcs-note-{{ section.id }}">{{ st.note }}</p>
+          {%- endif -%}
+        {%- endform -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "UK Coming soon",
+  "tag": "div",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "badge", "label": "Image badge", "default": "Coming soon" },
+    { "type": "text", "id": "eyebrow", "label": "Small line above heading", "default": "Coming soon" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "The Pure Honey Collection" },
+    { "type": "select", "id": "heading_tag", "label": "Heading level", "default": "h2", "options": [ { "value": "h1", "label": "H1 (page title)" }, { "value": "h2", "label": "H2" } ] },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "textarea", "id": "points", "label": "Key points (one per line)" },
+    { "type": "checkbox", "id": "show_form", "label": "Show 'tell me when it launches' email form", "default": true },
+    { "type": "text", "id": "form_label", "label": "Form label", "default": "Be the first to know when it launches" },
+    { "type": "text", "id": "button", "label": "Button", "default": "Notify me" },
+    { "type": "text", "id": "note", "label": "Small print", "default": "We'll email you when it's available. You can unsubscribe at any time." },
+    { "type": "text", "id": "success", "label": "Thank-you message", "default": "Thank you. We'll email you as soon as the Pure Honey Collection launches." },
+    { "type": "text", "id": "tag", "label": "Customer tag", "default": "pure-honey-collection-waitlist" },
+    { "type": "select", "id": "bg", "label": "Background", "default": "ivory", "options": [ { "value": "ivory", "label": "Cream" }, { "value": "charcoal", "label": "Forest green" } ] }
+  ],
+  "presets": [ { "name": "UK Coming soon" } ]
+}
+{% endschema %}

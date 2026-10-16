@@ -1,0 +1,41 @@
+{
+ "sections": {
+  "rich_text_zrCByd": {
+   "type": "bb-page-hero",
+   "settings": {
+    "heading": "Shipping & Delivery",
+    "crumbs": true,
+    "bg": "paper",
+    "fit": "cover"
+   }
+  },
+  "rich_text_HggLVg": {
+   "type": "rich-text",
+   "blocks": {
+    "text_FnVC6y": {
+     "type": "text",
+     "settings": {
+      "text": "<h2>Processing Time<br/></h2><p>All orders are processed within <strong>1–2 business days</strong> (Monday–Friday). Orders placed on weekends or public holidays will be processed on the next working day.</p><h2>Shipping Rates & Delivery Times<br/></h2><ul><li><strong>UK Standard Delivery:</strong> 3–5 business days — Free for orders over £40, otherwise £3.99</li><li><strong>UK Express Delivery:</strong> 1–2 business days — £6.99.</li><li><strong>International Delivery: </strong>7–14 business days — Shipping cost calculated at checkout.<em><br/>Please note: Delivery times may vary depending on customs clearance and local postal services.<br/></em></li></ul><h2>Order Tracking</h2><p>Once your order has been dispatched, you will receive an email with tracking details. You can track your order directly via our courier’s website.<br/></p><h2>Customs, Duties & Taxes</h2><p>International customers are responsible for any customs fees, import duties, or taxes applied by their destination country.</p><p></p><h2>Damaged or Missing Items</h2><p>If your order arrives damaged or incomplete, please contact us within 48 hours of delivery at <a href=\"mailto:support@beeblend.co.uk\">support@beeblend.co.uk</a> with your order number and photos of the items. We’ll resolve it promptly.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "text_FnVC6y"
+   ],
+   "name": "t:sections.rich-text.presets.name",
+   "settings": {
+    "custom_class": "rich_text_class",
+    "desktop_content_position": "center",
+    "content_alignment": "left",
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "full_width": true,
+    "padding_top": 72,
+    "padding_bottom": 68
+   }
+  }
+ },
+ "order": [
+  "rich_text_zrCByd",
+  "rich_text_HggLVg"
+ ]
+}

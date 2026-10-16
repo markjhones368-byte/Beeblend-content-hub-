@@ -1,0 +1,86 @@
+{{ 'bb-premium.css' | asset_url | stylesheet_tag }}
+{%- assign rows = section.blocks.size | plus: 1 -%}
+<style>
+  #bb-cmp-{{ section.id }} .bb-cmp2{position:relative;max-width:96rem;margin:0 auto;display:grid;grid-template-columns:1.1fr 1.25fr 1fr;grid-auto-rows:minmax(7.2rem,auto)}
+  #bb-cmp-{{ section.id }} .bb-cmp2__panel{grid-column:2;grid-row:1 / span {{ rows }};margin:-2.4rem 0;background:#FFFBF2;border-radius:1.6rem;box-shadow:0 30px 60px -24px rgba(0,0,0,.55),0 0 0 1px rgba(201,146,27,.4);z-index:0}
+  #bb-cmp-{{ section.id }} .bb-cmp2 > div:not(.bb-cmp2__panel){position:relative;z-index:1;display:flex;align-items:center;gap:1.2rem;padding:1.6rem 2.4rem;font-size:1.55rem;border-bottom:1px solid rgba(255,255,255,.12)}
+  #bb-cmp-{{ section.id }} .c1{grid-column:1;font-weight:600;color:#F4F1E8}
+  #bb-cmp-{{ section.id }} .c2{grid-column:2;font-weight:600;color:var(--bb-forest);border-bottom-color:#EFE4CC!important}
+  #bb-cmp-{{ section.id }} .c3{grid-column:3;color:rgba(244,241,232,.55)}
+  #bb-cmp-{{ section.id }} .is-last.c2{border-bottom-color:transparent!important}
+  #bb-cmp-{{ section.id }} .h{min-height:11rem;align-items:flex-end!important}
+  #bb-cmp-{{ section.id }} .h.c2{flex-direction:column;justify-content:flex-end;align-items:center!important;gap:.9rem!important;text-align:center}
+  #bb-cmp-{{ section.id }} .h.c3{font-family:'Young Serif',Georgia,serif;font-size:1.9rem;color:rgba(244,241,232,.7);line-height:1.2;font-weight:400}
+  #bb-cmp-{{ section.id }} .bb-cmp2__badge{font-size:1.1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#1d1606;background:var(--bb-gold);padding:.5rem 1.2rem;border-radius:999px}
+  #bb-cmp-{{ section.id }} .bb-cmp2__logo{height:5.6rem;width:auto;display:block}
+  #bb-cmp-{{ section.id }} .bb-cmp2__wordmark{font-family:'Young Serif',Georgia,serif;font-size:2.6rem;color:var(--bb-forest)}
+  #bb-cmp-{{ section.id }} .bb-cmp2__ico{flex:none;width:2.6rem;height:2.6rem;border-radius:50%;display:grid;place-items:center}
+  #bb-cmp-{{ section.id }} .bb-cmp2__ico svg{width:1.4rem;height:1.4rem}
+  #bb-cmp-{{ section.id }} .bb-cmp2__ico--yes{background:var(--bb-gold);color:#fff}
+  #bb-cmp-{{ section.id }} .bb-cmp2__ico--no{background:rgba(255,255,255,.08);color:rgba(244,241,232,.5)}
+  #bb-cmp-{{ section.id }} .bb-cmp2__label{display:none}
+  @media(max-width:749px){
+    #bb-cmp-{{ section.id }} .bb-cmp2{grid-template-columns:1.1fr 1fr;grid-auto-rows:minmax(8rem,auto)}
+    #bb-cmp-{{ section.id }} .c1{display:none!important}
+    #bb-cmp-{{ section.id }} .c2,#bb-cmp-{{ section.id }} .bb-cmp2__panel{grid-column:1}
+    #bb-cmp-{{ section.id }} .c3{grid-column:2}
+    #bb-cmp-{{ section.id }} .bb-cmp2__panel{margin:-1.2rem 0}
+    #bb-cmp-{{ section.id }} .bb-cmp2 > div:not(.bb-cmp2__panel){flex-direction:column;align-items:flex-start;gap:.5rem;padding:1.4rem;font-size:1.35rem}
+    #bb-cmp-{{ section.id }} .h{min-height:9rem;justify-content:flex-end}
+    #bb-cmp-{{ section.id }} .bb-cmp2__label{display:block;font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.6}
+    #bb-cmp-{{ section.id }} .bb-cmp2__ico{display:none}
+    #bb-cmp-{{ section.id }} .bb-cmp2__logo{height:4.2rem}
+    #bb-cmp-{{ section.id }} .h.c3{font-size:1.5rem}
+    #bb-cmp-{{ section.id }} .bb-cmp2__badge{font-size:.95rem;letter-spacing:.12em}
+  }
+</style>
+{%- capture tick -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{%- endcapture -%}
+{%- capture cross -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>{%- endcapture -%}
+<section class="bb bb-sec bb-sec--forest" id="bb-cmp-{{ section.id }}">
+  <div class="bb-wrap">
+    <div class="bb-head bb-head--center" style="margin-bottom:6rem">
+      <h2>{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}<p>{{ section.settings.text }}</p>{%- endif -%}
+    </div>
+    <div class="bb-cmp2" role="table" aria-label="{{ section.settings.us | escape }} compared with {{ section.settings.them | escape }}">
+      <span class="bb-cmp2__panel" aria-hidden="true"></span>
+      <div class="c1 h" role="columnheader" style="grid-row:1"><span class="bb-visually-hidden">Feature</span></div>
+      <div class="c2 h" role="columnheader" style="grid-row:1">
+        {%- if section.settings.badge != blank -%}<span class="bb-cmp2__badge">{{ section.settings.badge }}</span>{%- endif -%}
+        {%- assign cmp_logo = section.settings.logo | default: images['beeblend-logo.svg'] -%}
+        {%- if cmp_logo != blank -%}
+          {{ cmp_logo | image_url: width: 400 | image_tag: class: 'bb-cmp2__logo', loading: 'lazy', alt: section.settings.us }}
+        {%- else -%}<span class="bb-cmp2__wordmark">{{ section.settings.us }}</span>{%- endif -%}
+      </div>
+      <div class="c3 h" role="columnheader" style="grid-row:1">{{ section.settings.them }}</div>
+      {%- for block in section.blocks -%}
+        {%- assign r = forloop.index | plus: 1 -%}
+        <div class="c1{% if forloop.last %} is-last{% endif %}" role="rowheader" style="grid-row:{{ r }}" {{ block.shopify_attributes }}>{{ block.settings.feature }}</div>
+        <div class="c2{% if forloop.last %} is-last{% endif %}" role="cell" style="grid-row:{{ r }}"><span class="bb-cmp2__ico bb-cmp2__ico--yes">{{ tick }}</span><span><span class="bb-cmp2__label">{{ block.settings.feature }}</span>{{ block.settings.us }}</span></div>
+        <div class="c3{% if forloop.last %} is-last{% endif %}" role="cell" style="grid-row:{{ r }}"><span class="bb-cmp2__ico bb-cmp2__ico--no">{{ cross }}</span><span><span class="bb-cmp2__label">{{ block.settings.feature }}</span>{{ block.settings.them }}</span></div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BB Comparison table",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Not all honey is the same" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Most supermarket honey is heated and blended from many sources. Ours isn't." },
+    { "type": "image_picker", "id": "logo", "label": "Your logo (shown on the highlighted column)" },
+    { "type": "text", "id": "badge", "label": "Small label above logo", "default": "The raw choice" },
+    { "type": "text", "id": "us", "label": "Your column", "default": "BeeBlend" },
+    { "type": "text", "id": "them", "label": "Other column", "default": "Typical supermarket honey" }
+  ],
+  "blocks": [
+    { "type": "row", "name": "Row", "settings": [
+      { "type": "text", "id": "feature", "label": "Feature" },
+      { "type": "text", "id": "us", "label": "BeeBlend" },
+      { "type": "text", "id": "them", "label": "Other" }
+    ] }
+  ],
+  "presets": [ { "name": "BB Comparison table", "blocks": [ { "type": "row" } ] } ]
+}
+{% endschema %}

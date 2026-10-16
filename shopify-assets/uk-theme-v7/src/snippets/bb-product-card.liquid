@@ -1,0 +1,65 @@
+{%- liquid
+  assign p = product
+  assign short_title = p.title | split: '|' | first | strip
+  assign tagline = blank
+  if p.title contains '|'
+    assign tagline = p.title | split: '|' | last | strip
+  endif
+  assign rating = p.metafields.reviews.rating.value.rating
+  assign rating_count = p.metafields.reviews.rating_count.value
+  assign v0 = p.selected_or_first_available_variant
+-%}
+<article class="bb-card">
+  <a class="bb-card__media" href="{{ p.url }}" aria-label="{{ short_title | escape }}">
+    {%- if p.featured_media -%}
+      {{ p.featured_media.preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360, 540, 720, 900', sizes: '(min-width: 990px) 25vw, 50vw', alt: short_title, class: 'bb-card__img' }}
+      {%- if p.media[1] -%}
+        {{ p.media[1].preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360, 540, 720, 900', sizes: '(min-width: 990px) 25vw, 50vw', alt: '', class: 'bb-card__img bb-card__img--alt' }}
+      {%- endif -%}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'bb-card__img' }}
+    {%- endif -%}
+    {%- if p.available == false -%}
+      <span class="bb-badge bb-badge--out">Sold out</span>
+    {%- elsif p.compare_at_price > p.price -%}
+      {%- assign off = p.compare_at_price | minus: p.price | times: 100 | divided_by: p.compare_at_price -%}
+      <span class="bb-badge">Save {{ off }}%</span>
+    {%- endif -%}
+  </a>
+  <div class="bb-card__body">
+    {%- if rating != blank and rating_count > 0 -%}
+      <div class="bb-card__rating">{% render 'bb-stars', rating: rating %}<span>{{ rating_count }} review{% if rating_count != 1 %}s{% endif %}</span></div>
+    {%- endif -%}
+    <a class="bb-card__title" href="{{ p.url }}">{{ short_title }}</a>
+    {%- if tagline != blank -%}<p class="bb-card__tag">{{ tagline }}</p>{%- endif -%}
+    <div class="bb-price" data-bb-price>
+      <span data-bb-price-now>{% if p.price_varies and p.has_only_default_variant == false %}From {% endif %}{{ v0.price | money }}</span>
+      {%- if v0.compare_at_price > v0.price -%}<s data-bb-price-was>{{ v0.compare_at_price | money }}</s>{%- endif -%}
+    </div>
+    {%- if quick_add -%}
+      {%- form 'product', p, class: 'bb-card__form', data-bb-quick-add: '' -%}
+        {%- if p.has_only_default_variant -%}
+          <input type="hidden" name="id" value="{{ v0.id }}">
+        {%- else -%}
+          <fieldset class="bb-pills">
+            <legend class="bb-visually-hidden">Choose size for {{ short_title | escape }}</legend>
+            {%- for v in p.variants limit: 5 -%}
+              <label class="bb-pill">
+                <input type="radio" name="id" value="{{ v.id }}"
+                  data-price="{{ v.price | money | escape }}"
+                  data-was="{% if v.compare_at_price > v.price %}{{ v.compare_at_price | money | escape }}{% endif %}"
+                  {% if v.id == v0.id %}checked{% endif %}
+                  {% unless v.available %}disabled{% endunless %}>
+                <span>{{ v.title }}</span>
+              </label>
+            {%- endfor -%}
+          </fieldset>
+        {%- endif -%}
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" class="bb-btn bb-btn--solid bb-card__add" {% unless p.available %}disabled{% endunless %}>
+          {%- if p.available -%}Add to cart{%- else -%}Sold out{%- endif -%}
+        </button>
+      {%- endform -%}
+    {%- endif -%}
+  </div>
+</article>

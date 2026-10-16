@@ -1,0 +1,31 @@
+{%- comment -%}
+  Free UK delivery progress, from the store's own delivery rate (Standard, free at the threshold set in Theme settings > BeeBlend UK).
+  Shown only for GBP carts shipping to the UK. Re-rendered by Shopify whenever the cart changes.
+{%- endcomment -%}
+{%- liquid
+  assign thr = settings.uk_free_delivery_threshold | times: 100
+  assign show = false
+  if settings.uk_free_delivery_bar and thr > 0 and cart.item_count > 0 and cart.currency.iso_code == 'GBP' and localization.country.iso_code == 'GB'
+    assign show = true
+  endif
+-%}
+{%- if show -%}
+  {%- liquid
+    assign left = thr | minus: cart.total_price
+    assign pct = cart.total_price | times: 100 | divided_by: thr
+    if pct > 100
+      assign pct = 100
+    endif
+  -%}
+  <div class="ukfd{% if left <= 0 %} is-done{% endif %}" role="status">
+    <p class="ukfd__msg">
+      {% render 'uk-svg', name: 'truck' %}
+      {%- if left > 0 -%}
+        <span>You're <strong>{{ left | money }}</strong> away from <strong>free UK delivery</strong></span>
+      {%- else -%}
+        <span>Your order qualifies for <strong>free UK delivery</strong></span>
+      {%- endif -%}
+    </p>
+    <div class="ukfd__bar" aria-hidden="true"><span style="width:{{ pct }}%"></span></div>
+  </div>
+{%- endif -%}

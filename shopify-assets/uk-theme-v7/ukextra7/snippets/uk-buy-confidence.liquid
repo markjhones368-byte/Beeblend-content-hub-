@@ -1,0 +1,44 @@
+{%- comment -%}
+  Buy-box reassurance under Add to cart. Every line comes from the store's own delivery rates and shipping/refund policies.
+{%- endcomment -%}
+{%- liquid
+  assign thr = settings.uk_free_delivery_threshold | times: 100
+  assign ship_url = shop.shipping_policy.url | default: '/policies/shipping-policy'
+-%}
+<div class="ukbc">
+  <div class="ukbc__eta">
+    {% render 'uk-svg', name: 'truck' %}
+    <div>
+      <p class="ukbc__eta-main" data-uk-eta data-min="4" data-max="8">Dispatched in 1–3 working days, then UK delivery in 3–5 working days</p>
+      {%- if settings.uk_free_delivery_bar and thr > 0 -%}
+        <p class="ukbc__eta-sub">Free UK delivery on orders over {{ thr | money_without_trailing_zeros }}. <a href="{{ ship_url }}">Delivery info</a></p>
+      {%- else -%}
+        <p class="ukbc__eta-sub"><a href="{{ ship_url }}">Delivery info</a></p>
+      {%- endif -%}
+    </div>
+  </div>
+  <ul class="ukbc__list" role="list">
+    <li>{% render 'uk-svg', name: 'lock' %}<span>Secure checkout</span></li>
+    <li>{% render 'uk-svg', name: 'box' %}<span>Jars carefully wrapped for the journey</span></li>
+    <li>{% render 'uk-svg', name: 'refresh' %}<span>Arrived damaged? Tell us within 7 days and we'll replace or refund it</span></li>
+  </ul>
+  {%- if shop.enabled_payment_types.size > 0 -%}
+    <ul class="ukbc__pay" role="list" aria-label="Payment methods">
+      {%- for type in shop.enabled_payment_types -%}
+        <li>{{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+<script>
+  (function () {
+    var el = document.currentScript && document.currentScript.parentNode.querySelector('[data-uk-eta]:not([data-done])');
+    if (!el) return; el.setAttribute('data-done', '1');
+    function add(d, n) { var x = new Date(d); while (n > 0) { x.setDate(x.getDate() + 1); var w = x.getDay(); if (w !== 0 && w !== 6) n--; } return x; }
+    try {
+      var now = new Date(), f = { weekday: 'short', day: 'numeric', month: 'short' };
+      var a = add(now, +el.dataset.min).toLocaleDateString('en-GB', f), b = add(now, +el.dataset.max).toLocaleDateString('en-GB', f);
+      el.innerHTML = 'Estimated UK delivery: <strong>' + a + ' – ' + b + '</strong>';
+    } catch (e) {}
+  })();
+</script>

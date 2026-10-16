@@ -1,0 +1,68 @@
+
+/* ================= v7: premium conversion layer (beeblend.in palette) ================= */
+.uk-ico{width:2.2rem;height:2.2rem;flex:none;display:block}
+
+/* Header: settles onto a soft shadow once you scroll */
+.section-header .header-wrapper{transition:box-shadow .4s ease,background-color .4s ease}
+.uk-scrolled .section-header .header-wrapper{box-shadow:0 10px 30px -22px rgba(31,58,46,.55)}
+
+/* Free UK delivery progress (cart drawer + cart page) */
+.ukfd{margin:0 0 1.6rem;padding:1.4rem 1.6rem;border-radius:1.4rem;background:#FBF4E4;border:1px solid #EFE2C2;color:#1F3A2E;font-family:'Figtree',system-ui,sans-serif}
+cart-drawer .ukfd{margin:0 1.6rem 1.2rem}
+@media(min-width:750px){cart-drawer .ukfd{margin:0 3rem 1.2rem}}
+.ukfd__msg{display:flex;align-items:center;gap:1rem;margin:0;font-size:1.45rem;line-height:1.4}
+.ukfd__msg strong{font-weight:700}
+.ukfd__bar{margin-top:1rem;height:.6rem;border-radius:999px;background:#EFE2C2;overflow:hidden}
+.ukfd__bar span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#E2B341,#C9921B);transition:width .8s cubic-bezier(.22,1,.36,1)}
+.ukfd.is-done{background:#EAF1EC;border-color:#CFE0D5}
+.ukfd.is-done .ukfd__bar span{background:#1F3A2E}
+
+/* Buy box reassurance */
+.ukbc{margin-top:1.6rem;border:1px solid #EAE2D0;border-radius:1.6rem;background:#FFFCF5;font-family:'Figtree',system-ui,sans-serif;color:#24211C;overflow:hidden}
+.ukbc__eta{display:flex;gap:1.2rem;align-items:flex-start;padding:1.6rem 1.8rem;background:#FBF4E4;border-bottom:1px solid #EFE2C2;color:#1F3A2E}
+.ukbc__eta .uk-ico{margin-top:.2rem}
+.ukbc__eta .uk-ico circle[fill]{fill:#FBF4E4}
+.ukbc__eta-main{margin:0;font-size:1.5rem;line-height:1.45}
+.ukbc__eta-main strong{font-weight:700}
+.ukbc__eta-sub{margin:.4rem 0 0;font-size:1.35rem;line-height:1.45;color:#6B655B}
+.ukbc__eta-sub a{color:#1F3A2E;text-underline-offset:.25rem}
+.ukbc__list{list-style:none;margin:0;padding:1.4rem 1.8rem;display:grid;gap:1rem}
+.ukbc__list li{display:flex;gap:1.2rem;align-items:center;font-size:1.45rem;line-height:1.4;color:#3B372F}
+.ukbc__list .uk-ico{color:#A87A12;width:2rem;height:2rem}
+.ukbc__pay{list-style:none;margin:0;padding:1.2rem 1.8rem 1.6rem;display:flex;flex-wrap:wrap;gap:.6rem;border-top:1px dashed #EAE2D0}
+.ukbc__pay .icon{width:3.8rem;height:2.4rem;display:block}
+
+/* Product page: calmer, more confident buy box */
+.product__info-container .price{font-size:2.2rem}
+.product__info-container .price .price-item{font-family:'Figtree',sans-serif}
+.product-form__submit{min-height:5.6rem!important;font-size:1.6rem!important;box-shadow:0 14px 28px -18px rgba(31,58,46,.7)!important;transition:transform .3s cubic-bezier(.22,1,.36,1),background .3s!important}
+.product-form__submit:not([disabled]):hover{transform:translateY(-1px)}
+.shopify-payment-button__button{border-radius:999px!important;min-height:5.2rem!important;overflow:hidden}
+.product__info-container .product-form__input .form__label{font-family:'Figtree',sans-serif;font-weight:600;letter-spacing:.02em}
+.product__info-container .product-form__input input[type=radio]+label{border-radius:999px;transition:background .25s,color .25s,border-color .25s}
+.product__description{line-height:1.7}
+
+/* Footer payment icons */
+.footer__payment .list-payment{gap:.6rem}
+.footer__payment .icon{width:3.8rem;height:2.4rem}
+
+/* Product cards: a gentle lift with a warm shadow */
+.bb-card{transition:transform .5s cubic-bezier(.22,1,.36,1)}
+@media(hover:hover){.bb-card:hover{transform:translateY(-4px)}.bb-card:hover .bb-card__media{box-shadow:0 26px 40px -30px rgba(60,35,5,.55)}}
+.bb-card__media{transition:box-shadow .5s ease}
+
+/* Coming-soon form spacing when the theme form wrapper has no class */
+.ukcs-sec form{display:block}
+
+/* Empty cart: shelf of honeys */
+.cart-drawer__collection{margin:2rem 0 0}
+
+@media(max-width:749px){
+  .ukbc__eta,.ukbc__list,.ukbc__pay{padding-left:1.4rem;padding-right:1.4rem}
+  .ukbc__list li{font-size:1.4rem}
+  .product__info-container .price{font-size:2rem}
+}
+@media (prefers-reduced-motion: reduce){
+  .bb-card,.ukfd__bar span,.product-form__submit{transition:none!important}
+  .bb-card:hover{transform:none}
+}

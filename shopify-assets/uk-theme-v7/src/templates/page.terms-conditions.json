@@ -1,0 +1,41 @@
+{
+ "sections": {
+  "rich_text_TTFqUQ": {
+   "type": "bb-page-hero",
+   "settings": {
+    "heading": "Terms & Conditions",
+    "crumbs": true,
+    "bg": "paper",
+    "fit": "cover"
+   }
+  },
+  "rich_text_cX3P4i": {
+   "type": "rich-text",
+   "blocks": {
+    "text_gMAb8w": {
+     "type": "text",
+     "settings": {
+      "text": "<h2>Introduction</h2><p>Welcome to beeblend.co.uk, owned and operated by BeeBlend Ltd, registered in England & Wales (Company No. 1G2U1GU2). By accessing or purchasing from our website, you agree to these Terms & Conditions.</p><p></p><h2>Use of Website</h2><p>You must be at least 18 years old to make a purchase. You agree not to use our site for unlawful or fraudulent purposes.</p><p></p><h2>Product Information</h2><p>We make every effort to display our products accurately. However, variations in colour or packaging may occur. BeeBlend reserves the right to update product information and pricing at any time without notice.</p><p></p><h2>Prices & Payments</h2><p>All prices are listed in GBP (£) and include VAT where applicable. Payment must be made at the time of order through our secure payment gateways.</p><p></p><h2>Shipping & Delivery</h2><p>Delivery times are estimates and not guaranteed. BeeBlend is not liable for delays caused by third-party couriers or customs.</p><p></p><h2>Returns & Refunds</h2><p>Please refer to our Returns & Refunds Policy for full details.</p><p></p><h2>Limitation of Liability</h2><p>BeeBlend Ltd shall not be held responsible for any indirect, incidental, or consequential damages arising from the use of our products or website.</p><p></p><h2>Governing Law</h2><p>These Terms are governed by and interpreted in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the UK courts.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "text_gMAb8w"
+   ],
+   "name": "t:sections.rich-text.presets.name",
+   "settings": {
+    "custom_class": "rich_text_class",
+    "desktop_content_position": "center",
+    "content_alignment": "left",
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "full_width": true,
+    "padding_top": 72,
+    "padding_bottom": 68
+   }
+  }
+ },
+ "order": [
+  "rich_text_TTFqUQ",
+  "rich_text_cX3P4i"
+ ]
+}

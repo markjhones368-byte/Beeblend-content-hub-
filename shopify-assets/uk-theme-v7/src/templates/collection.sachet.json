@@ -1,0 +1,86 @@
+{
+ "sections": {
+  "coming": {
+   "type": "uk-coming-soon",
+   "settings": {
+    "image": "shopify://shop_images/pure-honey-collection-gift-box.jpg",
+    "badge": "Coming soon",
+    "eyebrow": "Coming soon",
+    "heading": "The Pure Honey Collection",
+    "heading_tag": "h1",
+    "text": "<p>Our honey sachet tasting box: 24 tear-open 10g sachets, four each of six raw honeys, so you can taste them side by side. Perfect for gifting, travel and the office.</p>",
+    "points": "Himalayan Multi, Fennel, Kashmiri Acacia, Mustard, Lychee and Ayurveda Blend\n24 sachets × 10g (240g in total)\nGift-ready box",
+    "show_form": true,
+    "bg": "ivory"
+   }
+  },
+  "promise": {
+   "type": "uk-service-strip",
+   "blocks": {
+    "p1": {
+     "type": "item",
+     "settings": {
+      "icon": "truck",
+      "title": "Free UK delivery",
+      "text": "On orders over £50",
+      "link": "/policies/shipping-policy"
+     }
+    },
+    "p2": {
+     "type": "item",
+     "settings": {
+      "icon": "clock",
+      "title": "Dispatched in 1–3 days",
+      "text": "Tracked, with UK delivery in 3–5 working days"
+     }
+    },
+    "p3": {
+     "type": "item",
+     "settings": {
+      "icon": "box",
+      "title": "Packed with care",
+      "text": "Glass jars wrapped for safe delivery"
+     }
+    },
+    "p4": {
+     "type": "item",
+     "settings": {
+      "icon": "lock",
+      "title": "Secure checkout",
+      "text": "Pay safely with the methods you trust"
+     }
+    }
+   },
+   "block_order": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+   ],
+   "settings": {
+    "bg": "#FFFCF5",
+    "compact": true
+   }
+  },
+  "jars": {
+   "type": "bb-product-grid",
+   "settings": {
+    "heading": "Our raw honey jars",
+    "text": "Available now, in 160g and 250g.",
+    "collection": "jar",
+    "limit": 8,
+    "columns": 4,
+    "quick_add": true,
+    "show_sold_out": true,
+    "center": false,
+    "button_label": "Shop all honey",
+    "bg": "white"
+   }
+  }
+ },
+ "order": [
+  "coming",
+  "promise",
+  "jars"
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "name": "t:sections.header.name",
+ "type": "header",
+ "sections": {
+  "announcement-bar": {
+   "type": "announcement-bar",
+   "blocks": {
+    "announcement-bar-0": {
+     "type": "announcement",
+     "settings": {
+      "text": "Sign up and Get 10% Off on Your First Order",
+      "link": "https://beeblend.co.uk/account/register"
+     }
+    },
+    "uk-free-delivery": {
+     "type": "announcement",
+     "settings": {
+      "text": "Free UK delivery on orders over £50",
+      "link": "shopify://collections/all"
+     }
+    }
+   },
+   "block_order": [
+    "announcement-bar-0",
+    "uk-free-delivery"
+   ],
+   "custom_css": [
+    ".announcement-bar__message {font-family: \"DM Sans\"; text-transform: uppercase; font-size: 13px; letter-spacing: 2px;}"
+   ],
+   "settings": {
+    "auto_rotate": true,
+    "change_slides_speed": 5,
+    "color_scheme": "scheme-92afd76a-68a9-449f-89d7-0c16f983dc5a",
+    "show_line_separator": true,
+    "show_social": true,
+    "enable_country_selector": false,
+    "enable_language_selector": true
+   }
+  },
+  "header": {
+   "type": "header",
+   "settings": {
+    "logo_position": "middle-left",
+    "mobile_logo_position": "center",
+    "menu": "main-menu",
+    "menu_type_desktop": "dropdown",
+    "sticky_header_type": "on-scroll-up",
+    "show_line_separator": false,
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "menu_color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "enable_country_selector": true,
+    "enable_language_selector": true,
+    "enable_customer_avatar": true,
+    "margin_bottom": 0,
+    "padding_top": 8,
+    "padding_bottom": 8
+   }
+  },
+  "bb_motion": {
+   "type": "bb-global",
+   "settings": {
+    "include_schema": false
+   }
+  }
+ },
+ "order": [
+  "announcement-bar",
+  "header",
+  "bb_motion"
+ ]
+}

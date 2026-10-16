@@ -1,0 +1,96 @@
+{
+ "sections": {
+  "banner": {
+   "type": "bb-page-hero",
+   "settings": {
+    "use_collection_image": true,
+    "fit": "contain",
+    "crumbs": true,
+    "bg": "paper"
+   }
+  },
+  "product-grid": {
+   "type": "main-collection-product-grid",
+   "settings": {
+    "products_per_page": 24,
+    "columns_desktop": 3,
+    "columns_mobile": "2",
+    "color_scheme": "scheme-2bdcb7d7-a416-4caa-8ca4-e19c43ed8033",
+    "image_ratio": "adapt",
+    "image_shape": "default",
+    "show_secondary_image": true,
+    "show_vendor": false,
+    "show_rating": true,
+    "quick_add": "standard",
+    "enable_filtering": true,
+    "filter_type": "horizontal",
+    "enable_sorting": true,
+    "padding_top": 60,
+    "padding_bottom": 60
+   }
+  },
+  "rich_text_Eg4xG6": {
+   "type": "bb-reasons",
+   "settings": {
+    "heading": "About our brand",
+    "text": "BeeBlend is the epitome of refined sweetness — where rare, single-origin honeys meet impeccable purity. Each jar is curated for connoisseurs who value elegance, craft, and the finest natural indulgence",
+    "center": true,
+    "bg": "white"
+   }
+  },
+  "uk_promise": {
+   "type": "uk-service-strip",
+   "blocks": {
+    "p1": {
+     "type": "item",
+     "settings": {
+      "icon": "truck",
+      "title": "Free UK delivery",
+      "text": "On orders over £50",
+      "link": "/policies/shipping-policy"
+     }
+    },
+    "p2": {
+     "type": "item",
+     "settings": {
+      "icon": "clock",
+      "title": "Dispatched in 1–3 days",
+      "text": "Tracked, with UK delivery in 3–5 working days"
+     }
+    },
+    "p3": {
+     "type": "item",
+     "settings": {
+      "icon": "box",
+      "title": "Packed with care",
+      "text": "Glass jars wrapped for safe delivery"
+     }
+    },
+    "p4": {
+     "type": "item",
+     "settings": {
+      "icon": "lock",
+      "title": "Secure checkout",
+      "text": "Pay safely with the methods you trust"
+     }
+    }
+   },
+   "block_order": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+   ],
+   "settings": {
+    "bg": "#FFFCF5",
+    "compact": true
+   }
+  }
+ },
+ "order": [
+  "banner",
+  "product-grid",
+  "uk_promise",
+  "rich_text_Eg4xG6"
+ ]
+}
