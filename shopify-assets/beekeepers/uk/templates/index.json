@@ -536,8 +536,8 @@
    "settings": {
     "eyebrow": "Meet the beekeepers",
     "heading": "We don't just sell honey. We keep the bees.",
-    "text": "<p>Every jar of BeeBlend starts at our own hives. We look after the bees ourselves, check the frames by hand and bring the honey to you raw and unheated.</p>",
-    "points": "Our own hives, tended by hand\nRaw and unheated, nothing added\nFrom our hives to your jar",
+    "text": "<p>BeeBlend is run by beekeepers. We tend our own hives by hand, frame by frame, and work side by side with the beekeepers in each region our honey comes from. Every harvest is kept separate and jarred raw, never heated.</p>",
+    "points": "Hands-on beekeepers, not just a brand\nRaw and unheated, nothing added\nEvery harvest kept separate, hive to jar",
     "btn1_label": "Shop our honey",
     "btn1_link": "shopify://collections/jar",
     "btn2_label": "Our story",
