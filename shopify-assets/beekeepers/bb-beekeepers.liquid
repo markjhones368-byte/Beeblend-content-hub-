@@ -117,7 +117,7 @@
               <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
             </button>
           {%- elsif st.video_asset != blank -%}
-            <video class="bbk__v" autoplay muted loop playsinline preload="metadata"{% if st.poster_asset != blank %} poster="{{ st.poster_asset | asset_url }}"{% endif %}><source src="{{ st.video_asset | asset_url }}" type="video/mp4"></video>
+            <video class="bbk__v" autoplay muted loop playsinline preload="metadata"{% if st.poster_asset != blank %} poster="{{ st.poster_asset | asset_url }}"{% endif %}><source src="{{ st.video_asset | asset_url }}" type="video/mp4"><source src="{{ st.video_asset | replace: '.mp4', '.webm' | asset_url }}" type="video/webm"></video>
             <button type="button" class="bbk__pp" aria-pressed="false" aria-label="Pause video">
               <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
               <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
@@ -152,7 +152,7 @@
                     <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
                   </button>
                 {%- elsif b.video_asset != blank -%}
-                  <video class="bbk__v" autoplay muted loop playsinline preload="metadata"{% if b.poster_asset != blank %} poster="{{ b.poster_asset | asset_url }}"{% endif %}><source src="{{ b.video_asset | asset_url }}" type="video/mp4"></video>
+                  <video class="bbk__v" autoplay muted loop playsinline preload="metadata"{% if b.poster_asset != blank %} poster="{{ b.poster_asset | asset_url }}"{% endif %}><source src="{{ b.video_asset | asset_url }}" type="video/mp4"><source src="{{ b.video_asset | replace: '.mp4', '.webm' | asset_url }}" type="video/webm"></video>
                   <button type="button" class="bbk__pp" aria-pressed="false" aria-label="Pause video">
                     <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
                     <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z"/></svg>
