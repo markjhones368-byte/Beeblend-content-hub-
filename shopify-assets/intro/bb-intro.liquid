@@ -1,0 +1,120 @@
+{%- comment -%}
+  BeeBlend opening moment: a single line-drawn bee glides in, traces a honey trail, the wordmark settles, then the cream curtain lifts.
+  ~2.2s, once per browser session, tap / key to skip, never shown with prefers-reduced-motion, never shown without JavaScript.
+  The page underneath loads normally the whole time (the overlay only covers it).
+{%- endcomment -%}
+{%- liquid
+  assign st = section.settings
+  assign show_here = true
+  if st.home_only and request.page_type != 'index'
+    assign show_here = false
+  endif
+  if request.design_mode
+    assign show_here = false
+  endif
+-%}
+{%- if st.enable and show_here -%}
+<div class="bbi" id="bbIntro" aria-hidden="true">
+  <style>
+    .bbi{display:none}
+    html.bbi-on{overflow:hidden}
+    html.bbi-on .bbi{display:block;position:fixed;inset:0;z-index:2147483000;background:{{ st.bg }};cursor:pointer;
+      clip-path:inset(0 0 0 0);transition:clip-path .9s cubic-bezier(.76,0,.24,1),opacity .9s ease}
+    html.bbi-on .bbi.is-out{clip-path:inset(0 0 100% 0)}
+    .bbi::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#F4DE9A,#C9921B,#A87A12);transform-origin:0 50%;transform:scaleX(0);animation:bbiBar 1.9s cubic-bezier(.65,0,.35,1) .1s forwards}
+    @keyframes bbiBar{to{transform:scaleX(1)}}
+    .bbi__stage{position:absolute;left:50%;top:50%;width:360px;height:260px;margin:-150px 0 0 -180px;transform:scale(var(--bbi-s,1))}
+    @media(min-width:990px){.bbi__stage{--bbi-s:1.35}}
+    @media(max-width:480px){.bbi__stage{--bbi-s:.86}}
+    .bbi__trail{position:absolute;inset:0;width:360px;height:260px;overflow:visible}
+    .bbi__trail path{fill:none;stroke:#C9921B;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:2 7;opacity:.85}
+    .bbi__trail .bbi__mask{stroke:{{ st.bg }};stroke-width:6;stroke-dasharray:none;opacity:1;stroke-dashoffset:0;animation:bbiDraw 1.35s cubic-bezier(.45,.05,.25,1) .15s forwards}
+    @keyframes bbiDraw{to{stroke-dashoffset:var(--len)}}
+    .bbi__hex{fill:none;stroke:#C9921B;stroke-width:1.4;opacity:0;transform-origin:180px 92px;transform:scale(.6) rotate(-30deg);animation:bbiHex .9s cubic-bezier(.16,1,.3,1) 1.05s forwards}
+    @keyframes bbiHex{to{opacity:.9;transform:none}}
+    .bbi__bee{position:absolute;left:0;top:0;width:46px;height:40px;offset-anchor:50% 50%;
+      offset-path:path("M -60 210 C 10 120, 60 40, 130 60 S 250 180, 300 110 S 250 20, 180 92");offset-rotate:auto 0deg;offset-distance:0%;
+      animation:bbiFly 1.35s cubic-bezier(.45,.05,.25,1) .15s forwards}
+    @keyframes bbiFly{to{offset-distance:100%}}
+    @supports not (offset-path:path("M0 0")){.bbi__bee{left:157px;top:72px;opacity:0;animation:bbiFade .6s ease .4s forwards}}
+    @keyframes bbiFade{to{opacity:1}}
+    .bbi__bee svg{display:block;width:100%;height:100%;overflow:visible;animation:bbiSettle .5s cubic-bezier(.16,1,.3,1) 1.5s forwards}
+    @keyframes bbiSettle{to{transform:rotate(-90deg) scale(1.08)}}
+    .bbi__wing{transform-box:fill-box;transform-origin:50% 100%;animation:bbiFlap .07s ease-in-out infinite alternate}
+    .bbi__wing--b{animation-delay:.035s}
+    @keyframes bbiFlap{from{transform:scaleY(1)}to{transform:scaleY(.35)}}
+    .bbi__word{position:absolute;left:0;right:0;top:150px;text-align:center;font-family:'Young Serif',Georgia,serif;font-size:44px;line-height:1;letter-spacing:-.01em;color:{{ st.ink }};opacity:0;transform:translateY(14px);animation:bbiUp .8s cubic-bezier(.16,1,.3,1) 1.1s forwards}
+    .bbi__tag{position:absolute;left:0;right:0;top:206px;text-align:center;font:600 11px/1 'Figtree',system-ui,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#A87A12;opacity:0;transform:translateY(10px);animation:bbiUp .8s cubic-bezier(.16,1,.3,1) 1.3s forwards}
+    @keyframes bbiUp{to{opacity:1;transform:none}}
+    .bbi__skip{position:absolute;right:20px;bottom:22px;padding:8px 14px;border:0;border-radius:999px;background:transparent;color:{{ st.ink }};opacity:.55;font:500 12px/1 'Figtree',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+    .bbi__skip:hover{opacity:1}
+  </style>
+  <div class="bbi__stage">
+    <svg class="bbi__trail" viewBox="0 0 360 260" aria-hidden="true">
+      <path id="bbiPath" d="M -60 210 C 10 120, 60 40, 130 60 S 250 180, 300 110 S 250 20, 180 92"/>
+      <path class="bbi__mask" d="M -60 210 C 10 120, 60 40, 130 60 S 250 180, 300 110 S 250 20, 180 92"/>
+      <polygon class="bbi__hex" points="180,70 199,81 199,103 180,114 161,103 161,81"/>
+    </svg>
+    <div class="bbi__bee">
+      <svg viewBox="-23 -20 46 40" aria-hidden="true">
+        <g transform="rotate(90)">
+          <ellipse class="bbi__wing" cx="-6" cy="-9" rx="5.2" ry="9" fill="rgba(255,255,255,.75)" stroke="{{ st.ink }}" stroke-width="1.1" transform="rotate(-24 -6 -9)"/>
+          <ellipse class="bbi__wing bbi__wing--b" cx="6" cy="-9" rx="5.2" ry="9" fill="rgba(255,255,255,.75)" stroke="{{ st.ink }}" stroke-width="1.1" transform="rotate(24 6 -9)"/>
+          <ellipse cx="0" cy="3" rx="7" ry="10.5" fill="#E2B341" stroke="{{ st.ink }}" stroke-width="1.3"/>
+          <path d="M -6.6 1 Q 0 3 6.6 1 M -6.2 6.4 Q 0 8.4 6.2 6.4" stroke="{{ st.ink }}" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <circle cx="0" cy="-9.5" r="4.4" fill="{{ st.ink }}"/>
+          <path d="M -1.6 -13 Q -4 -18 -6.5 -18.5 M 1.6 -13 Q 4 -18 6.5 -18.5" stroke="{{ st.ink }}" stroke-width="1" fill="none" stroke-linecap="round"/>
+          <path d="M 0 13.5 L 0 16.5" stroke="{{ st.ink }}" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+    <div class="bbi__word">{{ st.wordmark | default: shop.name }}</div>
+    {%- if st.tagline != blank -%}<div class="bbi__tag">{{ st.tagline }}</div>{%- endif -%}
+  </div>
+  <button type="button" class="bbi__skip" tabindex="-1">Skip</button>
+</div>
+<script>
+  (function () {
+    var el = document.getElementById('bbIntro'); if (!el) return;
+    var de = document.documentElement, KEY = 'bbIntroSeen';
+    try {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { el.remove(); return; }
+      {%- if st.once %}
+      if (sessionStorage.getItem(KEY)) { el.remove(); return; }
+      sessionStorage.setItem(KEY, '1');
+      {%- endif %}
+    } catch (e) {}
+    var p = el.querySelector('.bbi__mask');
+    try { var L = Math.ceil(document.getElementById('bbiPath').getTotalLength()); p.style.strokeDasharray = L + ' ' + (L + 10); p.style.setProperty('--len', -L); } catch (e) {}
+    de.classList.add('bbi-on');
+    var done = false;
+    function out() {
+      if (done) return; done = true;
+      el.classList.add('is-out');
+      setTimeout(function () { de.classList.remove('bbi-on'); el.remove(); }, 950);
+    }
+    el.addEventListener('click', out);
+    document.addEventListener('keydown', out, { once: true });
+    setTimeout(out, {{ st.duration | times: 1000 | round }});
+    /* safety: never trap the page */
+    setTimeout(function () { de.classList.remove('bbi-on'); if (el.parentNode) el.remove(); }, 6000);
+  })();
+</script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "BB Opening animation",
+  "tag": "div",
+  "class": "bb-intro",
+  "settings": [
+    { "type": "checkbox", "id": "enable", "label": "Show the bee opening animation", "default": true },
+    { "type": "checkbox", "id": "home_only", "label": "Only on the homepage", "default": true },
+    { "type": "checkbox", "id": "once", "label": "Only once per visit", "default": true },
+    { "type": "range", "id": "duration", "label": "Length (seconds)", "min": 1.5, "max": 3.5, "step": 0.1, "default": 2.1 },
+    { "type": "text", "id": "wordmark", "label": "Name", "default": "BeeBlend" },
+    { "type": "text", "id": "tagline", "label": "Tagline", "default": "Raw honey · From our hives" },
+    { "type": "color", "id": "bg", "label": "Background", "default": "#FFFCF5" },
+    { "type": "color", "id": "ink", "label": "Ink colour", "default": "#1F3A2E" }
+  ]
+}
+{% endschema %}
