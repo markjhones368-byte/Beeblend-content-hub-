@@ -1,4 +1,4 @@
-name: BeeBlend photo PDF
+name: BeeBlend photo export
 on:
   push:
     branches: [photo-pdf]
@@ -7,21 +7,18 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install pillow reportlab
-      - run: python tools/photo_pdf.py
-      - name: Save PDF to the photo-pdf-output branch
+      - run: python tools/photo_files.py && du -sh photos && find photos -type f | wc -l
+      - name: Save photos to the photo-files-output branch
         run: |
-          ls -la BeeBlend-website-photos.pdf
-          mkdir /tmp/out && cp BeeBlend-website-photos.pdf /tmp/out/
+          mv photos /tmp/photos
           git config user.name "BeeBlend bot"; git config user.email "actions@users.noreply.github.com"
-          git checkout --orphan photo-pdf-output
+          git checkout --orphan photo-files-output
           git rm -rq --cached . ; rm -rf ./* .github tools
-          cp /tmp/out/BeeBlend-website-photos.pdf .
-          git add BeeBlend-website-photos.pdf
-          git commit -qm "BeeBlend website photos PDF"
-          git push -f origin photo-pdf-output
+          cp -r /tmp/photos .
+          git add photos && git commit -qm "BeeBlend website photos (original resolution)"
+          git push -f origin photo-files-output
