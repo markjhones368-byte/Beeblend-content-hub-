@@ -1,0 +1,18 @@
+name: BeeBlend photo PDF
+on:
+  push:
+    branches: [photo-pdf]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pillow reportlab
+      - run: python tools/photo_pdf.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: beeblend-photos-pdf
+          path: BeeBlend-website-photos.pdf
