@@ -7,13 +7,13 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: python tools/deep_audit.py
+      - run: python tools/comp_audit.py
       - run: |
-          mv deep-audit.json /tmp/ && git config user.name "BeeBlend bot" && git config user.email "actions@users.noreply.github.com"
-          git checkout --orphan deep-audit-output && git rm -rq --cached . && rm -rf ./* .github tools
-          cp /tmp/deep-audit.json . && git add deep-audit.json && git commit -qm "SEO audit $(date -u +%F)" && git push -f origin deep-audit-output
+          mv comp-audit.json /tmp/ && git config user.name "BeeBlend bot" && git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan comp-audit-output && git rm -rq --cached . && rm -rf ./* .github tools
+          cp /tmp/comp-audit.json . && git add comp-audit.json && git commit -qm "SEO audit $(date -u +%F)" && git push -f origin comp-audit-output
