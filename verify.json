@@ -1,0 +1,44 @@
+{
+ "/pages/raw-honey": {
+  "final": "https://beeblend.in/pages/raw-honey",
+  "status": 200,
+  "found": true,
+  "title": "Raw Honey Online India – Buy Unheated Honey | BeeBlend India"
+ },
+ "/pages/pure-honey": {
+  "final": "https://beeblend.in/pages/pure-honey",
+  "status": 200,
+  "found": true,
+  "title": "Pure Honey Online India – Natural, Nothing Added | BeeBlend India"
+ },
+ "/pages/honey-sachets-wholesale": {
+  "final": "https://beeblend.in/pages/honey-sachets-wholesale",
+  "status": 200,
+  "found": true,
+  "title": "Honey Sachets Wholesale – Bulk 10g Sachets | BeeBlend India"
+ },
+ "/blogs/news/litchi-shahad": {
+  "final": "https://beeblend.in/blogs/news/litchi-shahad",
+  "status": 200,
+  "found": true,
+  "title": "लीची शहद (Litchi Honey): स्वाद और पहचान | BeeBlend India"
+ },
+ "/blogs/news/5-reasons-why-raw-honey-is-better-than-processed-honey": {
+  "final": "https://beeblend.in/blogs/news/raw-honey-vs-processed-honey-india",
+  "status": 200,
+  "found": true,
+  "title": "Raw vs Processed Honey: What&#39;s the Difference? | BeeBlend India"
+ },
+ "/collections/hampers": {
+  "final": "https://beeblend.in/collections/hampers",
+  "status": 200,
+  "found": true,
+  "title": "Premium Honey Gift Hampers – Buy Online – BeeBlend India"
+ },
+ "/collections/jar": {
+  "final": "https://beeblend.in/collections/jar",
+  "status": 200,
+  "found": true,
+  "title": "Single-Origin Honey Jars – Monofloral Raw Honey | BeeBlend India"
+ }
+}
