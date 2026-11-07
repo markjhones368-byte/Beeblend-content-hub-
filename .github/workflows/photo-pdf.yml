@@ -1,24 +1,19 @@
-name: BeeBlend photo export
+name: BeeBlend SEO audit
 on:
   push:
-    branches: [photo-pdf]
+    branches: [seo-audit]
 permissions:
   contents: write
 jobs:
-  build:
+  audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: python tools/photo_files.py && du -sh photos && find photos -type f | wc -l
-      - name: Save photos to the photo-files-output branch
-        run: |
-          mv photos /tmp/photos
-          git config user.name "BeeBlend bot"; git config user.email "actions@users.noreply.github.com"
-          git checkout --orphan photo-files-output
-          git rm -rq --cached . ; rm -rf ./* .github tools
-          cp -r /tmp/photos .
-          git add photos && git commit -qm "BeeBlend website photos (original resolution)"
-          git push -f origin photo-files-output
+      - run: python tools/seo_audit.py
+      - run: |
+          mv seo-audit.json /tmp/ && git config user.name "BeeBlend bot" && git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan seo-audit-output && git rm -rq --cached . && rm -rf ./* .github tools
+          cp /tmp/seo-audit.json . && git add seo-audit.json && git commit -qm "SEO audit $(date -u +%F)" && git push -f origin seo-audit-output
