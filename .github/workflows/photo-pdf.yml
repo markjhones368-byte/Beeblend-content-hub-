@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: python tools/comp_audit.py
+      - run: pip install -q pillow && python tools/thumbs.py
       - run: |
-          mv comp-audit.json /tmp/ && git config user.name "BeeBlend bot" && git config user.email "actions@users.noreply.github.com"
-          git checkout --orphan comp-audit-output && git rm -rq --cached . && rm -rf ./* .github tools
-          cp /tmp/comp-audit.json . && git add comp-audit.json && git commit -qm "SEO audit $(date -u +%F)" && git push -f origin comp-audit-output
+          mkdir -p /tmp/o && mv thumbs_*.jpg /tmp/o/ && git config user.name "BeeBlend bot" && git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan thumbs-output && git rm -rq --cached . && rm -rf ./* .github tools
+          cp /tmp/o/* . && git add thumbs_*.jpg && git commit -qm "SEO audit $(date -u +%F)" && git push -f origin thumbs-output
