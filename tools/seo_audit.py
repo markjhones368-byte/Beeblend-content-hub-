@@ -7,7 +7,7 @@ def get(u,t=60):
     except urllib.error.HTTPError as e: return e.code, '', u
     except Exception as e: return 0, str(e), u
 B='https://beeblend.in'
-pages=['/','/collections/jar','/collections/sachet','/collections/all','/collections/gifts','/collections/frontpage','/collections/honeycomb','/collections/candles','/pages/about-us','/pages/why-beeblend','/pages/health-benefits','/pages/gifting','/blogs/news','/blogs/news/which-honey-is-best-india','/blogs/news/how-to-identify-pure-honey-at-home','/blogs/news/asli-shahad-ki-pehchan']
+pages=['/','/collections/jar','/collections/sachet','/collections/all','/collections/gifts','/collections/frontpage','/collections/honeycomb','/collections/candles','/pages/about-us','/pages/why-beeblend','/pages/health-benefits','/pages/gifting','/blogs/news','/blogs/news/which-honey-is-best-india','/blogs/news/how-to-identify-pure-honey-at-home','/blogs/news/asli-shahad-ki-pehchan','/blogs/news/best-honey-brand-india-how-to-choose','/blogs/news/sesame-honey-til-honey-guide','/blogs/news/sarson-ka-shahad','/collections/corporate-gifting','/pages/contact','/blogs/recipes']
 for h in ['lychee-honey','fennel-honey','himalayan-multifloral-honey','sesame-honey','mustard-honey','golden-nut-honey','kashmiri-acacia-honey','pure-honey-collection']: pages.append('/products/'+h)
 out={'pages':{}}
 for p in pages:
@@ -52,7 +52,7 @@ for s in subs:
     s=s.replace('&amp;','&'); st,x,_=get(s); u=re.findall(r'<loc>(.*?)</loc>',x); out['sitemaps'][s]=len(u); allurls+=u
 out['sitemap_urls']=[u for u in allurls if not re.search(r'cdn\.shopify|/files/',u)]
 psi={}
-for p in ['/','/products/kashmiri-acacia-honey']:
+for p in []:
     for strat in ['mobile']:
         q=urllib.parse.urlencode({'url':B+p,'strategy':strat,'category':['performance','seo']},doseq=True)
         st,x,_=get('https://www.googleapis.com/pagespeedonline/v5/runPagespeed?'+q,t=120)
