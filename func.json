@@ -1,0 +1,73 @@
+{
+ "psi_mobile": "ERR HTTP Error 429: Too Many Requests",
+ "psi_desktop": "ERR HTTP Error 429: Too Many Requests",
+ "w3c": {
+  "errors": 303,
+  "warnings": 56,
+  "top_errors": [
+   "A \u201ccharset\u201d attribute on a \u201cmeta\u201d element found after the first 1024 bytes.",
+   "A \u201cscript\u201d element with \u201ctype=module\u201d must not have a \u201cdefer\u201d attribute.",
+   "A \u201cstyle\u201d element in \u201cbody\u201d must be the first child of its parent.",
+   "An element with \u201crole=cell\u201d must be contained in, or owned by, an element with the \u201crole\u201d ",
+   "An element with \u201crole=columnheader\u201d must be contained in, or owned by, an element with the",
+   "An element with \u201crole=rowheader\u201d must be contained in, or owned by, an element with the \u201cr",
+   "An inline \u201cscript\u201d element (i.e., a \u201cscript\u201d element without a \u201csrc\u201d attribute and with a ",
+   "Attribute \u201caria-expanded\u201d not allowed on element \u201cinput\u201d at this point.",
+   "Attribute \u201cversion\u201d not allowed on element \u201clink\u201d at this point.",
+   "Bad value \u201c79.24778761061947\u201d for attribute \u201cheight\u201d on element \u201cimg\u201d: Expected a digit bu"
+  ]
+ },
+ "page": {
+  "status": 200,
+  "kb": 476,
+  "theme_id": "200711209347",
+  "title": "BeeBlend | Premium Natural Honey Blends \u2013 UK",
+  "desc": "Discover BeeBlend&#39;s premium natural honey blends, crafted with UK beekeepers. Shop pure, sustainable honey and gift sets delivered across the UK.",
+  "canonical": "https://beeblend.co.uk/",
+  "h1_count": 1,
+  "og": [
+   "og:description",
+   "og:image",
+   "og:image:height",
+   "og:image:secure_url",
+   "og:image:width",
+   "og:site_name",
+   "og:title",
+   "og:type",
+   "og:url"
+  ],
+  "twitter": [
+   "twitter:card",
+   "twitter:description",
+   "twitter:title"
+  ],
+  "hreflang": [],
+  "lang": "en",
+  "schema_types": [
+   "Answer",
+   "ContactPoint",
+   "EntryPoint",
+   "FAQPage",
+   "Organization",
+   "Question",
+   "SearchAction",
+   "WebSite"
+  ],
+  "imgs_no_alt": 0,
+  "viewport": true,
+  "hsts": null,
+  "compression": null
+ },
+ "robots": {
+  "status": 200,
+  "sitemap_line": [
+   "Sitemap: https://beeblend.co.uk/sitemap.xml"
+  ]
+ },
+ "sitemap": {
+  "status": 200,
+  "children": 6
+ },
+ "http_to_https": 200,
+ "www": 200
+}
