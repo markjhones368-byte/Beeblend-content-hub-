@@ -7,13 +7,13 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: pip install -q playwright==1.47.0 && python -m playwright install --with-deps chromium && bash tools/uk_speed.sh
       - run: |
-          mkdir -p /tmp/o && mv out/uk_summary.json out/home.html /tmp/o/ && git config user.name "BeeBlend bot" && git config user.email "actions@users.noreply.github.com"
+          mkdir -p /tmp/o && mv out/uk_summary.json out/home.html out/draft.html out/bb-premium.css /tmp/o/ ; true && git config user.name "BeeBlend bot" && git config user.email "actions@users.noreply.github.com"
           git checkout --orphan uk-speed-output && git rm -rq --cached . && rm -rf ./* .github tools
-          cp /tmp/o/* . && git add uk_summary.json home.html && git commit -qm "SEO audit $(date -u +%F)" && git push -f origin uk-speed-output
+          cp /tmp/o/* . && git add -A . && git commit -qm "SEO audit $(date -u +%F)" && git push -f origin uk-speed-output
